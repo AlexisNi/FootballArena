@@ -9,7 +9,7 @@ export var AuthService = (function () {
     AuthService.prototype.signup = function (user) {
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post('https://footballarenaquiz.herokuapp.com//user', body, { headers: headers })
+        return this.http.post('https://footballarenaquiz.herokuapp.com/user', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) { return Observable.throw(error.json()); });
     };
