@@ -12,7 +12,7 @@ var appRoutes = require('./routes/app');
 
 var app = express();
 
-mongoose.connect('Alexis:315551@ds139288.mlab.com:39288/quiz_app');
+mongoose.connect('mongodb://Alexis:315551@ds139288.mlab.com:39288/quiz_app');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
