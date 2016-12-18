@@ -16,6 +16,11 @@ import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from '@angular/core/src/metadata/view';
 import * as import9 from '@angular/core/src/linker/component_factory';
 import * as import10 from './app.component.css.shim';
+import * as import11 from './header.component';
+import * as import12 from '@angular/router/src/directives/router_outlet';
+import * as import13 from './header.component.ngfactory';
+import * as import14 from '@angular/router/src/router_outlet_map';
+import * as import15 from '@angular/core/src/linker/component_factory_resolver';
 var renderType_AppComponent_Host = null;
 var _View_AppComponent_Host0 = (function (_super) {
     __extends(_View_AppComponent_Host0, _super);
@@ -56,45 +61,34 @@ var _View_AppComponent0 = (function (_super) {
     }
     _View_AppComponent0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
-        this._text_0 = this.renderer.createText(parentRenderNode, '\n', null);
-        this._el_1 = this.renderer.createElement(parentRenderNode, 'html', null);
-        this.renderer.setElementAttribute(this._el_1, 'lang', 'en');
-        this._text_2 = this.renderer.createText(this._el_1, '\n', null);
-        this._el_3 = this.renderer.createElement(this._el_1, 'head', null);
-        this._text_4 = this.renderer.createText(this._el_3, '\n    ', null);
-        this._el_5 = this.renderer.createElement(this._el_3, 'meta', null);
-        this.renderer.setElementAttribute(this._el_5, 'charset', 'UTF-8');
-        this._text_6 = this.renderer.createText(this._el_3, '\n    ', null);
-        this._el_7 = this.renderer.createElement(this._el_3, 'title', null);
-        this._text_8 = this.renderer.createText(this._el_7, 'Title', null);
-        this._text_9 = this.renderer.createText(this._el_3, '\n', null);
-        this._text_10 = this.renderer.createText(this._el_1, '\n', null);
-        this._el_11 = this.renderer.createElement(this._el_1, 'body', null);
-        this._text_12 = this.renderer.createText(this._el_11, '\n\n', null);
-        this._el_13 = this.renderer.createElement(this._el_11, 'p', null);
-        this._text_14 = this.renderer.createText(this._el_13, 'Hello world!', null);
-        this._text_15 = this.renderer.createText(this._el_11, '\n\n', null);
-        this._text_16 = this.renderer.createText(this._el_1, '\n', null);
+        this._el_0 = this.renderer.createElement(parentRenderNode, 'app-header', null);
+        this._appEl_0 = new import2.AppElement(0, null, this, this._el_0);
+        var compView_0 = import13.viewFactory_HeaderComponent0(this.viewUtils, this.injector(0), this._appEl_0);
+        this._HeaderComponent_0_4 = new import11.HeaderComponent();
+        this._appEl_0.initComponent(this._HeaderComponent_0_4, [], compView_0);
+        compView_0.create(this._HeaderComponent_0_4, [], null);
+        this._text_1 = this.renderer.createText(parentRenderNode, '\n', null);
+        this._el_2 = this.renderer.createElement(parentRenderNode, 'router-outlet', null);
+        this._appEl_2 = new import2.AppElement(2, null, this, this._el_2);
+        this._RouterOutlet_2_5 = new import12.RouterOutlet(this.parentInjector.get(import14.RouterOutletMap), this._appEl_2.vcRef, this.parentInjector.get(import15.ComponentFactoryResolver), null);
         this.init([], [
-            this._text_0,
-            this._el_1,
-            this._text_2,
-            this._el_3,
-            this._text_4,
-            this._el_5,
-            this._text_6,
-            this._el_7,
-            this._text_8,
-            this._text_9,
-            this._text_10,
-            this._el_11,
-            this._text_12,
-            this._el_13,
-            this._text_14,
-            this._text_15,
-            this._text_16
+            this._el_0,
+            this._text_1,
+            this._el_2
         ], [], []);
         return null;
+    };
+    _View_AppComponent0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
+        if (((token === import11.HeaderComponent) && (0 === requestNodeIndex))) {
+            return this._HeaderComponent_0_4;
+        }
+        if (((token === import12.RouterOutlet) && (2 === requestNodeIndex))) {
+            return this._RouterOutlet_2_5;
+        }
+        return notFoundResult;
+    };
+    _View_AppComponent0.prototype.destroyInternal = function () {
+        this._RouterOutlet_2_5.ngOnDestroy();
     };
     return _View_AppComponent0;
 }(import1.AppView));

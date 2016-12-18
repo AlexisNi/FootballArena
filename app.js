@@ -4,10 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+
+var userRoutes= require('./routes/user');
 
 var appRoutes = require('./routes/app');
 
 var app = express();
+
+mongoose.connect('Alexis:315551@ds139288.mlab.com:39288/quiz_app');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,6 +36,7 @@ app.use(function (req, res, next) {
 
 
 app.use('/', appRoutes);
+app.use('/user',userRoutes);
 
 
 app.use(function (req, res, next) {
