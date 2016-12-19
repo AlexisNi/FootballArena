@@ -13,7 +13,7 @@ export class SocketService{
 
     sendUserId(userId:string)
     {
-        this.socket=io(this.Lh+'game',{query:{userId:userId}});
+        this.socket=io(this.Heroku+'game',{query:{userId:userId}});
         this.socket.emit('get-userId',userId);
 
     }
