@@ -145,6 +145,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
       import39.MainComponentNgFactory,
       import40.ArenaComponentNgFactory,
       import41.QuestionStructureNgFactory,
+      import41.QuestionStructureNgFactory,
       import42.AuthenticationComponentNgFactory,
       import43.SignUpComponentNgFactory,
       import44.LoginComponentNgFactory,
@@ -315,6 +316,11 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
             {
               path: 'arena',
               component: import55.ArenaComponent
+            }
+            ,
+            {
+              path: 'arena/:id',
+              component: import56.QuestionStructure
             }
 
           ]
