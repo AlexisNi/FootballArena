@@ -10,7 +10,7 @@ export var SocketService = (function () {
         this.Heroku = 'https://footballarenaquiz.herokuapp.com/';
     }
     SocketService.prototype.sendUserId = function (userId) {
-        this.socket = io(this.Lh + 'game', { query: { userId: userId } });
+        this.socket = io(this.Heroku + 'game', { query: { userId: userId } });
         this.socket.emit('get-userId', userId);
     };
     SocketService.prototype.enterArena = function (arenaId, userId) {
