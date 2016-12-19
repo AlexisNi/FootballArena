@@ -48,51 +48,54 @@ import * as import36 from './questions/questionServices/question.service';
 import * as import37 from './questions/questionServices/questionAnswer.service';
 import * as import39 from './MainApp/main.component.ngfactory';
 import * as import40 from './MainApp/arena/arena.component.ngfactory';
-import * as import41 from './auth/authentication.component.ngfactory';
-import * as import42 from './auth/signup.component.ngfactory';
-import * as import43 from './auth/login.component.ngfactory';
-import * as import44 from './auth/logout.component.ngfactory';
-import * as import45 from './app.component.ngfactory';
-import * as import46 from '@angular/core/src/application_tokens';
-import * as import47 from '@angular/platform-browser/src/dom/events/dom_events';
-import * as import48 from '@angular/platform-browser/src/dom/events/key_events';
-import * as import49 from '@angular/core/src/zone/ng_zone';
-import * as import50 from '@angular/platform-browser/src/dom/debug/ng_probe';
-import * as import51 from '@angular/common/src/location/platform_location';
-import * as import52 from '@angular/common/src/location/location_strategy';
-import * as import53 from './MainApp/main.component';
-import * as import54 from './MainApp/arena/arena.component';
-import * as import55 from './auth/authentication.component';
-import * as import56 from './auth/signup.component';
-import * as import57 from './auth/login.component';
-import * as import58 from './auth/logout.component';
-import * as import59 from '@angular/router/src/router';
-import * as import60 from '@angular/core/src/console';
-import * as import61 from '@angular/core/src/i18n/tokens';
-import * as import62 from '@angular/core/src/error_handler';
-import * as import63 from '@angular/platform-browser/src/dom/dom_tokens';
-import * as import64 from '@angular/platform-browser/src/dom/animation_driver';
-import * as import65 from '@angular/core/src/render/api';
-import * as import66 from '@angular/core/src/security';
-import * as import67 from '@angular/core/src/change_detection/differs/iterable_differs';
-import * as import68 from '@angular/core/src/change_detection/differs/keyvalue_differs';
-import * as import69 from '@angular/http/src/interfaces';
-import * as import70 from '@angular/http/src/http';
-import * as import71 from '@angular/core/src/linker/ng_module_factory_loader';
-import * as import72 from '@angular/router/src/router_config_loader';
-import * as import73 from '@angular/router/src/router_state';
+import * as import41 from './questions/question-structure.component.ngfactory';
+import * as import42 from './auth/authentication.component.ngfactory';
+import * as import43 from './auth/signup.component.ngfactory';
+import * as import44 from './auth/login.component.ngfactory';
+import * as import45 from './auth/logout.component.ngfactory';
+import * as import46 from './app.component.ngfactory';
+import * as import47 from '@angular/core/src/application_tokens';
+import * as import48 from '@angular/platform-browser/src/dom/events/dom_events';
+import * as import49 from '@angular/platform-browser/src/dom/events/key_events';
+import * as import50 from '@angular/core/src/zone/ng_zone';
+import * as import51 from '@angular/platform-browser/src/dom/debug/ng_probe';
+import * as import52 from '@angular/common/src/location/platform_location';
+import * as import53 from '@angular/common/src/location/location_strategy';
+import * as import54 from './MainApp/main.component';
+import * as import55 from './MainApp/arena/arena.component';
+import * as import56 from './questions/question-structure.component';
+import * as import57 from './auth/authentication.component';
+import * as import58 from './auth/signup.component';
+import * as import59 from './auth/login.component';
+import * as import60 from './auth/logout.component';
+import * as import61 from '@angular/router/src/router';
+import * as import62 from '@angular/core/src/console';
+import * as import63 from '@angular/core/src/i18n/tokens';
+import * as import64 from '@angular/core/src/error_handler';
+import * as import65 from '@angular/platform-browser/src/dom/dom_tokens';
+import * as import66 from '@angular/platform-browser/src/dom/animation_driver';
+import * as import67 from '@angular/core/src/render/api';
+import * as import68 from '@angular/core/src/security';
+import * as import69 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import70 from '@angular/core/src/change_detection/differs/keyvalue_differs';
+import * as import71 from '@angular/http/src/interfaces';
+import * as import72 from '@angular/http/src/http';
+import * as import73 from '@angular/core/src/linker/ng_module_factory_loader';
+import * as import74 from '@angular/router/src/router_config_loader';
+import * as import75 from '@angular/router/src/router_state';
 var AppModuleInjector = (function (_super) {
     __extends(AppModuleInjector, _super);
     function AppModuleInjector(parent) {
         _super.call(this, parent, [
             import39.MainComponentNgFactory,
             import40.ArenaComponentNgFactory,
-            import41.AuthenticationComponentNgFactory,
-            import42.SignUpComponentNgFactory,
-            import43.LoginComponentNgFactory,
-            import44.LogoutComponentNgFactory,
-            import45.AppComponentNgFactory
-        ], [import45.AppComponentNgFactory]);
+            import41.QuestionStructureNgFactory,
+            import42.AuthenticationComponentNgFactory,
+            import43.SignUpComponentNgFactory,
+            import44.LoginComponentNgFactory,
+            import45.LogoutComponentNgFactory,
+            import46.AppComponentNgFactory
+        ], [import46.AppComponentNgFactory]);
     }
     Object.defineProperty(AppModuleInjector.prototype, "_LOCALE_ID_10", {
         get: function () {
@@ -137,7 +140,7 @@ var AppModuleInjector = (function (_super) {
     Object.defineProperty(AppModuleInjector.prototype, "_APP_ID_18", {
         get: function () {
             if ((this.__APP_ID_18 == null)) {
-                (this.__APP_ID_18 = import46._appIdRandomProviderFactory());
+                (this.__APP_ID_18 = import47._appIdRandomProviderFactory());
             }
             return this.__APP_ID_18;
         },
@@ -168,8 +171,8 @@ var AppModuleInjector = (function (_super) {
         get: function () {
             if ((this.__EVENT_MANAGER_PLUGINS_21 == null)) {
                 (this.__EVENT_MANAGER_PLUGINS_21 = [
-                    new import47.DomEventsPlugin(),
-                    new import48.KeyEventsPlugin(),
+                    new import48.DomEventsPlugin(),
+                    new import49.KeyEventsPlugin(),
                     new import14.HammerGesturesPlugin(this._HAMMER_GESTURE_CONFIG_20)
                 ]);
             }
@@ -181,7 +184,7 @@ var AppModuleInjector = (function (_super) {
     Object.defineProperty(AppModuleInjector.prototype, "_EventManager_22", {
         get: function () {
             if ((this.__EventManager_22 == null)) {
-                (this.__EventManager_22 = new import15.EventManager(this._EVENT_MANAGER_PLUGINS_21, this.parent.get(import49.NgZone)));
+                (this.__EventManager_22 = new import15.EventManager(this._EVENT_MANAGER_PLUGINS_21, this.parent.get(import50.NgZone)));
             }
             return this.__EventManager_22;
         },
@@ -221,7 +224,7 @@ var AppModuleInjector = (function (_super) {
     Object.defineProperty(AppModuleInjector.prototype, "_RootRenderer_26", {
         get: function () {
             if ((this.__RootRenderer_26 == null)) {
-                (this.__RootRenderer_26 = import50._createConditionalRootRenderer(this._DomRootRenderer_25, this.parent.get(import50.NgProbeToken, null)));
+                (this.__RootRenderer_26 = import51._createConditionalRootRenderer(this._DomRootRenderer_25, this.parent.get(import51.NgProbeToken, null)));
             }
             return this.__RootRenderer_26;
         },
@@ -391,7 +394,7 @@ var AppModuleInjector = (function (_super) {
     Object.defineProperty(AppModuleInjector.prototype, "_LocationStrategy_43", {
         get: function () {
             if ((this.__LocationStrategy_43 == null)) {
-                (this.__LocationStrategy_43 = import7.provideLocationStrategy(this.parent.get(import51.PlatformLocation), this.parent.get(import52.APP_BASE_HREF, null), this._ROUTER_CONFIGURATION_42));
+                (this.__LocationStrategy_43 = import7.provideLocationStrategy(this.parent.get(import52.PlatformLocation), this.parent.get(import53.APP_BASE_HREF, null), this._ROUTER_CONFIGURATION_42));
             }
             return this.__LocationStrategy_43;
         },
@@ -449,7 +452,7 @@ var AppModuleInjector = (function (_super) {
                         },
                         {
                             path: 'mainApp',
-                            component: import53.MainComponent,
+                            component: import54.MainComponent,
                             children: [
                                 {
                                     path: '',
@@ -458,13 +461,17 @@ var AppModuleInjector = (function (_super) {
                                 },
                                 {
                                     path: 'arena',
-                                    component: import54.ArenaComponent
+                                    component: import55.ArenaComponent
                                 }
                             ]
                         },
                         {
+                            path: 'questions',
+                            component: import56.QuestionStructure
+                        },
+                        {
                             path: 'auth',
-                            component: import55.AuthenticationComponent,
+                            component: import57.AuthenticationComponent,
                             children: [
                                 {
                                     path: '',
@@ -473,15 +480,15 @@ var AppModuleInjector = (function (_super) {
                                 },
                                 {
                                     path: 'signup',
-                                    component: import56.SignUpComponent
+                                    component: import58.SignUpComponent
                                 },
                                 {
                                     path: 'signin',
-                                    component: import57.LoginComponent
+                                    component: import59.LoginComponent
                                 },
                                 {
                                     path: 'logout',
-                                    component: import58.LogoutComponent
+                                    component: import60.LogoutComponent
                                 }
                             ]
                         }
@@ -599,15 +606,15 @@ var AppModuleInjector = (function (_super) {
         this._BrowserModule_2 = new import4.BrowserModule(this.parent.get(import4.BrowserModule, null));
         this._InternalFormsSharedModule_3 = new import5.InternalFormsSharedModule();
         this._FormsModule_4 = new import6.FormsModule();
-        this._ROUTER_FORROOT_GUARD_5 = import7.provideForRootGuard(this.parent.get(import59.Router, null));
+        this._ROUTER_FORROOT_GUARD_5 = import7.provideForRootGuard(this.parent.get(import61.Router, null));
         this._RouterModule_6 = new import7.RouterModule(this._ROUTER_FORROOT_GUARD_5);
         this._ReactiveFormsModule_7 = new import6.ReactiveFormsModule();
         this._HttpModule_8 = new import8.HttpModule();
         this._AppModule_9 = new import1.AppModule();
         this._ErrorHandler_12 = import4.errorHandler();
         this._ApplicationInitStatus_13 = new import10.ApplicationInitStatus(this.parent.get(import10.APP_INITIALIZER, null));
-        this._Testability_14 = new import11.Testability(this.parent.get(import49.NgZone));
-        this._ApplicationRef__15 = new import12.ApplicationRef_(this.parent.get(import49.NgZone), this.parent.get(import60.Console), this, this._ErrorHandler_12, this, this._ApplicationInitStatus_13, this.parent.get(import11.TestabilityRegistry, null), this._Testability_14);
+        this._Testability_14 = new import11.Testability(this.parent.get(import50.NgZone));
+        this._ApplicationRef__15 = new import12.ApplicationRef_(this.parent.get(import50.NgZone), this.parent.get(import62.Console), this, this._ErrorHandler_12, this, this._ApplicationInitStatus_13, this.parent.get(import11.TestabilityRegistry, null), this._Testability_14);
         return this._AppModule_9;
     };
     AppModuleInjector.prototype.getInternal = function (token, notFoundResult) {
@@ -641,13 +648,13 @@ var AppModuleInjector = (function (_super) {
         if ((token === import1.AppModule)) {
             return this._AppModule_9;
         }
-        if ((token === import61.LOCALE_ID)) {
+        if ((token === import63.LOCALE_ID)) {
             return this._LOCALE_ID_10;
         }
         if ((token === import9.NgLocalization)) {
             return this._NgLocalization_11;
         }
-        if ((token === import62.ErrorHandler)) {
+        if ((token === import64.ErrorHandler)) {
             return this._ErrorHandler_12;
         }
         if ((token === import10.ApplicationInitStatus)) {
@@ -665,10 +672,10 @@ var AppModuleInjector = (function (_super) {
         if ((token === import13.Compiler)) {
             return this._Compiler_17;
         }
-        if ((token === import46.APP_ID)) {
+        if ((token === import47.APP_ID)) {
             return this._APP_ID_18;
         }
-        if ((token === import63.DOCUMENT)) {
+        if ((token === import65.DOCUMENT)) {
             return this._DOCUMENT_19;
         }
         if ((token === import14.HAMMER_GESTURE_CONFIG)) {
@@ -683,28 +690,28 @@ var AppModuleInjector = (function (_super) {
         if ((token === import16.DomSharedStylesHost)) {
             return this._DomSharedStylesHost_23;
         }
-        if ((token === import64.AnimationDriver)) {
+        if ((token === import66.AnimationDriver)) {
             return this._AnimationDriver_24;
         }
         if ((token === import17.DomRootRenderer)) {
             return this._DomRootRenderer_25;
         }
-        if ((token === import65.RootRenderer)) {
+        if ((token === import67.RootRenderer)) {
             return this._RootRenderer_26;
         }
         if ((token === import18.DomSanitizer)) {
             return this._DomSanitizer_27;
         }
-        if ((token === import66.Sanitizer)) {
+        if ((token === import68.Sanitizer)) {
             return this._Sanitizer_28;
         }
         if ((token === import19.ViewUtils)) {
             return this._ViewUtils_29;
         }
-        if ((token === import67.IterableDiffers)) {
+        if ((token === import69.IterableDiffers)) {
             return this._IterableDiffers_30;
         }
-        if ((token === import68.KeyValueDiffers)) {
+        if ((token === import70.KeyValueDiffers)) {
             return this._KeyValueDiffers_31;
         }
         if ((token === import16.SharedStylesHost)) {
@@ -725,7 +732,7 @@ var AppModuleInjector = (function (_super) {
         if ((token === import24.ResponseOptions)) {
             return this._ResponseOptions_37;
         }
-        if ((token === import69.XSRFStrategy)) {
+        if ((token === import71.XSRFStrategy)) {
             return this._XSRFStrategy_38;
         }
         if ((token === import25.XHRBackend)) {
@@ -734,13 +741,13 @@ var AppModuleInjector = (function (_super) {
         if ((token === import26.RequestOptions)) {
             return this._RequestOptions_40;
         }
-        if ((token === import70.Http)) {
+        if ((token === import72.Http)) {
             return this._Http_41;
         }
         if ((token === import7.ROUTER_CONFIGURATION)) {
             return this._ROUTER_CONFIGURATION_42;
         }
-        if ((token === import52.LocationStrategy)) {
+        if ((token === import53.LocationStrategy)) {
             return this._LocationStrategy_43;
         }
         if ((token === import27.Location)) {
@@ -752,19 +759,19 @@ var AppModuleInjector = (function (_super) {
         if ((token === import29.RouterOutletMap)) {
             return this._RouterOutletMap_46;
         }
-        if ((token === import71.NgModuleFactoryLoader)) {
+        if ((token === import73.NgModuleFactoryLoader)) {
             return this._NgModuleFactoryLoader_47;
         }
-        if ((token === import72.ROUTES)) {
+        if ((token === import74.ROUTES)) {
             return this._ROUTES_48;
         }
-        if ((token === import59.Router)) {
+        if ((token === import61.Router)) {
             return this._Router_49;
         }
-        if ((token === import73.ActivatedRoute)) {
+        if ((token === import75.ActivatedRoute)) {
             return this._ActivatedRoute_50;
         }
-        if ((token === import46.APP_BOOTSTRAP_LISTENER)) {
+        if ((token === import47.APP_BOOTSTRAP_LISTENER)) {
             return this._APP_BOOTSTRAP_LISTENER_51;
         }
         if ((token === import31.AuthService)) {
