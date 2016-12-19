@@ -21,9 +21,7 @@ export class LoginComponent implements OnInit{
                 data=>{
                     localStorage.setItem('token',data.token);
                     localStorage.setItem('userId',data.userId);
-/*
                     this.router.navigateByUrl('mainApp');
-*/
                 },
                 error=>console.error(error)
             );

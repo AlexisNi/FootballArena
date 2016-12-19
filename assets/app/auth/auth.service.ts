@@ -5,12 +5,15 @@ import 'rxjs/Rx';
 import {Observable} from "rxjs";
 @Injectable()
 export  class AuthService{
+    public Lh='http://localhost:3000/';
+    public Heroku='https://footballarenaquiz.herokuapp.com/';
     constructor(private http:Http){}
+
 
     signup(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('https://footballarenaquiz.herokuapp.com/user', body, {headers: headers})
+        return this.http.post(this.Lh+'user', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) =>Observable.throw(error.json()));
     }
@@ -19,7 +22,7 @@ export  class AuthService{
     signin(user: User) {
         const body = JSON.stringify(user);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('https://footballarenaquiz.herokuapp.com/user/signin', body, {headers: headers})
+        return this.http.post(this.Lh+'user/signin', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) =>Observable.throw(error.json()));
                 }
@@ -27,7 +30,7 @@ export  class AuthService{
 
     getUser(){
         const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
-        return this.http.get('https://footballarenaquiz.herokuapp.com//user'+token)
+        return this.http.get(this.Lh+'user'+token)
             .map((response : Response)=>{
                 const user=response.json().obj.lastName;
 

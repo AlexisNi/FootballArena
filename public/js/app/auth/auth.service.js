@@ -5,24 +5,26 @@ import { Observable } from "rxjs";
 export var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
+        this.Lh = 'http://localhost:3000/';
+        this.Heroku = 'https://footballarenaquiz.herokuapp.com/';
     }
     AuthService.prototype.signup = function (user) {
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post('https://footballarenaquiz.herokuapp.com/user', body, { headers: headers })
+        return this.http.post(this.Lh + 'user', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) { return Observable.throw(error.json()); });
     };
     AuthService.prototype.signin = function (user) {
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post('https://footballarenaquiz.herokuapp.com/user/signin', body, { headers: headers })
+        return this.http.post(this.Lh + 'user/signin', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) { return Observable.throw(error.json()); });
     };
     AuthService.prototype.getUser = function () {
         var token = localStorage.getItem('token') ? '?token=' + localStorage.getItem('token') : '';
-        return this.http.get('https://footballarenaquiz.herokuapp.com//user' + token)
+        return this.http.get(this.Lh + 'user' + token)
             .map(function (response) {
             var user = response.json().obj.lastName;
             return user;

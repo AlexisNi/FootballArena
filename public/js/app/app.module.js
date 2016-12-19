@@ -10,14 +10,35 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { routing } from "./app.routing";
 import { HttpModule } from "@angular/http";
 import { AuthService } from "./auth/auth.service";
+import { ArenaComponent } from "./MainApp/arena/arena.component";
+import { GameListcomponent } from "./MainApp/game-list/game-list.component";
+import { GameItemComponent } from "./MainApp/game-list/game-item.component";
+import { GameListServices } from "./MainApp/game-list/game-list.services";
+import { SocketService } from "./MainApp/socketHanding/socket.service";
+import { MainComponent } from "./MainApp/main.component";
+import { OpponentComponentFind } from "./MainApp/opponent-find/opponent-find.component";
+import { OpponentFindService } from "./MainApp/opponent-find/opponent-find.sevices";
 export var AppModule = (function () {
     function AppModule() {
     }
     AppModule.decorators = [
         { type: NgModule, args: [{
-                    declarations: [AppComponent, LoginComponent, AuthenticationComponent, SignUpComponent, LogoutComponent, HeaderComponent],
+                    declarations: [AppComponent,
+                        LoginComponent,
+                        AuthenticationComponent,
+                        SignUpComponent,
+                        LogoutComponent,
+                        HeaderComponent,
+                        ArenaComponent,
+                        GameListcomponent,
+                        GameItemComponent,
+                        OpponentComponentFind,
+                        MainComponent],
                     imports: [BrowserModule, FormsModule, routing, ReactiveFormsModule, HttpModule],
-                    providers: [AuthService],
+                    providers: [AuthService,
+                        GameListServices,
+                        OpponentFindService,
+                        SocketService],
                     bootstrap: [AppComponent]
                 },] },
     ];

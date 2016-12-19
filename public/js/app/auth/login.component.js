@@ -9,14 +9,13 @@ export var LoginComponent = (function () {
         this.router = router;
     }
     LoginComponent.prototype.onSubmit = function () {
+        var _this = this;
         var user = new User(this.myForm.value.email, this.myForm.value.password);
         this.authservice.signin(user)
             .subscribe(function (data) {
             localStorage.setItem('token', data.token);
             localStorage.setItem('userId', data.userId);
-            /*
-                                this.router.navigateByUrl('mainApp');
-            */
+            _this.router.navigateByUrl('mainApp');
         }, function (error) { return console.error(error); });
         this.myForm.reset();
     };
