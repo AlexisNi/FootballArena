@@ -289,7 +289,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
       if ((this.__ROUTES_48 == (null as any))) { (this.__ROUTES_48 = [[
         {
           path: '',
-          redirectTo: 'mainApp',
+          redirectTo: 'auth',
           pathMatch: 'full'
         }
         ,

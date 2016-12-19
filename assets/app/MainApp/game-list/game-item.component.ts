@@ -7,11 +7,9 @@ import {AuthService} from "../../auth/auth.service";
 /*
 import {ModalComponent} from "ng2-bs3-modal/components/modal";
 */
-import {Data} from "@angular/router";
 import {ArenaUserId} from "../models/arenaUserId";
 import {GameListServices} from "./game-list.services";
 import {PlayerResult} from "./models/playerResults";
-import {SocketService} from "../socketHanding/socket.service";
 
 
 @Component({

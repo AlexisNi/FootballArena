@@ -9,7 +9,7 @@ import {QUESTION_ROUTES} from "./MainApp/mainApp.routes";
 
 
 const APP_ROUTES:Routes =[
-    {path:'',redirectTo:'mainApp',pathMatch:'full'},
+    {path:'',redirectTo:'auth',pathMatch:'full'},
     {path:'mainApp',component:MainComponent,children:QUESTION_ROUTES},
     {path:'auth',component:AuthenticationComponent,children:AUTH_ROUTES}
 

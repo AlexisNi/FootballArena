@@ -441,7 +441,7 @@ var AppModuleInjector = (function (_super) {
                 (this.__ROUTES_48 = [[
                         {
                             path: '',
-                            redirectTo: 'mainApp',
+                            redirectTo: 'auth',
                             pathMatch: 'full'
                         },
                         {

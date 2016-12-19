@@ -1,6 +1,5 @@
 import {Component, OnInit, OnDestroy} from "@angular/core";
 import {ArenaUsers} from "../models/arenaUsers";
-import {GameListServices} from "./game-list.services";
 import {SocketService} from "../socketHanding/socket.service";
 import {AuthService} from "../../auth/auth.service";
 

@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl,  Validators} from "@angular/forms";
 import {User} from "../../auth/user";
-import {ArenaUsers} from "../../../../../../WebstormProjects/footbalQuiz/assets/app/MainApp/models/arenaUsers";
-import {ArenaPlayers} from "../../../../../../WebstormProjects/footbalQuiz/assets/app/MainApp/models/arenaPlayers";
+
 import {OpponentFindService} from "./opponent-find.sevices";
 import {SocketService} from "../socketHanding/socket.service";
+import {ArenaPlayers} from "../models/arenaPlayers";
 
 
 @Component({

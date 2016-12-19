@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../auth/auth.service";
-import {SocketService} from "../socketHanding/socket.service";
 
 
 @Component({

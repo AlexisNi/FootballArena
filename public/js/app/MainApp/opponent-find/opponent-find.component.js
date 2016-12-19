@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 import { User } from "../../auth/user";
-import { ArenaPlayers } from "../../../../../../WebstormProjects/footbalQuiz/assets/app/MainApp/models/arenaPlayers";
 import { OpponentFindService } from "./opponent-find.sevices";
 import { SocketService } from "../socketHanding/socket.service";
+import { ArenaPlayers } from "../models/arenaPlayers";
 export var OpponentComponentFind = (function () {
     function OpponentComponentFind(opponentFindService, socketService) {
         this.opponentFindService = opponentFindService;
