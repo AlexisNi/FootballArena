@@ -18,6 +18,10 @@ import {SocketService} from "./MainApp/socketHanding/socket.service";
 import {MainComponent} from "./MainApp/main.component";
 import {OpponentComponentFind} from "./MainApp/opponent-find/opponent-find.component";
 import {OpponentFindService} from "./MainApp/opponent-find/opponent-find.sevices";
+import {ArenaServices} from "./questions/questionServices/arena.service";
+import {QuestionServices} from "./questions/questionServices/question.service";
+import {QuestionAnswerServices} from "./questions/questionServices/questionAnswer.service";
+import {QuestionStructure} from "./questions/question-structure.component";
 @NgModule({
     declarations:[AppComponent,
         LoginComponent,
@@ -29,14 +33,18 @@ import {OpponentFindService} from "./MainApp/opponent-find/opponent-find.sevices
         GameListcomponent,
         GameItemComponent,
         OpponentComponentFind,
-        MainComponent],
+        MainComponent,
+        QuestionStructure],
 
     imports:[BrowserModule,FormsModule,routing,ReactiveFormsModule,HttpModule],
 
     providers:[AuthService,
         GameListServices,
         OpponentFindService,
-        SocketService],
+        SocketService,
+        ArenaServices,
+        QuestionServices,
+        QuestionAnswerServices],
 
     bootstrap:[AppComponent]
 
