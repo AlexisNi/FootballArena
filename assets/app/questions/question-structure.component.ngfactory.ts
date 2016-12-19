@@ -21,10 +21,20 @@ import * as import13 from './questionServices/questionAnswer.service';
 import * as import14 from '@angular/router/src/router';
 import * as import15 from '@angular/core/src/metadata/view';
 import * as import16 from '@angular/core/src/linker/component_factory';
-import * as import17 from '@angular/common/src/directives/ng_if';
-import * as import18 from '@angular/core/src/linker/template_ref';
-import * as import19 from '@angular/common/src/directives/ng_for';
-import * as import20 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import17 from '@angular/core/src/linker/query_list';
+import * as import18 from '@angular/common/src/directives/ng_if';
+import * as import19 from 'ng2-bs3-modal/components/modal';
+import * as import20 from 'ng2-bs3-modal/components/modal-header';
+import * as import21 from 'ng2-bs3-modal/components/modal-body';
+import * as import22 from 'ng2-bs3-modal/components/modal-footer';
+import * as import23 from '@angular/core/src/linker/template_ref';
+import * as import24 from '../../../node_modules/ng2-bs3-modal/components/modal.ngfactory';
+import * as import25 from '@angular/core/src/linker/element_ref';
+import * as import26 from '../../../node_modules/ng2-bs3-modal/components/modal-header.ngfactory';
+import * as import27 from '../../../node_modules/ng2-bs3-modal/components/modal-body.ngfactory';
+import * as import28 from '../../../node_modules/ng2-bs3-modal/components/modal-footer.ngfactory';
+import * as import29 from '@angular/common/src/directives/ng_for';
+import * as import30 from '@angular/core/src/change_detection/differs/iterable_differs';
 var renderType_QuestionStructure_Host:import0.RenderComponentType = (null as any);
 class _View_QuestionStructure_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -64,6 +74,7 @@ export const QuestionStructureNgFactory:import16.ComponentFactory<import3.Questi
 const styles_QuestionStructure:any[] = [];
 var renderType_QuestionStructure:import0.RenderComponentType = (null as any);
 class _View_QuestionStructure0 extends import1.AppView<import3.QuestionStructure> {
+  _viewQuery_myModal_0:import17.QueryList<any>;
   _text_0:any;
   _el_1:any;
   _text_2:any;
@@ -71,28 +82,128 @@ class _View_QuestionStructure0 extends import1.AppView<import3.QuestionStructure
   _anchor_4:any;
   /*private*/ _appEl_4:import2.AppElement;
   _TemplateRef_4_5:any;
-  _NgIf_4_6:import17.NgIf;
+  _NgIf_4_6:import18.NgIf;
   _text_5:any;
-  _text_6:any;
+  _el_6:any;
+  /*private*/ _appEl_6:import2.AppElement;
+  _ModalComponent_6_4:import19.ModalComponent;
+  _text_7:any;
+  _el_8:any;
+  /*private*/ _appEl_8:import2.AppElement;
+  _ModalHeaderComponent_8_4:import20.ModalHeaderComponent;
+  _text_9:any;
+  _el_10:any;
+  _text_11:any;
+  _text_12:any;
+  _text_13:any;
+  _el_14:any;
+  /*private*/ _appEl_14:import2.AppElement;
+  _ModalBodyComponent_14_4:import21.ModalBodyComponent;
+  _text_15:any;
+  _text_16:any;
+  _el_17:any;
+  /*private*/ _appEl_17:import2.AppElement;
+  _ModalFooterComponent_17_4:import22.ModalFooterComponent;
+  _text_18:any;
+  _el_19:any;
+  _text_20:any;
+  _text_21:any;
+  _text_22:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
+  /*private*/ _expr_2:any;
+  /*private*/ _expr_3:any;
+  /*private*/ _expr_4:any;
+  /*private*/ _expr_5:any;
+  /*private*/ _expr_6:any;
+  /*private*/ _expr_7:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_QuestionStructure0,renderType_QuestionStructure,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
+    this._viewQuery_myModal_0 = new import17.QueryList<any>();
     this._text_0 = this.renderer.createText(parentRenderNode,'    ',(null as any));
     this._el_1 = this.renderer.createElement(parentRenderNode,'h3',(null as any));
     this._text_2 = this.renderer.createText(this._el_1,'',(null as any));
     this._text_3 = this.renderer.createText(parentRenderNode,'\n        ',(null as any));
     this._anchor_4 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
     this._appEl_4 = new import2.AppElement(4,(null as any),this,this._anchor_4);
-    this._TemplateRef_4_5 = new import18.TemplateRef_(this._appEl_4,viewFactory_QuestionStructure1);
-    this._NgIf_4_6 = new import17.NgIf(this._appEl_4.vcRef,this._TemplateRef_4_5);
-    this._text_5 = this.renderer.createText(parentRenderNode,'\n\n\n    ',(null as any));
-    this._text_6 = this.renderer.createText(parentRenderNode,'\n\n\n',(null as any));
+    this._TemplateRef_4_5 = new import23.TemplateRef_(this._appEl_4,viewFactory_QuestionStructure1);
+    this._NgIf_4_6 = new import18.NgIf(this._appEl_4.vcRef,this._TemplateRef_4_5);
+    this._text_5 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
+    this._el_6 = this.renderer.createElement(parentRenderNode,'modal',(null as any));
+    this.renderer.setElementAttribute(this._el_6,'class','modal');
+    this.renderer.setElementAttribute(this._el_6,'role','dialog');
+    this.renderer.setElementAttribute(this._el_6,'tabindex','-1');
+    this._appEl_6 = new import2.AppElement(6,(null as any),this,this._el_6);
+    var compView_6:any = import24.viewFactory_ModalComponent0(this.viewUtils,this.injector(6),this._appEl_6);
+    this._ModalComponent_6_4 = new import19.ModalComponent(new import25.ElementRef(this._el_6));
+    this._appEl_6.initComponent(this._ModalComponent_6_4,[],compView_6);
+    this._text_7 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._el_8 = this.renderer.createElement((null as any),'modal-header',(null as any));
+    this._appEl_8 = new import2.AppElement(8,6,this,this._el_8);
+    var compView_8:any = import26.viewFactory_ModalHeaderComponent0(this.viewUtils,this.injector(8),this._appEl_8);
+    this._ModalHeaderComponent_8_4 = new import20.ModalHeaderComponent(this._ModalComponent_6_4);
+    this._appEl_8.initComponent(this._ModalHeaderComponent_8_4,[],compView_8);
+    this._text_9 = this.renderer.createText((null as any),'\n        ',(null as any));
+    this._el_10 = this.renderer.createElement((null as any),'h4',(null as any));
+    this.renderer.setElementAttribute(this._el_10,'class','modal-title');
+    this._text_11 = this.renderer.createText(this._el_10,'I\'m a modal!',(null as any));
+    this._text_12 = this.renderer.createText((null as any),'\n    ',(null as any));
+      compView_8.create(this._ModalHeaderComponent_8_4,[[].concat([
+        this._text_9,
+        this._el_10,
+        this._text_12
+      ]
+    )],(null as any));
+    this._text_13 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._el_14 = this.renderer.createElement((null as any),'modal-body',(null as any));
+    this._appEl_14 = new import2.AppElement(14,6,this,this._el_14);
+    var compView_14:any = import27.viewFactory_ModalBodyComponent0(this.viewUtils,this.injector(14),this._appEl_14);
+    this._ModalBodyComponent_14_4 = new import21.ModalBodyComponent();
+    this._appEl_14.initComponent(this._ModalBodyComponent_14_4,[],compView_14);
+    this._text_15 = this.renderer.createText((null as any),'\n        Sorry,you lost! You answered correct :\n    ',(null as any));
+    compView_14.create(this._ModalBodyComponent_14_4,[[].concat([this._text_15])],(null as any));
+    this._text_16 = this.renderer.createText((null as any),'\n        ',(null as any));
+    this._el_17 = this.renderer.createElement((null as any),'modal-footer',(null as any));
+    this._appEl_17 = new import2.AppElement(17,6,this,this._el_17);
+    var compView_17:any = import28.viewFactory_ModalFooterComponent0(this.viewUtils,this.injector(17),this._appEl_17);
+    this._ModalFooterComponent_17_4 = new import22.ModalFooterComponent(this._ModalComponent_6_4);
+    this._appEl_17.initComponent(this._ModalFooterComponent_17_4,[],compView_17);
+    this._text_18 = this.renderer.createText((null as any),'\n                ',(null as any));
+    this._el_19 = this.renderer.createElement((null as any),'button',(null as any));
+    this.renderer.setElementAttribute(this._el_19,'class','btn btn-primary');
+    this.renderer.setElementAttribute(this._el_19,'type','button');
+    this._text_20 = this.renderer.createText(this._el_19,'Ok',(null as any));
+    this._text_21 = this.renderer.createText((null as any),'\n        ',(null as any));
+      compView_17.create(this._ModalFooterComponent_17_4,[[].concat([
+        this._text_18,
+        this._el_19,
+        this._text_21
+      ]
+    )],(null as any));
+      compView_6.create(this._ModalComponent_6_4,[[].concat([
+        this._text_7,
+        this._el_8,
+        this._text_13,
+        this._el_14,
+        this._text_16,
+        this._el_17
+      ]
+    )],(null as any));
+    this._text_22 = this.renderer.createText(parentRenderNode,'\n\n\n\n\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
+    this._expr_2 = import7.UNINITIALIZED;
+    this._expr_3 = import7.UNINITIALIZED;
+    this._expr_4 = import7.UNINITIALIZED;
+    this._expr_5 = import7.UNINITIALIZED;
+    this._expr_6 = import7.UNINITIALIZED;
+    this._expr_7 = import7.UNINITIALIZED;
+    var disposable_0:Function = this.renderer.listen(this._el_19,'click',this.eventHandler(this._handle_click_19_0.bind(this)));
+    this._viewQuery_myModal_0.reset([this._ModalComponent_6_4]);
+    this.context.modal = this._viewQuery_myModal_0.first;
     this.init([],[
       this._text_0,
       this._el_1,
@@ -100,14 +211,34 @@ class _View_QuestionStructure0 extends import1.AppView<import3.QuestionStructure
       this._text_3,
       this._anchor_4,
       this._text_5,
-      this._text_6
+      this._el_6,
+      this._text_7,
+      this._el_8,
+      this._text_9,
+      this._el_10,
+      this._text_11,
+      this._text_12,
+      this._text_13,
+      this._el_14,
+      this._text_15,
+      this._text_16,
+      this._el_17,
+      this._text_18,
+      this._el_19,
+      this._text_20,
+      this._text_21,
+      this._text_22
     ]
-    ,[],[]);
+    ,[disposable_0],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import18.TemplateRef) && (4 === requestNodeIndex))) { return this._TemplateRef_4_5; }
-    if (((token === import17.NgIf) && (4 === requestNodeIndex))) { return this._NgIf_4_6; }
+    if (((token === import23.TemplateRef) && (4 === requestNodeIndex))) { return this._TemplateRef_4_5; }
+    if (((token === import18.NgIf) && (4 === requestNodeIndex))) { return this._NgIf_4_6; }
+    if (((token === import20.ModalHeaderComponent) && ((8 <= requestNodeIndex) && (requestNodeIndex <= 12)))) { return this._ModalHeaderComponent_8_4; }
+    if (((token === import21.ModalBodyComponent) && ((14 <= requestNodeIndex) && (requestNodeIndex <= 15)))) { return this._ModalBodyComponent_14_4; }
+    if (((token === import22.ModalFooterComponent) && ((17 <= requestNodeIndex) && (requestNodeIndex <= 21)))) { return this._ModalFooterComponent_17_4; }
+    if (((token === import19.ModalComponent) && ((6 <= requestNodeIndex) && (requestNodeIndex <= 21)))) { return this._ModalComponent_6_4; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -116,13 +247,51 @@ class _View_QuestionStructure0 extends import1.AppView<import3.QuestionStructure
       this._NgIf_4_6.ngIf = currVal_1;
       this._expr_1 = currVal_1;
     }
+    const currVal_2:any = 'static';
+    if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
+      this._ModalComponent_6_4.backdrop = currVal_2;
+      this._expr_2 = currVal_2;
+    }
+    const currVal_3:any = false;
+    if (import4.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
+      this._ModalComponent_6_4.keyboard = currVal_3;
+      this._expr_3 = currVal_3;
+    }
+    const currVal_7:any = false;
+    if (import4.checkBinding(throwOnChange,this._expr_7,currVal_7)) {
+      this._ModalHeaderComponent_8_4.showClose = currVal_7;
+      this._expr_7 = currVal_7;
+    }
     this.detectContentChildrenChanges(throwOnChange);
     const currVal_0:any = import4.interpolate(1,'',this.context.userName,' you are playing....');
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
       this.renderer.setText(this._text_2,currVal_0);
       this._expr_0 = currVal_0;
     }
+    const currVal_4:any = this._ModalComponent_6_4.fadeClass;
+    if (import4.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
+      this.renderer.setElementClass(this._el_6,'fade',currVal_4);
+      this._expr_4 = currVal_4;
+    }
+    const currVal_5:any = this._ModalComponent_6_4.dataKeyboardAttr;
+    if (import4.checkBinding(throwOnChange,this._expr_5,currVal_5)) {
+      this.renderer.setElementAttribute(this._el_6,'data-keyboard',((currVal_5 == (null as any))? (null as any): currVal_5.toString()));
+      this._expr_5 = currVal_5;
+    }
+    const currVal_6:any = this._ModalComponent_6_4.dataBackdropAttr;
+    if (import4.checkBinding(throwOnChange,this._expr_6,currVal_6)) {
+      this.renderer.setElementAttribute(this._el_6,'data-backdrop',((currVal_6 == (null as any))? (null as any): currVal_6.toString()));
+      this._expr_6 = currVal_6;
+    }
     this.detectViewChildrenChanges(throwOnChange);
+  }
+  destroyInternal():void {
+    this._ModalComponent_6_4.ngOnDestroy();
+  }
+  private _handle_click_19_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.close()) !== false);
+    return (true && pd_0);
   }
 }
 export function viewFactory_QuestionStructure0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.QuestionStructure> {
@@ -135,7 +304,7 @@ class _View_QuestionStructure1 extends import1.AppView<any> {
   _anchor_2:any;
   /*private*/ _appEl_2:import2.AppElement;
   _TemplateRef_2_5:any;
-  _NgFor_2_6:import19.NgFor;
+  _NgFor_2_6:import29.NgFor;
   _text_3:any;
   /*private*/ _expr_0:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
@@ -146,8 +315,8 @@ class _View_QuestionStructure1 extends import1.AppView<any> {
     this._text_1 = this.renderer.createText(this._el_0,'\n            ',(null as any));
     this._anchor_2 = this.renderer.createTemplateAnchor(this._el_0,(null as any));
     this._appEl_2 = new import2.AppElement(2,0,this,this._anchor_2);
-    this._TemplateRef_2_5 = new import18.TemplateRef_(this._appEl_2,viewFactory_QuestionStructure2);
-    this._NgFor_2_6 = new import19.NgFor(this._appEl_2.vcRef,this._TemplateRef_2_5,this.parentInjector.get(import20.IterableDiffers),this.parent.ref);
+    this._TemplateRef_2_5 = new import23.TemplateRef_(this._appEl_2,viewFactory_QuestionStructure2);
+    this._NgFor_2_6 = new import29.NgFor(this._appEl_2.vcRef,this._TemplateRef_2_5,this.parentInjector.get(import30.IterableDiffers),this.parent.ref);
     this._text_3 = this.renderer.createText(this._el_0,'\n        ',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this.init([].concat([this._el_0]),[
@@ -160,8 +329,8 @@ class _View_QuestionStructure1 extends import1.AppView<any> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import18.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
-    if (((token === import19.NgFor) && (2 === requestNodeIndex))) { return this._NgFor_2_6; }
+    if (((token === import23.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
+    if (((token === import29.NgFor) && (2 === requestNodeIndex))) { return this._NgFor_2_6; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -189,7 +358,7 @@ class _View_QuestionStructure2 extends import1.AppView<any> {
   _anchor_2:any;
   /*private*/ _appEl_2:import2.AppElement;
   _TemplateRef_2_5:any;
-  _NgIf_2_6:import17.NgIf;
+  _NgIf_2_6:import18.NgIf;
   _text_3:any;
   /*private*/ _expr_0:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
@@ -201,8 +370,8 @@ class _View_QuestionStructure2 extends import1.AppView<any> {
     this._text_1 = this.renderer.createText(this._el_0,'\n                ',(null as any));
     this._anchor_2 = this.renderer.createTemplateAnchor(this._el_0,(null as any));
     this._appEl_2 = new import2.AppElement(2,0,this,this._anchor_2);
-    this._TemplateRef_2_5 = new import18.TemplateRef_(this._appEl_2,viewFactory_QuestionStructure3);
-    this._NgIf_2_6 = new import17.NgIf(this._appEl_2.vcRef,this._TemplateRef_2_5);
+    this._TemplateRef_2_5 = new import23.TemplateRef_(this._appEl_2,viewFactory_QuestionStructure3);
+    this._NgIf_2_6 = new import18.NgIf(this._appEl_2.vcRef,this._TemplateRef_2_5);
     this._text_3 = this.renderer.createText(this._el_0,'\n\n                ',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this.init([].concat([this._el_0]),[
@@ -215,8 +384,8 @@ class _View_QuestionStructure2 extends import1.AppView<any> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import18.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
-    if (((token === import17.NgIf) && (2 === requestNodeIndex))) { return this._NgIf_2_6; }
+    if (((token === import23.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
+    if (((token === import18.NgIf) && (2 === requestNodeIndex))) { return this._NgIf_2_6; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {

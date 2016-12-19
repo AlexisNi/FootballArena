@@ -7,9 +7,7 @@ import {ActivatedRoute, Data, Router} from "@angular/router";
 import {AuthService} from "../auth/auth.service";
 import {AnsweredQuestion} from "./questionModels/answered-questions";
 import {QuestionPlayed} from "./questionModels/questionPlayed";
-/*
 import {ModalComponent} from "ng2-bs3-modal/components/modal";
-*/
 import {StatusPlayed} from "./questionModels/statusPlayedArena";
 import {SocketService} from "../MainApp/socketHanding/socket.service";
 import {ArenaServices} from "./questionServices/arena.service";
@@ -37,7 +35,7 @@ export class QuestionStructure implements OnInit, OnDestroy{
     private  arenaId:string;
     private  subscription:Subscription;
     private arenaQuestions:Question[]=[];
-   /* @ViewChild('myModal')
+    @ViewChild('myModal')
     modal: ModalComponent;
 
     open() {
@@ -48,7 +46,6 @@ export class QuestionStructure implements OnInit, OnDestroy{
         this.modal.close();
         this.router.navigate(['/mainApp']);
     }
-*/
 
 
 
@@ -109,11 +106,6 @@ export class QuestionStructure implements OnInit, OnDestroy{
                     data => console.log(data),
                     error => console.error(error)
                 );
-            var questionPlayed=new  QuestionPlayed(this.arenaId,activeQuestion.questionId);
-        /*    this.questionServices.questionPlayed(questionPlayed)
-                .subscribe(
-                    data=>console.log(data),
-                    error=>console.log(error));*/
 
 
 
@@ -122,16 +114,8 @@ export class QuestionStructure implements OnInit, OnDestroy{
 
 
         }else {
-            var questionPlayed=new  QuestionPlayed(this.arenaId,activeQuestion.questionId);
-          /*  this.questionServices.questionPlayed(questionPlayed)
-                .subscribe(
-                    data=>console.log(data),
-                    error=>console.log(error));
-            this.getCorrectQuestions();*/
             this.isLost=true;
-/*
             this.open();
-*/
         }
 
     }

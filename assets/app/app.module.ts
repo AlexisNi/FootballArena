@@ -22,6 +22,7 @@ import {ArenaServices} from "./questions/questionServices/arena.service";
 import {QuestionServices} from "./questions/questionServices/question.service";
 import {QuestionAnswerServices} from "./questions/questionServices/questionAnswer.service";
 import {QuestionStructure} from "./questions/question-structure.component";
+import {Ng2Bs3ModalModule} from "ng2-bs3-modal/ng2-bs3-modal";
 @NgModule({
     declarations:[AppComponent,
         LoginComponent,
@@ -36,7 +37,7 @@ import {QuestionStructure} from "./questions/question-structure.component";
         MainComponent,
         QuestionStructure],
 
-    imports:[BrowserModule,FormsModule,routing,ReactiveFormsModule,HttpModule],
+    imports:[BrowserModule,FormsModule,routing,ReactiveFormsModule,HttpModule,Ng2Bs3ModalModule ],
 
     providers:[AuthService,
         GameListServices,
