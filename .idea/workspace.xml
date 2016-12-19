@@ -38,13 +38,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="opponent-find.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="opponent-find.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/app/MainApp/opponent-find/opponent-find.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="850">
               <caret line="50" column="40" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="40" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socket.service.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/app/MainApp/socketHanding/socket.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="42" column="57" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,7 +102,6 @@
         <option value="$PROJECT_DIR$/assets/app/MainApp/game-list/game-item.component.ngfactory.ts" />
         <option value="$PROJECT_DIR$/sockets/sockets.js" />
         <option value="$PROJECT_DIR$/bin/www" />
-        <option value="$PROJECT_DIR$/assets/app/MainApp/socketHanding/socket.service.ts" />
         <option value="$PROJECT_DIR$/sockets/socketss.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/assets/app/MainApp/game-list/game-list.services.ts" />
@@ -101,6 +112,7 @@
         <option value="$PROJECT_DIR$/assets/app/MainApp/game-list/game-list.component.ts" />
         <option value="$PROJECT_DIR$/assets/app/MainApp/arena/arena.component.ts" />
         <option value="$PROJECT_DIR$/assets/app/MainApp/opponent-find/opponent-find.component.ts" />
+        <option value="$PROJECT_DIR$/assets/app/MainApp/socketHanding/socket.service.ts" />
       </list>
     </option>
   </component>
@@ -390,12 +402,12 @@
       <updated>1482060542130</updated>
       <workItem from="1482060543962" duration="492000" />
       <workItem from="1482061659092" duration="1180000" />
-      <workItem from="1482062980663" duration="30844000" />
+      <workItem from="1482062980663" duration="30989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32516000" />
+    <option name="totallyTimeSpent" value="32661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -768,16 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/app/MainApp/socketHanding/socket.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/app/auth/auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -928,6 +930,16 @@
           <caret line="50" column="40" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="40" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app/MainApp/socketHanding/socket.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="57" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>

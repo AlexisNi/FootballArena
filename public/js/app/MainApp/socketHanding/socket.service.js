@@ -2,7 +2,7 @@ import * as io from "socket.io-client";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { GameListServices } from "../game-list/game-list.services";
-import { ArenaUsers } from "../../../../../../WebstormProjects/footbalQuiz/assets/app/MainApp/models/arenaUsers";
+import { ArenaUsers } from "../models/arenaUsers";
 export var SocketService = (function () {
     function SocketService(gameListServices) {
         this.gameListServices = gameListServices;
