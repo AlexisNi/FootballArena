@@ -11,12 +11,15 @@ var questionRoutes=require('./routes/questions');
 var questionAns=require('./routes/ArenaQuestion');
 var arenaRoutes=require('./routes/arena');
 var app = express();
-var http= require('http').Server(app);
-var io=require('./sockets/sockets');
-
-
-mongoose.connect('localhost:27017/quiz-app');
-
+var socket_io    = require( "socket.io" );
+var io           = socket_io();
+app.io           = io;
+var sockets=require('./sockets/socketss')(io);
+mongoose.connect('Alexis:315551@ds139288.mlab.com:39288/quiz_app');
+/*
+ 'localhost:27017/quiz-app'
+'Alexis:315551@ds139288.mlab.com:39288/quiz_app'
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -48,9 +51,5 @@ app.use(function (req, res, next) {
 });
 
 
-http.listen(4000,function () {
-    console.log('Listen to 4000');
-});
-io.startSocketServer(http);
 
 module.exports = app;
