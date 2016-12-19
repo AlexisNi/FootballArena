@@ -3,9 +3,9 @@ import {Http, Headers, Response} from "@angular/http";
 import {Observable} from "rxjs";
 import 'rxjs/add/operator/map';
 import {User} from "../../auth/user";
-import {ArenaPlayers} from "../../../../../../WebstormProjects/footbalQuiz/assets/app/MainApp/models/arenaPlayers";
 import {GameListServices} from "../game-list/game-list.services";
 import {ArenaUsers} from "../models/arenaUsers";
+import {ArenaPlayers} from "../models/arenaPlayers";
 @Injectable()
 export class OpponentFindService{
     constructor(private http:Http,private gameListSevices:GameListServices){}
