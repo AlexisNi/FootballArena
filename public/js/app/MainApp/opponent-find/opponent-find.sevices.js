@@ -15,7 +15,7 @@ export var OpponentFindService = (function () {
     OpponentFindService.prototype.findUser = function (userName) {
         var body = JSON.stringify(userName);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post(this.Heroku + 'user/find', body, { headers: headers })
+        return this.http.post('https://footballarenaquiz.herokuapp.com/user/find', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) { return Observable.throw(error.json()); });
     };
@@ -24,7 +24,7 @@ export var OpponentFindService = (function () {
         var body = JSON.stringify(arenaPlayer);
         var token = localStorage.getItem('token') ? '?token=' + localStorage.getItem('token') : '';
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post(this.Heroku + 'arena' + token, body, { headers: headers })
+        return this.http.post('https://footballarenaquiz.herokuapp.com/arena' + token, body, { headers: headers })
             .map(function (response) {
             var arenaUsers = new ArenaUsers(response.json().obj._id, response.json().obj.user._id, response.json().obj.invite._id, response.json().obj.status_accept, response.json().obj.invite.lastName, response.json().obj.user_played, response.json().obj.invite_played);
             _this.gameListSevices.arenas.push(arenaUsers);

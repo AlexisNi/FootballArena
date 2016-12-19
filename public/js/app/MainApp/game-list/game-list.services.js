@@ -17,7 +17,7 @@ export var GameListServices = (function () {
     GameListServices.prototype.getResult = function (arenaUserInfo) {
         var body = JSON.stringify(arenaUserInfo);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post(this.Heroku + 'questionANS/getResults', body, { headers: headers })
+        return this.http.post('https://footballarenaquiz.herokuapp.com/questionANS/getResults', body, { headers: headers })
             .map(function (response) {
             var winner = response.json().winner;
             var loser = response.json().loser;
@@ -29,7 +29,7 @@ export var GameListServices = (function () {
     GameListServices.prototype.getArenas = function () {
         var _this = this;
         var token = localStorage.getItem('token') ? '?token=' + localStorage.getItem('token') : '';
-        return this.http.get(this.Heroku + 'arena/arenas' + token)
+        return this.http.get('https://footballarenaquiz.herokuapp.com/arena/arenas' + token)
             .map(function (response) {
             var arenas = response.json().obj;
             var transformedArenas = [];
