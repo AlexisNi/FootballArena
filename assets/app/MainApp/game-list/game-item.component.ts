@@ -4,9 +4,7 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {ArenaUsers} from "../models/arenaUsers";
 import {AuthService} from "../../auth/auth.service";
-/*
 import {ModalComponent} from "ng2-bs3-modal/components/modal";
-*/
 import {ArenaUserId} from "../models/arenaUserId";
 import {GameListServices} from "./game-list.services";
 import {PlayerResult} from "./models/playerResults";
@@ -64,7 +62,7 @@ If user hasnt played
     </article>
 </a>
 
-<!--<div *ngIf=" arena.user_played==true&&arena.invite_played==true">
+<div *ngIf=" arena.user_played==true&&arena.invite_played==true">
 <button type="button" class="btn btn-primary" (click)="showResult(arena.arenaId)">Show results</button>
 </div>
     <modal #myModal [keyboard]="false" [backdrop]="'static'">
@@ -80,7 +78,7 @@ If user hasnt played
             </div>
         </modal-body>
         <modal-footer [show-default-buttons]="true"></modal-footer>
-    </modal>-->
+    </modal>
 </div>
 
 
@@ -114,9 +112,7 @@ If user hasnt played
 
 export class GameItemComponent implements OnInit{
     @ViewChild('myModal')
-/*
     modal: ModalComponent;
-*/
     @Input() arena:ArenaUsers;
     public userId;
     private playerResult:PlayerResult;
@@ -155,9 +151,7 @@ export class GameItemComponent implements OnInit{
 
                 });
 
-/*
         this.modal.open();
-*/
 
     }
 

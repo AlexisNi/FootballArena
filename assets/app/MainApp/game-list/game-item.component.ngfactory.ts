@@ -28,6 +28,14 @@ import * as import20 from '@angular/common/src/location/location_strategy';
 import * as import21 from '@angular/core/src/linker/element_ref';
 import * as import22 from '@angular/core/src/change_detection/differs/keyvalue_differs';
 import * as import23 from '@angular/core/src/security';
+import * as import24 from 'ng2-bs3-modal/components/modal';
+import * as import25 from 'ng2-bs3-modal/components/modal-header';
+import * as import26 from 'ng2-bs3-modal/components/modal-body';
+import * as import27 from 'ng2-bs3-modal/components/modal-footer';
+import * as import28 from '../../../../node_modules/ng2-bs3-modal/components/modal.ngfactory';
+import * as import29 from '../../../../node_modules/ng2-bs3-modal/components/modal-header.ngfactory';
+import * as import30 from '../../../../node_modules/ng2-bs3-modal/components/modal-body.ngfactory';
+import * as import31 from '../../../../node_modules/ng2-bs3-modal/components/modal-footer.ngfactory';
 var renderType_GameItemComponent_Host:import0.RenderComponentType = (null as any);
 class _View_GameItemComponent_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -99,8 +107,6 @@ class _View_GameItemComponent0 extends import1.AppView<import3.GameItemComponent
     this._text_5 = this.renderer.createText(parentRenderNode,'\n\n\n \n\n\n\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
-    this._viewQuery_myModal_0.reset([]);
-    this.context.arena = this._viewQuery_myModal_0.first;
     this.init([],[
       this._text_0,
       this._text_1,
@@ -132,6 +138,12 @@ class _View_GameItemComponent0 extends import1.AppView<import3.GameItemComponent
     }
     this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
+    if (!throwOnChange) { if (this._viewQuery_myModal_0.dirty) {
+        this._viewQuery_myModal_0.reset([this._appEl_4.mapNestedViews(_View_GameItemComponent4,(nestedView:_View_GameItemComponent4):any => {
+          return [nestedView._ModalComponent_19_4];
+      })]);
+      this.context.modal = this._viewQuery_myModal_0.first;
+    } }
   }
 }
 export function viewFactory_GameItemComponent0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.GameItemComponent> {
@@ -595,7 +607,43 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
   _text_14:any;
   _text_15:any;
   _text_16:any;
-  _text_17:any;
+  _anchor_17:any;
+  /*private*/ _appEl_17:import2.AppElement;
+  _TemplateRef_17_5:any;
+  _NgIf_17_6:import13.NgIf;
+  _text_18:any;
+  _el_19:any;
+  /*private*/ _appEl_19:import2.AppElement;
+  _ModalComponent_19_4:import24.ModalComponent;
+  _text_20:any;
+  _el_21:any;
+  /*private*/ _appEl_21:import2.AppElement;
+  _ModalHeaderComponent_21_4:import25.ModalHeaderComponent;
+  _text_22:any;
+  _el_23:any;
+  _text_24:any;
+  _text_25:any;
+  _text_26:any;
+  _el_27:any;
+  /*private*/ _appEl_27:import2.AppElement;
+  _ModalBodyComponent_27_4:import26.ModalBodyComponent;
+  _text_28:any;
+  _anchor_29:any;
+  /*private*/ _appEl_29:import2.AppElement;
+  _TemplateRef_29_5:any;
+  _NgIf_29_6:import13.NgIf;
+  _text_30:any;
+  _anchor_31:any;
+  /*private*/ _appEl_31:import2.AppElement;
+  _TemplateRef_31_5:any;
+  _NgIf_31_6:import13.NgIf;
+  _text_32:any;
+  _text_33:any;
+  _el_34:any;
+  /*private*/ _appEl_34:import2.AppElement;
+  _ModalFooterComponent_34_4:import27.ModalFooterComponent;
+  _text_35:any;
+  _text_36:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
   /*private*/ _expr_3:any;
@@ -604,6 +652,17 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
   /*private*/ _expr_5:any;
   /*private*/ _expr_6:any;
   /*private*/ _expr_7:any;
+  /*private*/ _expr_8:any;
+  /*private*/ _expr_9:any;
+  /*private*/ _expr_10:any;
+  /*private*/ _expr_11:any;
+  /*private*/ _expr_12:any;
+  /*private*/ _expr_13:any;
+  /*private*/ _expr_14:any;
+  /*private*/ _expr_15:any;
+  /*private*/ _expr_16:any;
+  /*private*/ _expr_17:any;
+  /*private*/ _expr_18:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_GameItemComponent4,renderType_GameItemComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -637,7 +696,80 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
     this._text_14 = this.renderer.createText(this._el_4,'\n    ',(null as any));
     this._text_15 = this.renderer.createText(this._el_2,'\n',(null as any));
     this._text_16 = this.renderer.createText(this._el_0,'\n\n',(null as any));
-    this._text_17 = this.renderer.createText(this._el_0,'\n',(null as any));
+    this._anchor_17 = this.renderer.createTemplateAnchor(this._el_0,(null as any));
+    this._appEl_17 = new import2.AppElement(17,0,this,this._anchor_17);
+    this._TemplateRef_17_5 = new import14.TemplateRef_(this._appEl_17,viewFactory_GameItemComponent5);
+    this._NgIf_17_6 = new import13.NgIf(this._appEl_17.vcRef,this._TemplateRef_17_5);
+    this._text_18 = this.renderer.createText(this._el_0,'\n    ',(null as any));
+    this._el_19 = this.renderer.createElement(this._el_0,'modal',(null as any));
+    this.renderer.setElementAttribute(this._el_19,'class','modal');
+    this.renderer.setElementAttribute(this._el_19,'role','dialog');
+    this.renderer.setElementAttribute(this._el_19,'tabindex','-1');
+    this._appEl_19 = new import2.AppElement(19,0,this,this._el_19);
+    var compView_19:any = import28.viewFactory_ModalComponent0(this.viewUtils,this.injector(19),this._appEl_19);
+    this._ModalComponent_19_4 = new import24.ModalComponent(new import21.ElementRef(this._el_19));
+    this._appEl_19.initComponent(this._ModalComponent_19_4,[],compView_19);
+    this._text_20 = this.renderer.createText((null as any),'\n        ',(null as any));
+    this._el_21 = this.renderer.createElement((null as any),'modal-header',(null as any));
+    this._appEl_21 = new import2.AppElement(21,19,this,this._el_21);
+    var compView_21:any = import29.viewFactory_ModalHeaderComponent0(this.viewUtils,this.injector(21),this._appEl_21);
+    this._ModalHeaderComponent_21_4 = new import25.ModalHeaderComponent(this._ModalComponent_19_4);
+    this._appEl_21.initComponent(this._ModalHeaderComponent_21_4,[],compView_21);
+    this._text_22 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._el_23 = this.renderer.createElement((null as any),'h4',(null as any));
+    this.renderer.setElementAttribute(this._el_23,'class','modal-title');
+    this._text_24 = this.renderer.createText(this._el_23,'',(null as any));
+    this._text_25 = this.renderer.createText((null as any),'\n        ',(null as any));
+      compView_21.create(this._ModalHeaderComponent_21_4,[[].concat([
+        this._text_22,
+        this._el_23,
+        this._text_25
+      ]
+    )],(null as any));
+    this._text_26 = this.renderer.createText((null as any),'\n        ',(null as any));
+    this._el_27 = this.renderer.createElement((null as any),'modal-body',(null as any));
+    this._appEl_27 = new import2.AppElement(27,19,this,this._el_27);
+    var compView_27:any = import30.viewFactory_ModalBodyComponent0(this.viewUtils,this.injector(27),this._appEl_27);
+    this._ModalBodyComponent_27_4 = new import26.ModalBodyComponent();
+    this._appEl_27.initComponent(this._ModalBodyComponent_27_4,[],compView_27);
+    this._text_28 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._anchor_29 = this.renderer.createTemplateAnchor((null as any),(null as any));
+    this._appEl_29 = new import2.AppElement(29,27,this,this._anchor_29);
+    this._TemplateRef_29_5 = new import14.TemplateRef_(this._appEl_29,viewFactory_GameItemComponent6);
+    this._NgIf_29_6 = new import13.NgIf(this._appEl_29.vcRef,this._TemplateRef_29_5);
+    this._text_30 = this.renderer.createText((null as any),'    \n            ',(null as any));
+    this._anchor_31 = this.renderer.createTemplateAnchor((null as any),(null as any));
+    this._appEl_31 = new import2.AppElement(31,27,this,this._anchor_31);
+    this._TemplateRef_31_5 = new import14.TemplateRef_(this._appEl_31,viewFactory_GameItemComponent7);
+    this._NgIf_31_6 = new import13.NgIf(this._appEl_31.vcRef,this._TemplateRef_31_5);
+    this._text_32 = this.renderer.createText((null as any),'\n        ',(null as any));
+      compView_27.create(this._ModalBodyComponent_27_4,[[].concat([
+        this._text_28,
+        this._appEl_29,
+        this._text_30,
+        this._appEl_31,
+        this._text_32
+      ]
+    )],(null as any));
+    this._text_33 = this.renderer.createText((null as any),'\n        ',(null as any));
+    this._el_34 = this.renderer.createElement((null as any),'modal-footer',(null as any));
+    this._appEl_34 = new import2.AppElement(34,19,this,this._el_34);
+    var compView_34:any = import31.viewFactory_ModalFooterComponent0(this.viewUtils,this.injector(34),this._appEl_34);
+    this._ModalFooterComponent_34_4 = new import27.ModalFooterComponent(this._ModalComponent_19_4);
+    this._appEl_34.initComponent(this._ModalFooterComponent_34_4,[],compView_34);
+    compView_34.create(this._ModalFooterComponent_34_4,[[]],(null as any));
+    this._text_35 = this.renderer.createText((null as any),'\n    ',(null as any));
+      compView_19.create(this._ModalComponent_19_4,[[].concat([
+        this._text_20,
+        this._el_21,
+        this._text_26,
+        this._el_27,
+        this._text_33,
+        this._el_34,
+        this._text_35
+      ]
+    )],(null as any));
+    this._text_36 = this.renderer.createText(this._el_0,'\n',(null as any));
     this._expr_1 = import7.UNINITIALIZED;
     var disposable_0:Function = this.renderer.listen(this._el_2,'click',this.eventHandler(this._handle_click_2_0.bind(this)));
     this._expr_2 = import7.UNINITIALIZED;
@@ -649,6 +781,17 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
     this._expr_5 = import7.UNINITIALIZED;
     this._expr_6 = import7.UNINITIALIZED;
     this._expr_7 = import7.UNINITIALIZED;
+    this._expr_8 = import7.UNINITIALIZED;
+    this._expr_9 = import7.UNINITIALIZED;
+    this._expr_10 = import7.UNINITIALIZED;
+    this._expr_11 = import7.UNINITIALIZED;
+    this._expr_12 = import7.UNINITIALIZED;
+    this._expr_13 = import7.UNINITIALIZED;
+    this._expr_14 = import7.UNINITIALIZED;
+    this._expr_15 = import7.UNINITIALIZED;
+    this._expr_16 = import7.UNINITIALIZED;
+    this._expr_17 = import7.UNINITIALIZED;
+    this._expr_18 = import7.UNINITIALIZED;
     this.init([].concat([this._el_0]),[
       this._el_0,
       this._text_1,
@@ -667,7 +810,26 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
       this._text_14,
       this._text_15,
       this._text_16,
-      this._text_17
+      this._anchor_17,
+      this._text_18,
+      this._el_19,
+      this._text_20,
+      this._el_21,
+      this._text_22,
+      this._el_23,
+      this._text_24,
+      this._text_25,
+      this._text_26,
+      this._el_27,
+      this._text_28,
+      this._anchor_29,
+      this._text_30,
+      this._anchor_31,
+      this._text_32,
+      this._text_33,
+      this._el_34,
+      this._text_35,
+      this._text_36
     ]
     ,[disposable_0],[]);
     return (null as any);
@@ -676,6 +838,16 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
     if (((token === import17.NgStyle) && ((4 <= requestNodeIndex) && (requestNodeIndex <= 14)))) { return this._NgStyle_4_3; }
     if (((token === import15.RouterLinkWithHref) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 15)))) { return this._RouterLinkWithHref_2_3; }
     if (((token === import16.RouterLinkActive) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 15)))) { return this._RouterLinkActive_2_4; }
+    if (((token === import14.TemplateRef) && (17 === requestNodeIndex))) { return this._TemplateRef_17_5; }
+    if (((token === import13.NgIf) && (17 === requestNodeIndex))) { return this._NgIf_17_6; }
+    if (((token === import25.ModalHeaderComponent) && ((21 <= requestNodeIndex) && (requestNodeIndex <= 25)))) { return this._ModalHeaderComponent_21_4; }
+    if (((token === import14.TemplateRef) && (29 === requestNodeIndex))) { return this._TemplateRef_29_5; }
+    if (((token === import13.NgIf) && (29 === requestNodeIndex))) { return this._NgIf_29_6; }
+    if (((token === import14.TemplateRef) && (31 === requestNodeIndex))) { return this._TemplateRef_31_5; }
+    if (((token === import13.NgIf) && (31 === requestNodeIndex))) { return this._NgIf_31_6; }
+    if (((token === import26.ModalBodyComponent) && ((27 <= requestNodeIndex) && (requestNodeIndex <= 32)))) { return this._ModalBodyComponent_27_4; }
+    if (((token === import27.ModalFooterComponent) && (34 === requestNodeIndex))) { return this._ModalFooterComponent_34_4; }
+    if (((token === import24.ModalComponent) && ((19 <= requestNodeIndex) && (requestNodeIndex <= 35)))) { return this._ModalComponent_19_4; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -704,6 +876,41 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
       this._expr_5 = currVal_5;
     }
     if (!throwOnChange) { this._NgStyle_4_3.ngDoCheck(); }
+    const currVal_8:any = ((this.parent.context.arena.user_played == true) && (this.parent.context.arena.invite_played == true));
+    if (import4.checkBinding(throwOnChange,this._expr_8,currVal_8)) {
+      this._NgIf_17_6.ngIf = currVal_8;
+      this._expr_8 = currVal_8;
+    }
+    const currVal_9:any = 'static';
+    if (import4.checkBinding(throwOnChange,this._expr_9,currVal_9)) {
+      this._ModalComponent_19_4.backdrop = currVal_9;
+      this._expr_9 = currVal_9;
+    }
+    const currVal_10:any = false;
+    if (import4.checkBinding(throwOnChange,this._expr_10,currVal_10)) {
+      this._ModalComponent_19_4.keyboard = currVal_10;
+      this._expr_10 = currVal_10;
+    }
+    const currVal_14:any = false;
+    if (import4.checkBinding(throwOnChange,this._expr_14,currVal_14)) {
+      this._ModalHeaderComponent_21_4.showClose = currVal_14;
+      this._expr_14 = currVal_14;
+    }
+    const currVal_16:any = (((this.parent.context.playerResult == (null as any))? (null as any): this.parent.context.playerResult.winnerUserId) == this.parent.context.userId);
+    if (import4.checkBinding(throwOnChange,this._expr_16,currVal_16)) {
+      this._NgIf_29_6.ngIf = currVal_16;
+      this._expr_16 = currVal_16;
+    }
+    const currVal_17:any = (((this.parent.context.playerResult == (null as any))? (null as any): this.parent.context.playerResult.loserUserId) == this.parent.context.userId);
+    if (import4.checkBinding(throwOnChange,this._expr_17,currVal_17)) {
+      this._NgIf_31_6.ngIf = currVal_17;
+      this._expr_17 = currVal_17;
+    }
+    const currVal_18:any = true;
+    if (import4.checkBinding(throwOnChange,this._expr_18,currVal_18)) {
+      this._ModalFooterComponent_34_4.showDefaultButtons = currVal_18;
+      this._expr_18 = currVal_18;
+    }
     this.detectContentChildrenChanges(throwOnChange);
     if (!throwOnChange) {
       if (this._query_RouterLink_2_0.dirty) {
@@ -738,11 +945,35 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
       this.renderer.setText(this._text_12,currVal_7);
       this._expr_7 = currVal_7;
     }
+    const currVal_11:any = this._ModalComponent_19_4.fadeClass;
+    if (import4.checkBinding(throwOnChange,this._expr_11,currVal_11)) {
+      this.renderer.setElementClass(this._el_19,'fade',currVal_11);
+      this._expr_11 = currVal_11;
+    }
+    const currVal_12:any = this._ModalComponent_19_4.dataKeyboardAttr;
+    if (import4.checkBinding(throwOnChange,this._expr_12,currVal_12)) {
+      this.renderer.setElementAttribute(this._el_19,'data-keyboard',((currVal_12 == (null as any))? (null as any): currVal_12.toString()));
+      this._expr_12 = currVal_12;
+    }
+    const currVal_13:any = this._ModalComponent_19_4.dataBackdropAttr;
+    if (import4.checkBinding(throwOnChange,this._expr_13,currVal_13)) {
+      this.renderer.setElementAttribute(this._el_19,'data-backdrop',((currVal_13 == (null as any))? (null as any): currVal_13.toString()));
+      this._expr_13 = currVal_13;
+    }
+    const currVal_15:any = import4.interpolate(1,'You played against ',this.parent.context.arena.lastName,'');
+    if (import4.checkBinding(throwOnChange,this._expr_15,currVal_15)) {
+      this.renderer.setText(this._text_24,currVal_15);
+      this._expr_15 = currVal_15;
+    }
     this.detectViewChildrenChanges(throwOnChange);
+  }
+  dirtyParentQueriesInternal():void {
+    (<_View_GameItemComponent0>this.parent)._viewQuery_myModal_0.setDirty();
   }
   destroyInternal():void {
     this._RouterLinkWithHref_2_3.ngOnDestroy();
     this._RouterLinkActive_2_4.ngOnDestroy();
+    this._ModalComponent_19_4.ngOnDestroy();
   }
   private _handle_click_2_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
@@ -752,4 +983,99 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
 }
 function viewFactory_GameItemComponent4(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
   return new _View_GameItemComponent4(viewUtils,parentInjector,declarationEl);
+}
+class _View_GameItemComponent5 extends import1.AppView<any> {
+  _el_0:any;
+  _text_1:any;
+  _el_2:any;
+  _text_3:any;
+  _text_4:any;
+  constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
+    super(_View_GameItemComponent5,renderType_GameItemComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+  }
+  createInternal(rootSelector:string):import2.AppElement {
+    this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'\n',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'button',(null as any));
+    this.renderer.setElementAttribute(this._el_2,'class','btn btn-primary');
+    this.renderer.setElementAttribute(this._el_2,'type','button');
+    this._text_3 = this.renderer.createText(this._el_2,'Show results',(null as any));
+    this._text_4 = this.renderer.createText(this._el_0,'\n',(null as any));
+    var disposable_0:Function = this.renderer.listen(this._el_2,'click',this.eventHandler(this._handle_click_2_0.bind(this)));
+    this.init([].concat([this._el_0]),[
+      this._el_0,
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._text_4
+    ]
+    ,[disposable_0],[]);
+    return (null as any);
+  }
+  private _handle_click_2_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.parent.parent.context.showResult(this.parent.parent.context.arena.arenaId)) !== false);
+    return (true && pd_0);
+  }
+}
+function viewFactory_GameItemComponent5(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
+  return new _View_GameItemComponent5(viewUtils,parentInjector,declarationEl);
+}
+class _View_GameItemComponent6 extends import1.AppView<any> {
+  _el_0:any;
+  _text_1:any;
+  _el_2:any;
+  _text_3:any;
+  _text_4:any;
+  constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
+    super(_View_GameItemComponent6,renderType_GameItemComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+  }
+  createInternal(rootSelector:string):import2.AppElement {
+    this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'\n            ',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'p',(null as any));
+    this._text_3 = this.renderer.createText(this._el_2,'Congratulation You Won!!!!',(null as any));
+    this._text_4 = this.renderer.createText(this._el_0,'\n            ',(null as any));
+    this.init([].concat([this._el_0]),[
+      this._el_0,
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._text_4
+    ]
+    ,[],[]);
+    return (null as any);
+  }
+}
+function viewFactory_GameItemComponent6(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
+  return new _View_GameItemComponent6(viewUtils,parentInjector,declarationEl);
+}
+class _View_GameItemComponent7 extends import1.AppView<any> {
+  _el_0:any;
+  _text_1:any;
+  _el_2:any;
+  _text_3:any;
+  _text_4:any;
+  constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
+    super(_View_GameItemComponent7,renderType_GameItemComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+  }
+  createInternal(rootSelector:string):import2.AppElement {
+    this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'\n            ',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'p',(null as any));
+    this._text_3 = this.renderer.createText(this._el_2,'Sorry you lost....!!!!',(null as any));
+    this._text_4 = this.renderer.createText(this._el_0,'\n            ',(null as any));
+    this.init([].concat([this._el_0]),[
+      this._el_0,
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._text_4
+    ]
+    ,[],[]);
+    return (null as any);
+  }
+}
+function viewFactory_GameItemComponent7(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
+  return new _View_GameItemComponent7(viewUtils,parentInjector,declarationEl);
 }

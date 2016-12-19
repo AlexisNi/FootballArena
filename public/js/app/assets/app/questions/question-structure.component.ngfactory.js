@@ -96,7 +96,7 @@ var _View_QuestionStructure0 = (function (_super) {
         this._appEl_4 = new import2.AppElement(4, null, this, this._anchor_4);
         this._TemplateRef_4_5 = new import23.TemplateRef_(this._appEl_4, viewFactory_QuestionStructure1);
         this._NgIf_4_6 = new import18.NgIf(this._appEl_4.vcRef, this._TemplateRef_4_5);
-        this._text_5 = this.renderer.createText(parentRenderNode, '\n    ', null);
+        this._text_5 = this.renderer.createText(parentRenderNode, '\n\n    ', null);
         this._el_6 = this.renderer.createElement(parentRenderNode, 'modal', null);
         this.renderer.setElementAttribute(this._el_6, 'class', 'modal');
         this.renderer.setElementAttribute(this._el_6, 'role', 'dialog');

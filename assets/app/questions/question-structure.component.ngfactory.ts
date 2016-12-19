@@ -131,7 +131,7 @@ class _View_QuestionStructure0 extends import1.AppView<import3.QuestionStructure
     this._appEl_4 = new import2.AppElement(4,(null as any),this,this._anchor_4);
     this._TemplateRef_4_5 = new import23.TemplateRef_(this._appEl_4,viewFactory_QuestionStructure1);
     this._NgIf_4_6 = new import18.NgIf(this._appEl_4.vcRef,this._TemplateRef_4_5);
-    this._text_5 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
+    this._text_5 = this.renderer.createText(parentRenderNode,'\n\n    ',(null as any));
     this._el_6 = this.renderer.createElement(parentRenderNode,'modal',(null as any));
     this.renderer.setElementAttribute(this._el_6,'class','modal');
     this.renderer.setElementAttribute(this._el_6,'role','dialog');

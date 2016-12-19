@@ -23,13 +23,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="38" column="81" selection-start-line="38" selection-start-column="81" selection-end-line="38" selection-end-column="81" />
+            <state relative-caret-position="495">
+              <caret line="39" column="95" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="95" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question-structure.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/app/questions/question-structure.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1819">
+              <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#118#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game-item.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/app/MainApp/game-list/game-item.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#42#108#0" expanded="true" />
+                <marker date="1482161138065" expanded="true" signature="494:516" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="646:1582" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="681:1110" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="805:1103" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="885:1098" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="914:954" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="988:1083" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1017:1069" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1147:1574" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1269:1567" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1349:1562" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1378:1418" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1452:1547" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1481:1533" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1709:2895" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1826:2124" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1906:2119" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="1935:1975" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="2009:2104" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="2038:2090" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="2191:2302" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="2364:2888" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="2408:2513" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="2534:2807" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="2595:2660" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="2724:2785" ph="..." />
+                <marker date="1482161138065" expanded="true" signature="2936:3050" ph="{...}" />
+                <marker date="1482161138065" expanded="true" signature="3066:3180" ph="{...}" />
+                <marker date="1482161138065" expanded="true" signature="3199:3273" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -73,7 +127,6 @@
         <option value="$PROJECT_DIR$/sockets/sockets.js" />
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/assets/app/MainApp/game-list/game-item.component.ts" />
         <option value="$PROJECT_DIR$/assets/app/MainApp/game-list/game-list.component.ts" />
         <option value="$PROJECT_DIR$/assets/app/MainApp/arena/arena.component.ts" />
         <option value="$PROJECT_DIR$/assets/app/MainApp/opponent-find/opponent-find.component.ts" />
@@ -83,8 +136,6 @@
         <option value="$PROJECT_DIR$/assets/app/auth/signup.component.ts" />
         <option value="$PROJECT_DIR$/sockets/socketss.js" />
         <option value="$PROJECT_DIR$/assets/app/MainApp/socketHanding/socket.service.ts" />
-        <option value="$PROJECT_DIR$/assets/app/questions/question-structure.component.ts" />
-        <option value="$PROJECT_DIR$/assets/app/questions/question-structure.component.html" />
         <option value="$PROJECT_DIR$/assets/app/questions/questionServices/arena.service.ts" />
         <option value="$PROJECT_DIR$/assets/app/questions/questionServices/question.service.ts" />
         <option value="$PROJECT_DIR$/assets/app/questions/questionServices/questionAnswer.service.ts" />
@@ -92,6 +143,9 @@
         <option value="$PROJECT_DIR$/assets/app/MainApp/mainApp.routes.ts" />
         <option value="$PROJECT_DIR$/views/index.hbs" />
         <option value="$PROJECT_DIR$/assets/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/assets/app/questions/question-structure.component.ts" />
+        <option value="$PROJECT_DIR$/assets/app/questions/question-structure.component.html" />
+        <option value="$PROJECT_DIR$/assets/app/MainApp/game-list/game-item.component.ts" />
       </list>
     </option>
   </component>
@@ -240,6 +294,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="footbalQuiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="footbalQuiz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MainApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game-list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -342,16 +422,16 @@
       <updated>1482060542130</updated>
       <workItem from="1482060543962" duration="492000" />
       <workItem from="1482061659092" duration="1180000" />
-      <workItem from="1482062980663" duration="35867000" />
+      <workItem from="1482062980663" duration="37096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37539000" />
+    <option name="totallyTimeSpent" value="38768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -360,7 +440,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32238194" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35721704" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35721704" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -407,14 +487,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/app/questions/questionModels/question.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/app/questions/questionModels/questionPlayed.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -444,7 +516,7 @@
         <state relative-caret-position="385">
           <caret line="93" column="147" selection-start-line="93" selection-start-column="131" selection-end-line="93" selection-end-column="147" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -462,7 +534,7 @@
         <state relative-caret-position="-29">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -472,7 +544,7 @@
         <state relative-caret-position="399">
           <caret line="190" column="153" selection-start-line="190" selection-start-column="137" selection-end-line="190" selection-end-column="153" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -482,7 +554,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -492,7 +564,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -514,7 +586,7 @@
         <state relative-caret-position="441">
           <caret line="83" column="149" selection-start-line="83" selection-start-column="133" selection-end-line="83" selection-end-column="149" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -737,17 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/app/questions/question-structure.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="59" column="61" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#118#0" expanded="true" />
-            <element signature="e#636#700#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/app/questions/question.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -758,20 +819,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/app/questions/question-structure.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="47" column="3" selection-start-line="36" selection-start-column="4" selection-end-line="47" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/app/MainApp/socketHanding/socket.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -781,7 +834,7 @@
         <state relative-caret-position="272">
           <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,7 +844,7 @@
         <state relative-caret-position="799">
           <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -801,7 +854,7 @@
         <state relative-caret-position="442">
           <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -811,8 +864,8 @@
         <state relative-caret-position="238">
           <caret line="14" column="49" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="49" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#42#95#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#42#95#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -822,7 +875,7 @@
         <state relative-caret-position="170">
           <caret line="10" column="49" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="49" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -845,10 +898,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="38" column="81" selection-start-line="38" selection-start-column="81" selection-end-line="38" selection-end-column="81" />
+        <state relative-caret-position="495">
+          <caret line="39" column="95" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="95" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app/questions/question-structure.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app/questions/question-structure.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app/MainApp/game-list/game-item.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#108#0" expanded="true" />
+            <marker date="1482161138065" expanded="true" signature="494:516" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="646:1582" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="681:1110" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="805:1103" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="885:1098" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="914:954" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="988:1083" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1017:1069" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1147:1574" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1269:1567" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1349:1562" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1378:1418" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1452:1547" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1481:1533" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1709:2895" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1826:2124" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1906:2119" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="1935:1975" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="2009:2104" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="2038:2090" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="2191:2302" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="2364:2888" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="2408:2513" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="2534:2807" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="2595:2660" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="2724:2785" ph="..." />
+            <marker date="1482161138065" expanded="true" signature="2936:3050" ph="{...}" />
+            <marker date="1482161138065" expanded="true" signature="3066:3180" ph="{...}" />
+            <marker date="1482161138065" expanded="true" signature="3199:3273" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -30,6 +30,14 @@ import * as import20 from '@angular/common/src/location/location_strategy';
 import * as import21 from '@angular/core/src/linker/element_ref';
 import * as import22 from '@angular/core/src/change_detection/differs/keyvalue_differs';
 import * as import23 from '@angular/core/src/security';
+import * as import24 from 'ng2-bs3-modal/components/modal';
+import * as import25 from 'ng2-bs3-modal/components/modal-header';
+import * as import26 from 'ng2-bs3-modal/components/modal-body';
+import * as import27 from 'ng2-bs3-modal/components/modal-footer';
+import * as import28 from '../../../../node_modules/ng2-bs3-modal/components/modal.ngfactory';
+import * as import29 from '../../../../node_modules/ng2-bs3-modal/components/modal-header.ngfactory';
+import * as import30 from '../../../../node_modules/ng2-bs3-modal/components/modal-body.ngfactory';
+import * as import31 from '../../../../node_modules/ng2-bs3-modal/components/modal-footer.ngfactory';
 var renderType_GameItemComponent_Host = null;
 var _View_GameItemComponent_Host0 = (function (_super) {
     __extends(_View_GameItemComponent_Host0, _super);
@@ -92,8 +100,6 @@ var _View_GameItemComponent0 = (function (_super) {
         this._text_5 = this.renderer.createText(parentRenderNode, '\n\n\n \n\n\n\n', null);
         this._expr_0 = import7.UNINITIALIZED;
         this._expr_1 = import7.UNINITIALIZED;
-        this._viewQuery_myModal_0.reset([]);
-        this.context.arena = this._viewQuery_myModal_0.first;
         this.init([], [
             this._text_0,
             this._text_1,
@@ -132,6 +138,14 @@ var _View_GameItemComponent0 = (function (_super) {
         }
         this.detectContentChildrenChanges(throwOnChange);
         this.detectViewChildrenChanges(throwOnChange);
+        if (!throwOnChange) {
+            if (this._viewQuery_myModal_0.dirty) {
+                this._viewQuery_myModal_0.reset([this._appEl_4.mapNestedViews(_View_GameItemComponent4, function (nestedView) {
+                        return [nestedView._ModalComponent_19_4];
+                    })]);
+                this.context.modal = this._viewQuery_myModal_0.first;
+            }
+        }
     };
     return _View_GameItemComponent0;
 }(import1.AppView));
@@ -579,7 +593,77 @@ var _View_GameItemComponent4 = (function (_super) {
         this._text_14 = this.renderer.createText(this._el_4, '\n    ', null);
         this._text_15 = this.renderer.createText(this._el_2, '\n', null);
         this._text_16 = this.renderer.createText(this._el_0, '\n\n', null);
-        this._text_17 = this.renderer.createText(this._el_0, '\n', null);
+        this._anchor_17 = this.renderer.createTemplateAnchor(this._el_0, null);
+        this._appEl_17 = new import2.AppElement(17, 0, this, this._anchor_17);
+        this._TemplateRef_17_5 = new import14.TemplateRef_(this._appEl_17, viewFactory_GameItemComponent5);
+        this._NgIf_17_6 = new import13.NgIf(this._appEl_17.vcRef, this._TemplateRef_17_5);
+        this._text_18 = this.renderer.createText(this._el_0, '\n    ', null);
+        this._el_19 = this.renderer.createElement(this._el_0, 'modal', null);
+        this.renderer.setElementAttribute(this._el_19, 'class', 'modal');
+        this.renderer.setElementAttribute(this._el_19, 'role', 'dialog');
+        this.renderer.setElementAttribute(this._el_19, 'tabindex', '-1');
+        this._appEl_19 = new import2.AppElement(19, 0, this, this._el_19);
+        var compView_19 = import28.viewFactory_ModalComponent0(this.viewUtils, this.injector(19), this._appEl_19);
+        this._ModalComponent_19_4 = new import24.ModalComponent(new import21.ElementRef(this._el_19));
+        this._appEl_19.initComponent(this._ModalComponent_19_4, [], compView_19);
+        this._text_20 = this.renderer.createText(null, '\n        ', null);
+        this._el_21 = this.renderer.createElement(null, 'modal-header', null);
+        this._appEl_21 = new import2.AppElement(21, 19, this, this._el_21);
+        var compView_21 = import29.viewFactory_ModalHeaderComponent0(this.viewUtils, this.injector(21), this._appEl_21);
+        this._ModalHeaderComponent_21_4 = new import25.ModalHeaderComponent(this._ModalComponent_19_4);
+        this._appEl_21.initComponent(this._ModalHeaderComponent_21_4, [], compView_21);
+        this._text_22 = this.renderer.createText(null, '\n            ', null);
+        this._el_23 = this.renderer.createElement(null, 'h4', null);
+        this.renderer.setElementAttribute(this._el_23, 'class', 'modal-title');
+        this._text_24 = this.renderer.createText(this._el_23, '', null);
+        this._text_25 = this.renderer.createText(null, '\n        ', null);
+        compView_21.create(this._ModalHeaderComponent_21_4, [[].concat([
+                this._text_22,
+                this._el_23,
+                this._text_25
+            ])], null);
+        this._text_26 = this.renderer.createText(null, '\n        ', null);
+        this._el_27 = this.renderer.createElement(null, 'modal-body', null);
+        this._appEl_27 = new import2.AppElement(27, 19, this, this._el_27);
+        var compView_27 = import30.viewFactory_ModalBodyComponent0(this.viewUtils, this.injector(27), this._appEl_27);
+        this._ModalBodyComponent_27_4 = new import26.ModalBodyComponent();
+        this._appEl_27.initComponent(this._ModalBodyComponent_27_4, [], compView_27);
+        this._text_28 = this.renderer.createText(null, '\n            ', null);
+        this._anchor_29 = this.renderer.createTemplateAnchor(null, null);
+        this._appEl_29 = new import2.AppElement(29, 27, this, this._anchor_29);
+        this._TemplateRef_29_5 = new import14.TemplateRef_(this._appEl_29, viewFactory_GameItemComponent6);
+        this._NgIf_29_6 = new import13.NgIf(this._appEl_29.vcRef, this._TemplateRef_29_5);
+        this._text_30 = this.renderer.createText(null, '    \n            ', null);
+        this._anchor_31 = this.renderer.createTemplateAnchor(null, null);
+        this._appEl_31 = new import2.AppElement(31, 27, this, this._anchor_31);
+        this._TemplateRef_31_5 = new import14.TemplateRef_(this._appEl_31, viewFactory_GameItemComponent7);
+        this._NgIf_31_6 = new import13.NgIf(this._appEl_31.vcRef, this._TemplateRef_31_5);
+        this._text_32 = this.renderer.createText(null, '\n        ', null);
+        compView_27.create(this._ModalBodyComponent_27_4, [[].concat([
+                this._text_28,
+                this._appEl_29,
+                this._text_30,
+                this._appEl_31,
+                this._text_32
+            ])], null);
+        this._text_33 = this.renderer.createText(null, '\n        ', null);
+        this._el_34 = this.renderer.createElement(null, 'modal-footer', null);
+        this._appEl_34 = new import2.AppElement(34, 19, this, this._el_34);
+        var compView_34 = import31.viewFactory_ModalFooterComponent0(this.viewUtils, this.injector(34), this._appEl_34);
+        this._ModalFooterComponent_34_4 = new import27.ModalFooterComponent(this._ModalComponent_19_4);
+        this._appEl_34.initComponent(this._ModalFooterComponent_34_4, [], compView_34);
+        compView_34.create(this._ModalFooterComponent_34_4, [[]], null);
+        this._text_35 = this.renderer.createText(null, '\n    ', null);
+        compView_19.create(this._ModalComponent_19_4, [[].concat([
+                this._text_20,
+                this._el_21,
+                this._text_26,
+                this._el_27,
+                this._text_33,
+                this._el_34,
+                this._text_35
+            ])], null);
+        this._text_36 = this.renderer.createText(this._el_0, '\n', null);
         this._expr_1 = import7.UNINITIALIZED;
         var disposable_0 = this.renderer.listen(this._el_2, 'click', this.eventHandler(this._handle_click_2_0.bind(this)));
         this._expr_2 = import7.UNINITIALIZED;
@@ -591,6 +675,17 @@ var _View_GameItemComponent4 = (function (_super) {
         this._expr_5 = import7.UNINITIALIZED;
         this._expr_6 = import7.UNINITIALIZED;
         this._expr_7 = import7.UNINITIALIZED;
+        this._expr_8 = import7.UNINITIALIZED;
+        this._expr_9 = import7.UNINITIALIZED;
+        this._expr_10 = import7.UNINITIALIZED;
+        this._expr_11 = import7.UNINITIALIZED;
+        this._expr_12 = import7.UNINITIALIZED;
+        this._expr_13 = import7.UNINITIALIZED;
+        this._expr_14 = import7.UNINITIALIZED;
+        this._expr_15 = import7.UNINITIALIZED;
+        this._expr_16 = import7.UNINITIALIZED;
+        this._expr_17 = import7.UNINITIALIZED;
+        this._expr_18 = import7.UNINITIALIZED;
         this.init([].concat([this._el_0]), [
             this._el_0,
             this._text_1,
@@ -609,7 +704,26 @@ var _View_GameItemComponent4 = (function (_super) {
             this._text_14,
             this._text_15,
             this._text_16,
-            this._text_17
+            this._anchor_17,
+            this._text_18,
+            this._el_19,
+            this._text_20,
+            this._el_21,
+            this._text_22,
+            this._el_23,
+            this._text_24,
+            this._text_25,
+            this._text_26,
+            this._el_27,
+            this._text_28,
+            this._anchor_29,
+            this._text_30,
+            this._anchor_31,
+            this._text_32,
+            this._text_33,
+            this._el_34,
+            this._text_35,
+            this._text_36
         ], [disposable_0], []);
         return null;
     };
@@ -622,6 +736,36 @@ var _View_GameItemComponent4 = (function (_super) {
         }
         if (((token === import16.RouterLinkActive) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 15)))) {
             return this._RouterLinkActive_2_4;
+        }
+        if (((token === import14.TemplateRef) && (17 === requestNodeIndex))) {
+            return this._TemplateRef_17_5;
+        }
+        if (((token === import13.NgIf) && (17 === requestNodeIndex))) {
+            return this._NgIf_17_6;
+        }
+        if (((token === import25.ModalHeaderComponent) && ((21 <= requestNodeIndex) && (requestNodeIndex <= 25)))) {
+            return this._ModalHeaderComponent_21_4;
+        }
+        if (((token === import14.TemplateRef) && (29 === requestNodeIndex))) {
+            return this._TemplateRef_29_5;
+        }
+        if (((token === import13.NgIf) && (29 === requestNodeIndex))) {
+            return this._NgIf_29_6;
+        }
+        if (((token === import14.TemplateRef) && (31 === requestNodeIndex))) {
+            return this._TemplateRef_31_5;
+        }
+        if (((token === import13.NgIf) && (31 === requestNodeIndex))) {
+            return this._NgIf_31_6;
+        }
+        if (((token === import26.ModalBodyComponent) && ((27 <= requestNodeIndex) && (requestNodeIndex <= 32)))) {
+            return this._ModalBodyComponent_27_4;
+        }
+        if (((token === import27.ModalFooterComponent) && (34 === requestNodeIndex))) {
+            return this._ModalFooterComponent_34_4;
+        }
+        if (((token === import24.ModalComponent) && ((19 <= requestNodeIndex) && (requestNodeIndex <= 35)))) {
+            return this._ModalComponent_19_4;
         }
         return notFoundResult;
     };
@@ -661,6 +805,41 @@ var _View_GameItemComponent4 = (function (_super) {
         if (!throwOnChange) {
             this._NgStyle_4_3.ngDoCheck();
         }
+        var currVal_8 = ((this.parent.context.arena.user_played == true) && (this.parent.context.arena.invite_played == true));
+        if (import4.checkBinding(throwOnChange, this._expr_8, currVal_8)) {
+            this._NgIf_17_6.ngIf = currVal_8;
+            this._expr_8 = currVal_8;
+        }
+        var currVal_9 = 'static';
+        if (import4.checkBinding(throwOnChange, this._expr_9, currVal_9)) {
+            this._ModalComponent_19_4.backdrop = currVal_9;
+            this._expr_9 = currVal_9;
+        }
+        var currVal_10 = false;
+        if (import4.checkBinding(throwOnChange, this._expr_10, currVal_10)) {
+            this._ModalComponent_19_4.keyboard = currVal_10;
+            this._expr_10 = currVal_10;
+        }
+        var currVal_14 = false;
+        if (import4.checkBinding(throwOnChange, this._expr_14, currVal_14)) {
+            this._ModalHeaderComponent_21_4.showClose = currVal_14;
+            this._expr_14 = currVal_14;
+        }
+        var currVal_16 = (((this.parent.context.playerResult == null) ? null : this.parent.context.playerResult.winnerUserId) == this.parent.context.userId);
+        if (import4.checkBinding(throwOnChange, this._expr_16, currVal_16)) {
+            this._NgIf_29_6.ngIf = currVal_16;
+            this._expr_16 = currVal_16;
+        }
+        var currVal_17 = (((this.parent.context.playerResult == null) ? null : this.parent.context.playerResult.loserUserId) == this.parent.context.userId);
+        if (import4.checkBinding(throwOnChange, this._expr_17, currVal_17)) {
+            this._NgIf_31_6.ngIf = currVal_17;
+            this._expr_17 = currVal_17;
+        }
+        var currVal_18 = true;
+        if (import4.checkBinding(throwOnChange, this._expr_18, currVal_18)) {
+            this._ModalFooterComponent_34_4.showDefaultButtons = currVal_18;
+            this._expr_18 = currVal_18;
+        }
         this.detectContentChildrenChanges(throwOnChange);
         if (!throwOnChange) {
             if (this._query_RouterLink_2_0.dirty) {
@@ -697,11 +876,35 @@ var _View_GameItemComponent4 = (function (_super) {
             this.renderer.setText(this._text_12, currVal_7);
             this._expr_7 = currVal_7;
         }
+        var currVal_11 = this._ModalComponent_19_4.fadeClass;
+        if (import4.checkBinding(throwOnChange, this._expr_11, currVal_11)) {
+            this.renderer.setElementClass(this._el_19, 'fade', currVal_11);
+            this._expr_11 = currVal_11;
+        }
+        var currVal_12 = this._ModalComponent_19_4.dataKeyboardAttr;
+        if (import4.checkBinding(throwOnChange, this._expr_12, currVal_12)) {
+            this.renderer.setElementAttribute(this._el_19, 'data-keyboard', ((currVal_12 == null) ? null : currVal_12.toString()));
+            this._expr_12 = currVal_12;
+        }
+        var currVal_13 = this._ModalComponent_19_4.dataBackdropAttr;
+        if (import4.checkBinding(throwOnChange, this._expr_13, currVal_13)) {
+            this.renderer.setElementAttribute(this._el_19, 'data-backdrop', ((currVal_13 == null) ? null : currVal_13.toString()));
+            this._expr_13 = currVal_13;
+        }
+        var currVal_15 = import4.interpolate(1, 'You played against ', this.parent.context.arena.lastName, '');
+        if (import4.checkBinding(throwOnChange, this._expr_15, currVal_15)) {
+            this.renderer.setText(this._text_24, currVal_15);
+            this._expr_15 = currVal_15;
+        }
         this.detectViewChildrenChanges(throwOnChange);
+    };
+    _View_GameItemComponent4.prototype.dirtyParentQueriesInternal = function () {
+        this.parent._viewQuery_myModal_0.setDirty();
     };
     _View_GameItemComponent4.prototype.destroyInternal = function () {
         this._RouterLinkWithHref_2_3.ngOnDestroy();
         this._RouterLinkActive_2_4.ngOnDestroy();
+        this._ModalComponent_19_4.ngOnDestroy();
     };
     _View_GameItemComponent4.prototype._handle_click_2_0 = function ($event) {
         this.markPathToRootAsCheckOnce();
@@ -712,4 +915,87 @@ var _View_GameItemComponent4 = (function (_super) {
 }(import1.AppView));
 function viewFactory_GameItemComponent4(viewUtils, parentInjector, declarationEl) {
     return new _View_GameItemComponent4(viewUtils, parentInjector, declarationEl);
+}
+var _View_GameItemComponent5 = (function (_super) {
+    __extends(_View_GameItemComponent5, _super);
+    function _View_GameItemComponent5(viewUtils, parentInjector, declarationEl) {
+        _super.call(this, _View_GameItemComponent5, renderType_GameItemComponent, import6.ViewType.EMBEDDED, viewUtils, parentInjector, declarationEl, import7.ChangeDetectorStatus.CheckAlways);
+    }
+    _View_GameItemComponent5.prototype.createInternal = function (rootSelector) {
+        this._el_0 = this.renderer.createElement(null, 'div', null);
+        this._text_1 = this.renderer.createText(this._el_0, '\n', null);
+        this._el_2 = this.renderer.createElement(this._el_0, 'button', null);
+        this.renderer.setElementAttribute(this._el_2, 'class', 'btn btn-primary');
+        this.renderer.setElementAttribute(this._el_2, 'type', 'button');
+        this._text_3 = this.renderer.createText(this._el_2, 'Show results', null);
+        this._text_4 = this.renderer.createText(this._el_0, '\n', null);
+        var disposable_0 = this.renderer.listen(this._el_2, 'click', this.eventHandler(this._handle_click_2_0.bind(this)));
+        this.init([].concat([this._el_0]), [
+            this._el_0,
+            this._text_1,
+            this._el_2,
+            this._text_3,
+            this._text_4
+        ], [disposable_0], []);
+        return null;
+    };
+    _View_GameItemComponent5.prototype._handle_click_2_0 = function ($event) {
+        this.markPathToRootAsCheckOnce();
+        var pd_0 = (this.parent.parent.context.showResult(this.parent.parent.context.arena.arenaId) !== false);
+        return (true && pd_0);
+    };
+    return _View_GameItemComponent5;
+}(import1.AppView));
+function viewFactory_GameItemComponent5(viewUtils, parentInjector, declarationEl) {
+    return new _View_GameItemComponent5(viewUtils, parentInjector, declarationEl);
+}
+var _View_GameItemComponent6 = (function (_super) {
+    __extends(_View_GameItemComponent6, _super);
+    function _View_GameItemComponent6(viewUtils, parentInjector, declarationEl) {
+        _super.call(this, _View_GameItemComponent6, renderType_GameItemComponent, import6.ViewType.EMBEDDED, viewUtils, parentInjector, declarationEl, import7.ChangeDetectorStatus.CheckAlways);
+    }
+    _View_GameItemComponent6.prototype.createInternal = function (rootSelector) {
+        this._el_0 = this.renderer.createElement(null, 'div', null);
+        this._text_1 = this.renderer.createText(this._el_0, '\n            ', null);
+        this._el_2 = this.renderer.createElement(this._el_0, 'p', null);
+        this._text_3 = this.renderer.createText(this._el_2, 'Congratulation You Won!!!!', null);
+        this._text_4 = this.renderer.createText(this._el_0, '\n            ', null);
+        this.init([].concat([this._el_0]), [
+            this._el_0,
+            this._text_1,
+            this._el_2,
+            this._text_3,
+            this._text_4
+        ], [], []);
+        return null;
+    };
+    return _View_GameItemComponent6;
+}(import1.AppView));
+function viewFactory_GameItemComponent6(viewUtils, parentInjector, declarationEl) {
+    return new _View_GameItemComponent6(viewUtils, parentInjector, declarationEl);
+}
+var _View_GameItemComponent7 = (function (_super) {
+    __extends(_View_GameItemComponent7, _super);
+    function _View_GameItemComponent7(viewUtils, parentInjector, declarationEl) {
+        _super.call(this, _View_GameItemComponent7, renderType_GameItemComponent, import6.ViewType.EMBEDDED, viewUtils, parentInjector, declarationEl, import7.ChangeDetectorStatus.CheckAlways);
+    }
+    _View_GameItemComponent7.prototype.createInternal = function (rootSelector) {
+        this._el_0 = this.renderer.createElement(null, 'div', null);
+        this._text_1 = this.renderer.createText(this._el_0, '\n            ', null);
+        this._el_2 = this.renderer.createElement(this._el_0, 'p', null);
+        this._text_3 = this.renderer.createText(this._el_2, 'Sorry you lost....!!!!', null);
+        this._text_4 = this.renderer.createText(this._el_0, '\n            ', null);
+        this.init([].concat([this._el_0]), [
+            this._el_0,
+            this._text_1,
+            this._el_2,
+            this._text_3,
+            this._text_4
+        ], [], []);
+        return null;
+    };
+    return _View_GameItemComponent7;
+}(import1.AppView));
+function viewFactory_GameItemComponent7(viewUtils, parentInjector, declarationEl) {
+    return new _View_GameItemComponent7(viewUtils, parentInjector, declarationEl);
 }
