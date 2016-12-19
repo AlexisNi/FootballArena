@@ -11,20 +11,20 @@ export var AuthService = (function () {
     AuthService.prototype.signup = function (user) {
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post(this.Heroku + 'user', body, { headers: headers })
+        return this.http.post(this.Lh + 'user', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) { return Observable.throw(error.json()); });
     };
     AuthService.prototype.signin = function (user) {
         var body = JSON.stringify(user);
         var headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post(this.Heroku + 'user/signin', body, { headers: headers })
+        return this.http.post(this.Lh + 'user/signin', body, { headers: headers })
             .map(function (response) { return response.json(); })
             .catch(function (error) { return Observable.throw(error.json()); });
     };
     AuthService.prototype.getUser = function () {
         var token = localStorage.getItem('token') ? '?token=' + localStorage.getItem('token') : '';
-        return this.http.get(this.Heroku + 'user' + token)
+        return this.http.get(this.Lh + 'user' + token)
             .map(function (response) {
             var user = response.json().obj.lastName;
             return user;
