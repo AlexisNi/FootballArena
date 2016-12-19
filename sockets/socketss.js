@@ -1,5 +1,5 @@
-var ArenaUser=require('../../../WebstormProjects/footbalQuiz/models/arena');
-var User=require('../../../WebstormProjects/footbalQuiz/models/user');
+var ArenaUser=require('../models/arena');
+var User=require('../models/user');
 var io={};
 var userInfo=[];
 var connectedUserList=[];
