@@ -4,6 +4,7 @@ import {Http, Response, Headers} from "@angular/http";
 import {Observable} from "rxjs";
 import 'rxjs/add/operator/map';
 import {QuestionPlayed} from "../questionModels/questionPlayed";
+import myGlobals=require('../../globals/globals');
 
 /**
  * Created by alex on 06/12/2016.
@@ -12,12 +13,11 @@ import {QuestionPlayed} from "../questionModels/questionPlayed";
 export class QuestionServices{
     private arenaQuestions:Question[]=[];
     constructor(private http:Http){}
-    public Heroku='https://footballarenaquiz.herokuapp.com/';
 
 
 
     getArenaQuestions(id:String){
-        return this.http.get(this.Heroku+'question/arenaQuestions'+'?id='+id).
+        return this.http.get(myGlobals.host+'question/arenaQuestions'+'?id='+id).
         map((response:Response)=>{
             const questions=response.json().obj;
             let transformedQuestions:Question[]=[];
@@ -45,7 +45,7 @@ export class QuestionServices{
     questionPlayed(questionPlayed:QuestionPlayed){
         const body = JSON.stringify(questionPlayed);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post(this.Heroku+'question/questionPlayed', body, {headers: headers})
+        return this.http.post(myGlobals.host+'question/questionPlayed', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) =>Observable.throw(error.json()));
     }

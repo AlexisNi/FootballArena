@@ -7,6 +7,8 @@ import {QuestionPlayed} from "../questionModels/questionPlayed";
 import {StatusPlayed} from "../questionModels/statusPlayedArena";
 import {ArenaQuestion} from "../questionModels/arena_question";
 import {AnsweredQuestion} from "../questionModels/answered-questions";
+import myGlobals=require('../../globals/globals');
+
 @Injectable()
 export class QuestionAnswerServices{
     constructor(private http:Http){}
@@ -17,14 +19,14 @@ export class QuestionAnswerServices{
     saveAnswerdQuestion(answer:ArenaQuestion){
         const body = JSON.stringify(answer);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post(this.Heroku+'questionANS', body, {headers: headers})
+        return this.http.post(myGlobals.host+'questionANS', body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) =>Observable.throw(error.json()));
     }
     getCorrectQuestions(playerArena:StatusPlayed){
         var userId=playerArena.userId;
         var arenaId=playerArena.arenaId;
-        return this.http.get(this.Heroku+'questionANS/correct'+'?userId='+userId+'&'+'arenaId='+arenaId)
+        return this.http.get(myGlobals.host+'questionANS/correct'+'?userId='+userId+'&'+'arenaId='+arenaId)
             . map((response:Response)=>{
                 const questionsAnswered=response.json().obj;
                 let transformedQuestionsAnswered:AnsweredQuestion[]=[];

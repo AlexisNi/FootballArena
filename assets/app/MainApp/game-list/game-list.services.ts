@@ -5,6 +5,8 @@ import {Observable} from "rxjs";
 import 'rxjs/add/operator/map';
 import {ArenaUsers} from "../models/arenaUsers";
 import {PlayerResult} from "./models/playerResults";
+import myGlobals=require('../../globals/globals');
+
 
 /**
  * Created by alex on 06/12/2016.
@@ -13,8 +15,6 @@ import {PlayerResult} from "./models/playerResults";
 @Injectable()
 export class GameListServices{
     constructor(private http:Http){}
-    public Lh='http://localhost:3000/';
-    public Heroku='https://footballarenaquiz.herokuapp.com/';
 
     public arenas:ArenaUsers[]=[];
 
@@ -24,7 +24,7 @@ export class GameListServices{
     getResult(arenaUserInfo:ArenaUserId){
         const body = JSON.stringify(arenaUserInfo);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post('https://footballarenaquiz.herokuapp.com/questionANS/getResults', body, {headers: headers})
+        return this.http.post(myGlobals.host+'questionANS/getResults', body, {headers: headers})
             .map((response: Response) =>{
                 const winner=response.json().winner;
                 const loser=response.json().loser;
@@ -41,7 +41,7 @@ export class GameListServices{
 
     getArenas(){
         const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
-        return this.http.get('https://footballarenaquiz.herokuapp.com/arena/arenas'+token)
+        return this.http.get(myGlobals.host+'arena/arenas'+token)
             .map((response: Response) => {
                 const arenas = response.json().obj;
                 let transformedArenas: ArenaUsers[] = [];

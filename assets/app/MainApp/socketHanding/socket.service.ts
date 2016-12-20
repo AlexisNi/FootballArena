@@ -3,17 +3,18 @@ import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {GameListServices} from "../game-list/game-list.services";
 import {ArenaUsers} from "../models/arenaUsers";
+import myGlobals=require('../../globals/globals');
+
 @Injectable()
 
 export class SocketService{
-    public Lh='http://localhost:3000/';
-    public Heroku='https://footballarenaquiz.herokuapp.com/';
+
     private socket:any;
     constructor(private gameListServices:GameListServices){}
 
     sendUserId(userId:string)
     {
-        this.socket=io(this.Heroku+'game',{query:{userId:userId}});
+        this.socket=io(myGlobals.host+'game',{query:{userId:userId}});
         this.socket.emit('get-userId',userId);
 
     }
