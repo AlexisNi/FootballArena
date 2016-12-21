@@ -19,17 +19,28 @@ export class SocketService{
 
     }
 
-    enterArena(arenaId:string,userId:string){
-        this.socket.emit('enterArena',{arenaId:arenaId,userId:userId});
+    enterArena(arenaId:string,userId:string/*,inviteId:string*/){
+        this.socket.emit('enterArena',{arenaId:arenaId,userId:userId,inviteId:'58308c2f81611516206007eb'});
     }
 
   arenaLeave(userId){
         this.socket.emit('leaveArena');
         this.reqArenas(userId);
     }
-    
 
+    onDisconect() {
+        let observable = new Observable((observer: any)=> {
+            this.socket.on('userDC', (data: any)=> {
+                this.reqArenas(data.userId);
 
+            });
+
+            return()=>{
+                this.socket.disconnect();
+            }
+        })
+        return observable;
+    }
 
 
     reqArenas(userId){
