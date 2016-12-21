@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var random =require('mongoose-random');
+var deepPopulate = require('mongoose-deep-populate')(mongoose);
 
 
 var schema = new Schema({
@@ -13,6 +14,7 @@ var schema = new Schema({
     isPlayed:{type:Boolean,default:false}
 });
 
+schema.plugin(deepPopulate );
 
 schema.plugin(random,{path:'r'});
 module.exports = mongoose.model('Question', schema);

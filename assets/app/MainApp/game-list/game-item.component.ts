@@ -1,7 +1,7 @@
 /**
  * Created by alex on 15/11/2016.
  */
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild, OnDestroy} from '@angular/core';
 import {ArenaUsers} from "../models/arenaUsers";
 import {AuthService} from "../../auth/auth.service";
 import {ModalComponent} from "ng2-bs3-modal/components/modal";
@@ -18,7 +18,8 @@ If user hasnt played
 -->
 <div class="row" *ngIf="arena.userId==userId && arena.user_played==false||arena.inviteId==userId&& arena.invite_played==false">
 <div *ngIf="arena.userId==userId">
-<a  [routerLink]="[arena.arenaId, { UserId: arena.inviteId }]"  class="list-group-item clearfix" routerLinkActive="active"> 
+<!--<a  [routerLink]="[arena.arenaId, { UserId: arena.inviteId }]"  class="list-group-item clearfix" routerLinkActive="active"> -->
+    <button class="list-group-item clearfix" (click)="sendArenaInfo(arena)">
     <article class="panel panel-default" [ngStyle]="{backgroundColor: color}">
     <div class="panel-body">
         {{arena?.lastName}} 
@@ -29,10 +30,16 @@ If user hasnt played
         </div>
     </footer>
     </article>
+    </button>
+<!--
 </a>
+-->
 </div>
 <div *ngIf="arena.inviteId==userId">
+<!--
 <a  [routerLink]="[arena.arenaId, { UserId: arena.userId }]"  class="list-group-item clearfix" routerLinkActive="active"> 
+-->
+    <button class="list-group-item clearfix" (click)="sendArenaInfo(arena)">
     <article class="panel panel-default" [ngStyle]="{backgroundColor: color}">
     <div class="panel-body">
         {{arena?.lastName}} 
@@ -43,13 +50,19 @@ If user hasnt played
         </div>
     </footer>
     </article>
+    </button>
+<!--
 </a>
+-->
 </div>
 
 </div>
 
 <div class="row" *ngIf="arena.userId==userId && arena.user_played==true||arena.inviteId==userId&& arena.invite_played==true">
+<!--
 <a [class.disabled]="true"  [routerLink]="arena.arenaId" class="list-group-item clearfix" routerLinkActive="active"> 
+-->
+    <button [class.disabled]="true"  class="list-group-item clearfix">
     <article class="panel panel-default" [ngStyle]="{backgroundColor: color}">
     <div class="panel-body">
         {{arena?.lastName}} 
@@ -60,7 +73,10 @@ If user hasnt played
         </div>
     </footer>
     </article>
+    </button>
+<!--
 </a>
+-->
 
 <div *ngIf=" arena.user_played==true&&arena.invite_played==true">
 <button type="button" class="btn btn-primary" (click)="showResult(arena.arenaId)">Show results</button>
@@ -110,7 +126,10 @@ If user hasnt played
 
 })
 
-export class GameItemComponent implements OnInit{
+export class GameItemComponent implements OnInit, OnDestroy{
+    ngOnDestroy(): void {
+
+    }
     @ViewChild('myModal')
     modal: ModalComponent;
     @Input() arena:ArenaUsers;
@@ -152,6 +171,13 @@ export class GameItemComponent implements OnInit{
                 });
 
         this.modal.open();
+
+    }
+
+    sendArenaInfo(ArenaInfo:ArenaUsers){
+        this.gameListService.getArenaUsers(ArenaInfo);
+        this.gameListService.setUserPlaying(true);
+
 
     }
 

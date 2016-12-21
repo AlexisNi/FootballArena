@@ -48,7 +48,8 @@ export class SocketService{
                         arena.status_accept,
                         arena.user.lastName || arena.invite.lastName,
                         arena.user_played,
-                        arena.invite_played
+                        arena.invite_played,
+                        arena.questions
                     ));
                 }
                 const UserArenas=data.objUser;
@@ -60,7 +61,9 @@ export class SocketService{
                         userArena.status_accept,
                         userArena.user.lastName,
                         userArena.user_played,
-                        userArena.invite_played
+                        userArena.invite_played,
+                        userArena.questions
+
 
                     ));
                 }

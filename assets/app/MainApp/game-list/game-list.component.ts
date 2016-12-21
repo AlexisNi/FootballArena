@@ -16,14 +16,11 @@ import {AuthService} from "../../auth/auth.service";
 
 })
 
-export  class GameListcomponent implements OnInit{
-/*    ngOnDestroy(): any {
+export  class GameListcomponent implements OnInit, OnDestroy{
+   ngOnDestroy(): any {
         console.log('ondestroy arenaas')
-        this.socketService.getArenas().subscribe(
-            (arena:ArenaUsers[])=> {
-                console.log(arena)
-            }).unsubscribe();
-    }*/
+
+    }
 
 
     ngOnInit(): any {

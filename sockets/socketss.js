@@ -3,6 +3,7 @@ var User=require('../models/user');
 var io={};
 var userInfo=[];
 var connectedUserList=[];
+
 module.exports = function (io) {
     'use strict';
     var nsp=io.of('/game');
@@ -69,6 +70,7 @@ module.exports = function (io) {
                 User.findOne({_id: req.userId/*socket.handshake.query.userId*/})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE USER ROW AND SHOW THE LAST NAME OF INVITE
                     .populate('arenas', '_id')
                     .exec(function (err, arenasArr) {
+
                         if (err) {
                             throw err;
                         }
@@ -78,10 +80,13 @@ module.exports = function (io) {
                         console.log(arenasArr);
                         ArenaUser.find({$and: [{user: req.userId}, {_id: {$in: arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
                             .populate('invite', 'lastName')
+                            .deepPopulate('questions')
                             .exec(function (err, arenas) {
+
                                 if (err) {
                                     throw err;
                                 }
+
                                 ArenaUser.find({$and: [{invite: req.userId}, {_id: {$in: arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
                                     .populate('user', 'lastName')
                                     .exec(function (err, arenasUser) {

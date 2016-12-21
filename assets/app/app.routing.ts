@@ -10,7 +10,7 @@ import {QuestionStructure} from "./questions/question-structure.component";
 
 
 const APP_ROUTES:Routes =[
-    {path:'',redirectTo:'auth',pathMatch:'full'},
+    {path:'',redirectTo:'mainApp',pathMatch:'full'},
     {path:'mainApp',component:MainComponent,children:QUESTION_ROUTES},
     {path:'questions',component:QuestionStructure},
     {path:'auth',component:AuthenticationComponent,children:AUTH_ROUTES}

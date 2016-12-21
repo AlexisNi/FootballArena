@@ -130,6 +130,7 @@ router.get('/arenas',function (req,res,next) {
 
         User.findOne({_id:decoded.user._id})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE USER ROW AND SHOW THE LAST NAME OF INVITE
             .populate('arenas','_id')
+            .populate('questions')
             .exec(function (err, arenasArr) {
                 if (err) {
                     return res.status(500).json({
@@ -145,6 +146,7 @@ router.get('/arenas',function (req,res,next) {
 
                     ArenaUser.find   ({ $and:[ {user: decoded.user._id},{_id:{$in:arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
                         .populate('invite', 'lastName')
+                        .populate('questions')
                         .exec(function (err, arenas) {
                             if (err) {
                                 return res.status(500).json({
@@ -169,7 +171,7 @@ router.get('/arenas',function (req,res,next) {
 
                                     }
 
-
+                console.log(arenas);
 
 
                         res.status(200).json({

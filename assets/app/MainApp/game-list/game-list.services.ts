@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Http, Headers, Response} from "@angular/http";
 import {ArenaUserId} from "../models/arenaUserId";
-import {Observable} from "rxjs";
+import {Observable, Subject} from "rxjs";
 import 'rxjs/add/operator/map';
 import {ArenaUsers} from "../models/arenaUsers";
 import {PlayerResult} from "./models/playerResults";
@@ -15,8 +15,18 @@ import myGlobals=require('../../globals/globals');
 @Injectable()
 export class GameListServices{
     constructor(private http:Http){}
-
     public arenas:ArenaUsers[]=[];
+    private ArenaPlaying =new Subject<ArenaUsers>();
+    ArenaChosen=this.ArenaPlaying.asObservable();
+    private UserPlaying=new Subject<Boolean>();
+    userPlayingChosen$=this.UserPlaying.asObservable();
+
+    getArenaUsers(arenasUsers:ArenaUsers){
+        this.ArenaPlaying.next(arenasUsers);
+    }
+    setUserPlaying(isPlaying){
+        this.UserPlaying.next(isPlaying);
+    }
 
 
 

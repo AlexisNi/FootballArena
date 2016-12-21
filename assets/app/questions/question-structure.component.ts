@@ -21,9 +21,7 @@ import {QuestionAnswerServices} from "./questionServices/questionAnswer.service"
 export class QuestionStructure implements OnInit, OnDestroy{
     ngOnDestroy(): void {
         console.log('On destroy');
-
         this.socketService.arenaLeave(this.inviteId);
-
 
     }
 
@@ -66,10 +64,6 @@ export class QuestionStructure implements OnInit, OnDestroy{
         this.socketService.enterArena(this.arenaId,this.userId);
         this.statusPlayed();
         this.getArenaQuestions();
-
-/*
-        this.getQuestionsANS();
-*/
     }
 
 

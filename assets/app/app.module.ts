@@ -23,6 +23,7 @@ import {QuestionServices} from "./questions/questionServices/question.service";
 import {QuestionAnswerServices} from "./questions/questionServices/questionAnswer.service";
 import {QuestionStructure} from "./questions/question-structure.component";
 import {Ng2Bs3ModalModule} from "ng2-bs3-modal/ng2-bs3-modal";
+import { ArenaPlayingComponent} from "./questions/arena-playing.component";
 @NgModule({
     declarations:[AppComponent,
         LoginComponent,
@@ -35,7 +36,8 @@ import {Ng2Bs3ModalModule} from "ng2-bs3-modal/ng2-bs3-modal";
         GameItemComponent,
         OpponentComponentFind,
         MainComponent,
-        QuestionStructure],
+        QuestionStructure,
+        ArenaPlayingComponent],
 
     imports:[BrowserModule,FormsModule,routing,ReactiveFormsModule,HttpModule,Ng2Bs3ModalModule ],
 
