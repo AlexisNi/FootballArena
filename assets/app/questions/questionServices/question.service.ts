@@ -4,7 +4,7 @@ import {Http, Response, Headers} from "@angular/http";
 import {Observable} from "rxjs";
 import 'rxjs/add/operator/map';
 import {QuestionPlayed} from "../questionModels/questionPlayed";
-import myGlobals=require('../../globals/globals');
+import {myGlobals}  from "../../globals/globals";
 
 /**
  * Created by alex on 06/12/2016.

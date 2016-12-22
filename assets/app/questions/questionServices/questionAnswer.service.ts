@@ -7,7 +7,7 @@ import {QuestionPlayed} from "../questionModels/questionPlayed";
 import {StatusPlayed} from "../questionModels/statusPlayedArena";
 import {ArenaQuestion} from "../questionModels/arena_question";
 import {AnsweredQuestion} from "../questionModels/answered-questions";
-import myGlobals=require('../../globals/globals');
+import {myGlobals}  from "../../globals/globals";
 
 @Injectable()
 export class QuestionAnswerServices{

@@ -3,7 +3,7 @@ import {Injectable} from "@angular/core";
 import {Http, Headers, Response} from "@angular/http";
 import 'rxjs/Rx';
 import {Observable} from "rxjs";
-import myGlobals=require('../globals/globals');
+import {myGlobals}  from "../globals/globals";
 @Injectable()
 export  class AuthService{
     constructor(private http:Http){}

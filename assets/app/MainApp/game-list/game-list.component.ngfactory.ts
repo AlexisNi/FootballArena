@@ -49,6 +49,9 @@ class _View_GameListcomponent_Host0 extends import1.AppView<any> {
     this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
   }
+  destroyInternal():void {
+    this._GameListcomponent_0_4.ngOnDestroy();
+  }
 }
 function viewFactory_GameListcomponent_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
   if ((renderType_GameListcomponent_Host === (null as any))) { (renderType_GameListcomponent_Host = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,[],{})); }
@@ -158,6 +161,9 @@ class _View_GameListcomponent1 extends import1.AppView<any> {
     if (((this.numberOfChecks === 0) && !throwOnChange)) { this._GameItemComponent_0_4.ngOnInit(); }
     this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
+  }
+  destroyInternal():void {
+    this._GameItemComponent_0_4.ngOnDestroy();
   }
 }
 function viewFactory_GameListcomponent1(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {

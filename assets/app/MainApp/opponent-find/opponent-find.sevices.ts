@@ -6,7 +6,7 @@ import {User} from "../../auth/user";
 import {GameListServices} from "../game-list/game-list.services";
 import {ArenaUsers} from "../models/arenaUsers";
 import {ArenaPlayers} from "../models/arenaPlayers";
-import myGlobals=require('../../globals/globals');
+import {myGlobals}  from "../../globals/globals";
 
 @Injectable()
 export class OpponentFindService{

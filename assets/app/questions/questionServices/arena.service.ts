@@ -5,7 +5,7 @@ import {Observable} from "rxjs";
 import 'rxjs/add/operator/map';
 import {QuestionPlayed} from "../questionModels/questionPlayed";
 import {StatusPlayed} from "../questionModels/statusPlayedArena";
-import myGlobals=require('../../globals/globals');
+import {myGlobals}  from "../../globals/globals";
 @Injectable()
 export class ArenaServices{
     constructor(private http:Http){}

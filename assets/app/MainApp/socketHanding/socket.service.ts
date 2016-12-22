@@ -3,7 +3,7 @@ import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {GameListServices} from "../game-list/game-list.services";
 import {ArenaUsers} from "../models/arenaUsers";
-import myGlobals=require('../../globals/globals');
+import {myGlobals}  from "../../globals/globals";
 
 @Injectable()
 

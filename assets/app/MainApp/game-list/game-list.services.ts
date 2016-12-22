@@ -5,7 +5,7 @@ import {Observable, Subject} from "rxjs";
 import 'rxjs/add/operator/map';
 import {ArenaUsers} from "../models/arenaUsers";
 import {PlayerResult} from "./models/playerResults";
-import myGlobals=require('../../globals/globals');
+import {myGlobals}  from "../../globals/globals";
 
 
 /**

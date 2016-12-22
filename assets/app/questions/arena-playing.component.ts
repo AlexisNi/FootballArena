@@ -1,7 +1,6 @@
-import {Component, OnInit, OnDestroy, AfterViewInit, Input} from '@angular/core';
+import {Component, OnInit, OnDestroy, Input, ViewChild} from '@angular/core';
 import {GameListServices} from "../MainApp/game-list/game-list.services";
 import {ArenaUsers} from "../MainApp/models/arenaUsers";
-import {Subscription} from "rxjs";
 import {Question} from "./questionModels/question";
 import {AnsweredQuestion} from "./questionModels/answered-questions";
 import {QuestionAnswerServices} from "./questionServices/questionAnswer.service";
@@ -10,6 +9,8 @@ import {ArenaQuestion} from "./questionModels/arena_question";
 import {StatusPlayed} from "./questionModels/statusPlayedArena";
 import {ArenaServices} from "./questionServices/arena.service";
 import {SocketService} from "../MainApp/socketHanding/socket.service";
+import {ModalComponent} from "ng2-bs3-modal/components/modal";
+import {Router} from "@angular/router";
 
 
 
@@ -23,7 +24,8 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
     constructor(private questionAnswerService:QuestionAnswerServices,
                 private userService:AuthService,
                 private arenaService:ArenaServices,
-                private socketService:SocketService){}
+                private socketService:SocketService,
+                private gameListService:GameListServices){}
 
     @Input() arenas:ArenaUsers;
     arenaQuestions:Question[]=[];
@@ -33,6 +35,19 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
     userId;
     arenaId;
     index=0;
+    @ViewChild('myModal')
+    modal: ModalComponent;
+
+    open() {
+        this.modal.open();
+    }
+    close(){
+        this.isLost=false;
+        this.modal.close();
+        this.gameListService.setUserPlaying(false);
+
+
+    }
 
     ngOnInit(): void {
         this.arenaId=this.arenas.arenaId;
@@ -89,6 +104,8 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
 
         }else {
             this.isLost=true;
+            this.open();
+
         }
 
     }
