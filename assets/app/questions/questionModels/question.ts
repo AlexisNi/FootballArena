@@ -4,10 +4,10 @@
 export  class Question{
     questionId:string;
     question:string;
-    optionA:string;
-    optionB:string;
-    optionC :string;
-    optionD:string;
+    optiona:string;
+    optionb:string;
+    optionc :string;
+    optiond:string;
     answer:string;
     isplayed:boolean;
 
@@ -15,10 +15,10 @@ export  class Question{
     constructor(question:string,optionA:string,optionB:string,optionC:string,optionD:string,answer:string,questionId:string,isplayed?:boolean){
         this.questionId=questionId;
         this.question=question;
-        this.optionA=optionA;;
-        this.optionB=optionB;
-        this.optionC=optionC;
-        this.optionD=optionD;
+        this.optiona=optionA;;
+        this.optionb=optionB;
+        this.optionc=optionC;
+        this.optiond=optionD;
         this.answer=answer;
         this.isplayed=isplayed;
 

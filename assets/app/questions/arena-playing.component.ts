@@ -20,14 +20,13 @@ import {SocketService} from "../MainApp/socketHanding/socket.service";
 
 export class ArenaPlayingComponent implements OnInit ,OnDestroy{
 
-    constructor(private gameListServices:GameListServices,
-                private questionAnswerService:QuestionAnswerServices,
+    constructor(private questionAnswerService:QuestionAnswerServices,
                 private userService:AuthService,
                 private arenaService:ArenaServices,
                 private socketService:SocketService){}
 
     @Input() arenas:ArenaUsers;
-    ArenaSubscription:Subscription;
+    arenaQuestions:Question[]=[];
     userName:string;
     inviteId:string;
     isLost;
@@ -39,20 +38,27 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
         this.arenaId=this.arenas.arenaId;
         this.getUserId();
         this.getUser();
+        this.getArenaQuestions();
         this.socketService.enterArena(this.arenaId,this.userId);
         this.statusPlayed();
+        this.getInviteId();
+
+    }
+    getInviteId(){
+        if(this.arenas.userId==this.userId){
+            this.inviteId=this.arenas.inviteId;
+        }else {
+            this.inviteId=this.userId;
+        }
+
     }
 
 
 
     ngOnDestroy(): void {
         console.log('on Destroy all arenas');
-        if(this.arenas.userId==this.userId){
-            this.inviteId=this.arenas.inviteId;
-        }else {
-            this.inviteId=this.userId;
-        }
-        this.socketService.arenaLeave(this.arenas.inviteId);
+
+        this.socketService.arenaLeave(this.inviteId);
 
 
     }
@@ -63,6 +69,8 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
     }
 
     onChooseQuestion(activeQuestion:Question,answerChoice:Object){
+        console.log(activeQuestion);
+        console.log(answerChoice);
         if(activeQuestion.answer===answerChoice){
             var questionAnswer=new AnsweredQuestion(activeQuestion.questionId,true);
             console.log(questionAnswer);
@@ -106,6 +114,10 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
             .subscribe(
                 data=>console.log(data),
                 error=>console.log(error));
+    }
+    getArenaQuestions(){
+        this.arenaQuestions=this.arenas.questions;
+        console.log(this.arenaQuestions);
     }
 
 

@@ -35,7 +35,8 @@ export class OpponentFindService{
                     response.json().obj.status_accept,
                     response.json().obj.invite.lastName,
                     response.json().obj.user_played,
-                    response.json().obj.invite_played);
+                    response.json().obj.invite_played,
+                    response.json().obj.questions);
                 this.gameListSevices.arenas.push(arenaUsers);
                 return arenaUsers;
             })

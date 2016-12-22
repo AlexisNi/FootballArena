@@ -27,8 +27,6 @@ export  class GameListcomponent implements OnInit, OnDestroy{
         console.log('on init');
         this.socketService.reqArenas(this.user.getUserId());
         this.getAreaUpdate();
-        this.socketService.onDisconect();
-
    }
     constructor(private socketService:SocketService,private user:AuthService){}
     arenas:ArenaUsers[];

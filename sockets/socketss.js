@@ -10,6 +10,8 @@ module.exports = function (io) {
     nsp.on('connection',function (socket) {
         console.log('User connected!');
         connectedUserList[socket.handshake.query.userId]=socket;
+        console.log('Loged in users :')
+        console.log(connectedUserList);
         /*
          connectedUserList['583095a7612b9025a49881d8'].emit('updateArenas',{status:true});
          */
@@ -51,6 +53,7 @@ module.exports = function (io) {
 
                                         ArenaUser.find({$and: [{invite: otherUser}, {_id: {$in: arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
                                             .populate('user', 'lastName')
+                                            .deepPopulate('questions')
                                             .exec(function (err, arenasUser) {
                                                 if (err) {
 
@@ -136,6 +139,7 @@ module.exports = function (io) {
 
                                 ArenaUser.find({$and: [{invite: req.userId}, {_id: {$in: arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
                                     .populate('user', 'lastName')
+                                    .deepPopulate('questions')
                                     .exec(function (err, arenasUser) {
                                         if (err) {
 

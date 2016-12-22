@@ -28,7 +28,7 @@ export class SocketService{
         this.reqArenas(userId);
     }
 
-    onDisconect() {
+  /*  onDisconect() {
         let observable = new Observable((observer: any)=> {
             this.socket.on('userDC', (data: any)=> {
                 this.reqArenas(data.userId);
@@ -41,7 +41,7 @@ export class SocketService{
         })
         return observable;
     }
-
+*/
 
     reqArenas(userId){
         this.socket.emit('getArenas',{userId:userId});
