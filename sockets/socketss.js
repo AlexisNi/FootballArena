@@ -10,8 +10,6 @@ module.exports = function (io) {
     nsp.on('connection',function (socket) {
         console.log('User connected!');
         connectedUserList[socket.handshake.query.userId]=socket;
-        console.log('Loged in users :')
-        console.log(connectedUserList);
         /*
          connectedUserList['583095a7612b9025a49881d8'].emit('updateArenas',{status:true});
          */
@@ -28,7 +26,6 @@ module.exports = function (io) {
                 console.log('player disconected invite id is :');
                 console.log(otherUser);
                 if (connectedUserList[otherUser]!=null){
-
                     if(otherUser!=null) {
                         var arenasArray = [];
                         User.findOne({_id: otherUser/*socket.handshake.query.userId*/})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE USER ROW AND SHOW THE LAST NAME OF INVITE
@@ -113,7 +110,8 @@ module.exports = function (io) {
 
 
             socket.on('getArenas',function (req) {
-            console.log('here get arenas!')
+            console.log('here get arenas!');
+                console.log(req);
 
             if(req.userId!=null) {
                 var arenasArray = [];
@@ -127,7 +125,6 @@ module.exports = function (io) {
                         for (var i = 0; i < arenasArr.arenas.length; i++) {
                             arenasArray.push(arenasArr.arenas[i]._id);
                         }
-                        console.log(arenasArr);
                         ArenaUser.find({$and: [{user: req.userId}, {_id: {$in: arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
                             .populate('invite', 'lastName')
                             .deepPopulate('questions')

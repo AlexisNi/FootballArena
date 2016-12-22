@@ -29,17 +29,17 @@ export var ArenaPlayingComponent = (function () {
         this.arenaId = this.arenas.arenaId;
         this.getUserId();
         this.getUser();
-        this.getArenaQuestions();
-        this.socketService.enterArena(this.arenaId, this.userId);
-        this.statusPlayed();
         this.getInviteId();
+        this.getArenaQuestions();
+        this.socketService.enterArena(this.arenaId, this.userId, this.inviteId);
+        this.statusPlayed();
     };
     ArenaPlayingComponent.prototype.getInviteId = function () {
         if (this.arenas.userId == this.userId) {
             this.inviteId = this.arenas.inviteId;
         }
-        else {
-            this.inviteId = this.userId;
+        else if (this.arenas.inviteId == this.userId) {
+            this.inviteId = this.arenaId.userId;
         }
     };
     ArenaPlayingComponent.prototype.ngOnDestroy = function () {

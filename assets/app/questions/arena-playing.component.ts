@@ -10,7 +10,6 @@ import {StatusPlayed} from "./questionModels/statusPlayedArena";
 import {ArenaServices} from "./questionServices/arena.service";
 import {SocketService} from "../MainApp/socketHanding/socket.service";
 import {ModalComponent} from "ng2-bs3-modal/components/modal";
-import {Router} from "@angular/router";
 
 
 
@@ -53,17 +52,17 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
         this.arenaId=this.arenas.arenaId;
         this.getUserId();
         this.getUser();
-        this.getArenaQuestions();
-        this.socketService.enterArena(this.arenaId,this.userId);
-        this.statusPlayed();
         this.getInviteId();
+        this.getArenaQuestions();
+        this.socketService.enterArena(this.arenaId,this.userId,this.inviteId);
+        this.statusPlayed();
 
     }
     getInviteId(){
         if(this.arenas.userId==this.userId){
             this.inviteId=this.arenas.inviteId;
-        }else {
-            this.inviteId=this.userId;
+        }else if(this.arenas.inviteId==this.userId) {
+            this.inviteId=this.arenaId.userId;
         }
 
     }
@@ -72,7 +71,6 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
 
     ngOnDestroy(): void {
         console.log('on Destroy all arenas');
-
         this.socketService.arenaLeave(this.inviteId);
 
 

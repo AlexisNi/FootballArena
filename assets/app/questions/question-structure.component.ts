@@ -61,7 +61,9 @@ export class QuestionStructure implements OnInit, OnDestroy{
         this.getArenaId();
         this.getUser();
         this.getUserId();
+/*
         this.socketService.enterArena(this.arenaId,this.userId);
+*/
         this.statusPlayed();
         this.getArenaQuestions();
     }

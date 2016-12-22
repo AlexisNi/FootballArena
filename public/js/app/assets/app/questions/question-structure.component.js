@@ -37,7 +37,9 @@ export var QuestionStructure = (function () {
         this.getArenaId();
         this.getUser();
         this.getUserId();
-        this.socketService.enterArena(this.arenaId, this.userId);
+        /*
+                this.socketService.enterArena(this.arenaId,this.userId);
+        */
         this.statusPlayed();
         this.getArenaQuestions();
     };

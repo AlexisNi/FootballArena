@@ -12,8 +12,8 @@ export var SocketService = (function () {
         this.socket = io(myGlobals.host + 'game', { query: { userId: userId } });
         this.socket.emit('get-userId', userId);
     };
-    SocketService.prototype.enterArena = function (arenaId, userId /*,inviteId:string*/) {
-        this.socket.emit('enterArena', { arenaId: arenaId, userId: userId, inviteId: '58308c2f81611516206007eb' });
+    SocketService.prototype.enterArena = function (arenaId, userId, inviteId) {
+        this.socket.emit('enterArena', { arenaId: arenaId, userId: userId, inviteId: inviteId });
     };
     SocketService.prototype.arenaLeave = function (userId) {
         this.socket.emit('leaveArena');

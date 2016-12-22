@@ -19,8 +19,8 @@ export class SocketService{
 
     }
 
-    enterArena(arenaId:string,userId:string/*,inviteId:string*/){
-        this.socket.emit('enterArena',{arenaId:arenaId,userId:userId,inviteId:'58308c2f81611516206007eb'});
+    enterArena(arenaId:string,userId:string,inviteId:string){
+        this.socket.emit('enterArena',{arenaId:arenaId,userId:userId,inviteId:inviteId});
     }
 
   arenaLeave(userId){
