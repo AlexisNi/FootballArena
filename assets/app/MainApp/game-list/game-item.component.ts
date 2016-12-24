@@ -143,11 +143,12 @@ export class GameItemComponent implements OnInit, OnDestroy{
     ngOnInit(): void {
 
         this.userId=this.userIdService.getUserId();
+
     }
 
     constructor(private userIdService:AuthService,private gameListService:GameListServices){}
 
-    getInviteId(inviteId,userid){
+/*    getInviteId(inviteId,userid){
         if (userid==this.userIdService.getUserId()){
             this.inviteId=inviteId;
         }else{
@@ -156,7 +157,7 @@ export class GameItemComponent implements OnInit, OnDestroy{
         console.log(this.inviteId);
 
 
-    }
+    }*/
 
     showResult(arenaId)
     {

@@ -61,9 +61,10 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
     getInviteId(){
         if(this.arenas.userId==this.userId){
             this.inviteId=this.arenas.inviteId;
-        }else if(this.arenas.inviteId==this.userId) {
-            this.inviteId=this.arenaId.userId;
+        }else {
+            this.inviteId=this.arenas.userId;
         }
+        console.log(this.inviteId);
 
     }
 

@@ -2,6 +2,7 @@ import {Component, OnInit, OnDestroy} from "@angular/core";
 import {ArenaUsers} from "../models/arenaUsers";
 import {SocketService} from "../socketHanding/socket.service";
 import {AuthService} from "../../auth/auth.service";
+import {Subscription} from "rxjs";
 
 
 
@@ -16,18 +17,16 @@ import {AuthService} from "../../auth/auth.service";
 
 })
 
-export  class GameListcomponent implements OnInit, OnDestroy{
-   ngOnDestroy(): any {
-        console.log('ondestroy arenaas')
-
+export  class GameListcomponent implements OnInit{
+    ngOnInit(): any {
+        console.log('on init');
+        this.getAreaUpdate();
+        console.log(this.user.getUserId());
+        this.socketService.reqArenas(this.user.getUserId());
     }
 
 
-    ngOnInit(): any {
-        console.log('on init');
-        this.socketService.reqArenas(this.user.getUserId());
-        this.getAreaUpdate();
-   }
+
     constructor(private socketService:SocketService,private user:AuthService){}
     arenas:ArenaUsers[];
 
@@ -35,7 +34,20 @@ export  class GameListcomponent implements OnInit, OnDestroy{
         this.socketService.getArenas().subscribe(
             (arena:ArenaUsers[])=> {
                 this.arenas=arena;
-                console.log(arena)
+                console.log(arena);
             });
     }
+
+
+
+
+/*    ngOnDestroy(): any {
+        console.log('ondestroy arenaas');
+        this.socketService.getArenas().subscribe(
+            (arena:ArenaUsers[])=> {
+            }).unsubscribe();
+
+    }*/
+
+
 }

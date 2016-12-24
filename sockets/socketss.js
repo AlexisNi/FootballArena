@@ -10,9 +10,6 @@ module.exports = function (io) {
     nsp.on('connection',function (socket) {
         console.log('User connected!');
         connectedUserList[socket.handshake.query.userId]=socket;
-        /*
-         connectedUserList['583095a7612b9025a49881d8'].emit('updateArenas',{status:true});
-         */
 
 
         socket.on('disconnect',function () {
