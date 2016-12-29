@@ -8,6 +8,7 @@ import {ModalComponent} from "ng2-bs3-modal/components/modal";
 import {ArenaUserId} from "../models/arenaUserId";
 import {GameListServices} from "./game-list.services";
 import {PlayerResult} from "./models/playerResults";
+import {SocketService} from "../socketHanding/socket.service";
 
 
 @Component({
@@ -139,7 +140,7 @@ export class GameItemComponent implements OnInit, OnDestroy{
         this.userId=this.userIdService.getUserId();
     }
 
-    constructor(private userIdService:AuthService,private gameListService:GameListServices){}
+    constructor(private userIdService:AuthService,private gameListService:GameListServices,private socketService:SocketService){}
 
     getInviteId(inviteId,userid){
         if (userid==this.userIdService.getUserId()){
@@ -176,8 +177,13 @@ export class GameItemComponent implements OnInit, OnDestroy{
     }
     claimAward(){
         this.gameListService.getAward(this.userId,this.arena.arenaId)
-            .subscribe((message)=>{console.log(message)});
-        this.modal.close()
+            .subscribe((message)=>{console.log(message)
+                this.socketService.reqArenas(this.userId);
+
+
+            });
+        this.modal.close();
+
     }
 
 

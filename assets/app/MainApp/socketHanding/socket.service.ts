@@ -33,6 +33,7 @@ export class SocketService{
     reqArenas(userId){
         this.socket.emit('getArenas',{userId:userId});
     }
+    test(){this.socket.emit('test')};
     getArenas(){
         this.socket.removeAllListeners('loadArenas');
         let observable=new Observable((observer:any)=>{

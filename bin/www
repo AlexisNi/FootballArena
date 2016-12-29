@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var io=require('../sockets/sockets');
+var io=require('../sockets/socketUpdateStats');
 var debug = require('debug')('footbalquiz:server');
 var http = require('http');
 

@@ -11,6 +11,8 @@ module.exports = function (io) {
         console.log('User connected!');
         connectedUserList[socket.handshake.query.userId]=socket;
         console.log(connectedUserList.length);
+        require('./socketUpdateStats')(socket);
+
 
 
         socket.on('disconnect',function () {

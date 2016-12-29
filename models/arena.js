@@ -9,7 +9,9 @@ var schema = new Schema({
     status_accept: {type: Boolean},
     questions: [{type: Schema.Types.ObjectId, ref: 'Question'}],
     user_played:{type:Boolean,default:false},
-    invite_played:{type:Boolean,default:false}
+    invite_played:{type:Boolean,default:false},
+    awardPlayerOne:{type:Boolean,default:false},
+    awardPlayerTwo:{type:Boolean,default:false}
 
 });
 

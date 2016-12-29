@@ -141,7 +141,7 @@ class _View_GameListcomponent1 extends import1.AppView<any> {
     this._el_0 = this.renderer.createElement((null as any),'game-item',(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = import16.viewFactory_GameItemComponent0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._GameItemComponent_0_4 = new import15.GameItemComponent(this.parent.parentInjector.get(import9.AuthService),this.parent.parentInjector.get(import17.GameListServices));
+    this._GameItemComponent_0_4 = new import15.GameItemComponent(this.parent.parentInjector.get(import9.AuthService),this.parent.parentInjector.get(import17.GameListServices),this.parent.parentInjector.get(import8.SocketService));
     this._appEl_0.initComponent(this._GameItemComponent_0_4,[],compView_0);
     compView_0.create(this._GameItemComponent_0_4,[],(null as any));
     this._expr_0 = import7.UNINITIALIZED;
