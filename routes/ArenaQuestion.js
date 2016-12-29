@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var ArenaQuestions=require('../models/ArenaQuestion');
+var Awards=require('../models/awards');
 
 
 
@@ -118,6 +119,7 @@ router.post('/getResults',function (req,res,next) {
     var userId=req.body.userId;
     ArenaQuestions.findOne().where({ $and:[ {arenaId:arenaId}, {userId:userId}]})
         .populate('userId','lastName')
+        .populate('userId','lastName')
         .exec(function (err,answerCount) {
             if (err){
                 return res.status(500).json({
@@ -138,18 +140,73 @@ router.post('/getResults',function (req,res,next) {
 
 
                   if(answerCount.questionAnswer.length>answerCountB.questionAnswer.length){
-                      res.status(200).json({
-                          message:'success',
-                          winner:answerCount.userId,
-                          loser:answerCountB.userId
+                      var awards={awards:{arenaId:arenaId,winner:{
+                          userId:'',arenaId:'',points:3,experience:140
+                      },loser:{
+                          userId:'',arenaId:'',points:0,experience:40
+                          }}};
+
+                      Awards.findOne({arenaId:arenaId}).exec(function (err,getAwards) {
+                          if (!getAwards){
+                              awards=new Awards({arenaId:arenaId,awards:{arenaId:arenaId,winner:{
+                                  userId:answerCount.userId._id,points:3,experience:140
+                              },loser:{
+                                  userId:answerCountB.userId._id,points:0,experience:40
+                              }}});
+                              awards.save();
+
+                          }else {
+                              console.log('awards intialized')
+                              awards=getAwards;
+
+                          }
+
+                          console.log(awards)
+
+                          res.status(200).json({
+                              message:'success',
+                              winner:answerCount.userId,
+                              loser:answerCountB.userId,
+                              awards:awards
+
+
                       });
 
+
+                  });
+
                   }else if(answerCount.questionAnswer.length<answerCountB.questionAnswer.length) {
-                      res.status(200).json({
-                          message:'success',
-                          loser:answerCount.userId,
-                          winner:answerCountB.userId
+                      var awards={awards:{arenaId:arenaId,winner:{
+                          userId:'',arenaId:'',points:3,experience:140
+                      },loser:{
+                          userId:'',arenaId:'',points:0,experience:40
+                      }}};
+
+                      Awards.findOne({arenaId:arenaId}).exec(function (err,getAwards) {
+                          if (!getAwards){
+                              awards=new Awards({arenaId:arenaId,awards:{arenaId:arenaId,winner:{
+                                  userId:answerCount.userId._id,points:3,experience:140
+                              },loser:{
+                                  userId:answerCountB.userId._id,points:0,experience:40
+                              }}});
+                              awards.save();
+
+                          }else {
+                              awards=getAwards;
+
+                          }
+                          res.status(200).json({
+                              message:'success',
+                              loser:answerCount.userId,
+                              winner:answerCountB.userId,
+                              awards:awards
+
+                          });
+
+
                       });
+
+
 
                   }
                   else{

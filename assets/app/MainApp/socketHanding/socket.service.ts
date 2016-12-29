@@ -28,25 +28,13 @@ export class SocketService{
         this.reqArenas(userId);
     }
 
-  /*  onDisconect() {
-        let observable = new Observable((observer: any)=> {
-            this.socket.on('userDC', (data: any)=> {
-                this.reqArenas(data.userId);
 
-            });
-
-            return()=>{
-                this.socket.disconnect();
-            }
-        })
-        return observable;
-    }
-*/
 
     reqArenas(userId){
         this.socket.emit('getArenas',{userId:userId});
     }
     getArenas(){
+        this.socket.removeAllListeners('loadArenas');
         let observable=new Observable((observer:any)=>{
             this.socket.on('loadArenas',(data:any)=>{
                 const arenas=data.obj;

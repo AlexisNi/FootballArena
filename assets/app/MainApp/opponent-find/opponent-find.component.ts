@@ -55,6 +55,7 @@ export class OpponentComponentFind implements OnInit{
 
 
                 data => {console.log(data);
+
                     this.socketService.reqArenas(inviteId);
 
                 },
@@ -62,7 +63,9 @@ export class OpponentComponentFind implements OnInit{
 
 
     );
+/*
         this.socketService.reqArenas(inviteId);
+*/
 
 
     }

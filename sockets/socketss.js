@@ -10,6 +10,7 @@ module.exports = function (io) {
     nsp.on('connection',function (socket) {
         console.log('User connected!');
         connectedUserList[socket.handshake.query.userId]=socket;
+        console.log(connectedUserList.length);
 
 
         socket.on('disconnect',function () {
@@ -143,7 +144,8 @@ module.exports = function (io) {
                                             connectedUserList[req.userId].emit('loadArenas', {
                                                 obj: arenas,
                                                 objUser: arenasUser
-                                            })
+                                            });
+
                                         }
                                     });
                             });

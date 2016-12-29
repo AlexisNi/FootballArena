@@ -17,17 +17,16 @@ import {Subscription} from "rxjs";
 
 })
 
-export  class GameListcomponent implements OnInit{
+export  class GameListcomponent implements OnInit, OnDestroy{
     ngOnInit(): any {
-        console.log('on init');
-        this.getAreaUpdate();
-        console.log(this.user.getUserId());
         this.socketService.reqArenas(this.user.getUserId());
     }
 
 
 
-    constructor(private socketService:SocketService,private user:AuthService){}
+    constructor(private socketService:SocketService,private user:AuthService){
+        this.getAreaUpdate();
+    }
     arenas:ArenaUsers[];
 
     getAreaUpdate(){
@@ -41,13 +40,13 @@ export  class GameListcomponent implements OnInit{
 
 
 
-/*    ngOnDestroy(): any {
-        console.log('ondestroy arenaas');
+    ngOnDestroy(): any {
+     /*   console.log('ondestroy arenaas');
         this.socketService.getArenas().subscribe(
             (arena:ArenaUsers[])=> {
             }).unsubscribe();
-
-    }*/
+*/
+    }
 
 
 }

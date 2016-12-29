@@ -38,11 +38,16 @@ export class GameListServices{
             .map((response: Response) =>{
                 const winner=response.json().winner;
                 const loser=response.json().loser;
+                const Awards=response.json().awards;
+                console.log(Awards.awards.winner);
                 var WinnerResult=new PlayerResult(
                     winner._id,
                     winner.lastName,
                     loser._id,
-                    loser.lastName
+                    loser.lastName,
+                    Awards.awards.winner,
+                    Awards.awards.loser
+
                 );
                 return WinnerResult;
             })
@@ -85,6 +90,16 @@ export class GameListServices{
             .catch((error: Response) =>Observable.throw(error.json()));
 
     }
+
+
+    getAward(userId:string,arenaId:string){
+            var userInfo={userId:userId,arenaId:arenaId};
+            const body=JSON.stringify(userInfo);
+            const headers = new Headers({'Content-Type': 'application/json'});
+            return this.http.post(myGlobals.host+'getAwards',body, {headers: headers})
+                .map((response: Response) => response.json())
+                .catch((error: Response) =>Observable.throw(error.json()));
+        }
 
 
 

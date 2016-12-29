@@ -10,6 +10,7 @@ var userRoutes= require('./routes/user');
 var questionRoutes=require('./routes/questions');
 var questionAns=require('./routes/ArenaQuestion');
 var arenaRoutes=require('./routes/arena');
+var awards=require('./routes/awards');
 var app = express();
 var socket_io    = require( "socket.io" );
 var io           = socket_io();
@@ -39,6 +40,7 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use('/getAwards',awards);
 app.use('/arena',arenaRoutes);
 app.use('/question',questionRoutes);
 app.use('/questionANS',questionAns);

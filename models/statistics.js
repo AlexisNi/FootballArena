@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 
 var schema = new Schema({
-    user: {type: Schema.Types.ObjectId, ref: 'User'},
+    user:{type: Schema.Types.ObjectId, ref: 'User'},
     level:{type:Number,default:1},
     currentExp:{type:Number,default:0},
     wins:{type:Number,default:0},

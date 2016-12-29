@@ -12,6 +12,7 @@ export class MainComponent implements OnInit,OnDestroy{
     ngOnInit(): void {
         this.userId=this.userIdService.getUserId();
         this.sendUserId();
+        console.log('mainn app called');
     }
 
     ngOnDestroy(): void {

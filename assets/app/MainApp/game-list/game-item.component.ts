@@ -18,7 +18,6 @@ If user hasnt played
 -->
 <div class="row" *ngIf="arena.userId==userId && arena.user_played==false||arena.inviteId==userId&& arena.invite_played==false">
 <div *ngIf="arena.userId==userId">
-<!--<a  [routerLink]="[arena.arenaId, { UserId: arena.inviteId }]"  class="list-group-item clearfix" routerLinkActive="active"> -->
     <button class="list-group-item clearfix" (click)="sendArenaInfo(arena)">
     <article class="panel panel-default" [ngStyle]="{backgroundColor: color}">
     <div class="panel-body">
@@ -31,14 +30,8 @@ If user hasnt played
     </footer>
     </article>
     </button>
-<!--
-</a>
--->
 </div>
 <div *ngIf="arena.inviteId==userId">
-<!--
-<a  [routerLink]="[arena.arenaId, { UserId: arena.userId }]"  class="list-group-item clearfix" routerLinkActive="active"> 
--->
     <button class="list-group-item clearfix" (click)="sendArenaInfo(arena)">
     <article class="panel panel-default" [ngStyle]="{backgroundColor: color}">
     <div class="panel-body">
@@ -51,17 +44,12 @@ If user hasnt played
     </footer>
     </article>
     </button>
-<!--
-</a>
--->
+
 </div>
 
 </div>
 
 <div class="row" *ngIf="arena.userId==userId && arena.user_played==true||arena.inviteId==userId&& arena.invite_played==true">
-<!--
-<a [class.disabled]="true"  [routerLink]="arena.arenaId" class="list-group-item clearfix" routerLinkActive="active"> 
--->
     <button [class.disabled]="true"  class="list-group-item clearfix">
     <article class="panel panel-default" [ngStyle]="{backgroundColor: color}">
     <div class="panel-body">
@@ -74,9 +62,7 @@ If user hasnt played
     </footer>
     </article>
     </button>
-<!--
-</a>
--->
+
 
 <div *ngIf=" arena.user_played==true&&arena.invite_played==true">
 <button type="button" class="btn btn-primary" (click)="showResult(arena.arenaId)">Show results</button>
@@ -87,14 +73,22 @@ If user hasnt played
         </modal-header>
         <modal-body>
             <div *ngIf="playerResult?.winnerUserId==userId">
-            <p>Congratulation You Won!!!!</p>
+            <h3>Congratulation You Won!!!!</h3>
+            <p>Experience gained: {{playerResult.winnerAward.experience}} Points:{{playerResult.winnerAward.points}}</p>
             </div>    
-            <div *ngIf="playerResult?.loserUserId==userId">
+            <div *ngIf="playerResult?.loserUserId==userId">         
             <p>Sorry you lost....!!!!</p>
-            </div>
+            <p>Experience gained: {{playerResult.loserAward.experience}} Points:{{playerResult.loserAward.points}}</p>
+           </div>
         </modal-body>
-        <modal-footer [show-default-buttons]="true"></modal-footer>
-    </modal>
+     <modal-footer>
+     <div class="row">
+        <div class="center-block" style="width:200px;background-color:#ccc;"><button type="button"  class="btn btn-primary"  style="width:200px" data-dismiss="modal" (click)="claimAward()">Claim Award</button></div>
+
+     </div>
+      
+    </modal-footer>  
+      </modal>
 </div>
 
 
@@ -143,12 +137,11 @@ export class GameItemComponent implements OnInit, OnDestroy{
     ngOnInit(): void {
 
         this.userId=this.userIdService.getUserId();
-
     }
 
     constructor(private userIdService:AuthService,private gameListService:GameListServices){}
 
-/*    getInviteId(inviteId,userid){
+    getInviteId(inviteId,userid){
         if (userid==this.userIdService.getUserId()){
             this.inviteId=inviteId;
         }else{
@@ -157,7 +150,7 @@ export class GameItemComponent implements OnInit, OnDestroy{
         console.log(this.inviteId);
 
 
-    }*/
+    }
 
     showResult(arenaId)
     {
@@ -180,6 +173,11 @@ export class GameItemComponent implements OnInit, OnDestroy{
         this.gameListService.setUserPlaying(true);
 
 
+    }
+    claimAward(){
+        this.gameListService.getAward(this.userId,this.arena.arenaId)
+            .subscribe((message)=>{console.log(message)});
+        this.modal.close()
     }
 
 

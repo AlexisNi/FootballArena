@@ -3,6 +3,7 @@ var router = express.Router();
 var bcrypt = require('bcryptjs');
 var User=require('../models/user');
 var jwt=require('jsonwebtoken');
+var Statistics=require('../models/statistics');
 
 
 router.post('/', function (req, res, next) {
@@ -19,7 +20,11 @@ router.post('/', function (req, res, next) {
                 title: 'An error occurred',
                 error: err
             });
+
         }
+        var statistics=new Statistics({user:result._id});
+        statistics.save();
+
         res.status(201).json({
             message: 'User created',
             obj: result
