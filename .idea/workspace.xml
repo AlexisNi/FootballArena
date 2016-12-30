@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ef6ecb-efdc-45cd-b794-7642fa97e1bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/app/globals/globals.ts" afterPath="$PROJECT_DIR$/assets/app/globals/globals.ts" />
     </list>
     <ignored path="footbalQuiz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/assets/app/globals/globals.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -721,12 +722,12 @@
       <workItem from="1482926549779" duration="6946000" />
       <workItem from="1482934566945" duration="3101000" />
       <workItem from="1483002190141" duration="26523000" />
-      <workItem from="1483092615514" duration="1374000" />
+      <workItem from="1483092615514" duration="1535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143297000" />
+    <option name="totallyTimeSpent" value="143458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-20" y="0" width="1948" height="1087" extended-state="0" />
@@ -1171,7 +1172,7 @@
     <entry file="file://$PROJECT_DIR$/assets/app/globals/globals.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding />
         </state>
       </provider>
