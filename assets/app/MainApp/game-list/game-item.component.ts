@@ -9,6 +9,7 @@ import {ArenaUserId} from "../models/arenaUserId";
 import {GameListServices} from "./game-list.services";
 import {PlayerResult} from "./models/playerResults";
 import {SocketService} from "../socketHanding/socket.service";
+import {QuestionAnswerServices} from "../../questions/questionServices/questionAnswer.service";
 
 
 @Component({
@@ -172,6 +173,7 @@ export class GameItemComponent implements OnInit, OnDestroy{
     sendArenaInfo(ArenaInfo:ArenaUsers){
         this.gameListService.getArenaUsers(ArenaInfo);
         this.gameListService.setUserPlaying(true);
+        this.gameListService.initAnswers('0',true,this.arena.arenaId,this.userId).subscribe();
 
 
     }

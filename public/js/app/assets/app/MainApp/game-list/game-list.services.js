@@ -66,6 +66,14 @@ export var GameListServices = (function () {
             .map(function (response) { return response.json(); })
             .catch(function (error) { return Observable.throw(error.json()); });
     };
+    GameListServices.prototype.initAnswers = function (id, answer, arenaId, userId) {
+        var init = { arenaId: arenaId, userId: userId, question: { answer: answer } };
+        var body = JSON.stringify(init);
+        var headers = new Headers({ 'Content-Type': 'application/json' });
+        return this.http.post(myGlobals.host + 'questionANS', body, { headers: headers })
+            .map(function (response) { return response.json(); })
+            .catch(function (error) { return Observable.throw(error.json()); });
+    };
     GameListServices.decorators = [
         { type: Injectable },
     ];

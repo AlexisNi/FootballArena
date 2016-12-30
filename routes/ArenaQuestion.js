@@ -139,6 +139,8 @@ router.post('/getResults',function (req,res,next) {
                   }
 
 
+                  answerCount.questionAnswer.length++;
+                  answerCountB.questionAnswer.length++;
                   if(answerCount.questionAnswer.length>answerCountB.questionAnswer.length){
                       var awards={awards:{arenaId:arenaId,winner:{
                           userId:'',arenaId:'',points:3,experience:140

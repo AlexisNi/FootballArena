@@ -101,6 +101,15 @@ export class GameListServices{
                 .catch((error: Response) =>Observable.throw(error.json()));
         }
 
+    initAnswers(id:string,answer:boolean,arenaId:string,userId:string){
+        const init={arenaId:arenaId,userId:userId,question:{answer:answer}}
+        const body = JSON.stringify(init);
+        const headers = new Headers({'Content-Type': 'application/json'});
+        return this.http.post(myGlobals.host+'questionANS', body, {headers: headers})
+            .map((response: Response) => response.json())
+            .catch((error: Response) =>Observable.throw(error.json()));
+    }
+
 
 
 

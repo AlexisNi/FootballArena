@@ -36,6 +36,7 @@ export var GameItemComponent = (function () {
     GameItemComponent.prototype.sendArenaInfo = function (ArenaInfo) {
         this.gameListService.getArenaUsers(ArenaInfo);
         this.gameListService.setUserPlaying(true);
+        this.gameListService.initAnswers('0', true, this.arena.arenaId, this.userId).subscribe();
     };
     GameItemComponent.prototype.claimAward = function () {
         var _this = this;
