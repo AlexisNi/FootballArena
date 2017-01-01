@@ -10,8 +10,7 @@ module.exports = function (io) {
     nsp.on('connection',function (socket) {
         console.log('User connected!');
         connectedUserList[socket.handshake.query.userId]=socket;
-        console.log(connectedUserList.length);
-        require('./socketUpdateStats')(socket);
+        require('./socketUpdateStats')(socket,connectedUserList[socket.handshake.query.userId]);
 
 
 

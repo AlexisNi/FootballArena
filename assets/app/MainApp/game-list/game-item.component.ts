@@ -74,13 +74,19 @@ If user hasnt played
             <h4 class="modal-title">You played against {{ arena.lastName }}</h4>
         </modal-header>
         <modal-body>
-            <div *ngIf="playerResult?.winnerUserId==userId">
-            <h3>Congratulation You Won!!!!</h3>
-            <p>Experience gained: {{playerResult.winnerAward.experience}} Points:{{playerResult.winnerAward.points}}</p>
-            </div>    
-            <div *ngIf="playerResult?.loserUserId==userId">         
-            <p>Sorry you lost....!!!!</p>
-            <p>Experience gained: {{playerResult.loserAward.experience}} Points:{{playerResult.loserAward.points}}</p>
+                 <div *ngIf="playerResult?.draw==false">
+                    <div *ngIf="playerResult?.winnerUserId==userId">
+                    <h3>Congratulation You Won!!!!</h3>
+                    <p>Experience gained: {{playerResult.winnerAward.experience}} Points:{{playerResult.winnerAward.points}}</p>
+                    </div>    
+                    <div *ngIf="playerResult?.loserUserId==userId">         
+                    <p>Sorry you lost....!!!!</p>
+                    <p>Experience gained: {{playerResult.loserAward.experience}} Points:{{playerResult.loserAward.points}}</p>
+                   </div>
+                </div>
+            <div *ngIf="playerResult?.draw==true">         
+            <p>Its A draw....!!!!</p>
+            <p>Experience gained: {{playerResult.drawAward.experience}} Points:{{playerResult.drawAward.points}}</p>
            </div>
         </modal-body>
      <modal-footer>
@@ -181,9 +187,11 @@ export class GameItemComponent implements OnInit, OnDestroy{
         this.gameListService.getAward(this.userId,this.arena.arenaId)
             .subscribe((message)=>{console.log(message)
                 this.socketService.reqArenas(this.userId);
+                this.socketService.reqStats(this.userId);
 
 
             });
+
         this.modal.close();
 
     }

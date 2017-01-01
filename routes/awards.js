@@ -75,7 +75,7 @@ router.post('/', function (req,res,next) {
                                 message:'Unexpected Error',
                             });
                         }
-                        statistics.currentExp=statistics.currentExp+result.awards.winner.experience;
+                        statistics.currentExp=statistics.currentExp+result.awards.loser.experience;
                         statistics.loses=statistics.loses+1;
 
                         statistics.save();
@@ -95,6 +95,35 @@ router.post('/', function (req,res,next) {
                             user.save();
                         });
 
+            }else {
+
+                Statistics.findOne({user:userId}).exec(function (err,statistics) {
+
+                    if(err){
+                        res.status(200).json({
+                            message:'Unexpected Error',
+                        });
+                    }
+                    statistics.currentExp=statistics.currentExp+result.awards.draw.experience;
+                    statistics.points = statistics.points+1;
+                    statistics.draws=statistics.draws+1;
+
+                    statistics.save();
+
+                });
+                User.findOne({_id:userId})
+                    .populate({path:'arenas',match:{_id:arenaId}})
+                    .exec(function (err,user) {
+
+                        if(err){
+                            res.status(200).json({
+                                message:'Unexpected Error',
+                            });
+                        }
+                        console.log(user.arenas);
+                        user.arenas.pull({_id:arenaId});
+                        user.save();
+                    });
             }
             ArenaUser.findOne({_id:arenaId})
                 .exec(function (err,arena) {

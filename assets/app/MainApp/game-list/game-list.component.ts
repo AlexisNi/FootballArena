@@ -20,12 +20,13 @@ import {Subscription} from "rxjs";
 export  class GameListcomponent implements OnInit, OnDestroy{
     ngOnInit(): any {
         this.socketService.reqArenas(this.user.getUserId());
+        this.getAreaUpdate();
+
     }
 
 
 
     constructor(private socketService:SocketService,private user:AuthService){
-        this.getAreaUpdate();
 
     }
     arenas:ArenaUsers[];

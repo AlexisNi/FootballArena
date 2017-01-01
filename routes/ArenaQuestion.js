@@ -169,7 +169,8 @@ router.post('/getResults',function (req,res,next) {
                               message:'success',
                               winner:answerCount.userId,
                               loser:answerCountB.userId,
-                              awards:awards
+                              awards:awards,
+                              draw:false
 
 
                       });
@@ -201,7 +202,8 @@ router.post('/getResults',function (req,res,next) {
                               message:'success',
                               loser:answerCount.userId,
                               winner:answerCountB.userId,
-                              awards:awards
+                              awards:awards,
+                              draw:false
 
                           });
 
@@ -212,7 +214,35 @@ router.post('/getResults',function (req,res,next) {
 
                   }
                   else{
-                      res.sendStatus(200);
+                      var awards={awards:{arenaId:arenaId,winner:{
+                          userId:'',arenaId:'',points:3,experience:140
+                      },loser:{
+                          userId:'',arenaId:'',points:0,experience:40
+                      }}};
+
+                      Awards.findOne({arenaId:arenaId}).exec(function (err,getAwards) {
+                          if (!getAwards){
+                              awards=new Awards({arenaId:arenaId,awards:{arenaId:arenaId,draw:{
+                                  userId:answerCountB.userId._id,points:1,experience:70
+                              }
+                              }});
+                              awards.save();
+
+                          }else {
+                              awards=getAwards;
+
+                          }
+                          res.status(200).json({
+                              message:'success',
+                              winner:answerCount.userId,
+                              loser:answerCountB.userId,
+                              draw:true,
+                              awards:awards
+
+                          });
+
+
+                      });
                   }
 
               });

@@ -4,6 +4,8 @@ import {Observable} from "rxjs";
 import {GameListServices} from "../game-list/game-list.services";
 import {ArenaUsers} from "../models/arenaUsers";
 import {myGlobals}  from "../../globals/globals";
+import {observableToBeFn} from "rxjs/testing/TestScheduler";
+import {Stats} from "../game-list/models/stats";
 
 @Injectable()
 
@@ -33,7 +35,28 @@ export class SocketService{
     reqArenas(userId){
         this.socket.emit('getArenas',{userId:userId});
     }
-    test(){this.socket.emit('test')};
+
+    reqStats(userId){
+        this.socket.emit('getStats',{userId:userId});
+    }
+
+    getStats(){
+        this.socket.removeAllListeners('loadStats');
+        let obsevable=new Observable((observer:any)=>{
+            this.socket.on('loadStats',(data:any)=>{
+                const stats=data.obj;
+                let  transFormedStats:Stats;
+                transFormedStats=new Stats(stats.level,stats.currentExp,stats.wins,stats.loses);
+                observer.next(transFormedStats);
+            });
+            return()=>{
+                this.socket.disconnect();
+            }
+        })
+        return obsevable;
+
+    }
+
     getArenas(){
         this.socket.removeAllListeners('loadArenas');
         let observable=new Observable((observer:any)=>{

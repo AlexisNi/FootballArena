@@ -1,10 +1,20 @@
-/**
- * Created by alex on 19/12/2016.
- */
-module.exports=function (io) {
-    io.on('test',function () {
-        console.log('test is working');
+var Statistics=require('../models/statistics');
+module.exports=function (io,connectedUserList) {
+    io.on('getStats',function (req) {
+        console.log('Get Stats Works!');
+        Statistics.findOne({user:req.userId}).exec(function (err,result) {
+            if (err) {
+                throw err;
+            }
+            if(connectedUserList!=null) {
+                connectedUserList.emit('loadStats', {
+                    obj: result,
+                    message:'Loaded succesfully'
+                });
+            }
+        });
 
-    })
 
-}
+    });
+
+};

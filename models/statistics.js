@@ -8,7 +8,8 @@ var schema = new Schema({
     level:{type:Number,default:1},
     currentExp:{type:Number,default:0},
     wins:{type:Number,default:0},
-    loses:{type:Number,default:0}
+    loses:{type:Number,default:0},
+    draws:{type:Number,default:0}
 });
 
 

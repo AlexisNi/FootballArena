@@ -46,7 +46,9 @@ export class GameListServices{
                     loser._id,
                     loser.lastName,
                     Awards.awards.winner,
-                    Awards.awards.loser
+                    Awards.awards.loser,
+                    Awards.awards.draw,
+                    response.json().draw
 
                 );
                 return WinnerResult;
