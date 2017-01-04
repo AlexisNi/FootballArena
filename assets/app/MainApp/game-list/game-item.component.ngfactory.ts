@@ -585,15 +585,15 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
     var compView_27:any = import25.viewFactory_ModalBodyComponent0(this.viewUtils,this.injector(27),this._appEl_27);
     this._ModalBodyComponent_27_4 = new import21.ModalBodyComponent();
     this._appEl_27.initComponent(this._ModalBodyComponent_27_4,[],compView_27);
-    this._text_28 = this.renderer.createText((null as any),'\n            ',(null as any));
+    this._text_28 = this.renderer.createText((null as any),'\n                 ',(null as any));
     this._anchor_29 = this.renderer.createTemplateAnchor((null as any),(null as any));
     this._appEl_29 = new import2.AppElement(29,27,this,this._anchor_29);
     this._TemplateRef_29_5 = new import15.TemplateRef_(this._appEl_29,viewFactory_GameItemComponent6);
     this._NgIf_29_6 = new import14.NgIf(this._appEl_29.vcRef,this._TemplateRef_29_5);
-    this._text_30 = this.renderer.createText((null as any),'    \n            ',(null as any));
+    this._text_30 = this.renderer.createText((null as any),'\n            ',(null as any));
     this._anchor_31 = this.renderer.createTemplateAnchor((null as any),(null as any));
     this._appEl_31 = new import2.AppElement(31,27,this,this._anchor_31);
-    this._TemplateRef_31_5 = new import15.TemplateRef_(this._appEl_31,viewFactory_GameItemComponent7);
+    this._TemplateRef_31_5 = new import15.TemplateRef_(this._appEl_31,viewFactory_GameItemComponent9);
     this._NgIf_31_6 = new import14.NgIf(this._appEl_31.vcRef,this._TemplateRef_31_5);
     this._text_32 = this.renderer.createText((null as any),'\n        ',(null as any));
       compView_27.create(this._ModalBodyComponent_27_4,[[].concat([
@@ -752,12 +752,12 @@ class _View_GameItemComponent4 extends import1.AppView<any> {
       this._ModalHeaderComponent_21_4.showClose = currVal_10;
       this._expr_10 = currVal_10;
     }
-    const currVal_12:any = (((this.parent.context.playerResult == (null as any))? (null as any): this.parent.context.playerResult.winnerUserId) == this.parent.context.userId);
+    const currVal_12:any = (((this.parent.context.playerResult == (null as any))? (null as any): this.parent.context.playerResult.draw) == false);
     if (import4.checkBinding(throwOnChange,this._expr_12,currVal_12)) {
       this._NgIf_29_6.ngIf = currVal_12;
       this._expr_12 = currVal_12;
     }
-    const currVal_13:any = (((this.parent.context.playerResult == (null as any))? (null as any): this.parent.context.playerResult.loserUserId) == this.parent.context.userId);
+    const currVal_13:any = (((this.parent.context.playerResult == (null as any))? (null as any): this.parent.context.playerResult.draw) == true);
     if (import4.checkBinding(throwOnChange,this._expr_13,currVal_13)) {
       this._NgIf_31_6.ngIf = currVal_13;
       this._expr_13 = currVal_13;
@@ -855,46 +855,66 @@ function viewFactory_GameItemComponent5(viewUtils:import4.ViewUtils,parentInject
 class _View_GameItemComponent6 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
-  _el_2:any;
+  _anchor_2:any;
+  /*private*/ _appEl_2:import2.AppElement;
+  _TemplateRef_2_5:any;
+  _NgIf_2_6:import14.NgIf;
   _text_3:any;
-  _text_4:any;
-  _el_5:any;
-  _text_6:any;
-  _text_7:any;
+  _anchor_4:any;
+  /*private*/ _appEl_4:import2.AppElement;
+  _TemplateRef_4_5:any;
+  _NgIf_4_6:import14.NgIf;
+  _text_5:any;
   /*private*/ _expr_0:any;
+  /*private*/ _expr_1:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_GameItemComponent6,renderType_GameItemComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
-    this._text_1 = this.renderer.createText(this._el_0,'\n            ',(null as any));
-    this._el_2 = this.renderer.createElement(this._el_0,'h3',(null as any));
-    this._text_3 = this.renderer.createText(this._el_2,'Congratulation You Won!!!!',(null as any));
-    this._text_4 = this.renderer.createText(this._el_0,'\n            ',(null as any));
-    this._el_5 = this.renderer.createElement(this._el_0,'p',(null as any));
-    this._text_6 = this.renderer.createText(this._el_5,'',(null as any));
-    this._text_7 = this.renderer.createText(this._el_0,'\n            ',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'\n                    ',(null as any));
+    this._anchor_2 = this.renderer.createTemplateAnchor(this._el_0,(null as any));
+    this._appEl_2 = new import2.AppElement(2,0,this,this._anchor_2);
+    this._TemplateRef_2_5 = new import15.TemplateRef_(this._appEl_2,viewFactory_GameItemComponent7);
+    this._NgIf_2_6 = new import14.NgIf(this._appEl_2.vcRef,this._TemplateRef_2_5);
+    this._text_3 = this.renderer.createText(this._el_0,'    \n                    ',(null as any));
+    this._anchor_4 = this.renderer.createTemplateAnchor(this._el_0,(null as any));
+    this._appEl_4 = new import2.AppElement(4,0,this,this._anchor_4);
+    this._TemplateRef_4_5 = new import15.TemplateRef_(this._appEl_4,viewFactory_GameItemComponent8);
+    this._NgIf_4_6 = new import14.NgIf(this._appEl_4.vcRef,this._TemplateRef_4_5);
+    this._text_5 = this.renderer.createText(this._el_0,'\n                ',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
+    this._expr_1 = import7.UNINITIALIZED;
     this.init([].concat([this._el_0]),[
       this._el_0,
       this._text_1,
-      this._el_2,
+      this._anchor_2,
       this._text_3,
-      this._text_4,
-      this._el_5,
-      this._text_6,
-      this._text_7
+      this._anchor_4,
+      this._text_5
     ]
     ,[],[]);
     return (null as any);
   }
+  injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
+    if (((token === import15.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
+    if (((token === import14.NgIf) && (2 === requestNodeIndex))) { return this._NgIf_2_6; }
+    if (((token === import15.TemplateRef) && (4 === requestNodeIndex))) { return this._TemplateRef_4_5; }
+    if (((token === import14.NgIf) && (4 === requestNodeIndex))) { return this._NgIf_4_6; }
+    return notFoundResult;
+  }
   detectChangesInternal(throwOnChange:boolean):void {
-    this.detectContentChildrenChanges(throwOnChange);
-    const currVal_0:any = import4.interpolate(2,'Experience gained: ',this.parent.parent.context.playerResult.winnerAward.experience,' Points:',this.parent.parent.context.playerResult.winnerAward.points,'');
+    const currVal_0:any = (((this.parent.parent.context.playerResult == (null as any))? (null as any): this.parent.parent.context.playerResult.winnerUserId) == this.parent.parent.context.userId);
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this.renderer.setText(this._text_6,currVal_0);
+      this._NgIf_2_6.ngIf = currVal_0;
       this._expr_0 = currVal_0;
     }
+    const currVal_1:any = (((this.parent.parent.context.playerResult == (null as any))? (null as any): this.parent.parent.context.playerResult.loserUserId) == this.parent.parent.context.userId);
+    if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
+      this._NgIf_4_6.ngIf = currVal_1;
+      this._expr_1 = currVal_1;
+    }
+    this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
   }
 }
@@ -916,9 +936,107 @@ class _View_GameItemComponent7 extends import1.AppView<any> {
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
-    this._text_1 = this.renderer.createText(this._el_0,'         \n            ',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'\n                    ',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'h3',(null as any));
+    this._text_3 = this.renderer.createText(this._el_2,'Congratulation You Won!!!!',(null as any));
+    this._text_4 = this.renderer.createText(this._el_0,'\n                    ',(null as any));
+    this._el_5 = this.renderer.createElement(this._el_0,'p',(null as any));
+    this._text_6 = this.renderer.createText(this._el_5,'',(null as any));
+    this._text_7 = this.renderer.createText(this._el_0,'\n                    ',(null as any));
+    this._expr_0 = import7.UNINITIALIZED;
+    this.init([].concat([this._el_0]),[
+      this._el_0,
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._text_4,
+      this._el_5,
+      this._text_6,
+      this._text_7
+    ]
+    ,[],[]);
+    return (null as any);
+  }
+  detectChangesInternal(throwOnChange:boolean):void {
+    this.detectContentChildrenChanges(throwOnChange);
+    const currVal_0:any = import4.interpolate(2,'Experience gained: ',this.parent.parent.parent.context.playerResult.winnerAward.experience,' Points:',this.parent.parent.parent.context.playerResult.winnerAward.points,'');
+    if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
+      this.renderer.setText(this._text_6,currVal_0);
+      this._expr_0 = currVal_0;
+    }
+    this.detectViewChildrenChanges(throwOnChange);
+  }
+}
+function viewFactory_GameItemComponent7(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
+  return new _View_GameItemComponent7(viewUtils,parentInjector,declarationEl);
+}
+class _View_GameItemComponent8 extends import1.AppView<any> {
+  _el_0:any;
+  _text_1:any;
+  _el_2:any;
+  _text_3:any;
+  _text_4:any;
+  _el_5:any;
+  _text_6:any;
+  _text_7:any;
+  /*private*/ _expr_0:any;
+  constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
+    super(_View_GameItemComponent8,renderType_GameItemComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+  }
+  createInternal(rootSelector:string):import2.AppElement {
+    this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'         \n                    ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'p',(null as any));
     this._text_3 = this.renderer.createText(this._el_2,'Sorry you lost....!!!!',(null as any));
+    this._text_4 = this.renderer.createText(this._el_0,'\n                    ',(null as any));
+    this._el_5 = this.renderer.createElement(this._el_0,'p',(null as any));
+    this._text_6 = this.renderer.createText(this._el_5,'',(null as any));
+    this._text_7 = this.renderer.createText(this._el_0,'\n                   ',(null as any));
+    this._expr_0 = import7.UNINITIALIZED;
+    this.init([].concat([this._el_0]),[
+      this._el_0,
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._text_4,
+      this._el_5,
+      this._text_6,
+      this._text_7
+    ]
+    ,[],[]);
+    return (null as any);
+  }
+  detectChangesInternal(throwOnChange:boolean):void {
+    this.detectContentChildrenChanges(throwOnChange);
+    const currVal_0:any = import4.interpolate(2,'Experience gained: ',this.parent.parent.parent.context.playerResult.loserAward.experience,' Points:',this.parent.parent.parent.context.playerResult.loserAward.points,'');
+    if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
+      this.renderer.setText(this._text_6,currVal_0);
+      this._expr_0 = currVal_0;
+    }
+    this.detectViewChildrenChanges(throwOnChange);
+  }
+}
+function viewFactory_GameItemComponent8(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
+  return new _View_GameItemComponent8(viewUtils,parentInjector,declarationEl);
+}
+class _View_GameItemComponent9 extends import1.AppView<any> {
+  _el_0:any;
+  _text_1:any;
+  _el_2:any;
+  _text_3:any;
+  _text_4:any;
+  _el_5:any;
+  _text_6:any;
+  _text_7:any;
+  /*private*/ _expr_0:any;
+  constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
+    super(_View_GameItemComponent9,renderType_GameItemComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
+  }
+  createInternal(rootSelector:string):import2.AppElement {
+    this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'         \n            ',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'p',(null as any));
+    this._text_3 = this.renderer.createText(this._el_2,'Its A draw....!!!!',(null as any));
     this._text_4 = this.renderer.createText(this._el_0,'\n            ',(null as any));
     this._el_5 = this.renderer.createElement(this._el_0,'p',(null as any));
     this._text_6 = this.renderer.createText(this._el_5,'',(null as any));
@@ -939,7 +1057,7 @@ class _View_GameItemComponent7 extends import1.AppView<any> {
   }
   detectChangesInternal(throwOnChange:boolean):void {
     this.detectContentChildrenChanges(throwOnChange);
-    const currVal_0:any = import4.interpolate(2,'Experience gained: ',this.parent.parent.context.playerResult.loserAward.experience,' Points:',this.parent.parent.context.playerResult.loserAward.points,'');
+    const currVal_0:any = import4.interpolate(2,'Experience gained: ',this.parent.parent.context.playerResult.drawAward.experience,' Points:',this.parent.parent.context.playerResult.drawAward.points,'');
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
       this.renderer.setText(this._text_6,currVal_0);
       this._expr_0 = currVal_0;
@@ -947,6 +1065,6 @@ class _View_GameItemComponent7 extends import1.AppView<any> {
     this.detectViewChildrenChanges(throwOnChange);
   }
 }
-function viewFactory_GameItemComponent7(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
-  return new _View_GameItemComponent7(viewUtils,parentInjector,declarationEl);
+function viewFactory_GameItemComponent9(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
+  return new _View_GameItemComponent9(viewUtils,parentInjector,declarationEl);
 }

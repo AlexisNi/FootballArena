@@ -36,6 +36,9 @@ export class LoginComponent implements OnInit{
 
 
     ngOnInit(): void {
+        if(this.authservice.isLoggedIn()==true){
+            this.router.navigateByUrl('mainApp');
+        }
         this.myForm=new FormGroup({
             email:new FormControl(null,Validators.required),
             password:new FormControl(null,Validators.required)

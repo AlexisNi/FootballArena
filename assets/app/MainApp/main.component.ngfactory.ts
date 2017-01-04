@@ -14,11 +14,12 @@ import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from './socketHanding/socket.service';
 import * as import9 from '../auth/auth.service';
-import * as import10 from '@angular/core/src/metadata/view';
-import * as import11 from '@angular/core/src/linker/component_factory';
-import * as import12 from '@angular/router/src/directives/router_outlet';
-import * as import13 from '@angular/router/src/router_outlet_map';
-import * as import14 from '@angular/core/src/linker/component_factory_resolver';
+import * as import10 from '@angular/router/src/router';
+import * as import11 from '@angular/core/src/metadata/view';
+import * as import12 from '@angular/core/src/linker/component_factory';
+import * as import13 from '@angular/router/src/directives/router_outlet';
+import * as import14 from '@angular/router/src/router_outlet_map';
+import * as import15 from '@angular/core/src/linker/component_factory_resolver';
 var renderType_MainComponent_Host:import0.RenderComponentType = (null as any);
 class _View_MainComponent_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -31,7 +32,7 @@ class _View_MainComponent_Host0 extends import1.AppView<any> {
     this._el_0 = this.selectOrCreateHostElement('my-app',rootSelector,(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = viewFactory_MainComponent0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._MainComponent_0_4 = new import3.MainComponent(this.parentInjector.get(import8.SocketService),this.parentInjector.get(import9.AuthService));
+    this._MainComponent_0_4 = new import3.MainComponent(this.parentInjector.get(import8.SocketService),this.parentInjector.get(import9.AuthService),this.parentInjector.get(import10.Router));
     this._appEl_0.initComponent(this._MainComponent_0_4,[],compView_0);
     compView_0.create(this._MainComponent_0_4,this.projectableNodes,(null as any));
     this.init([].concat([this._el_0]),[this._el_0],[],[]);
@@ -51,16 +52,16 @@ class _View_MainComponent_Host0 extends import1.AppView<any> {
   }
 }
 function viewFactory_MainComponent_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
-  if ((renderType_MainComponent_Host === (null as any))) { (renderType_MainComponent_Host = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,[],{})); }
+  if ((renderType_MainComponent_Host === (null as any))) { (renderType_MainComponent_Host = viewUtils.createRenderComponentType('',0,import11.ViewEncapsulation.None,[],{})); }
   return new _View_MainComponent_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const MainComponentNgFactory:import11.ComponentFactory<import3.MainComponent> = new import11.ComponentFactory<import3.MainComponent>('my-app',viewFactory_MainComponent_Host0,import3.MainComponent);
+export const MainComponentNgFactory:import12.ComponentFactory<import3.MainComponent> = new import12.ComponentFactory<import3.MainComponent>('my-app',viewFactory_MainComponent_Host0,import3.MainComponent);
 const styles_MainComponent:any[] = [];
 var renderType_MainComponent:import0.RenderComponentType = (null as any);
 class _View_MainComponent0 extends import1.AppView<import3.MainComponent> {
   _el_0:any;
   /*private*/ _appEl_0:import2.AppElement;
-  _RouterOutlet_0_5:import12.RouterOutlet;
+  _RouterOutlet_0_5:import13.RouterOutlet;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_MainComponent0,renderType_MainComponent,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -68,12 +69,12 @@ class _View_MainComponent0 extends import1.AppView<import3.MainComponent> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._el_0 = this.renderer.createElement(parentRenderNode,'router-outlet',(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
-    this._RouterOutlet_0_5 = new import12.RouterOutlet(this.parentInjector.get(import13.RouterOutletMap),this._appEl_0.vcRef,this.parentInjector.get(import14.ComponentFactoryResolver),(null as any));
+    this._RouterOutlet_0_5 = new import13.RouterOutlet(this.parentInjector.get(import14.RouterOutletMap),this._appEl_0.vcRef,this.parentInjector.get(import15.ComponentFactoryResolver),(null as any));
     this.init([],[this._el_0],[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import12.RouterOutlet) && (0 === requestNodeIndex))) { return this._RouterOutlet_0_5; }
+    if (((token === import13.RouterOutlet) && (0 === requestNodeIndex))) { return this._RouterOutlet_0_5; }
     return notFoundResult;
   }
   destroyInternal():void {
@@ -81,6 +82,6 @@ class _View_MainComponent0 extends import1.AppView<import3.MainComponent> {
   }
 }
 export function viewFactory_MainComponent0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.MainComponent> {
-  if ((renderType_MainComponent === (null as any))) { (renderType_MainComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/MainApp/main.component.html',0,import10.ViewEncapsulation.None,styles_MainComponent,{})); }
+  if ((renderType_MainComponent === (null as any))) { (renderType_MainComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/MainApp/main.component.html',0,import11.ViewEncapsulation.None,styles_MainComponent,{})); }
   return new _View_MainComponent0(viewUtils,parentInjector,declarationEl);
 }

@@ -14,15 +14,15 @@ import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from '../../auth/auth.service';
 import * as import9 from '../game-list/game-list.services';
-import * as import10 from '@angular/core/src/metadata/view';
-import * as import11 from '@angular/core/src/linker/component_factory';
-import * as import12 from '@angular/common/src/directives/ng_if';
-import * as import13 from '@angular/core/src/linker/template_ref';
-import * as import14 from '../opponent-find/opponent-find.component';
-import * as import15 from '../game-list/game-list.component';
-import * as import16 from '../opponent-find/opponent-find.component.ngfactory';
-import * as import17 from '../opponent-find/opponent-find.sevices';
-import * as import18 from '../socketHanding/socket.service';
+import * as import10 from '../socketHanding/socket.service';
+import * as import11 from '@angular/core/src/metadata/view';
+import * as import12 from '@angular/core/src/linker/component_factory';
+import * as import13 from '@angular/common/src/directives/ng_if';
+import * as import14 from '@angular/core/src/linker/template_ref';
+import * as import15 from '../opponent-find/opponent-find.component';
+import * as import16 from '../game-list/game-list.component';
+import * as import17 from '../opponent-find/opponent-find.component.ngfactory';
+import * as import18 from '../opponent-find/opponent-find.sevices';
 import * as import19 from '../game-list/game-list.component.ngfactory';
 import * as import20 from '../../questions/arena-playing.component';
 import * as import21 from '../../questions/arena-playing.component.ngfactory';
@@ -40,7 +40,7 @@ class _View_ArenaComponent_Host0 extends import1.AppView<any> {
     this._el_0 = this.selectOrCreateHostElement('my-arena',rootSelector,(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = viewFactory_ArenaComponent0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._ArenaComponent_0_4 = new import3.ArenaComponent(this.parentInjector.get(import8.AuthService),this.parentInjector.get(import9.GameListServices));
+    this._ArenaComponent_0_4 = new import3.ArenaComponent(this.parentInjector.get(import8.AuthService),this.parentInjector.get(import9.GameListServices),this.parentInjector.get(import10.SocketService));
     this._appEl_0.initComponent(this._ArenaComponent_0_4,[],compView_0);
     compView_0.create(this._ArenaComponent_0_4,this.projectableNodes,(null as any));
     this.init([].concat([this._el_0]),[this._el_0],[],[]);
@@ -57,23 +57,24 @@ class _View_ArenaComponent_Host0 extends import1.AppView<any> {
   }
 }
 function viewFactory_ArenaComponent_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
-  if ((renderType_ArenaComponent_Host === (null as any))) { (renderType_ArenaComponent_Host = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,[],{})); }
+  if ((renderType_ArenaComponent_Host === (null as any))) { (renderType_ArenaComponent_Host = viewUtils.createRenderComponentType('',0,import11.ViewEncapsulation.None,[],{})); }
   return new _View_ArenaComponent_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const ArenaComponentNgFactory:import11.ComponentFactory<import3.ArenaComponent> = new import11.ComponentFactory<import3.ArenaComponent>('my-arena',viewFactory_ArenaComponent_Host0,import3.ArenaComponent);
+export const ArenaComponentNgFactory:import12.ComponentFactory<import3.ArenaComponent> = new import12.ComponentFactory<import3.ArenaComponent>('my-arena',viewFactory_ArenaComponent_Host0,import3.ArenaComponent);
 const styles_ArenaComponent:any[] = [];
 var renderType_ArenaComponent:import0.RenderComponentType = (null as any);
 class _View_ArenaComponent0 extends import1.AppView<import3.ArenaComponent> {
-  _anchor_0:any;
-  /*private*/ _appEl_0:import2.AppElement;
-  _TemplateRef_0_5:any;
-  _NgIf_0_6:import12.NgIf;
-  _text_1:any;
-  _anchor_2:any;
-  /*private*/ _appEl_2:import2.AppElement;
-  _TemplateRef_2_5:any;
-  _NgIf_2_6:import12.NgIf;
-  _text_3:any;
+  _text_0:any;
+  _anchor_1:any;
+  /*private*/ _appEl_1:import2.AppElement;
+  _TemplateRef_1_5:any;
+  _NgIf_1_6:import13.NgIf;
+  _text_2:any;
+  _anchor_3:any;
+  /*private*/ _appEl_3:import2.AppElement;
+  _TemplateRef_3_5:any;
+  _NgIf_3_6:import13.NgIf;
+  _text_4:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
@@ -81,43 +82,45 @@ class _View_ArenaComponent0 extends import1.AppView<import3.ArenaComponent> {
   }
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
-    this._anchor_0 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
-    this._appEl_0 = new import2.AppElement(0,(null as any),this,this._anchor_0);
-    this._TemplateRef_0_5 = new import13.TemplateRef_(this._appEl_0,viewFactory_ArenaComponent1);
-    this._NgIf_0_6 = new import12.NgIf(this._appEl_0.vcRef,this._TemplateRef_0_5);
-    this._text_1 = this.renderer.createText(parentRenderNode,'\n   ',(null as any));
-    this._anchor_2 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
-    this._appEl_2 = new import2.AppElement(2,(null as any),this,this._anchor_2);
-    this._TemplateRef_2_5 = new import13.TemplateRef_(this._appEl_2,viewFactory_ArenaComponent2);
-    this._NgIf_2_6 = new import12.NgIf(this._appEl_2.vcRef,this._TemplateRef_2_5);
-    this._text_3 = this.renderer.createText(parentRenderNode,'\n\n\n',(null as any));
+    this._text_0 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
+    this._anchor_1 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
+    this._appEl_1 = new import2.AppElement(1,(null as any),this,this._anchor_1);
+    this._TemplateRef_1_5 = new import14.TemplateRef_(this._appEl_1,viewFactory_ArenaComponent1);
+    this._NgIf_1_6 = new import13.NgIf(this._appEl_1.vcRef,this._TemplateRef_1_5);
+    this._text_2 = this.renderer.createText(parentRenderNode,'\n    \n   ',(null as any));
+    this._anchor_3 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
+    this._appEl_3 = new import2.AppElement(3,(null as any),this,this._anchor_3);
+    this._TemplateRef_3_5 = new import14.TemplateRef_(this._appEl_3,viewFactory_ArenaComponent2);
+    this._NgIf_3_6 = new import13.NgIf(this._appEl_3.vcRef,this._TemplateRef_3_5);
+    this._text_4 = this.renderer.createText(parentRenderNode,'\n\n\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this.init([],[
-      this._anchor_0,
-      this._text_1,
-      this._anchor_2,
-      this._text_3
+      this._text_0,
+      this._anchor_1,
+      this._text_2,
+      this._anchor_3,
+      this._text_4
     ]
     ,[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import13.TemplateRef) && (0 === requestNodeIndex))) { return this._TemplateRef_0_5; }
-    if (((token === import12.NgIf) && (0 === requestNodeIndex))) { return this._NgIf_0_6; }
-    if (((token === import13.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
-    if (((token === import12.NgIf) && (2 === requestNodeIndex))) { return this._NgIf_2_6; }
+    if (((token === import14.TemplateRef) && (1 === requestNodeIndex))) { return this._TemplateRef_1_5; }
+    if (((token === import13.NgIf) && (1 === requestNodeIndex))) { return this._NgIf_1_6; }
+    if (((token === import14.TemplateRef) && (3 === requestNodeIndex))) { return this._TemplateRef_3_5; }
+    if (((token === import13.NgIf) && (3 === requestNodeIndex))) { return this._NgIf_3_6; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
     const currVal_0:any = (this.context.isUserPlaying == false);
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this._NgIf_0_6.ngIf = currVal_0;
+      this._NgIf_1_6.ngIf = currVal_0;
       this._expr_0 = currVal_0;
     }
     const currVal_1:any = (this.context.isUserPlaying == true);
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
-      this._NgIf_2_6.ngIf = currVal_1;
+      this._NgIf_3_6.ngIf = currVal_1;
       this._expr_1 = currVal_1;
     }
     this.detectContentChildrenChanges(throwOnChange);
@@ -125,7 +128,7 @@ class _View_ArenaComponent0 extends import1.AppView<import3.ArenaComponent> {
   }
 }
 export function viewFactory_ArenaComponent0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.ArenaComponent> {
-  if ((renderType_ArenaComponent === (null as any))) { (renderType_ArenaComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/MainApp/arena/arena.component.ts class ArenaComponent - inline template',0,import10.ViewEncapsulation.None,styles_ArenaComponent,{})); }
+  if ((renderType_ArenaComponent === (null as any))) { (renderType_ArenaComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/MainApp/arena/arena.component.ts class ArenaComponent - inline template',0,import11.ViewEncapsulation.None,styles_ArenaComponent,{})); }
   return new _View_ArenaComponent0(viewUtils,parentInjector,declarationEl);
 }
 class _View_ArenaComponent1 extends import1.AppView<any> {
@@ -134,92 +137,136 @@ class _View_ArenaComponent1 extends import1.AppView<any> {
   _el_2:any;
   _text_3:any;
   _el_4:any;
-  _text_5:any;
+  _el_5:any;
   _text_6:any;
-  _el_7:any;
-  /*private*/ _appEl_7:import2.AppElement;
-  _OpponentComponentFind_7_4:import14.OpponentComponentFind;
-  _text_8:any;
-  _text_9:any;
-  _el_10:any;
+  _text_7:any;
+  _el_8:any;
+  _el_9:any;
+  _text_10:any;
   _text_11:any;
   _el_12:any;
-  /*private*/ _appEl_12:import2.AppElement;
-  _GameListcomponent_12_4:import15.GameListcomponent;
-  _text_13:any;
+  _el_13:any;
   _text_14:any;
+  _text_15:any;
+  _el_16:any;
+  /*private*/ _appEl_16:import2.AppElement;
+  _OpponentComponentFind_16_4:import15.OpponentComponentFind;
+  _text_17:any;
+  _text_18:any;
+  _el_19:any;
+  _text_20:any;
+  _el_21:any;
+  /*private*/ _appEl_21:import2.AppElement;
+  _GameListcomponent_21_4:import16.GameListcomponent;
+  _text_22:any;
+  _text_23:any;
   /*private*/ _expr_0:any;
+  /*private*/ _expr_1:any;
+  /*private*/ _expr_2:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_ArenaComponent1,renderType_ArenaComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
     this.renderer.setElementAttribute(this._el_0,'class','row');
-    this._text_1 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'\n\n        ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_2,'class','col-md-5');
-    this._text_3 = this.renderer.createText(this._el_2,'\n        ',(null as any));
-    this._el_4 = this.renderer.createElement(this._el_2,'h1',(null as any));
-    this._text_5 = this.renderer.createText(this._el_4,'',(null as any));
-    this._text_6 = this.renderer.createText(this._el_2,'\n        ',(null as any));
-    this._el_7 = this.renderer.createElement(this._el_2,'opponent-find',(null as any));
-    this._appEl_7 = new import2.AppElement(7,2,this,this._el_7);
-    var compView_7:any = import16.viewFactory_OpponentComponentFind0(this.viewUtils,this.injector(7),this._appEl_7);
-    this._OpponentComponentFind_7_4 = new import14.OpponentComponentFind(this.parentInjector.get(import17.OpponentFindService),this.parentInjector.get(import18.SocketService));
-    this._appEl_7.initComponent(this._OpponentComponentFind_7_4,[],compView_7);
-    compView_7.create(this._OpponentComponentFind_7_4,[],(null as any));
-    this._text_8 = this.renderer.createText(this._el_2,'\n    ',(null as any));
-    this._text_9 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._el_10 = this.renderer.createElement(this._el_0,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_10,'class','col-md-7');
-    this._text_11 = this.renderer.createText(this._el_10,'\n        ',(null as any));
-    this._el_12 = this.renderer.createElement(this._el_10,'game-list',(null as any));
-    this._appEl_12 = new import2.AppElement(12,10,this,this._el_12);
-    var compView_12:any = import19.viewFactory_GameListcomponent0(this.viewUtils,this.injector(12),this._appEl_12);
-    this._GameListcomponent_12_4 = new import15.GameListcomponent(this.parentInjector.get(import18.SocketService),this.parentInjector.get(import8.AuthService));
-    this._appEl_12.initComponent(this._GameListcomponent_12_4,[],compView_12);
-    compView_12.create(this._GameListcomponent_12_4,[],(null as any));
-    this._text_13 = this.renderer.createText(this._el_10,'\n    ',(null as any));
-    this._text_14 = this.renderer.createText(this._el_0,'\n',(null as any));
+    this.renderer.setElementAttribute(this._el_2,'class','col-md-5 col-lg-5 col-sm-5');
+    this._text_3 = this.renderer.createText(this._el_2,'\n                       ',(null as any));
+    this._el_4 = this.renderer.createElement(this._el_2,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_4,'class',' col-sm-1 col-sm-offset-2 col-md-1 col-lg-1 col-md-offset-2 col-lg-offset-2');
+    this._el_5 = this.renderer.createElement(this._el_4,'h1',(null as any));
+    this._text_6 = this.renderer.createText(this._el_5,'',(null as any));
+    this._text_7 = this.renderer.createText(this._el_2,'\n                       ',(null as any));
+    this._el_8 = this.renderer.createElement(this._el_2,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_8,'class','col-sm-1 col-sm-offset-2 col-md-1 col-lg-1 col-md-offset-1 col-lg-offset-1');
+    this._el_9 = this.renderer.createElement(this._el_8,'h1',(null as any));
+    this._text_10 = this.renderer.createText(this._el_9,'',(null as any));
+    this._text_11 = this.renderer.createText(this._el_2,'\n                       ',(null as any));
+    this._el_12 = this.renderer.createElement(this._el_2,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_12,'class','col-sm-1 col-sm-offset-2 col-md-1 col-lg-1 col-md-offset-1 col-lg-offset-1');
+    this._el_13 = this.renderer.createElement(this._el_12,'h1',(null as any));
+    this._text_14 = this.renderer.createText(this._el_13,'',(null as any));
+    this._text_15 = this.renderer.createText(this._el_2,'\n            \n                     \n            \n\n           ',(null as any));
+    this._el_16 = this.renderer.createElement(this._el_2,'opponent-find',(null as any));
+    this._appEl_16 = new import2.AppElement(16,2,this,this._el_16);
+    var compView_16:any = import17.viewFactory_OpponentComponentFind0(this.viewUtils,this.injector(16),this._appEl_16);
+    this._OpponentComponentFind_16_4 = new import15.OpponentComponentFind(this.parentInjector.get(import18.OpponentFindService),this.parentInjector.get(import10.SocketService));
+    this._appEl_16.initComponent(this._OpponentComponentFind_16_4,[],compView_16);
+    compView_16.create(this._OpponentComponentFind_16_4,[],(null as any));
+    this._text_17 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._text_18 = this.renderer.createText(this._el_0,'\n        \n        ',(null as any));
+    this._el_19 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_19,'class','col-md-7');
+    this._text_20 = this.renderer.createText(this._el_19,'\n            ',(null as any));
+    this._el_21 = this.renderer.createElement(this._el_19,'game-list',(null as any));
+    this._appEl_21 = new import2.AppElement(21,19,this,this._el_21);
+    var compView_21:any = import19.viewFactory_GameListcomponent0(this.viewUtils,this.injector(21),this._appEl_21);
+    this._GameListcomponent_21_4 = new import16.GameListcomponent(this.parentInjector.get(import10.SocketService),this.parentInjector.get(import8.AuthService));
+    this._appEl_21.initComponent(this._GameListcomponent_21_4,[],compView_21);
+    compView_21.create(this._GameListcomponent_21_4,[],(null as any));
+    this._text_22 = this.renderer.createText(this._el_19,'\n        ',(null as any));
+    this._text_23 = this.renderer.createText(this._el_0,'\n        \n    ',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
+    this._expr_1 = import7.UNINITIALIZED;
+    this._expr_2 = import7.UNINITIALIZED;
     this.init([].concat([this._el_0]),[
       this._el_0,
       this._text_1,
       this._el_2,
       this._text_3,
       this._el_4,
-      this._text_5,
+      this._el_5,
       this._text_6,
-      this._el_7,
-      this._text_8,
-      this._text_9,
-      this._el_10,
+      this._text_7,
+      this._el_8,
+      this._el_9,
+      this._text_10,
       this._text_11,
       this._el_12,
-      this._text_13,
-      this._text_14
+      this._el_13,
+      this._text_14,
+      this._text_15,
+      this._el_16,
+      this._text_17,
+      this._text_18,
+      this._el_19,
+      this._text_20,
+      this._el_21,
+      this._text_22,
+      this._text_23
     ]
     ,[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import14.OpponentComponentFind) && (7 === requestNodeIndex))) { return this._OpponentComponentFind_7_4; }
-    if (((token === import15.GameListcomponent) && (12 === requestNodeIndex))) { return this._GameListcomponent_12_4; }
+    if (((token === import15.OpponentComponentFind) && (16 === requestNodeIndex))) { return this._OpponentComponentFind_16_4; }
+    if (((token === import16.GameListcomponent) && (21 === requestNodeIndex))) { return this._GameListcomponent_21_4; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
-    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._OpponentComponentFind_7_4.ngOnInit(); }
-    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._GameListcomponent_12_4.ngOnInit(); }
+    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._OpponentComponentFind_16_4.ngOnInit(); }
+    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._GameListcomponent_21_4.ngOnInit(); }
     this.detectContentChildrenChanges(throwOnChange);
     const currVal_0:any = import4.interpolate(1,'',this.parent.context.userName,'');
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this.renderer.setText(this._text_5,currVal_0);
+      this.renderer.setText(this._text_6,currVal_0);
       this._expr_0 = currVal_0;
+    }
+    const currVal_1:any = import4.interpolate(1,'Level:',((this.parent.context.stats == (null as any))? (null as any): this.parent.context.stats.level),'');
+    if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
+      this.renderer.setText(this._text_10,currVal_1);
+      this._expr_1 = currVal_1;
+    }
+    const currVal_2:any = import4.interpolate(1,'CurrentExp:',((this.parent.context.stats == (null as any))? (null as any): this.parent.context.stats.currentExp),'');
+    if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
+      this.renderer.setText(this._text_14,currVal_2);
+      this._expr_2 = currVal_2;
     }
     this.detectViewChildrenChanges(throwOnChange);
   }
   destroyInternal():void {
-    this._GameListcomponent_12_4.ngOnDestroy();
+    this._GameListcomponent_21_4.ngOnDestroy();
   }
 }
 function viewFactory_ArenaComponent1(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
@@ -249,7 +296,7 @@ class _View_ArenaComponent2 extends import1.AppView<any> {
     this._el_4 = this.renderer.createElement(this._el_2,'arena-playing',(null as any));
     this._appEl_4 = new import2.AppElement(4,2,this,this._el_4);
     var compView_4:any = import21.viewFactory_ArenaPlayingComponent0(this.viewUtils,this.injector(4),this._appEl_4);
-    this._ArenaPlayingComponent_4_4 = new import20.ArenaPlayingComponent(this.parentInjector.get(import22.QuestionAnswerServices),this.parentInjector.get(import8.AuthService),this.parentInjector.get(import23.ArenaServices),this.parentInjector.get(import18.SocketService),this.parentInjector.get(import9.GameListServices));
+    this._ArenaPlayingComponent_4_4 = new import20.ArenaPlayingComponent(this.parentInjector.get(import22.QuestionAnswerServices),this.parentInjector.get(import8.AuthService),this.parentInjector.get(import23.ArenaServices),this.parentInjector.get(import10.SocketService),this.parentInjector.get(import9.GameListServices));
     this._appEl_4.initComponent(this._ArenaPlayingComponent_4_4,[],compView_4);
     compView_4.create(this._ArenaPlayingComponent_4_4,[],(null as any));
     this._text_5 = this.renderer.createText(this._el_2,'\n        ',(null as any));

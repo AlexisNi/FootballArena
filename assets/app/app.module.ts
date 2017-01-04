@@ -24,6 +24,7 @@ import {QuestionAnswerServices} from "./questions/questionServices/questionAnswe
 import {QuestionStructure} from "./questions/question-structure.component";
 import {Ng2Bs3ModalModule} from "ng2-bs3-modal/ng2-bs3-modal";
 import { ArenaPlayingComponent} from "./questions/arena-playing.component";
+import {LoggedInGuard} from "./auth/logged-in.guard";
 @NgModule({
     declarations:[AppComponent,
         LoginComponent,
@@ -47,7 +48,8 @@ import { ArenaPlayingComponent} from "./questions/arena-playing.component";
         SocketService,
         ArenaServices,
         QuestionServices,
-        QuestionAnswerServices],
+        QuestionAnswerServices,
+        LoggedInGuard],
 
     bootstrap:[AppComponent]
 

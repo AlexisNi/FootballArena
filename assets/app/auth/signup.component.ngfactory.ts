@@ -13,16 +13,17 @@ import * as import5 from '@angular/core/src/di/injector';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from './auth.service';
-import * as import9 from '@angular/core/src/metadata/view';
-import * as import10 from '@angular/core/src/linker/component_factory';
-import * as import11 from '@angular/forms/src/directives/reactive_directives/form_group_directive';
-import * as import12 from '@angular/forms/src/directives/ng_control_status';
-import * as import13 from '@angular/forms/src/directives/default_value_accessor';
-import * as import14 from '@angular/forms/src/directives/reactive_directives/form_control_name';
-import * as import15 from '@angular/core/src/linker/element_ref';
-import * as import16 from '@angular/forms/src/directives/control_value_accessor';
-import * as import17 from '@angular/forms/src/directives/ng_control';
-import * as import18 from '@angular/forms/src/directives/control_container';
+import * as import9 from '@angular/router/src/router';
+import * as import10 from '@angular/core/src/metadata/view';
+import * as import11 from '@angular/core/src/linker/component_factory';
+import * as import12 from '@angular/forms/src/directives/reactive_directives/form_group_directive';
+import * as import13 from '@angular/forms/src/directives/ng_control_status';
+import * as import14 from '@angular/forms/src/directives/default_value_accessor';
+import * as import15 from '@angular/forms/src/directives/reactive_directives/form_control_name';
+import * as import16 from '@angular/core/src/linker/element_ref';
+import * as import17 from '@angular/forms/src/directives/control_value_accessor';
+import * as import18 from '@angular/forms/src/directives/ng_control';
+import * as import19 from '@angular/forms/src/directives/control_container';
 var renderType_SignUpComponent_Host:import0.RenderComponentType = (null as any);
 class _View_SignUpComponent_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -35,7 +36,7 @@ class _View_SignUpComponent_Host0 extends import1.AppView<any> {
     this._el_0 = this.selectOrCreateHostElement('quiz-signUp',rootSelector,(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = viewFactory_SignUpComponent0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._SignUpComponent_0_4 = new import3.SignUpComponent(this.parentInjector.get(import8.AuthService));
+    this._SignUpComponent_0_4 = new import3.SignUpComponent(this.parentInjector.get(import8.AuthService),this.parentInjector.get(import9.Router));
     this._appEl_0.initComponent(this._SignUpComponent_0_4,[],compView_0);
     compView_0.create(this._SignUpComponent_0_4,this.projectableNodes,(null as any));
     this.init([].concat([this._el_0]),[this._el_0],[],[]);
@@ -52,19 +53,19 @@ class _View_SignUpComponent_Host0 extends import1.AppView<any> {
   }
 }
 function viewFactory_SignUpComponent_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
-  if ((renderType_SignUpComponent_Host === (null as any))) { (renderType_SignUpComponent_Host = viewUtils.createRenderComponentType('',0,import9.ViewEncapsulation.None,[],{})); }
+  if ((renderType_SignUpComponent_Host === (null as any))) { (renderType_SignUpComponent_Host = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,[],{})); }
   return new _View_SignUpComponent_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const SignUpComponentNgFactory:import10.ComponentFactory<import3.SignUpComponent> = new import10.ComponentFactory<import3.SignUpComponent>('quiz-signUp',viewFactory_SignUpComponent_Host0,import3.SignUpComponent);
+export const SignUpComponentNgFactory:import11.ComponentFactory<import3.SignUpComponent> = new import11.ComponentFactory<import3.SignUpComponent>('quiz-signUp',viewFactory_SignUpComponent_Host0,import3.SignUpComponent);
 const styles_SignUpComponent:any[] = [];
 var renderType_SignUpComponent:import0.RenderComponentType = (null as any);
 class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
   _el_0:any;
   _text_1:any;
   _el_2:any;
-  _FormGroupDirective_2_3:import11.FormGroupDirective;
+  _FormGroupDirective_2_3:import12.FormGroupDirective;
   _ControlContainer_2_4:any;
-  _NgControlStatusGroup_2_5:import12.NgControlStatusGroup;
+  _NgControlStatusGroup_2_5:import13.NgControlStatusGroup;
   _text_3:any;
   _el_4:any;
   _text_5:any;
@@ -72,11 +73,11 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
   _text_7:any;
   _text_8:any;
   _el_9:any;
-  _DefaultValueAccessor_9_3:import13.DefaultValueAccessor;
+  _DefaultValueAccessor_9_3:import14.DefaultValueAccessor;
   _NG_VALUE_ACCESSOR_9_4:any[];
-  _FormControlName_9_5:import14.FormControlName;
+  _FormControlName_9_5:import15.FormControlName;
   _NgControl_9_6:any;
-  _NgControlStatus_9_7:import12.NgControlStatus;
+  _NgControlStatus_9_7:import13.NgControlStatus;
   _text_10:any;
   _text_11:any;
   _el_12:any;
@@ -85,11 +86,11 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
   _text_15:any;
   _text_16:any;
   _el_17:any;
-  _DefaultValueAccessor_17_3:import13.DefaultValueAccessor;
+  _DefaultValueAccessor_17_3:import14.DefaultValueAccessor;
   _NG_VALUE_ACCESSOR_17_4:any[];
-  _FormControlName_17_5:import14.FormControlName;
+  _FormControlName_17_5:import15.FormControlName;
   _NgControl_17_6:any;
-  _NgControlStatus_17_7:import12.NgControlStatus;
+  _NgControlStatus_17_7:import13.NgControlStatus;
   _text_18:any;
   _text_19:any;
   _el_20:any;
@@ -98,11 +99,11 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
   _text_23:any;
   _text_24:any;
   _el_25:any;
-  _DefaultValueAccessor_25_3:import13.DefaultValueAccessor;
+  _DefaultValueAccessor_25_3:import14.DefaultValueAccessor;
   _NG_VALUE_ACCESSOR_25_4:any[];
-  _FormControlName_25_5:import14.FormControlName;
+  _FormControlName_25_5:import15.FormControlName;
   _NgControl_25_6:any;
-  _NgControlStatus_25_7:import12.NgControlStatus;
+  _NgControlStatus_25_7:import13.NgControlStatus;
   _text_26:any;
   _text_27:any;
   _el_28:any;
@@ -111,11 +112,11 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
   _text_31:any;
   _text_32:any;
   _el_33:any;
-  _DefaultValueAccessor_33_3:import13.DefaultValueAccessor;
+  _DefaultValueAccessor_33_3:import14.DefaultValueAccessor;
   _NG_VALUE_ACCESSOR_33_4:any[];
-  _FormControlName_33_5:import14.FormControlName;
+  _FormControlName_33_5:import15.FormControlName;
   _NgControl_33_6:any;
-  _NgControlStatus_33_7:import12.NgControlStatus;
+  _NgControlStatus_33_7:import13.NgControlStatus;
   _text_34:any;
   _text_35:any;
   _el_36:any;
@@ -168,9 +169,9 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
     this.renderer.setElementAttribute(this._el_0,'class','col-md-4 col-lg-offset-4');
     this._text_1 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'form',(null as any));
-    this._FormGroupDirective_2_3 = new import11.FormGroupDirective((null as any),(null as any));
+    this._FormGroupDirective_2_3 = new import12.FormGroupDirective((null as any),(null as any));
     this._ControlContainer_2_4 = this._FormGroupDirective_2_3;
-    this._NgControlStatusGroup_2_5 = new import12.NgControlStatusGroup(this._ControlContainer_2_4);
+    this._NgControlStatusGroup_2_5 = new import13.NgControlStatusGroup(this._ControlContainer_2_4);
     this._text_3 = this.renderer.createText(this._el_2,'\n        ',(null as any));
     this._el_4 = this.renderer.createElement(this._el_2,'div',(null as any));
     this.renderer.setElementAttribute(this._el_4,'class','form-group');
@@ -184,11 +185,11 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
     this.renderer.setElementAttribute(this._el_9,'formControlName','firstName');
     this.renderer.setElementAttribute(this._el_9,'id','firstName');
     this.renderer.setElementAttribute(this._el_9,'type','text');
-    this._DefaultValueAccessor_9_3 = new import13.DefaultValueAccessor(this.renderer,new import15.ElementRef(this._el_9));
+    this._DefaultValueAccessor_9_3 = new import14.DefaultValueAccessor(this.renderer,new import16.ElementRef(this._el_9));
     this._NG_VALUE_ACCESSOR_9_4 = [this._DefaultValueAccessor_9_3];
-    this._FormControlName_9_5 = new import14.FormControlName(this._ControlContainer_2_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_9_4);
+    this._FormControlName_9_5 = new import15.FormControlName(this._ControlContainer_2_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_9_4);
     this._NgControl_9_6 = this._FormControlName_9_5;
-    this._NgControlStatus_9_7 = new import12.NgControlStatus(this._NgControl_9_6);
+    this._NgControlStatus_9_7 = new import13.NgControlStatus(this._NgControl_9_6);
     this._text_10 = this.renderer.createText(this._el_4,'\n        ',(null as any));
     this._text_11 = this.renderer.createText(this._el_2,'\n        ',(null as any));
     this._el_12 = this.renderer.createElement(this._el_2,'div',(null as any));
@@ -203,11 +204,11 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
     this.renderer.setElementAttribute(this._el_17,'formControlName','lastName');
     this.renderer.setElementAttribute(this._el_17,'id','lastName');
     this.renderer.setElementAttribute(this._el_17,'type','text');
-    this._DefaultValueAccessor_17_3 = new import13.DefaultValueAccessor(this.renderer,new import15.ElementRef(this._el_17));
+    this._DefaultValueAccessor_17_3 = new import14.DefaultValueAccessor(this.renderer,new import16.ElementRef(this._el_17));
     this._NG_VALUE_ACCESSOR_17_4 = [this._DefaultValueAccessor_17_3];
-    this._FormControlName_17_5 = new import14.FormControlName(this._ControlContainer_2_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_17_4);
+    this._FormControlName_17_5 = new import15.FormControlName(this._ControlContainer_2_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_17_4);
     this._NgControl_17_6 = this._FormControlName_17_5;
-    this._NgControlStatus_17_7 = new import12.NgControlStatus(this._NgControl_17_6);
+    this._NgControlStatus_17_7 = new import13.NgControlStatus(this._NgControl_17_6);
     this._text_18 = this.renderer.createText(this._el_12,'\n        ',(null as any));
     this._text_19 = this.renderer.createText(this._el_2,'\n        ',(null as any));
     this._el_20 = this.renderer.createElement(this._el_2,'div',(null as any));
@@ -222,11 +223,11 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
     this.renderer.setElementAttribute(this._el_25,'formControlName','email');
     this.renderer.setElementAttribute(this._el_25,'id','email');
     this.renderer.setElementAttribute(this._el_25,'type','text');
-    this._DefaultValueAccessor_25_3 = new import13.DefaultValueAccessor(this.renderer,new import15.ElementRef(this._el_25));
+    this._DefaultValueAccessor_25_3 = new import14.DefaultValueAccessor(this.renderer,new import16.ElementRef(this._el_25));
     this._NG_VALUE_ACCESSOR_25_4 = [this._DefaultValueAccessor_25_3];
-    this._FormControlName_25_5 = new import14.FormControlName(this._ControlContainer_2_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_25_4);
+    this._FormControlName_25_5 = new import15.FormControlName(this._ControlContainer_2_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_25_4);
     this._NgControl_25_6 = this._FormControlName_25_5;
-    this._NgControlStatus_25_7 = new import12.NgControlStatus(this._NgControl_25_6);
+    this._NgControlStatus_25_7 = new import13.NgControlStatus(this._NgControl_25_6);
     this._text_26 = this.renderer.createText(this._el_20,'\n        ',(null as any));
     this._text_27 = this.renderer.createText(this._el_2,'\n        ',(null as any));
     this._el_28 = this.renderer.createElement(this._el_2,'div',(null as any));
@@ -241,11 +242,11 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
     this.renderer.setElementAttribute(this._el_33,'formControlName','password');
     this.renderer.setElementAttribute(this._el_33,'id','password');
     this.renderer.setElementAttribute(this._el_33,'type','password');
-    this._DefaultValueAccessor_33_3 = new import13.DefaultValueAccessor(this.renderer,new import15.ElementRef(this._el_33));
+    this._DefaultValueAccessor_33_3 = new import14.DefaultValueAccessor(this.renderer,new import16.ElementRef(this._el_33));
     this._NG_VALUE_ACCESSOR_33_4 = [this._DefaultValueAccessor_33_3];
-    this._FormControlName_33_5 = new import14.FormControlName(this._ControlContainer_2_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_33_4);
+    this._FormControlName_33_5 = new import15.FormControlName(this._ControlContainer_2_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_33_4);
     this._NgControl_33_6 = this._FormControlName_33_5;
-    this._NgControlStatus_33_7 = new import12.NgControlStatus(this._NgControl_33_6);
+    this._NgControlStatus_33_7 = new import13.NgControlStatus(this._NgControl_33_6);
     this._text_34 = this.renderer.createText(this._el_28,'\n        ',(null as any));
     this._text_35 = this.renderer.createText(this._el_2,'\n        ',(null as any));
     this._el_36 = this.renderer.createElement(this._el_2,'button',(null as any));
@@ -363,29 +364,29 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import13.DefaultValueAccessor) && (9 === requestNodeIndex))) { return this._DefaultValueAccessor_9_3; }
-    if (((token === import16.NG_VALUE_ACCESSOR) && (9 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_9_4; }
-    if (((token === import14.FormControlName) && (9 === requestNodeIndex))) { return this._FormControlName_9_5; }
-    if (((token === import17.NgControl) && (9 === requestNodeIndex))) { return this._NgControl_9_6; }
-    if (((token === import12.NgControlStatus) && (9 === requestNodeIndex))) { return this._NgControlStatus_9_7; }
-    if (((token === import13.DefaultValueAccessor) && (17 === requestNodeIndex))) { return this._DefaultValueAccessor_17_3; }
-    if (((token === import16.NG_VALUE_ACCESSOR) && (17 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_17_4; }
-    if (((token === import14.FormControlName) && (17 === requestNodeIndex))) { return this._FormControlName_17_5; }
-    if (((token === import17.NgControl) && (17 === requestNodeIndex))) { return this._NgControl_17_6; }
-    if (((token === import12.NgControlStatus) && (17 === requestNodeIndex))) { return this._NgControlStatus_17_7; }
-    if (((token === import13.DefaultValueAccessor) && (25 === requestNodeIndex))) { return this._DefaultValueAccessor_25_3; }
-    if (((token === import16.NG_VALUE_ACCESSOR) && (25 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_25_4; }
-    if (((token === import14.FormControlName) && (25 === requestNodeIndex))) { return this._FormControlName_25_5; }
-    if (((token === import17.NgControl) && (25 === requestNodeIndex))) { return this._NgControl_25_6; }
-    if (((token === import12.NgControlStatus) && (25 === requestNodeIndex))) { return this._NgControlStatus_25_7; }
-    if (((token === import13.DefaultValueAccessor) && (33 === requestNodeIndex))) { return this._DefaultValueAccessor_33_3; }
-    if (((token === import16.NG_VALUE_ACCESSOR) && (33 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_33_4; }
-    if (((token === import14.FormControlName) && (33 === requestNodeIndex))) { return this._FormControlName_33_5; }
-    if (((token === import17.NgControl) && (33 === requestNodeIndex))) { return this._NgControl_33_6; }
-    if (((token === import12.NgControlStatus) && (33 === requestNodeIndex))) { return this._NgControlStatus_33_7; }
-    if (((token === import11.FormGroupDirective) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._FormGroupDirective_2_3; }
-    if (((token === import18.ControlContainer) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._ControlContainer_2_4; }
-    if (((token === import12.NgControlStatusGroup) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._NgControlStatusGroup_2_5; }
+    if (((token === import14.DefaultValueAccessor) && (9 === requestNodeIndex))) { return this._DefaultValueAccessor_9_3; }
+    if (((token === import17.NG_VALUE_ACCESSOR) && (9 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_9_4; }
+    if (((token === import15.FormControlName) && (9 === requestNodeIndex))) { return this._FormControlName_9_5; }
+    if (((token === import18.NgControl) && (9 === requestNodeIndex))) { return this._NgControl_9_6; }
+    if (((token === import13.NgControlStatus) && (9 === requestNodeIndex))) { return this._NgControlStatus_9_7; }
+    if (((token === import14.DefaultValueAccessor) && (17 === requestNodeIndex))) { return this._DefaultValueAccessor_17_3; }
+    if (((token === import17.NG_VALUE_ACCESSOR) && (17 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_17_4; }
+    if (((token === import15.FormControlName) && (17 === requestNodeIndex))) { return this._FormControlName_17_5; }
+    if (((token === import18.NgControl) && (17 === requestNodeIndex))) { return this._NgControl_17_6; }
+    if (((token === import13.NgControlStatus) && (17 === requestNodeIndex))) { return this._NgControlStatus_17_7; }
+    if (((token === import14.DefaultValueAccessor) && (25 === requestNodeIndex))) { return this._DefaultValueAccessor_25_3; }
+    if (((token === import17.NG_VALUE_ACCESSOR) && (25 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_25_4; }
+    if (((token === import15.FormControlName) && (25 === requestNodeIndex))) { return this._FormControlName_25_5; }
+    if (((token === import18.NgControl) && (25 === requestNodeIndex))) { return this._NgControl_25_6; }
+    if (((token === import13.NgControlStatus) && (25 === requestNodeIndex))) { return this._NgControlStatus_25_7; }
+    if (((token === import14.DefaultValueAccessor) && (33 === requestNodeIndex))) { return this._DefaultValueAccessor_33_3; }
+    if (((token === import17.NG_VALUE_ACCESSOR) && (33 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_33_4; }
+    if (((token === import15.FormControlName) && (33 === requestNodeIndex))) { return this._FormControlName_33_5; }
+    if (((token === import18.NgControl) && (33 === requestNodeIndex))) { return this._NgControl_33_6; }
+    if (((token === import13.NgControlStatus) && (33 === requestNodeIndex))) { return this._NgControlStatus_33_7; }
+    if (((token === import12.FormGroupDirective) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._FormGroupDirective_2_3; }
+    if (((token === import19.ControlContainer) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._ControlContainer_2_4; }
+    if (((token === import13.NgControlStatusGroup) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 38)))) { return this._NgControlStatusGroup_2_5; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -656,6 +657,6 @@ class _View_SignUpComponent0 extends import1.AppView<import3.SignUpComponent> {
   }
 }
 export function viewFactory_SignUpComponent0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.SignUpComponent> {
-  if ((renderType_SignUpComponent === (null as any))) { (renderType_SignUpComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/auth/signup.component.html',0,import9.ViewEncapsulation.None,styles_SignUpComponent,{})); }
+  if ((renderType_SignUpComponent === (null as any))) { (renderType_SignUpComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/auth/signup.component.html',0,import10.ViewEncapsulation.None,styles_SignUpComponent,{})); }
   return new _View_SignUpComponent0(viewUtils,parentInjector,declarationEl);
 }

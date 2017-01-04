@@ -2,6 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {FormGroup, Validators, FormControl, FormsModule} from "@angular/forms";
 import {User} from "./user";
 import {AuthService} from "./auth.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector:'quiz-signUp',
@@ -11,7 +12,7 @@ import {AuthService} from "./auth.service";
 
 export class SignUpComponent  implements OnInit{
     myForm:FormGroup;
-        constructor(private authService:AuthService){}
+        constructor(private authService:AuthService,private router:Router){}
 
     onSubmit() {
         const user = new User(
@@ -33,6 +34,9 @@ export class SignUpComponent  implements OnInit{
 
 
     ngOnInit(): void {
+        if(this.authService.isLoggedIn()==true){
+            this.router.navigateByUrl('mainApp');
+        }
         this.myForm=new FormGroup({
             firstName:new FormControl(null,Validators.required),
             lastName:new FormControl(null,Validators.required),

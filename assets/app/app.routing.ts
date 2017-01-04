@@ -7,12 +7,13 @@ import {AUTH_ROUTES} from "./auth/auth.routes";
 import {MainComponent} from "./MainApp/main.component";
 import {QUESTION_ROUTES} from "./MainApp/mainApp.routes";
 import {QuestionStructure} from "./questions/question-structure.component";
+import {LoggedInGuard} from "./auth/logged-in.guard";
 
 
 const APP_ROUTES:Routes =[
-    {path:'',redirectTo:'mainApp',pathMatch:'full'},
-    {path:'mainApp',component:MainComponent,children:QUESTION_ROUTES},
-    {path:'questions',component:QuestionStructure},
+    {path:'',redirectTo:'auth',pathMatch:'full'},
+    {path:'mainApp',component:MainComponent,children:QUESTION_ROUTES,canActivate:[LoggedInGuard]},
+    {path:'questions',component:QuestionStructure,canActivate:[LoggedInGuard]},
     {path:'auth',component:AuthenticationComponent,children:AUTH_ROUTES}
 
 
