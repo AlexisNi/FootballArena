@@ -25,6 +25,7 @@ import {QuestionStructure} from "./questions/question-structure.component";
 import {Ng2Bs3ModalModule} from "ng2-bs3-modal/ng2-bs3-modal";
 import { ArenaPlayingComponent} from "./questions/arena-playing.component";
 import {LoggedInGuard} from "./auth/logged-in.guard";
+import {ArenaHeaderComponent} from "./MainApp/arena/arena-header.component";
 @NgModule({
     declarations:[AppComponent,
         LoginComponent,
@@ -38,7 +39,9 @@ import {LoggedInGuard} from "./auth/logged-in.guard";
         OpponentComponentFind,
         MainComponent,
         QuestionStructure,
-        ArenaPlayingComponent],
+        ArenaPlayingComponent,
+        ArenaHeaderComponent
+        ],
 
     imports:[BrowserModule,FormsModule,routing,ReactiveFormsModule,HttpModule,Ng2Bs3ModalModule ],
 
@@ -49,7 +52,8 @@ import {LoggedInGuard} from "./auth/logged-in.guard";
         ArenaServices,
         QuestionServices,
         QuestionAnswerServices,
-        LoggedInGuard],
+        LoggedInGuard,
+        ],
 
     bootstrap:[AppComponent]
 

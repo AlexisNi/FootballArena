@@ -2,7 +2,10 @@ import {Component} from "@angular/core";
 import {AuthService} from "./auth.service";
 @Component({
     selector:'app-authenticatiom',
-    template:`<header class="row spacing">
+    template:`
+        <app-header></app-header>
+
+        <header class="row spacing">
 	                <nav class="col-md-8 col-md-offset-2">
 	                    <ul class="nav nav-tabs" >
 	                        <li routerLinkActive="active"  *ngIf="!isLoggedIn()"> <a [routerLink]="['signup']">SignUp</a></li>

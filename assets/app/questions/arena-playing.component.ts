@@ -24,7 +24,8 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
                 private userService:AuthService,
                 private arenaService:ArenaServices,
                 private socketService:SocketService,
-                private gameListService:GameListServices){}
+                private gameListService:GameListServices,
+                ){}
 
     @Input() arenas:ArenaUsers;
     arenaQuestions:Question[]=[];
