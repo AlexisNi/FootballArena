@@ -21,19 +21,19 @@
 
             <div class="row">
                 <div class="col-xs-1 col-sm-offset-4">
-                    <button type="submit"  class="btn btn-success" id="button1" (click)="onChooseQuestion(question,question.optiona)">{{question.optiona}}</button>
+                    <button #button1 type="submit"  class="btn btn-success"  (click)="onChooseQuestion(question,question.optiona,1)">{{question.optiona}}</button>
                 </div>
                 <div class="col-xs-1 col-sm-offset-1">
-                    <button type="submit" class="btn btn-success"  (click)="onChooseQuestion(question,question.optionb)">{{question.optionb}}</button>
+                    <button #button2 type="submit" class="btn btn-success"  (click)="onChooseQuestion(question,question.optionb,2)">{{question.optionb}}</button>
                 </div>
             </div>
             <br> <br>
             <div class="row">
                 <div class="col-xs-1 col-sm-offset-4">
-                    <button type="submit" class="btn btn-success"  (click)="onChooseQuestion(question,question.optionc)">{{question.optionc}}</button>
+                    <button #button3 type="submit" class="btn btn-success"  (click)="onChooseQuestion(question,question.optionc,3)">{{question.optionc}}</button>
                 </div>
                 <div class="col-xs-1 col-sm-offset-1">
-                    <button type="submit" class="btn btn-success"  (click)="onChooseQuestion(question,question.optiond)">{{question.optiond}}</button>
+                    <button #button4 type="submit" class="btn btn-success"  (click)="onChooseQuestion(question,question.optiond,4)">{{question.optiond}}</button>
                 </div>
             </div>
         </div>

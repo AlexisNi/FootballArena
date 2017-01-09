@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy, Input, ViewChild} from '@angular/core';
+import {Component, OnInit, OnDestroy, Input, ViewChild, AfterViewInit, ElementRef, Renderer} from '@angular/core';
 import {GameListServices} from "../MainApp/game-list/game-list.services";
 import {ArenaUsers} from "../MainApp/models/arenaUsers";
 import {Question} from "./questionModels/question";
@@ -10,8 +10,7 @@ import {StatusPlayed} from "./questionModels/statusPlayedArena";
 import {ArenaServices} from "./questionServices/arena.service";
 import {SocketService} from "../MainApp/socketHanding/socket.service";
 import {ModalComponent} from "ng2-bs3-modal/components/modal";
-import {Observable} from "rxjs";
-import {FormControl} from "@angular/forms";
+import {Observable, Subscription} from "rxjs";
 
 
 
@@ -20,13 +19,15 @@ import {FormControl} from "@angular/forms";
     templateUrl: './arena-playing.component.html'
 })
 
-export class ArenaPlayingComponent implements OnInit ,OnDestroy{
+export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
+
 
     constructor(private questionAnswerService:QuestionAnswerServices,
                 private userService:AuthService,
                 private arenaService:ArenaServices,
                 private socketService:SocketService,
                 private gameListService:GameListServices,
+                private rd: Renderer
                 ){}
 
     @Input() arenas:ArenaUsers;
@@ -38,6 +39,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
     arenaId;
     index=0;
     ticks=5;
+    subscription:Subscription;
     @ViewChild('myModal')
     modal: ModalComponent;
 
@@ -64,6 +66,20 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
         this.statusPlayed();
 
     }
+    @ViewChild('button1') el:ElementRef;
+    @ViewChild('button2') el1:ElementRef;
+    @ViewChild('button3') el2:ElementRef;
+    @ViewChild('button4') el3:ElementRef;
+    colourInit(){
+        this.rd.setElementStyle(this.el.nativeElement,'background-color','green');
+        this.rd.setElementStyle(this.el1.nativeElement,'background-color','green');
+        this.rd.setElementStyle(this.el2.nativeElement,'background-color','green');
+        this.rd.setElementStyle(this.el3.nativeElement,'background-color','green');
+    }
+
+    ngAfterViewInit(): void {
+        this.colourInit();
+    }
     getInviteId(){
         if(this.arenas.userId==this.userId){
             this.inviteId=this.arenas.inviteId;
@@ -87,30 +103,42 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
     nextQuestion(){
         this.ticks=5;
         this.index++;
+        this.enableButtons();
+        this.colourInit();
+
+    }
+    waitForNextQuestion(){
+        this.ticks=7000;
+        this.disableButtons();
     }
 
-    onChooseQuestion(activeQuestion:Question,answerChoice:Object){
-        console.log(activeQuestion);
-        console.log(answerChoice);
+    onChooseQuestion(activeQuestion:Question,answerChoice:Object,buttonNumber:number){
         if(activeQuestion.answer===answerChoice){
             var questionAnswer=new AnsweredQuestion(activeQuestion.questionId,true);
-            console.log(questionAnswer);
             var  questionAns=new ArenaQuestion(this.arenaId,this.userId,questionAnswer);
             this.questionAnswerService.saveAnswerdQuestion(questionAns)
                 .subscribe(
                     data => console.log(data),
                     error => console.error(error)
                 );
-
-
-
-            this.nextQuestion()
+            this.checkButtons(buttonNumber,true,activeQuestion);
+            this.waitForNextQuestion();
+         setTimeout(()=>{
+                console.log('TimeOut');
+                this.nextQuestion();
+            },3000);
 
 
 
         }else {
-            this.isLost=true;
-            this.open();
+            this.checkButtons(buttonNumber,false,activeQuestion);
+            this.waitForNextQuestion();
+            setTimeout(()=>{
+                this.isLost=true;
+                this.open();
+            },2000);
+
+
 
         }
 
@@ -146,7 +174,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
     timer() {
 
         let timer = Observable.timer(100, 1000).take(31);
-        timer.subscribe(t=>{this.ticks = this.ticks - 1;
+       timer.subscribe(t=>{this.ticks = this.ticks - 1;
             if(this.ticks==0)
             {
                 this.playerLost();
@@ -158,6 +186,103 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
         this.open();
     }
 
+    enableButtons(){
+        this.rd.setElementAttribute(this.el.nativeElement,'disabled','false');
+        this.rd.setElementAttribute(this.el1.nativeElement,'disabled','false');
+        this.rd.setElementAttribute(this.el2.nativeElement,'disabled','false');
+        this.rd.setElementAttribute(this.el3.nativeElement,'disabled','false');
+    }
+    disableButtons(){
+        this.rd.setElementAttribute(this.el.nativeElement,'disabled','true');
+        this.rd.setElementAttribute(this.el1.nativeElement,'disabled','true');
+        this.rd.setElementAttribute(this.el2.nativeElement,'disabled','true');
+        this.rd.setElementAttribute(this.el3.nativeElement,'disabled','true');
+
+    }
+
+
+    checkButtons(buttonNumber:number,right:boolean,activeQuestion:Question){
+
+        if(buttonNumber==1&&right==true)
+        {
+            this.rd.setElementStyle(this.el.nativeElement,'background-color','blue');
+        }
+        if(buttonNumber==2&&right==true)
+        {
+            this.rd.setElementStyle(this.el1.nativeElement,'background-color','blue');
+        }
+        if(buttonNumber==3&&right==true)
+        {
+            this.rd.setElementStyle(this.el2.nativeElement,'background-color','blue');
+        }
+        if(buttonNumber==4&&right==true)
+        {
+            this.rd.setElementStyle(this.el3.nativeElement,'background-color','blue');
+
+        }
+
+        if(buttonNumber==1&&right==false)
+        {
+            this.rd.setElementStyle(this.el.nativeElement,'background-color','red');
+            if(activeQuestion.answer===activeQuestion.optionb){
+                this.rd.setElementStyle(this.el1.nativeElement,'background-color','blue')
+            }
+            if(activeQuestion.answer===activeQuestion.optionc){
+                this.rd.setElementStyle(this.el2.nativeElement,'background-color','blue')
+            }
+            if(activeQuestion.answer===activeQuestion.optiond){
+                this.rd.setElementStyle(this.el3.nativeElement,'background-color','blue')
+            }
+
+        }
+        if(buttonNumber==2&&right==false)
+        {
+            this.rd.setElementStyle(this.el1.nativeElement,'background-color','red');
+
+            console.log(activeQuestion);
+            if(activeQuestion.answer==activeQuestion.optiona){
+                this.rd.setElementStyle(this.el.nativeElement,'background-color','blue')
+            }
+            if(activeQuestion.answer===activeQuestion.optionc){
+                this.rd.setElementStyle(this.el2.nativeElement,'background-color','blue')
+            }
+            if(activeQuestion.answer===activeQuestion.optiond){
+                this.rd.setElementStyle(this.el3.nativeElement,'background-color','blue')
+            }
+        }
+        if(buttonNumber==3&&right==false)
+        {
+            this.rd.setElementStyle(this.el2.nativeElement,'background-color','red');
+
+            if(activeQuestion.answer===activeQuestion.optionb){
+                this.rd.setElementStyle(this.el.nativeElement,'background-color','blue')
+            }
+            if(activeQuestion.answer===activeQuestion.optionc){
+                this.rd.setElementStyle(this.el1.nativeElement,'background-color','blue')
+            }
+            if(activeQuestion.answer===activeQuestion.optiond){
+                this.rd.setElementStyle(this.el3.nativeElement,'background-color','blue')
+            }
+        }
+        if(buttonNumber==4&&right==false)
+        {
+            this.rd.setElementStyle(this.el3.nativeElement,'background-color','red');
+
+            if(activeQuestion.answer===activeQuestion.optionb){
+                this.rd.setElementStyle(this.el.nativeElement,'background-color','blue')
+            }
+            if(activeQuestion.answer===activeQuestion.optionc){
+                this.rd.setElementStyle(this.el1.nativeElement,'background-color','blue')
+            }
+            if(activeQuestion.answer===activeQuestion.optiond){
+                this.rd.setElementStyle(this.el2.nativeElement,'background-color','blue')
+            }
+
+        }
+
+
+
+    }
 
 
 
