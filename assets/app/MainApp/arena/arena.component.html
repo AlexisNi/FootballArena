@@ -1,15 +1,5 @@
     <div class="row" *ngIf="isUserPlaying==false">
         <arena-header [username]="userName" [stats]="stats"></arena-header>
-        <div class="container">
-            <h2>Progress Bar With Label</h2>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="ticks" aria-valuemin="0" aria-valuemax="30" [style.width.%]="ticks*3.3">
-                    {{ticks}}
-                </div>
-            </div>
-        </div>
-        {{ticks}}
-
         <div class="col-md-5 col-lg-5 col-sm-5" >
             <opponent-find></opponent-find>
         </div>

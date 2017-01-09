@@ -59,26 +59,32 @@ export const MainComponentNgFactory:import12.ComponentFactory<import3.MainCompon
 const styles_MainComponent:any[] = [];
 var renderType_MainComponent:import0.RenderComponentType = (null as any);
 class _View_MainComponent0 extends import1.AppView<import3.MainComponent> {
-  _el_0:any;
-  /*private*/ _appEl_0:import2.AppElement;
-  _RouterOutlet_0_5:import13.RouterOutlet;
+  _text_0:any;
+  _el_1:any;
+  /*private*/ _appEl_1:import2.AppElement;
+  _RouterOutlet_1_5:import13.RouterOutlet;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_MainComponent0,renderType_MainComponent,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
-    this._el_0 = this.renderer.createElement(parentRenderNode,'router-outlet',(null as any));
-    this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
-    this._RouterOutlet_0_5 = new import13.RouterOutlet(this.parentInjector.get(import14.RouterOutletMap),this._appEl_0.vcRef,this.parentInjector.get(import15.ComponentFactoryResolver),(null as any));
-    this.init([],[this._el_0],[],[]);
+    this._text_0 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._el_1 = this.renderer.createElement(parentRenderNode,'router-outlet',(null as any));
+    this._appEl_1 = new import2.AppElement(1,(null as any),this,this._el_1);
+    this._RouterOutlet_1_5 = new import13.RouterOutlet(this.parentInjector.get(import14.RouterOutletMap),this._appEl_1.vcRef,this.parentInjector.get(import15.ComponentFactoryResolver),(null as any));
+    this.init([],[
+      this._text_0,
+      this._el_1
+    ]
+    ,[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import13.RouterOutlet) && (0 === requestNodeIndex))) { return this._RouterOutlet_0_5; }
+    if (((token === import13.RouterOutlet) && (1 === requestNodeIndex))) { return this._RouterOutlet_1_5; }
     return notFoundResult;
   }
   destroyInternal():void {
-    this._RouterOutlet_0_5.ngOnDestroy();
+    this._RouterOutlet_1_5.ngOnDestroy();
   }
 }
 export function viewFactory_MainComponent0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.MainComponent> {

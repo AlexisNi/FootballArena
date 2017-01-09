@@ -4,7 +4,6 @@ import {GameListServices} from "../game-list/game-list.services";
 import {SocketService} from "../socketHanding/socket.service";
 import {Stats} from "../game-list/models/stats";
 import {Observable} from "rxjs";
-import {tick} from "@angular/core/testing";
 
 
 @Component({
@@ -19,9 +18,8 @@ export class ArenaComponent implements  OnInit{
     public arenas;
     public userId;
     public stats:Stats;
-    public ticks=5;
+    public ticks=30;
     ngOnInit(): void {
-        this.timer();
         this.getUser();
         this.getUserId();
         this.loadStats();
@@ -69,13 +67,10 @@ export class ArenaComponent implements  OnInit{
             })
     }
 
-    timer(){
 
 
-       let timer=Observable.timer(100,1000);
-        timer.subscribe(t=>this.ticks=t);
 
 
-    }
+
 
 }

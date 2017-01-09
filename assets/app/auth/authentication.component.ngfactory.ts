@@ -15,19 +15,21 @@ import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from './auth.service';
 import * as import9 from '@angular/core/src/metadata/view';
 import * as import10 from '@angular/core/src/linker/component_factory';
-import * as import11 from '@angular/common/src/directives/ng_if';
-import * as import12 from '@angular/router/src/directives/router_outlet';
-import * as import13 from '@angular/core/src/linker/template_ref';
-import * as import14 from '@angular/router/src/router_outlet_map';
-import * as import15 from '@angular/core/src/linker/component_factory_resolver';
-import * as import16 from '@angular/router/src/directives/router_link_active';
-import * as import17 from '@angular/core/src/linker/query_list';
-import * as import18 from '@angular/router/src/directives/router_link';
-import * as import19 from '@angular/router/src/router';
-import * as import20 from '@angular/core/src/linker/element_ref';
-import * as import21 from '@angular/router/src/router_state';
-import * as import22 from '@angular/common/src/location/location_strategy';
-import * as import23 from '@angular/core/src/security';
+import * as import11 from '../header.component';
+import * as import12 from '@angular/common/src/directives/ng_if';
+import * as import13 from '@angular/router/src/directives/router_outlet';
+import * as import14 from '../header.component.ngfactory';
+import * as import15 from '@angular/core/src/linker/template_ref';
+import * as import16 from '@angular/router/src/router_outlet_map';
+import * as import17 from '@angular/core/src/linker/component_factory_resolver';
+import * as import18 from '@angular/router/src/directives/router_link_active';
+import * as import19 from '@angular/core/src/linker/query_list';
+import * as import20 from '@angular/router/src/directives/router_link';
+import * as import21 from '@angular/router/src/router';
+import * as import22 from '@angular/core/src/linker/element_ref';
+import * as import23 from '@angular/router/src/router_state';
+import * as import24 from '@angular/common/src/location/location_strategy';
+import * as import25 from '@angular/core/src/security';
 var renderType_AuthenticationComponent_Host:import0.RenderComponentType = (null as any);
 class _View_AuthenticationComponent_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -59,37 +61,42 @@ export const AuthenticationComponentNgFactory:import10.ComponentFactory<import3.
 const styles_AuthenticationComponent:any[] = [];
 var renderType_AuthenticationComponent:import0.RenderComponentType = (null as any);
 class _View_AuthenticationComponent0 extends import1.AppView<import3.AuthenticationComponent> {
-  _el_0:any;
-  _text_1:any;
-  _el_2:any;
-  _text_3:any;
-  _el_4:any;
-  _text_5:any;
-  _anchor_6:any;
-  /*private*/ _appEl_6:import2.AppElement;
-  _TemplateRef_6_5:any;
-  _NgIf_6_6:import11.NgIf;
-  _text_7:any;
-  _anchor_8:any;
-  /*private*/ _appEl_8:import2.AppElement;
-  _TemplateRef_8_5:any;
-  _NgIf_8_6:import11.NgIf;
-  _text_9:any;
-  _anchor_10:any;
-  /*private*/ _appEl_10:import2.AppElement;
-  _TemplateRef_10_5:any;
-  _NgIf_10_6:import11.NgIf;
-  _text_11:any;
+  _text_0:any;
+  _el_1:any;
+  /*private*/ _appEl_1:import2.AppElement;
+  _HeaderComponent_1_4:import11.HeaderComponent;
+  _text_2:any;
+  _el_3:any;
+  _text_4:any;
+  _el_5:any;
+  _text_6:any;
+  _el_7:any;
+  _text_8:any;
+  _anchor_9:any;
+  /*private*/ _appEl_9:import2.AppElement;
+  _TemplateRef_9_5:any;
+  _NgIf_9_6:import12.NgIf;
+  _text_10:any;
+  _anchor_11:any;
+  /*private*/ _appEl_11:import2.AppElement;
+  _TemplateRef_11_5:any;
+  _NgIf_11_6:import12.NgIf;
   _text_12:any;
-  _text_13:any;
+  _anchor_13:any;
+  /*private*/ _appEl_13:import2.AppElement;
+  _TemplateRef_13_5:any;
+  _NgIf_13_6:import12.NgIf;
   _text_14:any;
-  _el_15:any;
+  _text_15:any;
   _text_16:any;
-  _el_17:any;
-  /*private*/ _appEl_17:import2.AppElement;
-  _RouterOutlet_17_5:import12.RouterOutlet;
-  _text_18:any;
+  _text_17:any;
+  _el_18:any;
   _text_19:any;
+  _el_20:any;
+  /*private*/ _appEl_20:import2.AppElement;
+  _RouterOutlet_20_5:import13.RouterOutlet;
+  _text_21:any;
+  _text_22:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
@@ -98,100 +105,113 @@ class _View_AuthenticationComponent0 extends import1.AppView<import3.Authenticat
   }
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
-    this._el_0 = this.renderer.createElement(parentRenderNode,'header',(null as any));
-    this.renderer.setElementAttribute(this._el_0,'class','row spacing');
-    this._text_1 = this.renderer.createText(this._el_0,'\n	                ',(null as any));
-    this._el_2 = this.renderer.createElement(this._el_0,'nav',(null as any));
-    this.renderer.setElementAttribute(this._el_2,'class','col-md-8 col-md-offset-2');
-    this._text_3 = this.renderer.createText(this._el_2,'\n	                    ',(null as any));
-    this._el_4 = this.renderer.createElement(this._el_2,'ul',(null as any));
-    this.renderer.setElementAttribute(this._el_4,'class','nav nav-tabs');
-    this._text_5 = this.renderer.createText(this._el_4,'\n	                        ',(null as any));
-    this._anchor_6 = this.renderer.createTemplateAnchor(this._el_4,(null as any));
-    this._appEl_6 = new import2.AppElement(6,4,this,this._anchor_6);
-    this._TemplateRef_6_5 = new import13.TemplateRef_(this._appEl_6,viewFactory_AuthenticationComponent1);
-    this._NgIf_6_6 = new import11.NgIf(this._appEl_6.vcRef,this._TemplateRef_6_5);
-    this._text_7 = this.renderer.createText(this._el_4,'\n	                        ',(null as any));
-    this._anchor_8 = this.renderer.createTemplateAnchor(this._el_4,(null as any));
-    this._appEl_8 = new import2.AppElement(8,4,this,this._anchor_8);
-    this._TemplateRef_8_5 = new import13.TemplateRef_(this._appEl_8,viewFactory_AuthenticationComponent2);
-    this._NgIf_8_6 = new import11.NgIf(this._appEl_8.vcRef,this._TemplateRef_8_5);
-    this._text_9 = this.renderer.createText(this._el_4,'\n		                    ',(null as any));
-    this._anchor_10 = this.renderer.createTemplateAnchor(this._el_4,(null as any));
-    this._appEl_10 = new import2.AppElement(10,4,this,this._anchor_10);
-    this._TemplateRef_10_5 = new import13.TemplateRef_(this._appEl_10,viewFactory_AuthenticationComponent3);
-    this._NgIf_10_6 = new import11.NgIf(this._appEl_10.vcRef,this._TemplateRef_10_5);
-    this._text_11 = this.renderer.createText(this._el_4,'\n                        \n                         ',(null as any));
-    this._text_12 = this.renderer.createText(this._el_2,'\n                    ',(null as any));
-    this._text_13 = this.renderer.createText(this._el_0,'\n              ',(null as any));
-    this._text_14 = this.renderer.createText(parentRenderNode,'\n              ',(null as any));
-    this._el_15 = this.renderer.createElement(parentRenderNode,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_15,'class','row spacing');
-    this._text_16 = this.renderer.createText(this._el_15,'\n                ',(null as any));
-    this._el_17 = this.renderer.createElement(this._el_15,'router-outlet',(null as any));
-    this._appEl_17 = new import2.AppElement(17,15,this,this._el_17);
-    this._RouterOutlet_17_5 = new import12.RouterOutlet(this.parentInjector.get(import14.RouterOutletMap),this._appEl_17.vcRef,this.parentInjector.get(import15.ComponentFactoryResolver),(null as any));
-    this._text_18 = this.renderer.createText(this._el_15,'\n              ',(null as any));
-    this._text_19 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._text_0 = this.renderer.createText(parentRenderNode,'\n        ',(null as any));
+    this._el_1 = this.renderer.createElement(parentRenderNode,'app-header',(null as any));
+    this._appEl_1 = new import2.AppElement(1,(null as any),this,this._el_1);
+    var compView_1:any = import14.viewFactory_HeaderComponent0(this.viewUtils,this.injector(1),this._appEl_1);
+    this._HeaderComponent_1_4 = new import11.HeaderComponent(this.parentInjector.get(import8.AuthService));
+    this._appEl_1.initComponent(this._HeaderComponent_1_4,[],compView_1);
+    compView_1.create(this._HeaderComponent_1_4,[],(null as any));
+    this._text_2 = this.renderer.createText(parentRenderNode,'\n\n        ',(null as any));
+    this._el_3 = this.renderer.createElement(parentRenderNode,'header',(null as any));
+    this.renderer.setElementAttribute(this._el_3,'class','row spacing');
+    this._text_4 = this.renderer.createText(this._el_3,'\n	                ',(null as any));
+    this._el_5 = this.renderer.createElement(this._el_3,'nav',(null as any));
+    this.renderer.setElementAttribute(this._el_5,'class','col-md-8 col-md-offset-2');
+    this._text_6 = this.renderer.createText(this._el_5,'\n	                    ',(null as any));
+    this._el_7 = this.renderer.createElement(this._el_5,'ul',(null as any));
+    this.renderer.setElementAttribute(this._el_7,'class','nav nav-tabs');
+    this._text_8 = this.renderer.createText(this._el_7,'\n	                        ',(null as any));
+    this._anchor_9 = this.renderer.createTemplateAnchor(this._el_7,(null as any));
+    this._appEl_9 = new import2.AppElement(9,7,this,this._anchor_9);
+    this._TemplateRef_9_5 = new import15.TemplateRef_(this._appEl_9,viewFactory_AuthenticationComponent1);
+    this._NgIf_9_6 = new import12.NgIf(this._appEl_9.vcRef,this._TemplateRef_9_5);
+    this._text_10 = this.renderer.createText(this._el_7,'\n	                        ',(null as any));
+    this._anchor_11 = this.renderer.createTemplateAnchor(this._el_7,(null as any));
+    this._appEl_11 = new import2.AppElement(11,7,this,this._anchor_11);
+    this._TemplateRef_11_5 = new import15.TemplateRef_(this._appEl_11,viewFactory_AuthenticationComponent2);
+    this._NgIf_11_6 = new import12.NgIf(this._appEl_11.vcRef,this._TemplateRef_11_5);
+    this._text_12 = this.renderer.createText(this._el_7,'\n		                    ',(null as any));
+    this._anchor_13 = this.renderer.createTemplateAnchor(this._el_7,(null as any));
+    this._appEl_13 = new import2.AppElement(13,7,this,this._anchor_13);
+    this._TemplateRef_13_5 = new import15.TemplateRef_(this._appEl_13,viewFactory_AuthenticationComponent3);
+    this._NgIf_13_6 = new import12.NgIf(this._appEl_13.vcRef,this._TemplateRef_13_5);
+    this._text_14 = this.renderer.createText(this._el_7,'\n                        \n                         ',(null as any));
+    this._text_15 = this.renderer.createText(this._el_5,'\n                    ',(null as any));
+    this._text_16 = this.renderer.createText(this._el_3,'\n              ',(null as any));
+    this._text_17 = this.renderer.createText(parentRenderNode,'\n              ',(null as any));
+    this._el_18 = this.renderer.createElement(parentRenderNode,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_18,'class','row spacing');
+    this._text_19 = this.renderer.createText(this._el_18,'\n                ',(null as any));
+    this._el_20 = this.renderer.createElement(this._el_18,'router-outlet',(null as any));
+    this._appEl_20 = new import2.AppElement(20,18,this,this._el_20);
+    this._RouterOutlet_20_5 = new import13.RouterOutlet(this.parentInjector.get(import16.RouterOutletMap),this._appEl_20.vcRef,this.parentInjector.get(import17.ComponentFactoryResolver),(null as any));
+    this._text_21 = this.renderer.createText(this._el_18,'\n              ',(null as any));
+    this._text_22 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
     this.init([],[
-      this._el_0,
-      this._text_1,
-      this._el_2,
-      this._text_3,
-      this._el_4,
-      this._text_5,
-      this._anchor_6,
-      this._text_7,
-      this._anchor_8,
-      this._text_9,
-      this._anchor_10,
-      this._text_11,
+      this._text_0,
+      this._el_1,
+      this._text_2,
+      this._el_3,
+      this._text_4,
+      this._el_5,
+      this._text_6,
+      this._el_7,
+      this._text_8,
+      this._anchor_9,
+      this._text_10,
+      this._anchor_11,
       this._text_12,
-      this._text_13,
+      this._anchor_13,
       this._text_14,
-      this._el_15,
+      this._text_15,
       this._text_16,
-      this._el_17,
-      this._text_18,
-      this._text_19
+      this._text_17,
+      this._el_18,
+      this._text_19,
+      this._el_20,
+      this._text_21,
+      this._text_22
     ]
     ,[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import13.TemplateRef) && (6 === requestNodeIndex))) { return this._TemplateRef_6_5; }
-    if (((token === import11.NgIf) && (6 === requestNodeIndex))) { return this._NgIf_6_6; }
-    if (((token === import13.TemplateRef) && (8 === requestNodeIndex))) { return this._TemplateRef_8_5; }
-    if (((token === import11.NgIf) && (8 === requestNodeIndex))) { return this._NgIf_8_6; }
-    if (((token === import13.TemplateRef) && (10 === requestNodeIndex))) { return this._TemplateRef_10_5; }
-    if (((token === import11.NgIf) && (10 === requestNodeIndex))) { return this._NgIf_10_6; }
-    if (((token === import12.RouterOutlet) && (17 === requestNodeIndex))) { return this._RouterOutlet_17_5; }
+    if (((token === import11.HeaderComponent) && (1 === requestNodeIndex))) { return this._HeaderComponent_1_4; }
+    if (((token === import15.TemplateRef) && (9 === requestNodeIndex))) { return this._TemplateRef_9_5; }
+    if (((token === import12.NgIf) && (9 === requestNodeIndex))) { return this._NgIf_9_6; }
+    if (((token === import15.TemplateRef) && (11 === requestNodeIndex))) { return this._TemplateRef_11_5; }
+    if (((token === import12.NgIf) && (11 === requestNodeIndex))) { return this._NgIf_11_6; }
+    if (((token === import15.TemplateRef) && (13 === requestNodeIndex))) { return this._TemplateRef_13_5; }
+    if (((token === import12.NgIf) && (13 === requestNodeIndex))) { return this._NgIf_13_6; }
+    if (((token === import13.RouterOutlet) && (20 === requestNodeIndex))) { return this._RouterOutlet_20_5; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
+    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._HeaderComponent_1_4.ngOnInit(); }
     const currVal_0:boolean = !this.context.isLoggedIn();
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this._NgIf_6_6.ngIf = currVal_0;
+      this._NgIf_9_6.ngIf = currVal_0;
       this._expr_0 = currVal_0;
     }
     const currVal_1:boolean = !this.context.isLoggedIn();
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
-      this._NgIf_8_6.ngIf = currVal_1;
+      this._NgIf_11_6.ngIf = currVal_1;
       this._expr_1 = currVal_1;
     }
     const currVal_2:any = this.context.isLoggedIn();
     if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
-      this._NgIf_10_6.ngIf = currVal_2;
+      this._NgIf_13_6.ngIf = currVal_2;
       this._expr_2 = currVal_2;
     }
     this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
   }
   destroyInternal():void {
-    this._RouterOutlet_17_5.ngOnDestroy();
+    this._RouterOutlet_20_5.ngOnDestroy();
   }
 }
 export function viewFactory_AuthenticationComponent0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.AuthenticationComponent> {
@@ -200,12 +220,12 @@ export function viewFactory_AuthenticationComponent0(viewUtils:import4.ViewUtils
 }
 class _View_AuthenticationComponent1 extends import1.AppView<any> {
   _el_0:any;
-  _RouterLinkActive_0_3:import16.RouterLinkActive;
-  _query_RouterLink_0_0:import17.QueryList<any>;
-  _query_RouterLinkWithHref_0_1:import17.QueryList<any>;
+  _RouterLinkActive_0_3:import18.RouterLinkActive;
+  _query_RouterLink_0_0:import19.QueryList<any>;
+  _query_RouterLinkWithHref_0_1:import19.QueryList<any>;
   _text_1:any;
   _el_2:any;
-  _RouterLinkWithHref_2_3:import18.RouterLinkWithHref;
+  _RouterLinkWithHref_2_3:import20.RouterLinkWithHref;
   _text_3:any;
   /*private*/ _expr_0:any;
   _arr_0:any;
@@ -217,12 +237,12 @@ class _View_AuthenticationComponent1 extends import1.AppView<any> {
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'li',(null as any));
     this.renderer.setElementAttribute(this._el_0,'routerLinkActive','active');
-    this._RouterLinkActive_0_3 = new import16.RouterLinkActive(this.parent.parentInjector.get(import19.Router),new import20.ElementRef(this._el_0),this.renderer);
-    this._query_RouterLink_0_0 = new import17.QueryList<any>();
-    this._query_RouterLinkWithHref_0_1 = new import17.QueryList<any>();
+    this._RouterLinkActive_0_3 = new import18.RouterLinkActive(this.parent.parentInjector.get(import21.Router),new import22.ElementRef(this._el_0),this.renderer);
+    this._query_RouterLink_0_0 = new import19.QueryList<any>();
+    this._query_RouterLinkWithHref_0_1 = new import19.QueryList<any>();
     this._text_1 = this.renderer.createText(this._el_0,' ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'a',(null as any));
-    this._RouterLinkWithHref_2_3 = new import18.RouterLinkWithHref(this.parent.parentInjector.get(import19.Router),this.parent.parentInjector.get(import21.ActivatedRoute),this.parent.parentInjector.get(import22.LocationStrategy));
+    this._RouterLinkWithHref_2_3 = new import20.RouterLinkWithHref(this.parent.parentInjector.get(import21.Router),this.parent.parentInjector.get(import23.ActivatedRoute),this.parent.parentInjector.get(import24.LocationStrategy));
     this._text_3 = this.renderer.createText(this._el_2,'SignUp',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     var disposable_0:Function = this.renderer.listen(this._el_2,'click',this.eventHandler(this._handle_click_2_0.bind(this)));
@@ -241,8 +261,8 @@ class _View_AuthenticationComponent1 extends import1.AppView<any> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import18.RouterLinkWithHref) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkWithHref_2_3; }
-    if (((token === import16.RouterLinkActive) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkActive_0_3; }
+    if (((token === import20.RouterLinkWithHref) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkWithHref_2_3; }
+    if (((token === import18.RouterLinkActive) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkActive_0_3; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -281,7 +301,7 @@ class _View_AuthenticationComponent1 extends import1.AppView<any> {
     }
     const currVal_3:any = this._RouterLinkWithHref_2_3.href;
     if (import4.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
-      this.renderer.setElementProperty(this._el_2,'href',this.viewUtils.sanitizer.sanitize(import23.SecurityContext.URL,currVal_3));
+      this.renderer.setElementProperty(this._el_2,'href',this.viewUtils.sanitizer.sanitize(import25.SecurityContext.URL,currVal_3));
       this._expr_3 = currVal_3;
     }
     this.detectViewChildrenChanges(throwOnChange);
@@ -301,12 +321,12 @@ function viewFactory_AuthenticationComponent1(viewUtils:import4.ViewUtils,parent
 }
 class _View_AuthenticationComponent2 extends import1.AppView<any> {
   _el_0:any;
-  _RouterLinkActive_0_3:import16.RouterLinkActive;
-  _query_RouterLink_0_0:import17.QueryList<any>;
-  _query_RouterLinkWithHref_0_1:import17.QueryList<any>;
+  _RouterLinkActive_0_3:import18.RouterLinkActive;
+  _query_RouterLink_0_0:import19.QueryList<any>;
+  _query_RouterLinkWithHref_0_1:import19.QueryList<any>;
   _text_1:any;
   _el_2:any;
-  _RouterLinkWithHref_2_3:import18.RouterLinkWithHref;
+  _RouterLinkWithHref_2_3:import20.RouterLinkWithHref;
   _text_3:any;
   /*private*/ _expr_0:any;
   _arr_0:any;
@@ -318,12 +338,12 @@ class _View_AuthenticationComponent2 extends import1.AppView<any> {
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'li',(null as any));
     this.renderer.setElementAttribute(this._el_0,'routerLinkActive','active');
-    this._RouterLinkActive_0_3 = new import16.RouterLinkActive(this.parent.parentInjector.get(import19.Router),new import20.ElementRef(this._el_0),this.renderer);
-    this._query_RouterLink_0_0 = new import17.QueryList<any>();
-    this._query_RouterLinkWithHref_0_1 = new import17.QueryList<any>();
+    this._RouterLinkActive_0_3 = new import18.RouterLinkActive(this.parent.parentInjector.get(import21.Router),new import22.ElementRef(this._el_0),this.renderer);
+    this._query_RouterLink_0_0 = new import19.QueryList<any>();
+    this._query_RouterLinkWithHref_0_1 = new import19.QueryList<any>();
     this._text_1 = this.renderer.createText(this._el_0,' ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'a',(null as any));
-    this._RouterLinkWithHref_2_3 = new import18.RouterLinkWithHref(this.parent.parentInjector.get(import19.Router),this.parent.parentInjector.get(import21.ActivatedRoute),this.parent.parentInjector.get(import22.LocationStrategy));
+    this._RouterLinkWithHref_2_3 = new import20.RouterLinkWithHref(this.parent.parentInjector.get(import21.Router),this.parent.parentInjector.get(import23.ActivatedRoute),this.parent.parentInjector.get(import24.LocationStrategy));
     this._text_3 = this.renderer.createText(this._el_2,'SignIn',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     var disposable_0:Function = this.renderer.listen(this._el_2,'click',this.eventHandler(this._handle_click_2_0.bind(this)));
@@ -342,8 +362,8 @@ class _View_AuthenticationComponent2 extends import1.AppView<any> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import18.RouterLinkWithHref) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkWithHref_2_3; }
-    if (((token === import16.RouterLinkActive) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkActive_0_3; }
+    if (((token === import20.RouterLinkWithHref) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkWithHref_2_3; }
+    if (((token === import18.RouterLinkActive) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkActive_0_3; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -382,7 +402,7 @@ class _View_AuthenticationComponent2 extends import1.AppView<any> {
     }
     const currVal_3:any = this._RouterLinkWithHref_2_3.href;
     if (import4.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
-      this.renderer.setElementProperty(this._el_2,'href',this.viewUtils.sanitizer.sanitize(import23.SecurityContext.URL,currVal_3));
+      this.renderer.setElementProperty(this._el_2,'href',this.viewUtils.sanitizer.sanitize(import25.SecurityContext.URL,currVal_3));
       this._expr_3 = currVal_3;
     }
     this.detectViewChildrenChanges(throwOnChange);
@@ -402,12 +422,12 @@ function viewFactory_AuthenticationComponent2(viewUtils:import4.ViewUtils,parent
 }
 class _View_AuthenticationComponent3 extends import1.AppView<any> {
   _el_0:any;
-  _RouterLinkActive_0_3:import16.RouterLinkActive;
-  _query_RouterLink_0_0:import17.QueryList<any>;
-  _query_RouterLinkWithHref_0_1:import17.QueryList<any>;
+  _RouterLinkActive_0_3:import18.RouterLinkActive;
+  _query_RouterLink_0_0:import19.QueryList<any>;
+  _query_RouterLinkWithHref_0_1:import19.QueryList<any>;
   _text_1:any;
   _el_2:any;
-  _RouterLinkWithHref_2_3:import18.RouterLinkWithHref;
+  _RouterLinkWithHref_2_3:import20.RouterLinkWithHref;
   _text_3:any;
   /*private*/ _expr_0:any;
   _arr_0:any;
@@ -419,12 +439,12 @@ class _View_AuthenticationComponent3 extends import1.AppView<any> {
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'li',(null as any));
     this.renderer.setElementAttribute(this._el_0,'routerLinkActive','active');
-    this._RouterLinkActive_0_3 = new import16.RouterLinkActive(this.parent.parentInjector.get(import19.Router),new import20.ElementRef(this._el_0),this.renderer);
-    this._query_RouterLink_0_0 = new import17.QueryList<any>();
-    this._query_RouterLinkWithHref_0_1 = new import17.QueryList<any>();
+    this._RouterLinkActive_0_3 = new import18.RouterLinkActive(this.parent.parentInjector.get(import21.Router),new import22.ElementRef(this._el_0),this.renderer);
+    this._query_RouterLink_0_0 = new import19.QueryList<any>();
+    this._query_RouterLinkWithHref_0_1 = new import19.QueryList<any>();
     this._text_1 = this.renderer.createText(this._el_0,' ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'a',(null as any));
-    this._RouterLinkWithHref_2_3 = new import18.RouterLinkWithHref(this.parent.parentInjector.get(import19.Router),this.parent.parentInjector.get(import21.ActivatedRoute),this.parent.parentInjector.get(import22.LocationStrategy));
+    this._RouterLinkWithHref_2_3 = new import20.RouterLinkWithHref(this.parent.parentInjector.get(import21.Router),this.parent.parentInjector.get(import23.ActivatedRoute),this.parent.parentInjector.get(import24.LocationStrategy));
     this._text_3 = this.renderer.createText(this._el_2,'Logout',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     var disposable_0:Function = this.renderer.listen(this._el_2,'click',this.eventHandler(this._handle_click_2_0.bind(this)));
@@ -443,8 +463,8 @@ class _View_AuthenticationComponent3 extends import1.AppView<any> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import18.RouterLinkWithHref) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkWithHref_2_3; }
-    if (((token === import16.RouterLinkActive) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkActive_0_3; }
+    if (((token === import20.RouterLinkWithHref) && ((2 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkWithHref_2_3; }
+    if (((token === import18.RouterLinkActive) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 3)))) { return this._RouterLinkActive_0_3; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -483,7 +503,7 @@ class _View_AuthenticationComponent3 extends import1.AppView<any> {
     }
     const currVal_3:any = this._RouterLinkWithHref_2_3.href;
     if (import4.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
-      this.renderer.setElementProperty(this._el_2,'href',this.viewUtils.sanitizer.sanitize(import23.SecurityContext.URL,currVal_3));
+      this.renderer.setElementProperty(this._el_2,'href',this.viewUtils.sanitizer.sanitize(import25.SecurityContext.URL,currVal_3));
       this._expr_3 = currVal_3;
     }
     this.detectViewChildrenChanges(throwOnChange);

@@ -10,6 +10,8 @@ import {StatusPlayed} from "./questionModels/statusPlayedArena";
 import {ArenaServices} from "./questionServices/arena.service";
 import {SocketService} from "../MainApp/socketHanding/socket.service";
 import {ModalComponent} from "ng2-bs3-modal/components/modal";
+import {Observable} from "rxjs";
+import {FormControl} from "@angular/forms";
 
 
 
@@ -35,6 +37,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
     userId;
     arenaId;
     index=0;
+    ticks=5;
     @ViewChild('myModal')
     modal: ModalComponent;
 
@@ -50,7 +53,9 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
     }
 
     ngOnInit(): void {
+
         this.arenaId=this.arenas.arenaId;
+        this.timer();
         this.getUserId();
         this.getUser();
         this.getInviteId();
@@ -80,6 +85,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
 
 
     nextQuestion(){
+        this.ticks=5;
         this.index++;
     }
 
@@ -136,6 +142,22 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy{
         this.arenaQuestions=this.arenas.questions;
         console.log(this.arenaQuestions);
     }
+
+    timer() {
+
+        let timer = Observable.timer(100, 1000).take(31);
+        timer.subscribe(t=>{this.ticks = this.ticks - 1;
+            if(this.ticks==0)
+            {
+                this.playerLost();
+            }});
+    }
+
+    playerLost(){
+        this.isLost=true;
+        this.open();
+    }
+
 
 
 

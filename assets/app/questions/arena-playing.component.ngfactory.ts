@@ -33,6 +33,7 @@ import * as import25 from '../../../node_modules/ng2-bs3-modal/components/modal-
 import * as import26 from '../../../node_modules/ng2-bs3-modal/components/modal-footer.ngfactory';
 import * as import27 from '@angular/common/src/directives/ng_for';
 import * as import28 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import29 from '@angular/core/src/security';
 var renderType_ArenaPlayingComponent_Host:import0.RenderComponentType = (null as any);
 class _View_ArenaPlayingComponent_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -296,51 +297,98 @@ export function viewFactory_ArenaPlayingComponent0(viewUtils:import4.ViewUtils,p
 class _View_ArenaPlayingComponent1 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
-  _anchor_2:any;
-  /*private*/ _appEl_2:import2.AppElement;
-  _TemplateRef_2_5:any;
-  _NgFor_2_6:import27.NgFor;
+  _el_2:any;
   _text_3:any;
+  _el_4:any;
+  _text_5:any;
+  _el_6:any;
+  _text_7:any;
+  _text_8:any;
+  _text_9:any;
+  _text_10:any;
+  _anchor_11:any;
+  /*private*/ _appEl_11:import2.AppElement;
+  _TemplateRef_11_5:any;
+  _NgFor_11_6:import27.NgFor;
+  _text_12:any;
   /*private*/ _expr_0:any;
+  /*private*/ _expr_1:any;
+  /*private*/ _expr_2:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_ArenaPlayingComponent1,renderType_ArenaPlayingComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
-    this._text_1 = this.renderer.createText(this._el_0,'\n    ',(null as any));
-    this._anchor_2 = this.renderer.createTemplateAnchor(this._el_0,(null as any));
-    this._appEl_2 = new import2.AppElement(2,0,this,this._anchor_2);
-    this._TemplateRef_2_5 = new import21.TemplateRef_(this._appEl_2,viewFactory_ArenaPlayingComponent2);
-    this._NgFor_2_6 = new import27.NgFor(this._appEl_2.vcRef,this._TemplateRef_2_5,this.parentInjector.get(import28.IterableDiffers),this.parent.ref);
-    this._text_3 = this.renderer.createText(this._el_0,'\n',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_2,'class','container');
+    this._text_3 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._el_4 = this.renderer.createElement(this._el_2,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_4,'class','progress');
+    this._text_5 = this.renderer.createText(this._el_4,'\n            ',(null as any));
+    this._el_6 = this.renderer.createElement(this._el_4,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_6,'aria-valuemax','30');
+    this.renderer.setElementAttribute(this._el_6,'aria-valuemin','0');
+    this.renderer.setElementAttribute(this._el_6,'class','progress-bar');
+    this.renderer.setElementAttribute(this._el_6,'role','progressbar');
+    this._text_7 = this.renderer.createText(this._el_6,'\n            ',(null as any));
+    this._text_8 = this.renderer.createText(this._el_4,'\n        ',(null as any));
+    this._text_9 = this.renderer.createText(this._el_2,'\n    ',(null as any));
+    this._text_10 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
+    this._anchor_11 = this.renderer.createTemplateAnchor(this._el_0,(null as any));
+    this._appEl_11 = new import2.AppElement(11,0,this,this._anchor_11);
+    this._TemplateRef_11_5 = new import21.TemplateRef_(this._appEl_11,viewFactory_ArenaPlayingComponent2);
+    this._NgFor_11_6 = new import27.NgFor(this._appEl_11.vcRef,this._TemplateRef_11_5,this.parentInjector.get(import28.IterableDiffers),this.parent.ref);
+    this._text_12 = this.renderer.createText(this._el_0,'\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
+    this._expr_1 = import7.UNINITIALIZED;
+    this._expr_2 = import7.UNINITIALIZED;
     this.init([].concat([this._el_0]),[
       this._el_0,
       this._text_1,
-      this._anchor_2,
-      this._text_3
+      this._el_2,
+      this._text_3,
+      this._el_4,
+      this._text_5,
+      this._el_6,
+      this._text_7,
+      this._text_8,
+      this._text_9,
+      this._text_10,
+      this._anchor_11,
+      this._text_12
     ]
     ,[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import21.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
-    if (((token === import27.NgFor) && (2 === requestNodeIndex))) { return this._NgFor_2_6; }
+    if (((token === import21.TemplateRef) && (11 === requestNodeIndex))) { return this._TemplateRef_11_5; }
+    if (((token === import27.NgFor) && (11 === requestNodeIndex))) { return this._NgFor_11_6; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
     var changes:{[key: string]:import7.SimpleChange} = (null as any);
     changes = (null as any);
-    const currVal_0:any = this.parent.context.arenaQuestions;
-    if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this._NgFor_2_6.ngForOf = currVal_0;
+    const currVal_2:any = this.parent.context.arenaQuestions;
+    if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
+      this._NgFor_11_6.ngForOf = currVal_2;
       if ((changes === (null as any))) { (changes = {}); }
-      changes['ngForOf'] = new import7.SimpleChange(this._expr_0,currVal_0);
+      changes['ngForOf'] = new import7.SimpleChange(this._expr_2,currVal_2);
+      this._expr_2 = currVal_2;
+    }
+    if ((changes !== (null as any))) { this._NgFor_11_6.ngOnChanges(changes); }
+    if (!throwOnChange) { this._NgFor_11_6.ngDoCheck(); }
+    this.detectContentChildrenChanges(throwOnChange);
+    const currVal_0:any = this.parent.context.ticks;
+    if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
+      this.renderer.setElementAttribute(this._el_6,'aria-valuenow',((currVal_0 == (null as any))? (null as any): currVal_0.toString()));
       this._expr_0 = currVal_0;
     }
-    if ((changes !== (null as any))) { this._NgFor_2_6.ngOnChanges(changes); }
-    if (!throwOnChange) { this._NgFor_2_6.ngDoCheck(); }
-    this.detectContentChildrenChanges(throwOnChange);
+    const currVal_1:any = (this.parent.context.ticks * 3.4);
+    if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
+      this.renderer.setElementStyle(this._el_6,'width',((this.viewUtils.sanitizer.sanitize(import29.SecurityContext.STYLE,currVal_1) == (null as any))? (null as any): (this.viewUtils.sanitizer.sanitize(import29.SecurityContext.STYLE,currVal_1).toString() + '%')));
+      this._expr_1 = currVal_1;
+    }
     this.detectViewChildrenChanges(throwOnChange);
   }
 }
@@ -480,6 +528,7 @@ class _View_ArenaPlayingComponent3 extends import1.AppView<any> {
     this._text_17 = this.renderer.createText(this._el_16,'\n                    ',(null as any));
     this._el_18 = this.renderer.createElement(this._el_16,'button',(null as any));
     this.renderer.setElementAttribute(this._el_18,'class','btn btn-success');
+    this.renderer.setElementAttribute(this._el_18,'id','button1');
     this.renderer.setElementAttribute(this._el_18,'type','submit');
     this._text_19 = this.renderer.createText(this._el_18,'',(null as any));
     this._text_20 = this.renderer.createText(this._el_16,'\n                ',(null as any));

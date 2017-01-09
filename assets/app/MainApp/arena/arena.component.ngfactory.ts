@@ -19,15 +19,17 @@ import * as import11 from '@angular/core/src/metadata/view';
 import * as import12 from '@angular/core/src/linker/component_factory';
 import * as import13 from '@angular/common/src/directives/ng_if';
 import * as import14 from '@angular/core/src/linker/template_ref';
-import * as import15 from '../opponent-find/opponent-find.component';
-import * as import16 from '../game-list/game-list.component';
-import * as import17 from '../opponent-find/opponent-find.component.ngfactory';
-import * as import18 from '../opponent-find/opponent-find.sevices';
-import * as import19 from '../game-list/game-list.component.ngfactory';
-import * as import20 from '../../questions/arena-playing.component';
-import * as import21 from '../../questions/arena-playing.component.ngfactory';
-import * as import22 from '../../questions/questionServices/questionAnswer.service';
-import * as import23 from '../../questions/questionServices/arena.service';
+import * as import15 from './arena-header.component';
+import * as import16 from '../opponent-find/opponent-find.component';
+import * as import17 from '../game-list/game-list.component';
+import * as import18 from './arena-header.component.ngfactory';
+import * as import19 from '../opponent-find/opponent-find.component.ngfactory';
+import * as import20 from '../opponent-find/opponent-find.sevices';
+import * as import21 from '../game-list/game-list.component.ngfactory';
+import * as import22 from '../../questions/arena-playing.component';
+import * as import23 from '../../questions/arena-playing.component.ngfactory';
+import * as import24 from '../../questions/questionServices/questionAnswer.service';
+import * as import25 from '../../questions/questionServices/arena.service';
 var renderType_ArenaComponent_Host:import0.RenderComponentType = (null as any);
 class _View_ArenaComponent_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -82,17 +84,17 @@ class _View_ArenaComponent0 extends import1.AppView<import3.ArenaComponent> {
   }
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
-    this._text_0 = this.renderer.createText(parentRenderNode,'\n    ',(null as any));
+    this._text_0 = this.renderer.createText(parentRenderNode,'    ',(null as any));
     this._anchor_1 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
     this._appEl_1 = new import2.AppElement(1,(null as any),this,this._anchor_1);
     this._TemplateRef_1_5 = new import14.TemplateRef_(this._appEl_1,viewFactory_ArenaComponent1);
     this._NgIf_1_6 = new import13.NgIf(this._appEl_1.vcRef,this._TemplateRef_1_5);
-    this._text_2 = this.renderer.createText(parentRenderNode,'\n    \n   ',(null as any));
+    this._text_2 = this.renderer.createText(parentRenderNode,'\n\n    ',(null as any));
     this._anchor_3 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
     this._appEl_3 = new import2.AppElement(3,(null as any),this,this._anchor_3);
     this._TemplateRef_3_5 = new import14.TemplateRef_(this._appEl_3,viewFactory_ArenaComponent2);
     this._NgIf_3_6 = new import13.NgIf(this._appEl_3.vcRef,this._TemplateRef_3_5);
-    this._text_4 = this.renderer.createText(parentRenderNode,'\n\n\n',(null as any));
+    this._text_4 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this.init([],[
@@ -128,145 +130,113 @@ class _View_ArenaComponent0 extends import1.AppView<import3.ArenaComponent> {
   }
 }
 export function viewFactory_ArenaComponent0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.ArenaComponent> {
-  if ((renderType_ArenaComponent === (null as any))) { (renderType_ArenaComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/MainApp/arena/arena.component.ts class ArenaComponent - inline template',0,import11.ViewEncapsulation.None,styles_ArenaComponent,{})); }
+  if ((renderType_ArenaComponent === (null as any))) { (renderType_ArenaComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/MainApp/arena/arena.component.html',0,import11.ViewEncapsulation.None,styles_ArenaComponent,{})); }
   return new _View_ArenaComponent0(viewUtils,parentInjector,declarationEl);
 }
 class _View_ArenaComponent1 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
   _el_2:any;
+  /*private*/ _appEl_2:import2.AppElement;
+  _ArenaHeaderComponent_2_4:import15.ArenaHeaderComponent;
   _text_3:any;
   _el_4:any;
-  _el_5:any;
-  _text_6:any;
+  _text_5:any;
+  _el_6:any;
+  /*private*/ _appEl_6:import2.AppElement;
+  _OpponentComponentFind_6_4:import16.OpponentComponentFind;
   _text_7:any;
-  _el_8:any;
+  _text_8:any;
   _el_9:any;
   _text_10:any;
-  _text_11:any;
-  _el_12:any;
-  _el_13:any;
-  _text_14:any;
-  _text_15:any;
-  _el_16:any;
-  /*private*/ _appEl_16:import2.AppElement;
-  _OpponentComponentFind_16_4:import15.OpponentComponentFind;
-  _text_17:any;
-  _text_18:any;
-  _el_19:any;
-  _text_20:any;
-  _el_21:any;
-  /*private*/ _appEl_21:import2.AppElement;
-  _GameListcomponent_21_4:import16.GameListcomponent;
-  _text_22:any;
-  _text_23:any;
+  _el_11:any;
+  /*private*/ _appEl_11:import2.AppElement;
+  _GameListcomponent_11_4:import17.GameListcomponent;
+  _text_12:any;
+  _text_13:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
-  /*private*/ _expr_2:any;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_ArenaComponent1,renderType_ArenaComponent,import6.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import2.AppElement {
     this._el_0 = this.renderer.createElement((null as any),'div',(null as any));
     this.renderer.setElementAttribute(this._el_0,'class','row');
-    this._text_1 = this.renderer.createText(this._el_0,'\n\n        ',(null as any));
-    this._el_2 = this.renderer.createElement(this._el_0,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_2,'class','col-md-5 col-lg-5 col-sm-5');
-    this._text_3 = this.renderer.createText(this._el_2,'\n                       ',(null as any));
-    this._el_4 = this.renderer.createElement(this._el_2,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_4,'class',' col-sm-1 col-sm-offset-2 col-md-1 col-lg-1 col-md-offset-2 col-lg-offset-2');
-    this._el_5 = this.renderer.createElement(this._el_4,'h1',(null as any));
-    this._text_6 = this.renderer.createText(this._el_5,'',(null as any));
-    this._text_7 = this.renderer.createText(this._el_2,'\n                       ',(null as any));
-    this._el_8 = this.renderer.createElement(this._el_2,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_8,'class','col-sm-1 col-sm-offset-2 col-md-1 col-lg-1 col-md-offset-1 col-lg-offset-1');
-    this._el_9 = this.renderer.createElement(this._el_8,'h1',(null as any));
-    this._text_10 = this.renderer.createText(this._el_9,'',(null as any));
-    this._text_11 = this.renderer.createText(this._el_2,'\n                       ',(null as any));
-    this._el_12 = this.renderer.createElement(this._el_2,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_12,'class','col-sm-1 col-sm-offset-2 col-md-1 col-lg-1 col-md-offset-1 col-lg-offset-1');
-    this._el_13 = this.renderer.createElement(this._el_12,'h1',(null as any));
-    this._text_14 = this.renderer.createText(this._el_13,'',(null as any));
-    this._text_15 = this.renderer.createText(this._el_2,'\n            \n                     \n            \n\n           ',(null as any));
-    this._el_16 = this.renderer.createElement(this._el_2,'opponent-find',(null as any));
-    this._appEl_16 = new import2.AppElement(16,2,this,this._el_16);
-    var compView_16:any = import17.viewFactory_OpponentComponentFind0(this.viewUtils,this.injector(16),this._appEl_16);
-    this._OpponentComponentFind_16_4 = new import15.OpponentComponentFind(this.parentInjector.get(import18.OpponentFindService),this.parentInjector.get(import10.SocketService));
-    this._appEl_16.initComponent(this._OpponentComponentFind_16_4,[],compView_16);
-    compView_16.create(this._OpponentComponentFind_16_4,[],(null as any));
-    this._text_17 = this.renderer.createText(this._el_2,'\n        ',(null as any));
-    this._text_18 = this.renderer.createText(this._el_0,'\n        \n        ',(null as any));
-    this._el_19 = this.renderer.createElement(this._el_0,'div',(null as any));
-    this.renderer.setElementAttribute(this._el_19,'class','col-md-7');
-    this._text_20 = this.renderer.createText(this._el_19,'\n            ',(null as any));
-    this._el_21 = this.renderer.createElement(this._el_19,'game-list',(null as any));
-    this._appEl_21 = new import2.AppElement(21,19,this,this._el_21);
-    var compView_21:any = import19.viewFactory_GameListcomponent0(this.viewUtils,this.injector(21),this._appEl_21);
-    this._GameListcomponent_21_4 = new import16.GameListcomponent(this.parentInjector.get(import10.SocketService),this.parentInjector.get(import8.AuthService));
-    this._appEl_21.initComponent(this._GameListcomponent_21_4,[],compView_21);
-    compView_21.create(this._GameListcomponent_21_4,[],(null as any));
-    this._text_22 = this.renderer.createText(this._el_19,'\n        ',(null as any));
-    this._text_23 = this.renderer.createText(this._el_0,'\n        \n    ',(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_2 = this.renderer.createElement(this._el_0,'arena-header',(null as any));
+    this._appEl_2 = new import2.AppElement(2,0,this,this._el_2);
+    var compView_2:any = import18.viewFactory_ArenaHeaderComponent0(this.viewUtils,this.injector(2),this._appEl_2);
+    this._ArenaHeaderComponent_2_4 = new import15.ArenaHeaderComponent(this.parentInjector.get(import10.SocketService));
+    this._appEl_2.initComponent(this._ArenaHeaderComponent_2_4,[],compView_2);
+    compView_2.create(this._ArenaHeaderComponent_2_4,[],(null as any));
+    this._text_3 = this.renderer.createText(this._el_0,'\n        ',(null as any));
+    this._el_4 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_4,'class','col-md-5 col-lg-5 col-sm-5');
+    this._text_5 = this.renderer.createText(this._el_4,'\n            ',(null as any));
+    this._el_6 = this.renderer.createElement(this._el_4,'opponent-find',(null as any));
+    this._appEl_6 = new import2.AppElement(6,4,this,this._el_6);
+    var compView_6:any = import19.viewFactory_OpponentComponentFind0(this.viewUtils,this.injector(6),this._appEl_6);
+    this._OpponentComponentFind_6_4 = new import16.OpponentComponentFind(this.parentInjector.get(import20.OpponentFindService),this.parentInjector.get(import10.SocketService));
+    this._appEl_6.initComponent(this._OpponentComponentFind_6_4,[],compView_6);
+    compView_6.create(this._OpponentComponentFind_6_4,[],(null as any));
+    this._text_7 = this.renderer.createText(this._el_4,'\n        ',(null as any));
+    this._text_8 = this.renderer.createText(this._el_0,'\n\n        ',(null as any));
+    this._el_9 = this.renderer.createElement(this._el_0,'div',(null as any));
+    this.renderer.setElementAttribute(this._el_9,'class','col-md-7');
+    this._text_10 = this.renderer.createText(this._el_9,'\n            ',(null as any));
+    this._el_11 = this.renderer.createElement(this._el_9,'game-list',(null as any));
+    this._appEl_11 = new import2.AppElement(11,9,this,this._el_11);
+    var compView_11:any = import21.viewFactory_GameListcomponent0(this.viewUtils,this.injector(11),this._appEl_11);
+    this._GameListcomponent_11_4 = new import17.GameListcomponent(this.parentInjector.get(import10.SocketService),this.parentInjector.get(import8.AuthService));
+    this._appEl_11.initComponent(this._GameListcomponent_11_4,[],compView_11);
+    compView_11.create(this._GameListcomponent_11_4,[],(null as any));
+    this._text_12 = this.renderer.createText(this._el_9,'\n        ',(null as any));
+    this._text_13 = this.renderer.createText(this._el_0,'\n\n    ',(null as any));
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
-    this._expr_2 = import7.UNINITIALIZED;
     this.init([].concat([this._el_0]),[
       this._el_0,
       this._text_1,
       this._el_2,
       this._text_3,
       this._el_4,
-      this._el_5,
-      this._text_6,
+      this._text_5,
+      this._el_6,
       this._text_7,
-      this._el_8,
+      this._text_8,
       this._el_9,
       this._text_10,
-      this._text_11,
-      this._el_12,
-      this._el_13,
-      this._text_14,
-      this._text_15,
-      this._el_16,
-      this._text_17,
-      this._text_18,
-      this._el_19,
-      this._text_20,
-      this._el_21,
-      this._text_22,
-      this._text_23
+      this._el_11,
+      this._text_12,
+      this._text_13
     ]
     ,[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import15.OpponentComponentFind) && (16 === requestNodeIndex))) { return this._OpponentComponentFind_16_4; }
-    if (((token === import16.GameListcomponent) && (21 === requestNodeIndex))) { return this._GameListcomponent_21_4; }
+    if (((token === import15.ArenaHeaderComponent) && (2 === requestNodeIndex))) { return this._ArenaHeaderComponent_2_4; }
+    if (((token === import16.OpponentComponentFind) && (6 === requestNodeIndex))) { return this._OpponentComponentFind_6_4; }
+    if (((token === import17.GameListcomponent) && (11 === requestNodeIndex))) { return this._GameListcomponent_11_4; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
-    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._OpponentComponentFind_16_4.ngOnInit(); }
-    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._GameListcomponent_21_4.ngOnInit(); }
-    this.detectContentChildrenChanges(throwOnChange);
-    const currVal_0:any = import4.interpolate(1,'',this.parent.context.userName,'');
+    const currVal_0:any = this.parent.context.userName;
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this.renderer.setText(this._text_6,currVal_0);
+      this._ArenaHeaderComponent_2_4.username = currVal_0;
       this._expr_0 = currVal_0;
     }
-    const currVal_1:any = import4.interpolate(1,'Level:',((this.parent.context.stats == (null as any))? (null as any): this.parent.context.stats.level),'');
+    const currVal_1:any = this.parent.context.stats;
     if (import4.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
-      this.renderer.setText(this._text_10,currVal_1);
+      this._ArenaHeaderComponent_2_4.stats = currVal_1;
       this._expr_1 = currVal_1;
     }
-    const currVal_2:any = import4.interpolate(1,'CurrentExp:',((this.parent.context.stats == (null as any))? (null as any): this.parent.context.stats.currentExp),'');
-    if (import4.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
-      this.renderer.setText(this._text_14,currVal_2);
-      this._expr_2 = currVal_2;
-    }
+    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._OpponentComponentFind_6_4.ngOnInit(); }
+    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._GameListcomponent_11_4.ngOnInit(); }
+    this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
   }
   destroyInternal():void {
-    this._GameListcomponent_21_4.ngOnDestroy();
+    this._GameListcomponent_11_4.ngOnDestroy();
   }
 }
 function viewFactory_ArenaComponent1(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
@@ -279,7 +249,7 @@ class _View_ArenaComponent2 extends import1.AppView<any> {
   _text_3:any;
   _el_4:any;
   /*private*/ _appEl_4:import2.AppElement;
-  _ArenaPlayingComponent_4_4:import20.ArenaPlayingComponent;
+  _ArenaPlayingComponent_4_4:import22.ArenaPlayingComponent;
   _text_5:any;
   _text_6:any;
   /*private*/ _expr_0:any;
@@ -292,11 +262,11 @@ class _View_ArenaComponent2 extends import1.AppView<any> {
     this._text_1 = this.renderer.createText(this._el_0,'\n        ',(null as any));
     this._el_2 = this.renderer.createElement(this._el_0,'div',(null as any));
     this.renderer.setElementAttribute(this._el_2,'class','col-md-5');
-    this._text_3 = this.renderer.createText(this._el_2,'\n        ',(null as any));
+    this._text_3 = this.renderer.createText(this._el_2,'\n            ',(null as any));
     this._el_4 = this.renderer.createElement(this._el_2,'arena-playing',(null as any));
     this._appEl_4 = new import2.AppElement(4,2,this,this._el_4);
-    var compView_4:any = import21.viewFactory_ArenaPlayingComponent0(this.viewUtils,this.injector(4),this._appEl_4);
-    this._ArenaPlayingComponent_4_4 = new import20.ArenaPlayingComponent(this.parentInjector.get(import22.QuestionAnswerServices),this.parentInjector.get(import8.AuthService),this.parentInjector.get(import23.ArenaServices),this.parentInjector.get(import10.SocketService),this.parentInjector.get(import9.GameListServices));
+    var compView_4:any = import23.viewFactory_ArenaPlayingComponent0(this.viewUtils,this.injector(4),this._appEl_4);
+    this._ArenaPlayingComponent_4_4 = new import22.ArenaPlayingComponent(this.parentInjector.get(import24.QuestionAnswerServices),this.parentInjector.get(import8.AuthService),this.parentInjector.get(import25.ArenaServices),this.parentInjector.get(import10.SocketService),this.parentInjector.get(import9.GameListServices));
     this._appEl_4.initComponent(this._ArenaPlayingComponent_4_4,[],compView_4);
     compView_4.create(this._ArenaPlayingComponent_4_4,[],(null as any));
     this._text_5 = this.renderer.createText(this._el_2,'\n        ',(null as any));
@@ -315,7 +285,7 @@ class _View_ArenaComponent2 extends import1.AppView<any> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import20.ArenaPlayingComponent) && (4 === requestNodeIndex))) { return this._ArenaPlayingComponent_4_4; }
+    if (((token === import22.ArenaPlayingComponent) && (4 === requestNodeIndex))) { return this._ArenaPlayingComponent_4_4; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
