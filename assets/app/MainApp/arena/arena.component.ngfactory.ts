@@ -266,7 +266,7 @@ class _View_ArenaComponent2 extends import1.AppView<any> {
     this._el_4 = this.renderer.createElement(this._el_2,'arena-playing',(null as any));
     this._appEl_4 = new import2.AppElement(4,2,this,this._el_4);
     var compView_4:any = import23.viewFactory_ArenaPlayingComponent0(this.viewUtils,this.injector(4),this._appEl_4);
-    this._ArenaPlayingComponent_4_4 = new import22.ArenaPlayingComponent(this.parentInjector.get(import24.QuestionAnswerServices),this.parentInjector.get(import8.AuthService),this.parentInjector.get(import25.ArenaServices),this.parentInjector.get(import10.SocketService),this.parentInjector.get(import9.GameListServices));
+    this._ArenaPlayingComponent_4_4 = new import22.ArenaPlayingComponent(this.parentInjector.get(import24.QuestionAnswerServices),this.parentInjector.get(import8.AuthService),this.parentInjector.get(import25.ArenaServices),this.parentInjector.get(import10.SocketService),this.parentInjector.get(import9.GameListServices),this.renderer);
     this._appEl_4.initComponent(this._ArenaPlayingComponent_4_4,[],compView_4);
     compView_4.create(this._ArenaPlayingComponent_4_4,[],(null as any));
     this._text_5 = this.renderer.createText(this._el_2,'\n        ',(null as any));
@@ -297,6 +297,7 @@ class _View_ArenaComponent2 extends import1.AppView<any> {
     if (((this.numberOfChecks === 0) && !throwOnChange)) { this._ArenaPlayingComponent_4_4.ngOnInit(); }
     this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
+    if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._ArenaPlayingComponent_4_4.ngAfterViewInit(); } }
   }
   destroyInternal():void {
     this._ArenaPlayingComponent_4_4.ngOnDestroy();

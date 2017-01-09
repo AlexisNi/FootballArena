@@ -46,7 +46,7 @@ class _View_ArenaPlayingComponent_Host0 extends import1.AppView<any> {
     this._el_0 = this.selectOrCreateHostElement('arena-playing',rootSelector,(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = viewFactory_ArenaPlayingComponent0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._ArenaPlayingComponent_0_4 = new import3.ArenaPlayingComponent(this.parentInjector.get(import8.QuestionAnswerServices),this.parentInjector.get(import9.AuthService),this.parentInjector.get(import10.ArenaServices),this.parentInjector.get(import11.SocketService),this.parentInjector.get(import12.GameListServices));
+    this._ArenaPlayingComponent_0_4 = new import3.ArenaPlayingComponent(this.parentInjector.get(import8.QuestionAnswerServices),this.parentInjector.get(import9.AuthService),this.parentInjector.get(import10.ArenaServices),this.parentInjector.get(import11.SocketService),this.parentInjector.get(import12.GameListServices),this.renderer);
     this._appEl_0.initComponent(this._ArenaPlayingComponent_0_4,[],compView_0);
     compView_0.create(this._ArenaPlayingComponent_0_4,this.projectableNodes,(null as any));
     this.init([].concat([this._el_0]),[this._el_0],[],[]);
@@ -60,6 +60,7 @@ class _View_ArenaPlayingComponent_Host0 extends import1.AppView<any> {
     if (((this.numberOfChecks === 0) && !throwOnChange)) { this._ArenaPlayingComponent_0_4.ngOnInit(); }
     this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
+    if (!throwOnChange) { if ((this.numberOfChecks === 0)) { this._ArenaPlayingComponent_0_4.ngAfterViewInit(); } }
   }
   destroyInternal():void {
     this._ArenaPlayingComponent_0_4.ngOnDestroy();
@@ -74,6 +75,10 @@ const styles_ArenaPlayingComponent:any[] = [];
 var renderType_ArenaPlayingComponent:import0.RenderComponentType = (null as any);
 class _View_ArenaPlayingComponent0 extends import1.AppView<import3.ArenaPlayingComponent> {
   _viewQuery_myModal_0:import15.QueryList<any>;
+  _viewQuery_button1_1:import15.QueryList<any>;
+  _viewQuery_button2_2:import15.QueryList<any>;
+  _viewQuery_button3_3:import15.QueryList<any>;
+  _viewQuery_button4_4:import15.QueryList<any>;
   _el_0:any;
   _text_1:any;
   _text_2:any;
@@ -121,6 +126,10 @@ class _View_ArenaPlayingComponent0 extends import1.AppView<import3.ArenaPlayingC
   createInternal(rootSelector:string):import2.AppElement {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._viewQuery_myModal_0 = new import15.QueryList<any>();
+    this._viewQuery_button1_1 = new import15.QueryList<any>();
+    this._viewQuery_button2_2 = new import15.QueryList<any>();
+    this._viewQuery_button3_3 = new import15.QueryList<any>();
+    this._viewQuery_button4_4 = new import15.QueryList<any>();
     this._el_0 = this.renderer.createElement(parentRenderNode,'h3',(null as any));
     this._text_1 = this.renderer.createText(this._el_0,'',(null as any));
     this._text_2 = this.renderer.createText(parentRenderNode,'\n',(null as any));
@@ -280,6 +289,48 @@ class _View_ArenaPlayingComponent0 extends import1.AppView<import3.ArenaPlayingC
       this._expr_6 = currVal_6;
     }
     this.detectViewChildrenChanges(throwOnChange);
+    if (!throwOnChange) {
+      if (this._viewQuery_button1_1.dirty) {
+          this._viewQuery_button1_1.reset([this._appEl_3.mapNestedViews(_View_ArenaPlayingComponent1,(nestedView:_View_ArenaPlayingComponent1):any => {
+              return [nestedView._appEl_11.mapNestedViews(_View_ArenaPlayingComponent2,(nestedView:_View_ArenaPlayingComponent2):any => {
+                  return [nestedView._appEl_2.mapNestedViews(_View_ArenaPlayingComponent3,(nestedView:_View_ArenaPlayingComponent3):any => {
+                    return [new import23.ElementRef(nestedView._el_18)];
+                })];
+            })];
+        })]);
+        this.context.el = this._viewQuery_button1_1.first;
+      }
+      if (this._viewQuery_button2_2.dirty) {
+          this._viewQuery_button2_2.reset([this._appEl_3.mapNestedViews(_View_ArenaPlayingComponent1,(nestedView:_View_ArenaPlayingComponent1):any => {
+              return [nestedView._appEl_11.mapNestedViews(_View_ArenaPlayingComponent2,(nestedView:_View_ArenaPlayingComponent2):any => {
+                  return [nestedView._appEl_2.mapNestedViews(_View_ArenaPlayingComponent3,(nestedView:_View_ArenaPlayingComponent3):any => {
+                    return [new import23.ElementRef(nestedView._el_24)];
+                })];
+            })];
+        })]);
+        this.context.el1 = this._viewQuery_button2_2.first;
+      }
+      if (this._viewQuery_button3_3.dirty) {
+          this._viewQuery_button3_3.reset([this._appEl_3.mapNestedViews(_View_ArenaPlayingComponent1,(nestedView:_View_ArenaPlayingComponent1):any => {
+              return [nestedView._appEl_11.mapNestedViews(_View_ArenaPlayingComponent2,(nestedView:_View_ArenaPlayingComponent2):any => {
+                  return [nestedView._appEl_2.mapNestedViews(_View_ArenaPlayingComponent3,(nestedView:_View_ArenaPlayingComponent3):any => {
+                    return [new import23.ElementRef(nestedView._el_37)];
+                })];
+            })];
+        })]);
+        this.context.el2 = this._viewQuery_button3_3.first;
+      }
+      if (this._viewQuery_button4_4.dirty) {
+          this._viewQuery_button4_4.reset([this._appEl_3.mapNestedViews(_View_ArenaPlayingComponent1,(nestedView:_View_ArenaPlayingComponent1):any => {
+              return [nestedView._appEl_11.mapNestedViews(_View_ArenaPlayingComponent2,(nestedView:_View_ArenaPlayingComponent2):any => {
+                  return [nestedView._appEl_2.mapNestedViews(_View_ArenaPlayingComponent3,(nestedView:_View_ArenaPlayingComponent3):any => {
+                    return [new import23.ElementRef(nestedView._el_43)];
+                })];
+            })];
+        })]);
+        this.context.el3 = this._viewQuery_button4_4.first;
+      }
+    }
   }
   destroyInternal():void {
     this._ModalComponent_5_4.ngOnDestroy();
@@ -528,7 +579,6 @@ class _View_ArenaPlayingComponent3 extends import1.AppView<any> {
     this._text_17 = this.renderer.createText(this._el_16,'\n                    ',(null as any));
     this._el_18 = this.renderer.createElement(this._el_16,'button',(null as any));
     this.renderer.setElementAttribute(this._el_18,'class','btn btn-success');
-    this.renderer.setElementAttribute(this._el_18,'id','button1');
     this.renderer.setElementAttribute(this._el_18,'type','submit');
     this._text_19 = this.renderer.createText(this._el_18,'',(null as any));
     this._text_20 = this.renderer.createText(this._el_16,'\n                ',(null as any));
@@ -666,24 +716,30 @@ class _View_ArenaPlayingComponent3 extends import1.AppView<any> {
     }
     this.detectViewChildrenChanges(throwOnChange);
   }
+  dirtyParentQueriesInternal():void {
+    (<_View_ArenaPlayingComponent0>this.parent.parent.parent)._viewQuery_button1_1.setDirty();
+    (<_View_ArenaPlayingComponent0>this.parent.parent.parent)._viewQuery_button2_2.setDirty();
+    (<_View_ArenaPlayingComponent0>this.parent.parent.parent)._viewQuery_button3_3.setDirty();
+    (<_View_ArenaPlayingComponent0>this.parent.parent.parent)._viewQuery_button4_4.setDirty();
+  }
   private _handle_click_18_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>this.parent.parent.parent.context.onChooseQuestion(this.parent.context.$implicit,this.parent.context.$implicit.optiona)) !== false);
+    const pd_0:any = ((<any>this.parent.parent.parent.context.onChooseQuestion(this.parent.context.$implicit,this.parent.context.$implicit.optiona,1)) !== false);
     return (true && pd_0);
   }
   private _handle_click_24_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>this.parent.parent.parent.context.onChooseQuestion(this.parent.context.$implicit,this.parent.context.$implicit.optionb)) !== false);
+    const pd_0:any = ((<any>this.parent.parent.parent.context.onChooseQuestion(this.parent.context.$implicit,this.parent.context.$implicit.optionb,2)) !== false);
     return (true && pd_0);
   }
   private _handle_click_37_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>this.parent.parent.parent.context.onChooseQuestion(this.parent.context.$implicit,this.parent.context.$implicit.optionc)) !== false);
+    const pd_0:any = ((<any>this.parent.parent.parent.context.onChooseQuestion(this.parent.context.$implicit,this.parent.context.$implicit.optionc,3)) !== false);
     return (true && pd_0);
   }
   private _handle_click_43_0($event:any):boolean {
     this.markPathToRootAsCheckOnce();
-    const pd_0:any = ((<any>this.parent.parent.parent.context.onChooseQuestion(this.parent.context.$implicit,this.parent.context.$implicit.optiond)) !== false);
+    const pd_0:any = ((<any>this.parent.parent.parent.context.onChooseQuestion(this.parent.context.$implicit,this.parent.context.$implicit.optiond,4)) !== false);
     return (true && pd_0);
   }
 }

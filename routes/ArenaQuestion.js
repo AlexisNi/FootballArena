@@ -119,7 +119,6 @@ router.post('/getResults',function (req,res,next) {
     var userId=req.body.userId;
     ArenaQuestions.findOne().where({ $and:[ {arenaId:arenaId}, {userId:userId}]})
         .populate('userId','lastName')
-        .populate('userId','lastName')
         .exec(function (err,answerCount) {
             if (err){
                 return res.status(500).json({
@@ -127,6 +126,8 @@ router.post('/getResults',function (req,res,next) {
                     error:err
                 });
             }
+            console.log('answer count')
+
 
           ArenaQuestions.findOne().where({ $and:[ {arenaId:arenaId}, {userId:{$ne:userId}}]})
               .populate('userId','lastName')
@@ -139,8 +140,9 @@ router.post('/getResults',function (req,res,next) {
                   }
 
 
-                  answerCount.questionAnswer.length++;
-                  answerCountB.questionAnswer.length++;
+
+
+
                   if(answerCount.questionAnswer.length>answerCountB.questionAnswer.length){
                       var awards={awards:{arenaId:arenaId,winner:{
                           userId:'',arenaId:'',points:3,experience:140
@@ -188,9 +190,9 @@ router.post('/getResults',function (req,res,next) {
                       Awards.findOne({arenaId:arenaId}).exec(function (err,getAwards) {
                           if (!getAwards){
                               awards=new Awards({arenaId:arenaId,awards:{arenaId:arenaId,winner:{
-                                  userId:answerCount.userId._id,points:3,experience:140
+                                  userId:answerCountB.userId._id,points:3,experience:140
                               },loser:{
-                                  userId:answerCountB.userId._id,points:0,experience:40
+                                  userId:answerCount.userId._id,points:0,experience:40
                               }}});
                               awards.save();
 

@@ -38,8 +38,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     userId;
     arenaId;
     index=0;
-    ticks=5;
-    subscription:Subscription;
+    ticks=30;
     @ViewChild('myModal')
     modal: ModalComponent;
 
@@ -101,7 +100,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
 
     nextQuestion(){
-        this.ticks=5;
+        this.ticks=30;
         this.index++;
         this.enableButtons();
         this.colourInit();
@@ -126,7 +125,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
          setTimeout(()=>{
                 console.log('TimeOut');
                 this.nextQuestion();
-            },3000);
+            },2000);
 
 
 
