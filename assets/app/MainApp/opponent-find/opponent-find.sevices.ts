@@ -7,6 +7,7 @@ import {GameListServices} from "../game-list/game-list.services";
 import {ArenaUsers} from "../models/arenaUsers";
 import {ArenaPlayers} from "../models/arenaPlayers";
 import {myGlobals}  from "../../globals/globals";
+import {Question} from "../../questions/questionModels/question";
 
 @Injectable()
 export class OpponentFindService{
@@ -29,6 +30,18 @@ export class OpponentFindService{
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.post(myGlobals.host+'arena'+token, body, {headers: headers})
             .map((response: Response) => {
+                let transformedQuestions:Question[]=[];
+                for(let finalQuestion of response.json().obj.questions){
+                    transformedQuestions.push(new Question(
+                        finalQuestion.question,
+                        finalQuestion.optiona,
+                        finalQuestion.optionb,
+                        finalQuestion.optionc,
+                        finalQuestion.optiond,
+                        finalQuestion.answer,
+                        finalQuestion._id
+                    ));
+                }
                 const arenaUsers = new ArenaUsers(response.json().obj._id,
                     response.json().obj.user._id,
                     response.json().obj.invite._id,
@@ -36,7 +49,7 @@ export class OpponentFindService{
                     response.json().obj.invite.lastName,
                     response.json().obj.user_played,
                     response.json().obj.invite_played,
-                    response.json().obj.questions);
+                    transformedQuestions);
                 this.gameListSevices.arenas.push(arenaUsers);
                 return arenaUsers;
             })
