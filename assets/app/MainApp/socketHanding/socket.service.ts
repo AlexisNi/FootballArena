@@ -4,8 +4,8 @@ import {Observable} from "rxjs";
 import {GameListServices} from "../game-list/game-list.services";
 import {ArenaUsers} from "../models/arenaUsers";
 import {myGlobals}  from "../../globals/globals";
-import {observableToBeFn} from "rxjs/testing/TestScheduler";
 import {Stats} from "../game-list/models/stats";
+import {Question} from "../../questions/questionModels/question";
 
 @Injectable()
 
@@ -62,8 +62,21 @@ export class SocketService{
         let observable=new Observable((observer:any)=>{
             this.socket.on('loadArenas',(data:any)=>{
                 const arenas=data.obj;
+
                 let transformedArenas: ArenaUsers[] = [];
                 for (let arena of arenas) {
+                    let transformedQuestions:Question[]=[];
+                    for(let finalQuestion of arena.questions){
+                        transformedQuestions.push(new Question(
+                            finalQuestion.question,
+                            finalQuestion.optiona,
+                            finalQuestion.optionb,
+                            finalQuestion.optionc,
+                            finalQuestion.optiond,
+                            finalQuestion.answer,
+                            finalQuestion._id
+                        ));
+                    }
                     transformedArenas.push(new ArenaUsers(
                         arena._id,
                         arena.user ,
@@ -72,11 +85,23 @@ export class SocketService{
                         arena.user.lastName || arena.invite.lastName,
                         arena.user_played,
                         arena.invite_played,
-                        arena.questions
+                        transformedQuestions
                     ));
                 }
                 const UserArenas=data.objUser;
                 for (let userArena of UserArenas){
+                    let transformedQuestions:Question[]=[];
+                    for(let finalQuestion of userArena.questions){
+                        transformedQuestions.push(new Question(
+                            finalQuestion.question,
+                            finalQuestion.optiona,
+                            finalQuestion.optionb,
+                            finalQuestion.optionc,
+                            finalQuestion.optiond,
+                            finalQuestion.answer,
+                            finalQuestion._id
+                        ));
+                    }
                     transformedArenas.push(new ArenaUsers(
                         userArena._id,
                         userArena.user._id ,
@@ -85,7 +110,7 @@ export class SocketService{
                         userArena.user.lastName,
                         userArena.user_played,
                         userArena.invite_played,
-                        userArena.questions
+                        transformedQuestions
 
 
                     ));

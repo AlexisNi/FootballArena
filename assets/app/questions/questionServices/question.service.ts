@@ -32,6 +32,8 @@ export class QuestionServices{
                     question._id
                 ));
             }
+            console.log('edw transffromed');
+            console.log(transformedQuestions);
             this.arenaQuestions=transformedQuestions;
             return transformedQuestions;
 

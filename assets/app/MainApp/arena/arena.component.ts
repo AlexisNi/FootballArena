@@ -4,6 +4,7 @@ import {GameListServices} from "../game-list/game-list.services";
 import {SocketService} from "../socketHanding/socket.service";
 import {Stats} from "../game-list/models/stats";
 import {Observable} from "rxjs";
+import {Question} from "../../questions/questionModels/question";
 
 
 @Component({
@@ -20,6 +21,7 @@ export class ArenaComponent implements  OnInit{
     public stats:Stats;
     public ticks=30;
     ngOnInit(): void {
+        this.arrayTest();
         this.getUser();
         this.getUserId();
         this.loadStats();
@@ -36,6 +38,7 @@ export class ArenaComponent implements  OnInit{
         this.gameListSevices.ArenaChosen
             .subscribe(isPlaying=>{
              this.arenas=isPlaying;
+
                 console.log(isPlaying);
             });
 
@@ -67,7 +70,19 @@ export class ArenaComponent implements  OnInit{
             })
     }
 
+    arrayTest(){
+        var array=['1','2','3'];
+        for (let i = array.length; i; i--) {
+            let j = Math.floor(Math.random() * i);
+            [array[i - 1], array[j]] = [array[j], array[i - 1]];
 
+        }
+        console.log(array[1]);
+       let question:Question=new Question('Poios irthe?','enas','dios','trios','teseros','trios','123');
+
+        console.log(question);
+
+    }
 
 
 

@@ -70,12 +70,12 @@ export class QuestionStructure implements OnInit, OnDestroy{
 
 
     getArenaQuestions(){
-        return  this.questionServices.getArenaQuestions(this.arenaId)
+     /*   return  this.questionServices.getArenaQuestions(this.arenaId)
             .subscribe(
                 (arenaQuestions:Question[])=>{
                    this.arenaQuestions=arenaQuestions;
                 });
-
+*/
 
     }
     getCorrectQuestions(){

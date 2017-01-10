@@ -56,6 +56,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     ngOnInit(): void {
 
         this.arenaId=this.arenas.arenaId;
+
         this.timer();
         this.getUserId();
         this.getUser();
@@ -167,7 +168,6 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     }
     getArenaQuestions(){
         this.arenaQuestions=this.arenas.questions;
-        console.log(this.arenaQuestions);
     }
 
     timer() {
@@ -282,6 +282,8 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
 
     }
+
+
 
 
 
