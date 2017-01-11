@@ -38,7 +38,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     userId;
     arenaId;
     index=0;
-    ticks=30;
+    ticks=7000;
     @ViewChild('myModal')
     modal: ModalComponent;
 
@@ -55,15 +55,13 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
     ngOnInit(): void {
 
-        this.arenaId=this.arenas.arenaId;
 
         this.timer();
         this.getUserId();
         this.getUser();
         this.getInviteId();
         this.getArenaQuestions();
-        this.socketService.enterArena(this.arenaId,this.userId,this.inviteId);
-        this.statusPlayed();
+        this.socketService.enterArena(this.arenas.arenaId,this.userId,this.inviteId);
 
     }
     @ViewChild('button1') el:ElementRef;
@@ -94,6 +92,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
     ngOnDestroy(): void {
         console.log('on Destroy all arenas');
+        this.statusPlayed();
         this.socketService.arenaLeave(this.inviteId);
 
 
@@ -101,8 +100,12 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
 
     nextQuestion(){
+
         this.ticks=30;
         this.index++;
+        if(this.index>9){
+            this.playerLost();
+        }
         this.enableButtons();
         this.colourInit();
 
@@ -126,7 +129,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
          setTimeout(()=>{
                 console.log('TimeOut');
                 this.nextQuestion();
-            },2000);
+            },1);
 
 
 
@@ -136,7 +139,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
             setTimeout(()=>{
                 this.isLost=true;
                 this.open();
-            },2000);
+            },1);
 
 
 
@@ -159,7 +162,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     }
 
     statusPlayed(){
-        var arenaInfo=new StatusPlayed(this.arenaId,this.userId);
+        var arenaInfo=new StatusPlayed(this.arenas.arenaId,this.userId);
 
         this.arenaService.statusPlayed(arenaInfo)
             .subscribe(
@@ -253,10 +256,10 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
         {
             this.rd.setElementStyle(this.el2.nativeElement,'background-color','red');
 
-            if(activeQuestion.answer===activeQuestion.optionb){
+            if(activeQuestion.answer===activeQuestion.optiona){
                 this.rd.setElementStyle(this.el.nativeElement,'background-color','blue')
             }
-            if(activeQuestion.answer===activeQuestion.optionc){
+            if(activeQuestion.answer===activeQuestion.optionb){
                 this.rd.setElementStyle(this.el1.nativeElement,'background-color','blue')
             }
             if(activeQuestion.answer===activeQuestion.optiond){
@@ -267,13 +270,13 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
         {
             this.rd.setElementStyle(this.el3.nativeElement,'background-color','red');
 
-            if(activeQuestion.answer===activeQuestion.optionb){
+            if(activeQuestion.answer===activeQuestion.optiona){
                 this.rd.setElementStyle(this.el.nativeElement,'background-color','blue')
             }
-            if(activeQuestion.answer===activeQuestion.optionc){
+            if(activeQuestion.answer===activeQuestion.optionb){
                 this.rd.setElementStyle(this.el1.nativeElement,'background-color','blue')
             }
-            if(activeQuestion.answer===activeQuestion.optiond){
+            if(activeQuestion.answer===activeQuestion.optionc){
                 this.rd.setElementStyle(this.el2.nativeElement,'background-color','blue')
             }
 

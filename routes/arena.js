@@ -154,7 +154,7 @@ router.get('/arenas',function (req,res,next) {
 
 
 router.post('/playedStatus',function (req,res,next) {
-    console.log('Post Received');
+    console.log('Post Received played status');
     console.log(req.body);
     var userId=req.body.userId;
     var arenaId=req.body.arenaId;
