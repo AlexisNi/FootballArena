@@ -114,7 +114,7 @@ export var ArenaPlayingComponent = (function () {
     };
     ArenaPlayingComponent.prototype.timer = function () {
         var _this = this;
-        var timer = Observable.timer(100, 1000).take(31);
+        var timer = Observable.timer(100, 1000);
         timer.subscribe(function (t) {
             _this.ticks = _this.ticks - 1;
             if (_this.ticks == 0) {

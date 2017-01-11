@@ -172,7 +172,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
     timer() {
 
-        let timer = Observable.timer(100, 1000).take(31);
+        let timer = Observable.timer(100, 1000);
        timer.subscribe(t=>{this.ticks = this.ticks - 1;
             if(this.ticks==0)
             {

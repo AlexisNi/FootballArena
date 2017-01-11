@@ -689,7 +689,7 @@ class _View_ArenaPlayingComponent3 extends import1.AppView<any> {
   }
   detectChangesInternal(throwOnChange:boolean):void {
     this.detectContentChildrenChanges(throwOnChange);
-    const currVal_0:any = import4.interpolate(1,'\n                        ',this.parent.context.$implicit.question,'\n                    ');
+    const currVal_0:any = import4.interpolate(2,'\n                        ',this.parent.context.$implicit.question,'  #',this.parent.parent.parent.context.index,'\n                    ');
     if (import4.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
       this.renderer.setText(this._text_7,currVal_0);
       this._expr_0 = currVal_0;

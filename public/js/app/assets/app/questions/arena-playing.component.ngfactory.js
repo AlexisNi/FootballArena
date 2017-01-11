@@ -601,7 +601,7 @@ var _View_ArenaPlayingComponent3 = (function (_super) {
     };
     _View_ArenaPlayingComponent3.prototype.detectChangesInternal = function (throwOnChange) {
         this.detectContentChildrenChanges(throwOnChange);
-        var currVal_0 = import4.interpolate(1, '\n                        ', this.parent.context.$implicit.question, '\n                    ');
+        var currVal_0 = import4.interpolate(2, '\n                        ', this.parent.context.$implicit.question, '  #', this.parent.parent.parent.context.index, '\n                    ');
         if (import4.checkBinding(throwOnChange, this._expr_0, currVal_0)) {
             this.renderer.setText(this._text_7, currVal_0);
             this._expr_0 = currVal_0;
