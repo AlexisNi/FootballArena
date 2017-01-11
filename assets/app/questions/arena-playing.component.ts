@@ -38,7 +38,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     userId;
     arenaId;
     index=0;
-    ticks=30;
+    ticks=20;
     @ViewChild('myModal')
     modal: ModalComponent;
 
@@ -101,7 +101,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
     nextQuestion(){
 
-        this.ticks=5;
+        this.ticks=20;
         this.index++;
         if(this.index>9){
             this.playerLost();

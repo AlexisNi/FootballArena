@@ -18,7 +18,7 @@ export var ArenaPlayingComponent = (function () {
         this.rd = rd;
         this.arenaQuestions = [];
         this.index = 0;
-        this.ticks = 30;
+        this.ticks = 20;
     }
     ArenaPlayingComponent.prototype.open = function () {
         this.modal.open();
@@ -61,7 +61,7 @@ export var ArenaPlayingComponent = (function () {
         this.socketService.arenaLeave(this.inviteId);
     };
     ArenaPlayingComponent.prototype.nextQuestion = function () {
-        this.ticks = 5;
+        this.ticks = 20;
         this.index++;
         if (this.index > 9) {
             this.playerLost();
