@@ -16,7 +16,7 @@ var socket_io    = require( "socket.io" );
 var io           = socket_io();
 app.io           = io;
 var sockets=require('./sockets/socketss')(io);
-mongoose.connect( 'localhost:27017/quiz-app');
+mongoose.connect( 'Alexis:315551@ds139288.mlab.com:39288/quiz_app');
 /*
  'localhost:27017/quiz-app'
 'Alexis:315551@ds139288.mlab.com:39288/quiz_app'
