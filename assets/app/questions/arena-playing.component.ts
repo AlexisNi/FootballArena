@@ -101,7 +101,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
     nextQuestion(){
 
-        this.ticks=30;
+        this.ticks=5;
         this.index++;
         if(this.index>9){
             this.playerLost();

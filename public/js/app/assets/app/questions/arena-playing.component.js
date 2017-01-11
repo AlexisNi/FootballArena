@@ -61,7 +61,7 @@ export var ArenaPlayingComponent = (function () {
         this.socketService.arenaLeave(this.inviteId);
     };
     ArenaPlayingComponent.prototype.nextQuestion = function () {
-        this.ticks = 30;
+        this.ticks = 5;
         this.index++;
         if (this.index > 9) {
             this.playerLost();
