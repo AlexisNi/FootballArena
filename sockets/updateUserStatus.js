@@ -7,23 +7,27 @@ module.exports=function (userId,arenaId) {
         .populate('user')
         .populate('invite')
         .exec(function (err,arenas) {
-            if (arenas.user._id==userId){
-                console.log(arenas.user_played);
-                ArenaUser.update({_id:arenaId},{$set:{user_played:true}},function (err,result) {
-                    if (err) {
-                        throw err;
-                    }
+            console.log(arenas);
+            if (arenas!==null){
+                if (arenas.user._id==userId){
+                    console.log(arenas.user_played);
+                    ArenaUser.update({_id:arenaId},{$set:{user_played:true}},function (err,result) {
+                        if (err) {
+                            throw err;
+                        }
 
                     });
 
-            }else {
-                ArenaUser.update({_id:arenaId},{$set:{invite_played:true}},function (err,result) {
-                    if (err) {
-                        throw err;
-                    }
+                }else {
+                    ArenaUser.update({_id:arenaId},{$set:{invite_played:true}},function (err,result) {
+                        if (err) {
+                            throw err;
+                        }
 
-                });
+                    });
+                }
             }
+
         });
 }
 

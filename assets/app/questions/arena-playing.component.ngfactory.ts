@@ -563,7 +563,6 @@ class _View_ArenaPlayingComponent3 extends import1.AppView<any> {
     this.renderer.setElementAttribute(this._el_4,'class','col-xs-12 ');
     this._text_5 = this.renderer.createText(this._el_4,'\n                    ',(null as any));
     this._el_6 = this.renderer.createElement(this._el_4,'h1',(null as any));
-    this.renderer.setElementAttribute(this._el_6,'onload','');
     this._text_7 = this.renderer.createText(this._el_6,'',(null as any));
     this._text_8 = this.renderer.createText(this._el_4,'\n                ',(null as any));
     this._text_9 = this.renderer.createText(this._el_2,'\n            ',(null as any));

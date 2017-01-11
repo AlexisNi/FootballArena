@@ -29,8 +29,9 @@ module.exports = function (io) {
 
                 if (connectedUserList[otherUser]!=null){
                     if(otherUser!=null) {
-                        var arenasArray = [];
-                        User.findOne({_id: otherUser/*socket.handshake.query.userId*/})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE USER ROW AND SHOW THE LAST NAME OF INVITE
+                        require('./getArenasOnDisconnect')(otherUser,connectedUserList[otherUser]);
+                       /* var arenasArray = [];
+                        User.findOne({_id: otherUser/!*socket.handshake.query.userId*!/})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE USER ROW AND SHOW THE LAST NAME OF INVITE
                             .populate('arenas', '_id')
                             .exec(function (err, arenasArr) {
 
@@ -66,7 +67,7 @@ module.exports = function (io) {
                                                 }
                                             });
                                     });
-                            });
+                            });*/
                     }
 
                 }

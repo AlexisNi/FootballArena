@@ -1,11 +1,12 @@
 /**
  * Created by alex on 11/01/2017.
  */
-
+var ArenaUser=require('../models/arena');
+var User=require('../models/user');
 module.exports=function (otherUser,connectedUserList) {
 
-/*    var arenasArray = [];
-    User.findOne({_id: otherUser/!*socket.handshake.query.userId*!/})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE USER ROW AND SHOW THE LAST NAME OF INVITE
+    var arenasArray = [];
+    User.findOne({_id: otherUser/*socket.handshake.query.userId*/})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE USER ROW AND SHOW THE LAST NAME OF INVITE
         .populate('arenas', '_id')
         .exec(function (err, arenasArr) {
 
@@ -33,8 +34,8 @@ module.exports=function (otherUser,connectedUserList) {
 
                                 throw err;
                             }
-                            if(connectedUserList[otherUser]!=null) {
-                                connectedUserList[otherUser].emit('loadArenas', {
+                            if(connectedUserList!=null) {
+                                connectedUserList.emit('loadArenas', {
                                     obj: arenas,
                                     objUser: arenasUser
                                 })
@@ -42,5 +43,5 @@ module.exports=function (otherUser,connectedUserList) {
                         });
                 });
         });
-    */
+
 }

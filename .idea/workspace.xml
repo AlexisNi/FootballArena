@@ -5,76 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7ef6ecb-efdc-45cd-b794-7642fa97e1bd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/arena/arena-header.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/arena/arena-header.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/arena/arena.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/arena/arena.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/game-list/game-item.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/game-list/game-item.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/game-list/game-list.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/game-list/game-list.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/game-list/game-list.services.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/game-list/models/awards.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/game-list/models/playerResults.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/game-list/models/stats.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/main.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/main.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/mainApp.routes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/models/arenaPlayers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/models/arenaUserId.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/models/arenaUsers.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/opponent-find/opponent-find.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/opponent-find/opponent-find.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/opponent-find/opponent-find.sevices.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/MainApp/socketHanding/socket.service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/app.component.css.shim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/app.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/app.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/app.module.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/app.module.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/app.routing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/auth.routes.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/auth.service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/authentication.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/authentication.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/logged-in.guard.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/login.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/login.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/logout.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/logout.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/signup.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/signup.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/auth/user.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/globals/globals.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/header.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/header.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/main.aot.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/polyfills.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/arena-playing.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/arena-playing.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/question-structure.component.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/question-structure.component.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/question.service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/questionModels/answered-questions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/questionModels/arena_question.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/questionModels/question.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/questionModels/questionPlayed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/questionModels/statusPlayedArena.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/questionServices/arena.service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/questionServices/question.service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/assets/app/questions/questionServices/questionAnswer.service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/node_modules/ng2-bs3-modal/components/modal-body.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/node_modules/ng2-bs3-modal/components/modal-footer.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/node_modules/ng2-bs3-modal/components/modal-header.ngfactory.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/node_modules/ng2-bs3-modal/components/modal.ngfactory.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/app/bundle.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/app/globals/globals.ts" afterPath="$PROJECT_DIR$/assets/app/globals/globals.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/app/questions/arena-playing.component.html" afterPath="$PROJECT_DIR$/assets/app/questions/arena-playing.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/app/questions/arena-playing.component.ngfactory.ts" afterPath="$PROJECT_DIR$/assets/app/questions/arena-playing.component.ngfactory.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/app/questions/arena-playing.component.ts" afterPath="$PROJECT_DIR$/assets/app/questions/arena-playing.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/bundle.js" afterPath="$PROJECT_DIR$/public/js/app/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/arena.js" afterPath="$PROJECT_DIR$/routes/arena.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sockets/getArenasOnDisconnect.js" afterPath="$PROJECT_DIR$/sockets/getArenasOnDisconnect.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sockets/socketss.js" afterPath="$PROJECT_DIR$/sockets/socketss.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sockets/updateUserStatus.js" afterPath="$PROJECT_DIR$/sockets/updateUserStatus.js" />
     </list>
     <ignored path="footbalQuiz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,49 +31,17 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="socketUpdateStats.js" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/sockets/socketUpdateStats.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="136">
-                    <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="footbalQuiz" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="socket.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/app/MainApp/socketHanding/socket.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1853">
-              <caret line="109" column="48" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="arena-playing.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/app/questions/arena-playing.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="164" column="58" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="58" />
+            <state relative-caret-position="370">
+              <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
               <folding>
                 <element signature="e#0#114#0" expanded="true" />
               </folding>
@@ -141,31 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arena-playing.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/app/questions/arena-playing.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="globals.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="globals.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/app/globals/globals.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getArenasOnDisconnect.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sockets/getArenasOnDisconnect.js">
+      <file leaf-file-name="getArenas.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sockets/getArenas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+            <state relative-caret-position="17">
+              <caret line="3" column="3" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="35" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -173,24 +71,109 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arena.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/arena.js">
+      <file leaf-file-name="ArenaQuestion.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/ArenaQuestion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="162" column="27" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+            <state relative-caret-position="386">
+              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questionAnswer.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/app/questions/questionServices/questionAnswer.service.ts">
+      <file leaf-file-name="arena-playing.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/app/questions/arena-playing.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
+            <state relative-caret-position="221">
+              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game-item.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/app/MainApp/game-list/game-item.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2499">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1483292515482" expanded="true" signature="664:686" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="816:1677" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="851:1241" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="928:1234" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1007:1220" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1036:1076" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1110:1205" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1139:1191" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1278:1669" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1355:1661" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1434:1647" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1463:1503" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1537:1632" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1566:1618" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1804:3815" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1875:2181" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1954:2167" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="1983:2023" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="2057:2152" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="2086:2138" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="2249:2360" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="2422:3808" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="2466:2571" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="2592:3492" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="2649:3237" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="2718:2930" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="3002:3214" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="3288:3470" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="3512:3791" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="3535:3764" ph="..." />
+                <marker date="1483292515482" expanded="false" signature="3578:3612" ph="..." />
+                <marker date="1483292515482" expanded="false" signature="3669:3680" ph="..." />
+                <marker date="1483292515482" expanded="true" signature="3856:3970" ph="{...}" />
+                <marker date="1483292515482" expanded="true" signature="3986:4100" ph="{...}" />
+                <marker date="1483292515482" expanded="true" signature="4119:4193" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socketUpdateStats.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sockets/socketUpdateStats.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateUserStatus.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sockets/updateUserStatus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="socketss.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sockets/socketss.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -255,15 +238,15 @@
         <option value="$PROJECT_DIR$/assets/app/MainApp/socketHanding/socket.service.ts" />
         <option value="$PROJECT_DIR$/assets/app/MainApp/opponent-find/opponent-find.sevices.ts" />
         <option value="$PROJECT_DIR$/assets/app/questions/questionModels/question.ts" />
+        <option value="$PROJECT_DIR$/routes/arena.js" />
+        <option value="$PROJECT_DIR$/sockets/getArenas.js" />
+        <option value="$PROJECT_DIR$/sockets/socketss.js" />
+        <option value="$PROJECT_DIR$/sockets/getArenasOnDisconnect.js" />
+        <option value="$PROJECT_DIR$/sockets/updateUserStatus.js" />
+        <option value="$PROJECT_DIR$/assets/app/questions/arena-playing.component.html" />
+        <option value="$PROJECT_DIR$/assets/app/questions/arena-playing.component.ts" />
         <option value="$PROJECT_DIR$/assets/app/globals/globals.ts" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/arena.js" />
-        <option value="$PROJECT_DIR$/assets/app/questions/arena-playing.component.html" />
-        <option value="$PROJECT_DIR$/sockets/getArenas.js" />
-        <option value="$PROJECT_DIR$/sockets/getArenasOnDisconnect.js" />
-        <option value="$PROJECT_DIR$/sockets/socketss.js" />
-        <option value="$PROJECT_DIR$/sockets/updateUserStatus.js" />
-        <option value="$PROJECT_DIR$/assets/app/questions/arena-playing.component.ts" />
       </list>
     </option>
   </component>
@@ -787,12 +770,12 @@
       <workItem from="1483783730900" duration="25807000" />
       <workItem from="1483951729799" duration="19098000" />
       <workItem from="1484041944267" duration="13073000" />
-      <workItem from="1484127629811" duration="8980000" />
+      <workItem from="1484127629811" duration="11215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245595000" />
+    <option name="totallyTimeSpent" value="247830000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -805,7 +788,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2455216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -813,7 +796,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3219107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28764278" sideWeight="0.49789253" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28764278" sideWeight="0.49789253" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -856,18 +839,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/app/MainApp/mainApp.routes.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/app/MainApp/opponent-find/opponent-find.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1022,13 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/ArenaQuestion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/app/questions/questionModels/statusPlayedArena.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1098,14 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -1180,76 +1141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sockets/socketUpdateStats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sockets/updateUserStatus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/app/globals/globals.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sockets/getArenas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="36" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sockets/socketss.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="27" column="89" selection-start-line="27" selection-start-column="89" selection-end-line="27" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sockets/getArenasOnDisconnect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/app/questions/arena-playing.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/app/questions/arena-playing.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="164" column="58" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/app/questions/questionServices/questionAnswer.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
@@ -1264,6 +1155,137 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
           <caret line="162" column="27" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sockets/getArenasOnDisconnect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sockets/socketss.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app/MainApp/game-list/game-item.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2499">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1483292515482" expanded="true" signature="664:686" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="816:1677" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="851:1241" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="928:1234" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1007:1220" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1036:1076" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1110:1205" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1139:1191" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1278:1669" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1355:1661" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1434:1647" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1463:1503" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1537:1632" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1566:1618" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1804:3815" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1875:2181" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1954:2167" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="1983:2023" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="2057:2152" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="2086:2138" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="2249:2360" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="2422:3808" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="2466:2571" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="2592:3492" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="2649:3237" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="2718:2930" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="3002:3214" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="3288:3470" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="3512:3791" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="3535:3764" ph="..." />
+            <marker date="1483292515482" expanded="false" signature="3578:3612" ph="..." />
+            <marker date="1483292515482" expanded="false" signature="3669:3680" ph="..." />
+            <marker date="1483292515482" expanded="true" signature="3856:3970" ph="{...}" />
+            <marker date="1483292515482" expanded="true" signature="3986:4100" ph="{...}" />
+            <marker date="1483292515482" expanded="true" signature="4119:4193" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sockets/socketUpdateStats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sockets/updateUserStatus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/ArenaQuestion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app/questions/arena-playing.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app/questions/arena-playing.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sockets/getArenas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="18" column="67" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/app/globals/globals.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding />
         </state>
       </provider>

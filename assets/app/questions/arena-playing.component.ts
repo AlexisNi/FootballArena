@@ -38,7 +38,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     userId;
     arenaId;
     index=0;
-    ticks=7000;
+    ticks=30;
     @ViewChild('myModal')
     modal: ModalComponent;
 
@@ -55,7 +55,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
     ngOnInit(): void {
 
-
+        this.arenaId=this.arenas.arenaId;
         this.timer();
         this.getUserId();
         this.getUser();
@@ -118,7 +118,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     onChooseQuestion(activeQuestion:Question,answerChoice:Object,buttonNumber:number){
         if(activeQuestion.answer===answerChoice){
             var questionAnswer=new AnsweredQuestion(activeQuestion.questionId,true);
-            var  questionAns=new ArenaQuestion(this.arenaId,this.userId,questionAnswer);
+            var  questionAns=new ArenaQuestion(this.arenas.arenaId,this.userId,questionAnswer);
             this.questionAnswerService.saveAnswerdQuestion(questionAns)
                 .subscribe(
                     data => console.log(data),
@@ -129,7 +129,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
          setTimeout(()=>{
                 console.log('TimeOut');
                 this.nextQuestion();
-            },1);
+            },1200);
 
 
 
@@ -139,7 +139,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
             setTimeout(()=>{
                 this.isLost=true;
                 this.open();
-            },1);
+            },1200);
 
 
 
