@@ -182,7 +182,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
            console.log(t);
             if(this.ticks==0)
             {
-
+                this.subscription.unsubscribe();
                 this.playerLost();
             }});
     }

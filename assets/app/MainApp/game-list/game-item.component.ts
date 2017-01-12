@@ -185,9 +185,14 @@ export class GameItemComponent implements OnInit, OnDestroy{
     }
     claimAward(){
         this.gameListService.getAward(this.userId,this.arena.arenaId)
+            .debounceTime(1000)
             .subscribe((message)=>{console.log(message)
-                this.socketService.reqArenas(this.userId);
-                this.socketService.reqStats(this.userId);
+                setTimeout(()=>{
+                    this.socketService.reqArenas(this.userId);
+                    this.socketService.reqStats(this.userId);
+                },300);
+               /*this.socketService.reqArenas(this.userId);
+                this.socketService.reqStats(this.userId);*/
 
 
             });

@@ -59,7 +59,9 @@ export class OpponentComponentFind implements OnInit{
                         this.socketService.reqArenas(inviteId);
                     },1200);
 
+/*
                     this.socketService.reqArenas(inviteId);
+*/
 
                 },
                 error => console.error(error),
