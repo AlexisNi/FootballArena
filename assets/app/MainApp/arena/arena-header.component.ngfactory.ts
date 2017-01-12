@@ -13,8 +13,9 @@ import * as import5 from '@angular/core/src/di/injector';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/change_detection/change_detection';
 import * as import8 from '../socketHanding/socket.service';
-import * as import9 from '@angular/core/src/metadata/view';
-import * as import10 from '@angular/core/src/linker/component_factory';
+import * as import9 from '../../auth/auth.service';
+import * as import10 from '@angular/core/src/metadata/view';
+import * as import11 from '@angular/core/src/linker/component_factory';
 var renderType_ArenaHeaderComponent_Host:import0.RenderComponentType = (null as any);
 class _View_ArenaHeaderComponent_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -27,7 +28,7 @@ class _View_ArenaHeaderComponent_Host0 extends import1.AppView<any> {
     this._el_0 = this.selectOrCreateHostElement('arena-header',rootSelector,(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
     var compView_0:any = viewFactory_ArenaHeaderComponent0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._ArenaHeaderComponent_0_4 = new import3.ArenaHeaderComponent(this.parentInjector.get(import8.SocketService));
+    this._ArenaHeaderComponent_0_4 = new import3.ArenaHeaderComponent(this.parentInjector.get(import8.SocketService),this.parentInjector.get(import9.AuthService));
     this._appEl_0.initComponent(this._ArenaHeaderComponent_0_4,[],compView_0);
     compView_0.create(this._ArenaHeaderComponent_0_4,this.projectableNodes,(null as any));
     this.init([].concat([this._el_0]),[this._el_0],[],[]);
@@ -39,10 +40,10 @@ class _View_ArenaHeaderComponent_Host0 extends import1.AppView<any> {
   }
 }
 function viewFactory_ArenaHeaderComponent_Host0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<any> {
-  if ((renderType_ArenaHeaderComponent_Host === (null as any))) { (renderType_ArenaHeaderComponent_Host = viewUtils.createRenderComponentType('',0,import9.ViewEncapsulation.None,[],{})); }
+  if ((renderType_ArenaHeaderComponent_Host === (null as any))) { (renderType_ArenaHeaderComponent_Host = viewUtils.createRenderComponentType('',0,import10.ViewEncapsulation.None,[],{})); }
   return new _View_ArenaHeaderComponent_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const ArenaHeaderComponentNgFactory:import10.ComponentFactory<import3.ArenaHeaderComponent> = new import10.ComponentFactory<import3.ArenaHeaderComponent>('arena-header',viewFactory_ArenaHeaderComponent_Host0,import3.ArenaHeaderComponent);
+export const ArenaHeaderComponentNgFactory:import11.ComponentFactory<import3.ArenaHeaderComponent> = new import11.ComponentFactory<import3.ArenaHeaderComponent>('arena-header',viewFactory_ArenaHeaderComponent_Host0,import3.ArenaHeaderComponent);
 const styles_ArenaHeaderComponent:any[] = [];
 var renderType_ArenaHeaderComponent:import0.RenderComponentType = (null as any);
 class _View_ArenaHeaderComponent0 extends import1.AppView<import3.ArenaHeaderComponent> {
@@ -144,7 +145,6 @@ class _View_ArenaHeaderComponent0 extends import1.AppView<import3.ArenaHeaderCom
     this._text_30 = this.renderer.createText(this._el_29,'\n                    ',(null as any));
     this._el_31 = this.renderer.createElement(this._el_29,'li',(null as any));
     this._el_32 = this.renderer.createElement(this._el_31,'a',(null as any));
-    this.renderer.setElementAttribute(this._el_32,'href','#');
     this._text_33 = this.renderer.createText(this._el_32,'Logout',(null as any));
     this._text_34 = this.renderer.createText(this._el_29,'\n                    ',(null as any));
     this._el_35 = this.renderer.createElement(this._el_29,'li',(null as any));
@@ -160,6 +160,7 @@ class _View_ArenaHeaderComponent0 extends import1.AppView<import3.ArenaHeaderCom
     this._expr_0 = import7.UNINITIALIZED;
     this._expr_1 = import7.UNINITIALIZED;
     this._expr_2 = import7.UNINITIALIZED;
+    var disposable_0:Function = this.renderer.listen(this._el_32,'click',this.eventHandler(this._handle_click_32_0.bind(this)));
     this.init([],[
       this._el_0,
       this._text_1,
@@ -206,7 +207,7 @@ class _View_ArenaHeaderComponent0 extends import1.AppView<import3.ArenaHeaderCom
       this._text_42,
       this._text_43
     ]
-    ,[],[]);
+    ,[disposable_0],[]);
     return (null as any);
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -228,8 +229,13 @@ class _View_ArenaHeaderComponent0 extends import1.AppView<import3.ArenaHeaderCom
     }
     this.detectViewChildrenChanges(throwOnChange);
   }
+  private _handle_click_32_0($event:any):boolean {
+    this.markPathToRootAsCheckOnce();
+    const pd_0:any = ((<any>this.context.logout()) !== false);
+    return (true && pd_0);
+  }
 }
 export function viewFactory_ArenaHeaderComponent0(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement):import1.AppView<import3.ArenaHeaderComponent> {
-  if ((renderType_ArenaHeaderComponent === (null as any))) { (renderType_ArenaHeaderComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/MainApp/arena/arena-header.component.html',0,import9.ViewEncapsulation.None,styles_ArenaHeaderComponent,{})); }
+  if ((renderType_ArenaHeaderComponent === (null as any))) { (renderType_ArenaHeaderComponent = viewUtils.createRenderComponentType('C:/Users/alex/WebstormProjects/footbalQuiz/assets/app/MainApp/arena/arena-header.component.html',0,import10.ViewEncapsulation.None,styles_ArenaHeaderComponent,{})); }
   return new _View_ArenaHeaderComponent0(viewUtils,parentInjector,declarationEl);
 }

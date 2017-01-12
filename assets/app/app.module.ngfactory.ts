@@ -384,7 +384,7 @@ class AppModuleInjector extends import0.NgModuleInjector<import1.AppModule> {
     return this.__APP_BOOTSTRAP_LISTENER_52;
   }
   get _AuthService_53():import32.AuthService {
-    if ((this.__AuthService_53 == (null as any))) { (this.__AuthService_53 = new import32.AuthService(this._Http_42)); }
+    if ((this.__AuthService_53 == (null as any))) { (this.__AuthService_53 = new import32.AuthService(this._Http_42,this._Router_50)); }
     return this.__AuthService_53;
   }
   get _GameListServices_54():import33.GameListServices {

@@ -166,7 +166,7 @@ class _View_ArenaComponent1 extends import1.AppView<any> {
     this._el_2 = this.renderer.createElement(this._el_0,'arena-header',(null as any));
     this._appEl_2 = new import2.AppElement(2,0,this,this._el_2);
     var compView_2:any = import18.viewFactory_ArenaHeaderComponent0(this.viewUtils,this.injector(2),this._appEl_2);
-    this._ArenaHeaderComponent_2_4 = new import15.ArenaHeaderComponent(this.parentInjector.get(import10.SocketService));
+    this._ArenaHeaderComponent_2_4 = new import15.ArenaHeaderComponent(this.parentInjector.get(import10.SocketService),this.parentInjector.get(import8.AuthService));
     this._appEl_2.initComponent(this._ArenaHeaderComponent_2_4,[],compView_2);
     compView_2.create(this._ArenaHeaderComponent_2_4,[],(null as any));
     this._text_3 = this.renderer.createText(this._el_0,'\n        ',(null as any));
