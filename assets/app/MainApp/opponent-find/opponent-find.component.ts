@@ -55,6 +55,9 @@ export class OpponentComponentFind implements OnInit{
 
 
                 data => {console.log(data);
+                    setTimeout(()=>{
+                        this.socketService.reqArenas(inviteId);
+                    },1200);
 
                     this.socketService.reqArenas(inviteId);
 

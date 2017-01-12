@@ -39,6 +39,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     arenaId;
     index=0;
     ticks=20;
+    subscription:Subscription;
     @ViewChild('myModal')
     modal: ModalComponent;
 
@@ -94,6 +95,7 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
         console.log('on Destroy all arenas');
         this.statusPlayed();
         this.socketService.arenaLeave(this.inviteId);
+        this.subscription.unsubscribe();
 
 
     }
@@ -175,15 +177,18 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
 
     timer() {
 
-        let timer = Observable.timer(100, 1000);
-       timer.subscribe(t=>{this.ticks = this.ticks - 1;
+       let timer = Observable.timer(100, 1000);
+       this.subscription=timer.subscribe(t=>{this.ticks = this.ticks - 1;
+           console.log(t);
             if(this.ticks==0)
             {
+
                 this.playerLost();
             }});
     }
 
     playerLost(){
+        this.subscription.unsubscribe();
         this.isLost=true;
         this.open();
     }
