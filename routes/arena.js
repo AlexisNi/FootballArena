@@ -5,7 +5,7 @@ var User=require('../models/user');
 var jwt=require('jsonwebtoken');
 var Questions=require('../models/questions');
 
-/*router.use('/',function (req,res,next) {
+router.use('/',function (req,res,next) {
     jwt.verify(req.query.token,'secret',function (err,decoded) {
         if(err){
             return res.status(401).json({
@@ -17,7 +17,7 @@ var Questions=require('../models/questions');
 
     })
 
-});*/
+});
 
 router.post('/', function (req, res, next) {
     var decoded=jwt.decode(req.query.token);

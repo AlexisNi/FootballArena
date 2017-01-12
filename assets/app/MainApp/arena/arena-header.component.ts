@@ -4,6 +4,7 @@
 import {Component, Input, OnInit} from "@angular/core";
 import {Stats} from "../game-list/models/stats";
 import {SocketService} from "../socketHanding/socket.service";
+import {AuthService} from "../../auth/auth.service";
 
 
 @Component({
@@ -12,11 +13,17 @@ import {SocketService} from "../socketHanding/socket.service";
 })
 
 export  class ArenaHeaderComponent{
-    constructor(private socketServices:SocketService){}
+    constructor(private socketServices:SocketService,private authservice:AuthService){}
 
 
     @Input() username;
     @Input() stats:Stats;
 
 
+
+
+    logout(){
+        this.authservice.logout();
+
+    }
 }

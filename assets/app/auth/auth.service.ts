@@ -4,9 +4,10 @@ import {Http, Headers, Response} from "@angular/http";
 import 'rxjs/Rx';
 import {Observable} from "rxjs";
 import {myGlobals}  from "../globals/globals";
+import {Router} from "@angular/router";
 @Injectable()
 export  class AuthService{
-    constructor(private http:Http){}
+    constructor(private http:Http,private router:Router){}
 
 
     signup(user: User) {
@@ -49,11 +50,19 @@ export  class AuthService{
 
     logout(){
         localStorage.clear();
+        this.router.navigate(['/auth','signin']);
     }
     isLoggedIn() {
         return localStorage.getItem('token')!==null;
 
     }
-    path(){
+    checkUserName(userName){
+        const lastNAme={lastName:userName};
+        const body = JSON.stringify(lastNAme);
+        const headers = new Headers({'Content-Type': 'application/json'});
+        return this.http.post(myGlobals.host+'user/checkUserName', body, {headers: headers})
+            .map((response: Response) => response.json())
+            .catch((error: Response) =>Observable.throw(error.json()));
+
     }
 }

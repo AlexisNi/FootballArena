@@ -1,25 +1,49 @@
 <div class="col-md-4 col-lg-offset-4">
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label for="firstName" >FirstName</label>
+            <label for="firstName" >Your Name</label>
             <input type="text"
                    id="firstName"
                    class="form-control"
-                   formControlName="firstName" >
+                   formControlName="firstName">
+
+            <div [hidden]="myForm.controls['firstName'].valid&&myForm.controls['firstName'].touched||!myForm.controls['firstName'].valid&&!myForm.controls['firstName'].touched"
+                 class="alert alert-danger">
+                First Name is required
+                {{myForm.controls['firstName'].touched}}
+            </div>
+
+
+
         </div>
         <div class="form-group">
-            <label for="lastName" >LastName</label>
-            <input type="text"
+            <label for="lastName" >Your Team NickName</label>
+            <input  #lastNameInput
+                    type="text"
                    id="lastName"
                    class="form-control"
-                   formControlName="lastName" >
+                   placeholder="Must Be Unique"
+                   formControlName="lastName"
+                   (keyup)="checkForUserName(lastNameInput.value)">
+            <div [hidden]="myForm.controls['lastName'].valid&&myForm.controls['lastName'].touched||!myForm.controls['lastName'].valid&&!myForm.controls['lastName'].touched"
+                 class="alert alert-danger">
+                Last Name is required
+                {{myForm.controls['firstName'].touched}}
+            </div>
+
         </div>
         <div class="form-group">
-            <label for="email" >Mail</label>
+            <label for="email" >Your Email</label>
             <input type="text"
                    id="email"
                    class="form-control"
                    formControlName="email" >
+            <div [hidden]="myForm.controls['email'].valid&&myForm.controls['email'].touched||!myForm.controls['email'].valid&&!myForm.controls['email'].touched"
+                 class="alert alert-danger">
+                email is required
+                {{myForm.controls['email'].touched}}
+            </div>
+
         </div>
         <div class="form-group">
             <label for="password" >Password</label>
@@ -27,6 +51,12 @@
                    id="password"
                    class="form-control"
                    formControlName="password" >
+            <div [hidden]="myForm.controls['password'].valid&&myForm.controls['password'].touched||!myForm.controls['password'].valid&&!myForm.controls['password'].touched"
+                 class="alert alert-danger">
+                password is required
+                {{myForm.controls['password'].touched}}
+            </div>
+
         </div>
         <button class="btn btn-primary"type="submit"
                 [disabled]="!myForm.valid">Submit</button>

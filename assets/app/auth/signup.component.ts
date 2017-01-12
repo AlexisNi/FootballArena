@@ -3,6 +3,7 @@ import {FormGroup, Validators, FormControl, FormsModule} from "@angular/forms";
 import {User} from "./user";
 import {AuthService} from "./auth.service";
 import {Router} from "@angular/router";
+import {error} from "util";
 
 @Component({
     selector:'quiz-signUp',
@@ -12,6 +13,8 @@ import {Router} from "@angular/router";
 
 export class SignUpComponent  implements OnInit{
     myForm:FormGroup;
+    firstName:FormControl;
+
         constructor(private authService:AuthService,private router:Router){}
 
     onSubmit() {
@@ -23,7 +26,15 @@ export class SignUpComponent  implements OnInit{
         );
         this.authService.signup(user)
             .subscribe(
-                data => console.log(data),
+                data =>{
+                    console.log(data);
+                    this.authService.signin(user)
+                        .subscribe(data=>{
+                            localStorage.setItem('token',data.token);
+                            localStorage.setItem('userId',data.userId);
+                            this.router.navigateByUrl('mainApp');
+                        },error=>console.error(error));
+                },
                 error => console.error(error)
             );
         this.myForm.reset();
@@ -45,5 +56,13 @@ export class SignUpComponent  implements OnInit{
             ]),
             password:new FormControl(null,Validators.required),
         });
+    }
+
+    checkForUserName(lastName){
+        this.authService.checkUserName(lastName)
+            .subscribe(
+                data => console.log(data),
+                error => console.error(error)
+            );
     }
 }

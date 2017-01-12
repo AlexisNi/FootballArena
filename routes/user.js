@@ -5,7 +5,6 @@ var User=require('../models/user');
 var jwt=require('jsonwebtoken');
 var Statistics=require('../models/statistics');
 
-
 router.post('/', function (req, res, next) {
     console.log('Post received! On user');
     var user = new User({
@@ -55,6 +54,7 @@ router.get('/',function (req,res,next) {
             message:'User Found',
             obj:user
         });
+
 
     });
 
@@ -119,6 +119,29 @@ router.post('/find',function (req,res,next) {
 
 
     });
+});
+
+router.post('/checkUserName',function (req,res,next) {
+    console.log('Check UserName Here');
+   User.findOne({lastName:req.body.lastName},function (err,user) {
+       if(err){
+           return res.status(500).json({
+               title: 'An error occurred',
+               error: err
+           });
+       }
+       if(user){
+              return res.status(200).json({
+               title: 'User Name Not Available',
+               available: false
+           });
+       }
+
+       res.status(200).json({
+           title: 'User Name is Available',
+           available: true
+       });
+   })
 });
 
 

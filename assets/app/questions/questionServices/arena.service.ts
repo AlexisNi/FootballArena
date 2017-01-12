@@ -13,8 +13,9 @@ export class ArenaServices{
 
     statusPlayed(arenaInfo:StatusPlayed){
         const body = JSON.stringify(arenaInfo);
+        const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post(myGlobals.host+'arena/playedStatus', body, {headers: headers})
+        return this.http.post(myGlobals.host+'arena/playedStatus'+token, body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) =>Observable.throw(error.json()));
 
