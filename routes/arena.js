@@ -6,16 +6,18 @@ var jwt=require('jsonwebtoken');
 var Questions=require('../models/questions');
 
 router.use('/',function (req,res,next) {
-    jwt.verify(req.query.token,'secret',function (err,decoded) {
-        if(err){
-            return res.status(401).json({
-                title:'Not Authenticated',
-                error:err
-            });
+    User.findByToken(req.query.token).then(function (user) {
+        if (!user){
+            return Promise.reject();
+
+
         }
         next();
+    }).catch(function (e) {
+        res.status(401).send();
 
-    })
+    });
+
 
 });
 

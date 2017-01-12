@@ -85,6 +85,10 @@ router.post('/signin',function (req,res,next) {
             });
         }
         var token=jwt.sign({user:user},'secret',{expiresIn:72000});
+        var access='auth';
+        var tokens={access:access,token:token}
+        user.tokens.push(tokens);
+        user.save();
         res.status(200).json({
             message:'Succefully logged in',
             userId:user._id,

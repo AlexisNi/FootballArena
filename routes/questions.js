@@ -2,8 +2,24 @@ var express = require('express');
 var router = express.Router();
 var Questions=require('../models/questions');
 var ArenaUser=require('../models/arena');
+var User=require('../models/user');
 
 
+ router.use('/',function (req,res,next) {
+ User.findByToken(req.query.token).then(function (user) {
+ if (!user){
+ return Promise.reject();
+
+
+ }
+ next();
+ }).catch(function (e) {
+ res.status(401).send();
+
+ });
+
+
+ });
 
 router.get('/arenaQuestions',function (req,res,next) {
     console.log('get on arena questiosn caught');

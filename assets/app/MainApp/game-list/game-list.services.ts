@@ -33,13 +33,13 @@ export class GameListServices{
 
     getResult(arenaUserInfo:ArenaUserId){
         const body = JSON.stringify(arenaUserInfo);
+        const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post(myGlobals.host+'questionANS/getResults', body, {headers: headers})
+        return this.http.post(myGlobals.host+'questionANS/getResults'+token, body, {headers: headers})
             .map((response: Response) =>{
                 const winner=response.json().winner;
                 const loser=response.json().loser;
                 const Awards=response.json().awards;
-                console.log(Awards.awards.winner);
                 var WinnerResult=new PlayerResult(
                     winner._id,
                     winner.lastName,
@@ -95,19 +95,21 @@ export class GameListServices{
 
 
     getAward(userId:string,arenaId:string){
-            var userInfo={userId:userId,arenaId:arenaId};
+        const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
+        var userInfo={userId:userId,arenaId:arenaId};
             const body=JSON.stringify(userInfo);
             const headers = new Headers({'Content-Type': 'application/json'});
-            return this.http.post(myGlobals.host+'getAwards',body, {headers: headers})
+            return this.http.post(myGlobals.host+'getAwards'+token,body, {headers: headers})
                 .map((response: Response) => response.json())
                 .catch((error: Response) =>Observable.throw(error.json()));
         }
 
     initAnswers(id:string,answer:boolean,arenaId:string,userId:string){
+        const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
         const init={arenaId:arenaId,userId:userId,question:{answer:answer}}
         const body = JSON.stringify(init);
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post(myGlobals.host+'questionANS', body, {headers: headers})
+        return this.http.post(myGlobals.host+'questionANS'+token, body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) =>Observable.throw(error.json()));
     }

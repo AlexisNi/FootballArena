@@ -5,6 +5,21 @@ var Awards=require('../models/awards');
 var Statistics=require('../models/statistics');
 var User=require('../models/user');
 
+router.use('/',function (req,res,next) {
+    User.findByToken(req.query.token).then(function (user) {
+        if (!user){
+            return Promise.reject();
+
+
+        }
+        next();
+    }).catch(function (e) {
+        res.status(401).send();
+
+    });
+
+
+});
 
 
 router.post('/', function (req,res,next) {

@@ -18,15 +18,17 @@ export class QuestionAnswerServices{
 
     saveAnswerdQuestion(answer:ArenaQuestion){
         const body = JSON.stringify(answer);
+        const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post(myGlobals.host+'questionANS', body, {headers: headers})
+        return this.http.post(myGlobals.host+'questionANS'+token, body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) =>Observable.throw(error.json()));
     }
     getCorrectQuestions(playerArena:StatusPlayed){
         var userId=playerArena.userId;
         var arenaId=playerArena.arenaId;
-        return this.http.get(myGlobals.host+'questionANS/correct'+'?userId='+userId+'&'+'arenaId='+arenaId)
+        const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
+        return this.http.get(myGlobals.host+'questionANS/correct'+token+'?userId='+userId+'&'+'arenaId='+arenaId)
             . map((response:Response)=>{
                 const questionsAnswered=response.json().obj;
                 let transformedQuestionsAnswered:AnsweredQuestion[]=[];

@@ -17,8 +17,9 @@ export class OpponentFindService{
 
     findUser(userName:User) {
         const body = JSON.stringify(userName);
+        const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
         const headers = new Headers({'Content-Type': 'application/json'});
-        return this.http.post(myGlobals.host+'user/find', body, {headers: headers})
+        return this.http.post(myGlobals.host+'user/find'+token, body, {headers: headers})
             .map((response: Response) => response.json())
             .catch((error: Response) =>Observable.throw(error.json()));
     }
