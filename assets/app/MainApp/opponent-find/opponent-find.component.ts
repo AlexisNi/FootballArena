@@ -41,7 +41,9 @@ export class OpponentComponentFind implements OnInit{
                     this.inviteId=data.inviteId;
 
                 },
-                error=>console.error(error),
+                error=>{
+                    console.error(error);
+                },
                 this.userName=null
             );
     }

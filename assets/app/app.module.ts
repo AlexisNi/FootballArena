@@ -26,6 +26,8 @@ import {Ng2Bs3ModalModule} from "ng2-bs3-modal/ng2-bs3-modal";
 import { ArenaPlayingComponent} from "./questions/arena-playing.component";
 import {LoggedInGuard} from "./auth/logged-in.guard";
 import {ArenaHeaderComponent} from "./MainApp/arena/arena-header.component";
+import {ErrorComponent} from "./errors/error.component";
+import {ErrorService} from "./errors/error.service";
 @NgModule({
     declarations:[AppComponent,
         LoginComponent,
@@ -40,7 +42,8 @@ import {ArenaHeaderComponent} from "./MainApp/arena/arena-header.component";
         MainComponent,
         QuestionStructure,
         ArenaPlayingComponent,
-        ArenaHeaderComponent
+        ArenaHeaderComponent,
+        ErrorComponent
         ],
 
     imports:[BrowserModule,FormsModule,routing,ReactiveFormsModule,HttpModule,Ng2Bs3ModalModule ],
@@ -53,6 +56,7 @@ import {ArenaHeaderComponent} from "./MainApp/arena/arena-header.component";
         QuestionServices,
         QuestionAnswerServices,
         LoggedInGuard,
+        ErrorService
         ],
 
     bootstrap:[AppComponent]

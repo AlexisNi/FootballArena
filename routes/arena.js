@@ -11,7 +11,10 @@ router.use('/',function (req,res,next) {
             return Promise.reject();
 
 
+
         }
+        var decoded=jwt.decode(req.query.token);
+        console.log(decoded)
         next();
     }).catch(function (e) {
         res.status(401).send();
@@ -94,6 +97,7 @@ router.post('/', function (req, res, next) {
 
 router.get('/arenas',function (req,res,next) {
     var decoded=jwt.decode(req.query.token);
+    console.log(decoded)
     var arenasArray=[];
 
         User.findOne({_id:decoded.user._id})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE USER ROW AND SHOW THE LAST NAME OF INVITE

@@ -16,10 +16,13 @@ export class SocketService{
 
     sendUserId(userId:string)
     {
-        this.socket=io(myGlobals.host+'game',{query:{userId:userId}});
+        const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
+        this.socket=io(myGlobals.host+'game',{query:{userId:userId,token:token}});
         this.socket.emit('get-userId',userId);
 
     }
+
+
 
     enterArena(arenaId:string,userId:string,inviteId:string){
         this.socket.emit('enterArena',{arenaId:arenaId,userId:userId,inviteId:inviteId});

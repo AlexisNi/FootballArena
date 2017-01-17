@@ -5,6 +5,27 @@ var User=require('../models/user');
 var jwt=require('jsonwebtoken');
 var Statistics=require('../models/statistics');
 
+router.use('/find',function (req,res,next) {
+    User.findByToken(req.query.token).then(function (user) {
+        if (!user){
+            return Promise.reject();
+
+
+
+        }
+
+        next();
+    }).catch(function (e) {
+        return res.status(401).json({
+            title:'Not Authenticated',
+            message:'Please Login',
+            status:'401'
+        });
+
+    });
+
+
+});
 router.post('/', function (req, res, next) {
     console.log('Post received! On user');
     var user = new User({

@@ -3,7 +3,7 @@
 
 
 export const myGlobals = Object.freeze({
-    host:'https://footballarenaquiz.herokuapp.com/'
+    host:'http://localhost:3000/'
     //... more of your variables
 });
 /*

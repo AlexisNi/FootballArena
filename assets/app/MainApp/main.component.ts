@@ -2,7 +2,6 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import {AuthService} from "../auth/auth.service";
 import {SocketService} from "./socketHanding/socket.service";
 import {Router} from "@angular/router";
-
 @Component({
     selector: 'my-app',
     templateUrl: './main.component.html'

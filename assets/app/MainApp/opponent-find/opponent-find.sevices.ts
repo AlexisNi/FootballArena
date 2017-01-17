@@ -8,10 +8,11 @@ import {ArenaUsers} from "../models/arenaUsers";
 import {ArenaPlayers} from "../models/arenaPlayers";
 import {myGlobals}  from "../../globals/globals";
 import {Question} from "../../questions/questionModels/question";
+import {ErrorService} from "../../errors/error.service";
 
 @Injectable()
 export class OpponentFindService{
-    constructor(private http:Http,private gameListSevices:GameListServices){}
+    constructor(private http:Http,private gameListSevices:GameListServices,private errorService:ErrorService){}
 
 
 
@@ -21,8 +22,16 @@ export class OpponentFindService{
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.post(myGlobals.host+'user/find'+token, body, {headers: headers})
             .map((response: Response) => response.json())
-            .catch((error: Response) =>Observable.throw(error.json()));
+            .catch((error: Response) =>{
+                if (error.status===401){
+                    console.log('The authentication session expires or the user is not authorised. Force refresh of the current page.');
+
+                }
+                this.errorService.handleError(error.json());
+               return Observable.throw(error.json())
+            });
     }
+
 
 
     createArena(arenaPlayer:ArenaPlayers){

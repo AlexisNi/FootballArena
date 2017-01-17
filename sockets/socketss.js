@@ -6,7 +6,9 @@ var connectedUserList=[];
 
 module.exports = function (io) {
     'use strict';
+
     var nsp=io.of('/game');
+
     nsp.on('connection',function (socket) {
         console.log('User connected!');
         connectedUserList[socket.handshake.query.userId]=socket;
