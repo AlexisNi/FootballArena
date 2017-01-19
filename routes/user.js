@@ -37,8 +37,9 @@ router.post('/', function (req, res, next) {
     user.save(function(err, result) {
         if (err) {
             return res.status(500).json({
-                title: 'An error occurred',
-                error: err
+                title:'Error',
+                message:'An error has occured....',
+                status:'500'
             });
 
         }
@@ -58,15 +59,17 @@ router.get('/',function (req,res,next) {
     User.findOne({_id:decoded.user._id},'lastName',function (err,user) {
         if (err) {
             return res.status(500).json({
-                title: 'An error occurred',
-                error: err
+                title:'Error',
+                message:'An error has occured....',
+                status:'500'
             });
         }
 
         if(!user){
             return res.status(404).json({
                 title:'Not Found',
-                error:{Message:'User not in the list'}
+                Message:'User not in the list',
+                status:'401'
             });
         }
 
@@ -88,21 +91,24 @@ router.post('/signin',function (req,res,next) {
     User.findOne({email:req.body.email},function (err,user) {
         if (err) {
             return res.status(500).json({
-                title: 'An error occurred',
-                error: err
+                title:'Error',
+                message:'An error has occured....',
+                status:'500'
             });
         }
         if(!user){
             return res.status(401).json({
                 title:'Login failed',
-                error:{Message:'Invalid Login Credentials'}
+                message:'Invalid Login Credentials',
+                status:'401'
             });
         }
 
         if (!bcrypt.compareSync(req.body.password,user.password)){
             return res.status(401).json({
                 title:'Login failed',
-                error:{Message:'Invalid Login Credentials'}
+                Message:'Invalid Login Credentials',
+                status:'401'
             });
         }
         var token=jwt.sign({user:user},'secret',{expiresIn:72000});
@@ -126,14 +132,16 @@ router.post('/find',function (req,res,next) {
     User.findOne({lastName:req.body.lastName},function (err,user) {
         if (err) {
             return res.status(500).json({
-                title: 'An error occurred',
-                error: err
+                title:'Error',
+                message:'An error has occured....',
+                status:'500'
             });
         }
         if(!user){
             return res.status(400).json({
-                title:'User Not Found',
-                error:{Message:'User Not Found'}
+                title:'No results',
+                Message:'User Not Found',
+                status:'400'
             });
         }
         res.status(200).json({
@@ -151,8 +159,9 @@ router.post('/checkUserName',function (req,res,next) {
    User.findOne({lastName:req.body.lastName},function (err,user) {
        if(err){
            return res.status(500).json({
-               title: 'An error occurred',
-               error: err
+               title:'Error',
+               message:'An error has occured....',
+               status:'500'
            });
        }
        if(user){
@@ -162,7 +171,7 @@ router.post('/checkUserName',function (req,res,next) {
            });
        }
 
-       res.status(200).json({
+       return res.status(200).json({
            title: 'User Name is Available',
            available: true
        });

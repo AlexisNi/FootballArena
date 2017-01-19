@@ -8,7 +8,7 @@ export class ErrorService{
 
     handleError(error:any){
         const  errorData=new Error(error.title,error.message);
-        this.errorOccurred.emit(errorData)
+        this.errorOccurred.emit(errorData);
     }
 
 }

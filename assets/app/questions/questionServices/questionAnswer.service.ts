@@ -8,10 +8,11 @@ import {StatusPlayed} from "../questionModels/statusPlayedArena";
 import {ArenaQuestion} from "../questionModels/arena_question";
 import {AnsweredQuestion} from "../questionModels/answered-questions";
 import {myGlobals}  from "../../globals/globals";
+import {ErrorService} from "../../errors/error.service";
 
 @Injectable()
 export class QuestionAnswerServices{
-    constructor(private http:Http){}
+    constructor(private http:Http,private errorService:ErrorService){}
     private arenaQuestionAnswer:AnsweredQuestion[]=[];
     public Heroku='https://footballarenaquiz.herokuapp.com/';
 
@@ -22,7 +23,10 @@ export class QuestionAnswerServices{
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.post(myGlobals.host+'questionANS'+token, body, {headers: headers})
             .map((response: Response) => response.json())
-            .catch((error: Response) =>Observable.throw(error.json()));
+            .catch((error: Response) =>{
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json())
+            });
     }
     getCorrectQuestions(playerArena:StatusPlayed){
         var userId=playerArena.userId;

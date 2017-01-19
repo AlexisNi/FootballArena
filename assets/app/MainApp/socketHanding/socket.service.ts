@@ -6,21 +6,23 @@ import {ArenaUsers} from "../models/arenaUsers";
 import {myGlobals}  from "../../globals/globals";
 import {Stats} from "../game-list/models/stats";
 import {Question} from "../../questions/questionModels/question";
+import {ErrorService} from "../../errors/error.service";
 
 @Injectable()
 
 export class SocketService{
 
     private socket:any;
-    constructor(private gameListServices:GameListServices){}
+    constructor(private gameListServices:GameListServices,private errorService:ErrorService){}
 
     sendUserId(userId:string)
     {
-        const token=localStorage.getItem('token')? '?token='+localStorage.getItem('token') : '';
-        this.socket=io(myGlobals.host+'game',{query:{userId:userId,token:token}});
+        const token=localStorage.getItem('token');
+        this.socket=io(myGlobals.host/*+'game'*/,{query:{userId:userId,token:token}});
         this.socket.emit('get-userId',userId);
 
     }
+
 
 
 
@@ -36,6 +38,7 @@ export class SocketService{
 
 
     reqArenas(userId){
+        const token=localStorage.getItem('token');
         this.socket.emit('getArenas',{userId:userId});
     }
 

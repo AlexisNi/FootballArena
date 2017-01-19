@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 import {ArenaUsers} from "../models/arenaUsers";
 import {PlayerResult} from "./models/playerResults";
 import {myGlobals}  from "../../globals/globals";
+import {ErrorService} from "../../errors/error.service";
 
 
 /**
@@ -14,7 +15,7 @@ import {myGlobals}  from "../../globals/globals";
 
 @Injectable()
 export class GameListServices{
-    constructor(private http:Http){}
+    constructor(private http:Http,private errorService:ErrorService){}
     public arenas:ArenaUsers[]=[];
     private ArenaPlaying =new Subject<ArenaUsers>();
     ArenaChosen=this.ArenaPlaying.asObservable();
@@ -53,7 +54,10 @@ export class GameListServices{
                 );
                 return WinnerResult;
             })
-            .catch((error: Response) =>Observable.throw(error.json()));
+            .catch((error: Response) =>{
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json())
+            });
     }
 
     getArenas(){
@@ -89,7 +93,10 @@ export class GameListServices{
                 this.arenas=transformedArenas;
                 return transformedArenas ;
             })
-            .catch((error: Response) =>Observable.throw(error.json()));
+            .catch((error: Response) =>{
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json())
+            });
 
     }
 
@@ -101,7 +108,10 @@ export class GameListServices{
             const headers = new Headers({'Content-Type': 'application/json'});
             return this.http.post(myGlobals.host+'getAwards'+token,body, {headers: headers})
                 .map((response: Response) => response.json())
-                .catch((error: Response) =>Observable.throw(error.json()));
+                .catch((error: Response) =>{
+                    this.errorService.handleError(error.json());
+                    return Observable.throw(error.json())
+                });
         }
 
     initAnswers(id:string,answer:boolean,arenaId:string,userId:string){
@@ -111,7 +121,10 @@ export class GameListServices{
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.post(myGlobals.host+'questionANS'+token, body, {headers: headers})
             .map((response: Response) => response.json())
-            .catch((error: Response) =>Observable.throw(error.json()));
+            .catch((error: Response) =>{
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json())
+            });
     }
 
 

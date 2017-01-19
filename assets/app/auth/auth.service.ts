@@ -5,9 +5,10 @@ import 'rxjs/Rx';
 import {Observable} from "rxjs";
 import {myGlobals}  from "../globals/globals";
 import {Router} from "@angular/router";
+import {ErrorService} from "../errors/error.service";
 @Injectable()
 export  class AuthService{
-    constructor(private http:Http,private router:Router){}
+    constructor(private http:Http,private router:Router,private errorService:ErrorService){}
 
 
     signup(user: User) {
@@ -15,7 +16,10 @@ export  class AuthService{
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.post(myGlobals.host+'user', body, {headers: headers})
             .map((response: Response) => response.json())
-            .catch((error: Response) =>Observable.throw(error.json()));
+            .catch((error: Response) =>{
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json())
+            });
     }
 
 
@@ -24,7 +28,10 @@ export  class AuthService{
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.post(myGlobals.host+'user/signin', body, {headers: headers})
             .map((response: Response) => response.json())
-            .catch((error: Response) =>Observable.throw(error.json()));
+            .catch((error: Response) =>{
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json())
+            });
                 }
 
 
@@ -37,7 +44,10 @@ export  class AuthService{
                 return user;
 
             })
-            .catch((error: Response) =>Observable.throw(error.json()));
+            .catch((error: Response) =>{
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json())
+            });
 
     }
     getUserId(){
@@ -62,7 +72,10 @@ export  class AuthService{
         const headers = new Headers({'Content-Type': 'application/json'});
         return this.http.post(myGlobals.host+'user/checkUserName', body, {headers: headers})
             .map((response: Response) => response.json())
-            .catch((error: Response) =>Observable.throw(error.json()));
+            .catch((error: Response) =>{
+                this.errorService.handleError(error.json());
+                return Observable.throw(error.json())
+            });
 
     }
 }

@@ -31,8 +31,9 @@ router.get('/arenaQuestions',function (req,res,next) {
         .exec(function (err,arena) {
             if(err){
                 return res.status(500).json({
-                    title:'An error occured',
-                    error:err
+                    title:'Error',
+                    message:'An error has occured....',
+                    status:'500'
                 });
             }
             res.status(200).json({
@@ -53,8 +54,9 @@ router.post('/questionPlayed',function (req,res,next) {
         .exec(function (err,arena) {
             if(err){
                 return res.status(500).json({
-                    title:'An error occured',
-                    error:err
+                    title:'Error',
+                    message:'An error has occured....',
+                    status:'500'
                 });
             }
 

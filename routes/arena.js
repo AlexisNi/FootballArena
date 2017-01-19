@@ -17,8 +17,11 @@ router.use('/',function (req,res,next) {
         console.log(decoded)
         next();
     }).catch(function (e) {
-        res.status(401).send();
-
+        return res.status(401).json({
+            title:'Not Authenticated',
+            message:'Please Login',
+            status:'401'
+        });
     });
 
 
@@ -30,8 +33,9 @@ router.post('/', function (req, res, next) {
     User.findById(decoded.user._id,function (err,user) {
         if (err){
             return res.status(500).json({
-                title:'An error occured',
-                error:err
+                title:'Error',
+                message:'An error has occured....',
+                status:'500'
             });
         }
 
@@ -39,8 +43,9 @@ router.post('/', function (req, res, next) {
         User.findById(req.body.inviteId,function (err,userInvite) {
             if (err) {
                 return res.status(500).json({
-                    title: 'An error occured',
-                    error: err
+                    title:'Error',
+                    message:'An error has occured....',
+                    status:'500'
                 });
             }
             Questions.syncRandom(function (err, result) {
@@ -70,8 +75,9 @@ router.post('/', function (req, res, next) {
         arenaUser.save(function(err, result) {
             if (err) {
                 return res.status(500).json({
-                    title: 'An error occurred',
-                    error: err
+                    title:'Error',
+                    message:'An error has occured....',
+                    status:'500'
                 });
             }
             user.arenas.push(result);
@@ -106,8 +112,9 @@ router.get('/arenas',function (req,res,next) {
             .exec(function (err, arenasArr) {
                 if (err) {
                     return res.status(500).json({
-                        title: 'An error occured',
-                        error: err
+                        title:'Error',
+                        message:'An error has occured....',
+                        status:'500'
                     });
                 }
 
@@ -122,8 +129,9 @@ router.get('/arenas',function (req,res,next) {
                         .exec(function (err, arenas) {
                             if (err) {
                                 return res.status(500).json({
-                                    title: 'An error occured',
-                                    error: err
+                                    title:'Error',
+                                    message:'An error has occured....',
+                                    status:'500'
                                 });
 
 
@@ -135,10 +143,10 @@ router.get('/arenas',function (req,res,next) {
                                 .exec(function (err, arenasUser) {
                                     if (err) {
                                         return res.status(500).json({
-                                            title: 'An error occured',
-                                            error: err
+                                            title:'Error',
+                                            message:'An error has occured....',
+                                            status:'500'
                                         });
-
 
 
                                     }
@@ -185,8 +193,9 @@ router.post('/playedStatus',function (req,res,next) {
                 ArenaUser.update({_id:arenaId},{$set:{invite_played:true}},function (err,result) {
                     if (err) {
                         return res.status(500).json({
-                            title: 'An error occurred',
-                            error: err
+                            title:'Error',
+                            message:'An error has occured....',
+                            status:'500'
                         });
                     }
                     res.status(200).json({

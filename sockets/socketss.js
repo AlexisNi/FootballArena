@@ -3,16 +3,42 @@ var User=require('../models/user');
 var io={};
 var userInfo=[];
 var connectedUserList=[];
+var jwt=require('jsonwebtoken');
+var decoded;
+var notAuthorized=[];
 
 module.exports = function (io) {
     'use strict';
+    io.use(function (socket,next) {
+        try{
+            decoded = jwt.verify(socket.handshake.query.token, 'secret');
+        }
+        catch (e){
+            console.log(e);
 
-    var nsp=io.of('/game');
+        }
+        User.findByToken(socket.handshake.query.token).then(function (user) {
+            if (!user){
+                return Promise.reject();
 
-    nsp.on('connection',function (socket) {
+
+
+            }
+
+            next();
+        }).catch(function (e) {
+            next();
+
+        });
+
+    });
+    /*var nsp=io.of('/game');*/
+    io.on('connection',function (socket) {
+
         console.log('User connected!');
         connectedUserList[socket.handshake.query.userId]=socket;
         require('./socketUpdateStats')(socket,connectedUserList[socket.handshake.query.userId]);
+
 
 
 
@@ -32,44 +58,6 @@ module.exports = function (io) {
                 if (connectedUserList[otherUser]!=null){
                     if(otherUser!=null) {
                         require('./getArenasOnDisconnect')(otherUser,connectedUserList[otherUser]);
-                       /* var arenasArray = [];
-                        User.findOne({_id: otherUser/!*socket.handshake.query.userId*!/})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE USER ROW AND SHOW THE LAST NAME OF INVITE
-                            .populate('arenas', '_id')
-                            .exec(function (err, arenasArr) {
-
-                                if (err) {
-                                    throw err;
-                                }
-                                for (var i = 0; i < arenasArr.arenas.length; i++) {
-                                    arenasArray.push(arenasArr.arenas[i]._id);
-                                }
-                                console.log(arenasArr);
-                                ArenaUser.find({$and: [{user: otherUser}, {_id: {$in: arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
-                                    .populate('invite', 'lastName')
-                                    .deepPopulate('questions')
-                                    .exec(function (err, arenas) {
-
-                                        if (err) {
-                                            throw err;
-                                        }
-
-                                        ArenaUser.find({$and: [{invite: otherUser}, {_id: {$in: arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
-                                            .populate('user', 'lastName')
-                                            .deepPopulate('questions')
-                                            .exec(function (err, arenasUser) {
-                                                if (err) {
-
-                                                    throw err;
-                                                }
-                                                if(connectedUserList[otherUser]!=null) {
-                                                    connectedUserList[otherUser].emit('loadArenas', {
-                                                        obj: arenas,
-                                                        objUser: arenasUser
-                                                    })
-                                                }
-                                            });
-                                    });
-                            });*/
                     }
 
                 }
@@ -103,29 +91,12 @@ module.exports = function (io) {
             nsp.emit('getFinish',{status:data}) ;
         });
 
-
-
-
-
-
-
-
-
-
-
-
             socket.on('getArenas',function (req) {
             console.log('here get arenas!');
                 console.log(req);
                 require('./getArenas')(req,connectedUserList[req.userId]);
 
         });
-
-
-
-
-
-
 
     });
 

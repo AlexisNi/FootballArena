@@ -16,8 +16,11 @@ import * as import8 from '@angular/core/src/metadata/view';
 import * as import9 from '@angular/core/src/linker/component_factory';
 import * as import10 from './app.component.css.shim';
 import * as import11 from '@angular/router/src/directives/router_outlet';
-import * as import12 from '@angular/router/src/router_outlet_map';
-import * as import13 from '@angular/core/src/linker/component_factory_resolver';
+import * as import12 from './errors/error.component';
+import * as import13 from '@angular/router/src/router_outlet_map';
+import * as import14 from '@angular/core/src/linker/component_factory_resolver';
+import * as import15 from './errors/error.component.ngfactory';
+import * as import16 from './errors/error.service';
 var renderType_AppComponent_Host:import0.RenderComponentType = (null as any);
 class _View_AppComponent_Host0 extends import1.AppView<any> {
   _el_0:any;
@@ -52,6 +55,10 @@ class _View_AppComponent0 extends import1.AppView<import3.AppComponent> {
   _el_0:any;
   /*private*/ _appEl_0:import2.AppElement;
   _RouterOutlet_0_5:import11.RouterOutlet;
+  _text_1:any;
+  _el_2:any;
+  /*private*/ _appEl_2:import2.AppElement;
+  _ErrorComponent_2_4:import12.ErrorComponent;
   constructor(viewUtils:import4.ViewUtils,parentInjector:import5.Injector,declarationEl:import2.AppElement) {
     super(_View_AppComponent0,renderType_AppComponent,import6.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import7.ChangeDetectorStatus.CheckAlways);
   }
@@ -59,13 +66,31 @@ class _View_AppComponent0 extends import1.AppView<import3.AppComponent> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
     this._el_0 = this.renderer.createElement(parentRenderNode,'router-outlet',(null as any));
     this._appEl_0 = new import2.AppElement(0,(null as any),this,this._el_0);
-    this._RouterOutlet_0_5 = new import11.RouterOutlet(this.parentInjector.get(import12.RouterOutletMap),this._appEl_0.vcRef,this.parentInjector.get(import13.ComponentFactoryResolver),(null as any));
-    this.init([],[this._el_0],[],[]);
+    this._RouterOutlet_0_5 = new import11.RouterOutlet(this.parentInjector.get(import13.RouterOutletMap),this._appEl_0.vcRef,this.parentInjector.get(import14.ComponentFactoryResolver),(null as any));
+    this._text_1 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._el_2 = this.renderer.createElement(parentRenderNode,'app-error',(null as any));
+    this._appEl_2 = new import2.AppElement(2,(null as any),this,this._el_2);
+    var compView_2:any = import15.viewFactory_ErrorComponent0(this.viewUtils,this.injector(2),this._appEl_2);
+    this._ErrorComponent_2_4 = new import12.ErrorComponent(this.parentInjector.get(import16.ErrorService));
+    this._appEl_2.initComponent(this._ErrorComponent_2_4,[],compView_2);
+    compView_2.create(this._ErrorComponent_2_4,[],(null as any));
+    this.init([],[
+      this._el_0,
+      this._text_1,
+      this._el_2
+    ]
+    ,[],[]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
     if (((token === import11.RouterOutlet) && (0 === requestNodeIndex))) { return this._RouterOutlet_0_5; }
+    if (((token === import12.ErrorComponent) && (2 === requestNodeIndex))) { return this._ErrorComponent_2_4; }
     return notFoundResult;
+  }
+  detectChangesInternal(throwOnChange:boolean):void {
+    if (((this.numberOfChecks === 0) && !throwOnChange)) { this._ErrorComponent_2_4.ngOnInit(); }
+    this.detectContentChildrenChanges(throwOnChange);
+    this.detectViewChildrenChanges(throwOnChange);
   }
   destroyInternal():void {
     this._RouterOutlet_0_5.ngOnDestroy();

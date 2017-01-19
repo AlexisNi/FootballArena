@@ -32,8 +32,9 @@ router.post('/', function (req, res, next) {
             ArenaQuestions.update({_id:arenaQuestion._id},{$push:{questionAnswer:req.body.question}},function (err,result) {
                 if (err) {
                     return res.status(500).json({
-                        title: 'An error occurred',
-                        error: err
+                        title:'Error',
+                        message:'An error has occured....',
+                        status:'500'
                     });
                 }
                 res.status(201).json({
@@ -54,8 +55,9 @@ router.post('/', function (req, res, next) {
             arenaQuestion.save(function(err, result) {
                 if (err) {
                     return res.status(500).json({
-                        title: 'An error occurred',
-                        error: err
+                        title:'Error',
+                        message:'An error has occured....',
+                        status:'500'
                     });
                 }
                 res.status(201).json({

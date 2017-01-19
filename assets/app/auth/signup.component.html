@@ -15,6 +15,8 @@
 
 
 
+
+
         </div>
         <div class="form-group">
             <label for="lastName" >Your Team NickName</label>
@@ -29,6 +31,10 @@
                  class="alert alert-danger">
                 Last Name is required
                 {{myForm.controls['firstName'].touched}}
+            </div>
+            <div [hidden]="userNameCheckisAvaible||!userNameCheckisAvaible&&myForm.controls['lastName'].touched"
+                 class="alert alert-danger">
+                UserName Not Available
             </div>
 
         </div>

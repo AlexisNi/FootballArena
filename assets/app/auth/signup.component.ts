@@ -14,6 +14,7 @@ import {error} from "util";
 export class SignUpComponent  implements OnInit{
     myForm:FormGroup;
     firstName:FormControl;
+    userNameCheckisAvaible;
 
         constructor(private authService:AuthService,private router:Router){}
 
@@ -61,7 +62,13 @@ export class SignUpComponent  implements OnInit{
     checkForUserName(lastName){
         this.authService.checkUserName(lastName)
             .subscribe(
-                data => console.log(data),
+
+                data =>
+                {
+                    console.log(data);
+                    this.userNameCheckisAvaible=data.available
+
+                },
                 error => console.error(error)
             );
     }
