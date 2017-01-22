@@ -3,7 +3,6 @@ import {FormGroup, Validators, FormControl, FormsModule} from "@angular/forms";
 import {User} from "./user";
 import {AuthService} from "./auth.service";
 import {Router} from "@angular/router";
-import {error} from "util";
 
 @Component({
     selector:'quiz-signUp',
@@ -14,9 +13,11 @@ import {error} from "util";
 export class SignUpComponent  implements OnInit{
     myForm:FormGroup;
     firstName:FormControl;
-    userNameCheckisAvaible;
+    userNameCheckisAvaible=true;
 
-        constructor(private authService:AuthService,private router:Router){}
+        constructor(private authService:AuthService,private router:Router){
+
+        }
 
     onSubmit() {
         const user = new User(
@@ -50,19 +51,22 @@ export class SignUpComponent  implements OnInit{
             this.router.navigateByUrl('mainApp');
         }
         this.myForm=new FormGroup({
-            firstName:new FormControl(null,Validators.required),
-            lastName:new FormControl(null,Validators.required),
+            firstName:new FormControl(null,Validators.required,),
+            lastName:new FormControl(null,[Validators.required]),
             email:new FormControl(null,[
                 Validators.required,
             ]),
-            password:new FormControl(null,Validators.required),
+            password:new FormControl(null,[Validators.required]),
+            confirmPassword:new FormControl(null,Validators.required)
         });
+
+        this.myForm.controls['lastName'].valueChanges.debounceTime(500)
+            .subscribe(value=>this.checkForUserName(value))
     }
 
     checkForUserName(lastName){
         this.authService.checkUserName(lastName)
             .subscribe(
-
                 data =>
                 {
                     console.log(data);

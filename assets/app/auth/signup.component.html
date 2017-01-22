@@ -24,15 +24,17 @@
                     type="text"
                    id="lastName"
                    class="form-control"
-                   placeholder="Must Be Unique"
+                    asyncValidator
+                    placeholder="Must Be Unique"
                    formControlName="lastName"
-                   (keyup)="checkForUserName(lastNameInput.value)">
-            <div [hidden]="myForm.controls['lastName'].valid&&myForm.controls['lastName'].touched||!myForm.controls['lastName'].valid&&!myForm.controls['lastName'].touched"
+                  >
+            <div [hidden]="myForm.controls['lastName'].valid&&myForm.controls['lastName'].touched
+                          ||!myForm.controls['lastName'].valid&&!myForm.controls['lastName'].touched
+                          ||!myForm.controls['lastName'].valid&&myForm.controls['lastName'].touched&&!userNameCheckisAvaible"
                  class="alert alert-danger">
-                Last Name is required
-                {{myForm.controls['firstName'].touched}}
+               NickName is required
             </div>
-            <div [hidden]="userNameCheckisAvaible||!userNameCheckisAvaible&&myForm.controls['lastName'].touched"
+            <div [hidden]="userNameCheckisAvaible"
                  class="alert alert-danger">
                 UserName Not Available
             </div>
@@ -61,6 +63,19 @@
                  class="alert alert-danger">
                 password is required
                 {{myForm.controls['password'].touched}}
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword" >Confirm Password</label>
+            <input type="password"
+                   id="confirmPassword"
+                   class="form-control"
+                   formControlName="confirmPassword" >
+            <div [hidden]="myForm.controls['confirmPassword'].valid&&myForm.controls['confirmPassword'].touched||!myForm.controls['confirmPassword'].valid&&!myForm.controls['confirmPassword'].touched"
+                 class="alert alert-danger">
+                password is required
+                {{myForm.controls['confirmPassword'].touched}}
             </div>
 
         </div>

@@ -111,7 +111,7 @@ router.post('/signin',function (req,res,next) {
                 status:'401'
             });
         }
-        var token=jwt.sign({user:user},'secret',{expiresIn:72000});
+        var token=jwt.sign({user:user},'secret',{expiresIn:72});
         var access='auth';
         var tokens={access:access,token:token}
         user.tokens.push(tokens);

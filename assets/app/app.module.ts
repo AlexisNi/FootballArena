@@ -28,6 +28,7 @@ import {LoggedInGuard} from "./auth/logged-in.guard";
 import {ArenaHeaderComponent} from "./MainApp/arena/arena-header.component";
 import {ErrorComponent} from "./errors/error.component";
 import {ErrorService} from "./errors/error.service";
+import AsyncValidator from "./auth/validators/equla-validator.directive";
 @NgModule({
     declarations:[AppComponent,
         LoginComponent,
@@ -43,7 +44,8 @@ import {ErrorService} from "./errors/error.service";
         QuestionStructure,
         ArenaPlayingComponent,
         ArenaHeaderComponent,
-        ErrorComponent
+        ErrorComponent,
+        AsyncValidator
         ],
 
     imports:[BrowserModule,FormsModule,routing,ReactiveFormsModule,HttpModule,Ng2Bs3ModalModule ],
@@ -57,6 +59,7 @@ import {ErrorService} from "./errors/error.service";
         QuestionAnswerServices,
         LoggedInGuard,
         ErrorService
+
         ],
 
     bootstrap:[AppComponent]
