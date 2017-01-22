@@ -5,6 +5,8 @@ import {SocketService} from "../socketHanding/socket.service";
 import {Stats} from "../game-list/models/stats";
 import {Observable} from "rxjs";
 import {Question} from "../../questions/questionModels/question";
+import {Error} from "../../errors/error.model";
+import {ErrorService} from "../../errors/error.service";
 
 
 @Component({
@@ -13,7 +15,10 @@ import {Question} from "../../questions/questionModels/question";
 })
 export class ArenaComponent implements  OnInit{
 
-    constructor(private userService:AuthService,private gameListSevices:GameListServices,private socketServices:SocketService){}
+    constructor(private userService:AuthService,
+                private gameListSevices:GameListServices,
+                private socketServices:SocketService,
+                private errorService:ErrorService){}
     public userName;
     public isUserPlaying;
     public arenas;
@@ -21,7 +26,7 @@ export class ArenaComponent implements  OnInit{
     public stats:Stats;
     public ticks=30;
     ngOnInit(): void {
-        this.arrayTest();
+        this.onError();
         this.getUser();
         this.getUserId();
         this.loadStats();
@@ -69,7 +74,7 @@ export class ArenaComponent implements  OnInit{
                 this.stats=stats;
             })
     }
-
+/*
     arrayTest(){
         var array=['1','2','3'];
         for (let i = array.length; i; i--) {
@@ -82,8 +87,15 @@ export class ArenaComponent implements  OnInit{
 
         console.log(question);
 
-    }
+    }*/
 
+    onError(){
+        this.socketServices.onError()
+            .subscribe((error:Error)=>{
+                if(error){ this.errorService.handleError(error);}
+
+            })
+    }
 
 
 

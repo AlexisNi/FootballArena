@@ -6,32 +6,11 @@ var connectedUserList=[];
 var jwt=require('jsonwebtoken');
 var decoded;
 var notAuthorized=[];
+var TokenIsSet;
 
 module.exports = function (io) {
     'use strict';
-    io.use(function (socket,next) {
-        try{
-            decoded = jwt.verify(socket.handshake.query.token, 'secret');
-        }
-        catch (e){
-            console.log(e);
-
-        }
-        User.findByToken(socket.handshake.query.token).then(function (user) {
-            if (!user){
-                return Promise.reject();
-
-
-
-            }
-
-            next();
-        }).catch(function (e) {
-            next();
-
-        });
-
-    });
+    require('./socketMiddleware')(io);
     /*var nsp=io.of('/game');*/
     io.on('connection',function (socket) {
 

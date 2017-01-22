@@ -7,6 +7,7 @@ import {myGlobals}  from "../../globals/globals";
 import {Stats} from "../game-list/models/stats";
 import {Question} from "../../questions/questionModels/question";
 import {ErrorService} from "../../errors/error.service";
+import {Error} from "../../errors/error.model";
 
 @Injectable()
 
@@ -23,6 +24,21 @@ export class SocketService{
 
     }
 
+    onError(){
+        let obsevable=new Observable((observer:any)=>{
+            this.socket.on('getError',(data:any)=>{
+                const error=data.obj;
+                let  errors:Error;
+                errors=new Error(error.title,error.message);
+                observer.next(errors);
+            });
+            return()=>{
+                this.socket.disconnect();
+            }
+        })
+        return obsevable;
+
+    }
 
 
 
