@@ -111,12 +111,12 @@ router.post('/signin',function (req,res,next) {
                 status:'401'
             });
         }
-        var token=jwt.sign({user:user},'secret'/*,{expiresIn:720000000000000000000}*/);
+        var token=jwt.sign({user:user},'secret',{expiresIn:720000000000000000000});
         var access='auth';
-        var tokens={access:access,token:token}
+        var tokens={access:access,token:token};
         user.tokens.push(tokens);
         user.save();
-        res.status(200).json({
+       return res.status(200).json({
             message:'Succefully logged in',
             userId:user._id,
             token:token

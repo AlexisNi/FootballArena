@@ -10,13 +10,14 @@ var TokenIsSet;
 
 module.exports = function (io) {
     'use strict';
-    require('./socketMiddleware')(io);
+    /*require('./socketMiddleware')(io);*/
     /*var nsp=io.of('/game');*/
     io.on('connection',function (socket) {
 
         console.log('User connected!');
         connectedUserList[socket.handshake.query.userId]=socket;
         require('./socketUpdateStats')(socket,connectedUserList[socket.handshake.query.userId]);
+
 
 
 
@@ -36,6 +37,7 @@ module.exports = function (io) {
 
                 if (connectedUserList[otherUser]!=null){
                     if(otherUser!=null) {
+                        console.log('othe user');
                         require('./getArenasOnDisconnect')(otherUser,connectedUserList[otherUser]);
                     }
 
@@ -77,6 +79,12 @@ module.exports = function (io) {
 
         });
 
+        socket.on('getQuestions',function (req) {
+            console.log('here get questions!');
+            console.log(req);
+            require('./getQuestions')(req,connectedUserList[req.userId]);
+
+        });
     });
 
 };

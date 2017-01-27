@@ -55,13 +55,14 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     }
 
     ngOnInit(): void {
-
         this.arenaId=this.arenas.arenaId;
         this.timer();
         this.getUserId();
         this.getUser();
         this.getInviteId();
+        this.socketService.reqQuestions(this.userId,this.arenas.arenaId);
         this.getArenaQuestions();
+        this.getQuestionsObs();
         this.socketService.enterArena(this.arenas.arenaId,this.userId,this.inviteId);
 
     }
@@ -98,6 +99,14 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
         this.subscription.unsubscribe();
 
 
+    }
+    getQuestionsObs(){
+        this.socketService.getQuestions()
+            .subscribe((questions:Question[])=>{
+                console.log(questions);
+                }
+
+            )
     }
 
 

@@ -4,6 +4,7 @@ var ArenaQuestions=require('../models/ArenaQuestion');
 var Awards=require('../models/awards');
 var User=require('../models/user');
 
+
 router.use('/',function (req,res,next) {
     User.findByToken(req.query.token).then(function (user) {
         if (!user){

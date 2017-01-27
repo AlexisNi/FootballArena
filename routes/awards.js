@@ -4,6 +4,8 @@ var ArenaUser=require('../models/arena');
 var Awards=require('../models/awards');
 var Statistics=require('../models/statistics');
 var User=require('../models/user');
+var level;
+var experience;
 
 router.use('/',function (req,res,next) {
     User.findByToken(req.query.token).then(function (user) {
@@ -57,7 +59,10 @@ router.post('/', function (req,res,next) {
                    }
                    statistics.currentExp=statistics.currentExp+result.awards.winner.experience;
                    statistics.wins=statistics.wins+1;
-
+                   console.log('here is level');
+                   var levelInfo=require('./checkLevelUp')(statistics.level,statistics.currentExp);
+                   statistics.currentExp=levelInfo.currentExperience;
+                   statistics.level=levelInfo.level;
                    statistics.save();
 
                });
@@ -92,6 +97,10 @@ router.post('/', function (req,res,next) {
                         }
                         statistics.currentExp=statistics.currentExp+result.awards.loser.experience;
                         statistics.loses=statistics.loses+1;
+                        console.log('here is level');
+                        var levelInfo=require('./checkLevelUp')(statistics.level,statistics.currentExp);
+                        statistics.currentExp=levelInfo.currentExperience;
+                        statistics.level=levelInfo.level;
 
                         statistics.save();
 
@@ -122,6 +131,10 @@ router.post('/', function (req,res,next) {
                     statistics.currentExp=statistics.currentExp+result.awards.draw.experience;
                     statistics.points = statistics.points+1;
                     statistics.draws=statistics.draws+1;
+                    console.log('here is level');
+                    var levelInfo=require('./checkLevelUp')(statistics.level,statistics.currentExp);
+                    statistics.currentExp=levelInfo.currentExperience;
+                    statistics.level=levelInfo.level;
 
                     statistics.save();
 

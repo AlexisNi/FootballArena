@@ -54,7 +54,6 @@ export class SocketService{
 
 
     reqArenas(userId){
-        const token=localStorage.getItem('token');
         this.socket.emit('getArenas',{userId:userId});
     }
 
@@ -78,7 +77,38 @@ export class SocketService{
         return obsevable;
 
     }
+        reqQuestions(userId,arenaId){
+            this.socket.removeAllListeners('loadArenas');
+            this.socket.emit('getQuestions',{userId:userId,arenaId:arenaId});
+        }
+    getQuestions(){
+            this.socket.removeAllListeners('getQuestions');
+            let observable=new Observable((observer:any)=>{
+                this.socket.on('loadQuestions',(data:any)=>{
+                    const questions=data.obj;
 
+                    let transFormedQuestions:Question[]=[];
+                    for (let question of questions){
+                        transFormedQuestions.push(new Question(
+                            question.question,
+                            question.optiona,
+                            question.optionb,
+                            question.optionc,
+                            question.optiond,
+                            question.answer,
+                            question._id
+
+                        ));
+                    }
+                    observer.next(transFormedQuestions)
+                });
+                return()=>{
+                    this.socket.disconnect();
+                }
+
+                });
+             return observable
+        }
     getArenas(){
         this.socket.removeAllListeners('loadArenas');
         let observable=new Observable((observer:any)=>{

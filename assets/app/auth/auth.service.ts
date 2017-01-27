@@ -45,7 +45,6 @@ export  class AuthService{
 
             })
             .catch((error: Response) =>{
-                this.errorService.handleError(error.json());
                 return Observable.throw(error.json())
             });
 
