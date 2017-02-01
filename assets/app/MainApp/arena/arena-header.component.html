@@ -5,7 +5,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a class="navbar-brand"> Level: {{stats?.level}}</a> </li>
-            <li><a class="navbar-brand">CurrentExp : {{stats?.currentExp}}</a> </li>        </ul>
+            <li><a class="navbar-brand">Experience : {{stats?.currentExp}}/{{experienceNextLevel}}</a> </li>        </ul>
         <ul class="nav navbar-nav navbar-right"><li class="dropdown"><a class="dropdown-toggle glyphicon glyphicon-wrench" data-toggle="dropdown">settings <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a (click)="logout()">Logout</a></li>

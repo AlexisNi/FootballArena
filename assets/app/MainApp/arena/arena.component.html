@@ -1,5 +1,5 @@
     <div class="row" *ngIf="isUserPlaying==false">
-        <arena-header [username]="userName" [stats]="stats"></arena-header>
+        <arena-header [username]="userName" [stats]="stats" [experienceNextLevel]="experienceNextLevel" [level]="stats?.level" ></arena-header>
         <div class="col-md-5 col-lg-5 col-sm-5" >
             <opponent-find></opponent-find>
         </div>
@@ -15,3 +15,4 @@
             <arena-playing [arenas]="arenas" ></arena-playing>
         </div>
     </div>
+    <levelup></levelup>

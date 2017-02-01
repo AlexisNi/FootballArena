@@ -20,19 +20,21 @@ module.exports=function (req,connectedUserList) {
                 for (var i = 0; i < arenasArr.arenas.length; i++) {
                     arenasArray.push(arenasArr.arenas[i]._id);
                 }
-                ArenaUser.find({$and: [{user: req.userId}, {_id: {$in: arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
+                ArenaUser.find({$and: [{user: req.userId}, {_id: {$in: arenasArray}}]},'user invite invite_played  status_accept  user_played')//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
                     .populate('invite', 'lastName')
                     .deepPopulate('questions')
                     .exec(function (err, arenas) {
+                        console.log(arenas);
 
                         if (err) {
                             throw err;
                         }
 
-                        ArenaUser.find({$and: [{invite: req.userId}, {_id: {$in: arenasArray}}]})//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
+                        ArenaUser.find({$and: [{invite: req.userId}, {_id: {$in: arenasArray}}]},'user invite invite_played  status_accept  user_played')//HERE IS SEARCHING WITH THE USER TOKEN PARAMETER IN THE ARENA DATABASE AT THE INVITE ROW AND SHOWS THE LAST NAME OF THE USER
                             .populate('user', 'lastName')
                             .deepPopulate('questions')
                             .exec(function (err, arenasUser) {
+                                console.log(arenas);
                                 if (err) {
 
                                     throw err;

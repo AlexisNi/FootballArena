@@ -7,6 +7,8 @@ import {Observable} from "rxjs";
 import {Question} from "../../questions/questionModels/question";
 import {Error} from "../../errors/error.model";
 import {ErrorService} from "../../errors/error.service";
+import {LevelUpService} from "../../levelUp/levelup.service";
+import {LevelUp} from "../../levelUp/levelUp.model";
 
 
 @Component({
@@ -18,13 +20,15 @@ export class ArenaComponent implements  OnInit{
     constructor(private userService:AuthService,
                 private gameListSevices:GameListServices,
                 private socketServices:SocketService,
-                private errorService:ErrorService){}
+                private errorService:ErrorService,
+                private levelUpservice:LevelUpService){}
     public userName;
     public isUserPlaying;
     public arenas;
     public userId;
     public stats:Stats;
     public ticks=30;
+    public experienceNextLevel=0;
     ngOnInit(): void {
         this.onError();
         this.getUser();
@@ -72,22 +76,10 @@ export class ArenaComponent implements  OnInit{
         this.socketServices.getStats()
             .subscribe((stats:Stats)=>{
                 this.stats=stats;
+                this.experienceNextLevel=300*this.stats.level;
             })
     }
-/*
-    arrayTest(){
-        var array=['1','2','3'];
-        for (let i = array.length; i; i--) {
-            let j = Math.floor(Math.random() * i);
-            [array[i - 1], array[j]] = [array[j], array[i - 1]];
 
-        }
-        console.log(array[1]);
-       let question:Question=new Question('Poios irthe?','enas','dios','trios','teseros','trios','123');
-
-        console.log(question);
-
-    }*/
 
     onError(){
         this.socketServices.onError()
@@ -96,6 +88,7 @@ export class ArenaComponent implements  OnInit{
 
             })
     }
+
 
 
 

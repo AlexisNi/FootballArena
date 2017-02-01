@@ -61,7 +61,9 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
         this.getUser();
         this.getInviteId();
         this.socketService.reqQuestions(this.userId,this.arenas.arenaId);
+/*
         this.getArenaQuestions();
+*/
         this.getQuestionsObs();
         this.socketService.enterArena(this.arenas.arenaId,this.userId,this.inviteId);
 
@@ -78,7 +80,9 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     }
 
     ngAfterViewInit(): void {
+/*
         this.colourInit();
+*/
     }
     getInviteId(){
         if(this.arenas.userId==this.userId){
@@ -103,7 +107,8 @@ export class ArenaPlayingComponent implements OnInit ,OnDestroy,AfterViewInit{
     getQuestionsObs(){
         this.socketService.getQuestions()
             .subscribe((questions:Question[])=>{
-                console.log(questions);
+               this.arenaQuestions=questions;
+                console.log(this.arenaQuestions);
                 }
 
             )

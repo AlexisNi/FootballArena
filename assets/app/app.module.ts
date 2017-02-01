@@ -29,6 +29,8 @@ import {ArenaHeaderComponent} from "./MainApp/arena/arena-header.component";
 import {ErrorComponent} from "./errors/error.component";
 import {ErrorService} from "./errors/error.service";
 import AsyncValidator from "./auth/validators/equla-validator.directive";
+import {LevelUpService} from "./levelUp/levelup.service";
+import {LevelUpComponent} from "./levelUp/levelup.component";
 @NgModule({
     declarations:[AppComponent,
         LoginComponent,
@@ -45,7 +47,8 @@ import AsyncValidator from "./auth/validators/equla-validator.directive";
         ArenaPlayingComponent,
         ArenaHeaderComponent,
         ErrorComponent,
-        AsyncValidator
+        AsyncValidator,
+        LevelUpComponent
         ],
 
     imports:[BrowserModule,FormsModule,routing,ReactiveFormsModule,HttpModule,Ng2Bs3ModalModule ],
@@ -58,7 +61,8 @@ import AsyncValidator from "./auth/validators/equla-validator.directive";
         QuestionServices,
         QuestionAnswerServices,
         LoggedInGuard,
-        ErrorService
+        ErrorService,
+        LevelUpService
 
         ],
 

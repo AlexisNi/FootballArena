@@ -117,7 +117,7 @@ export class SocketService{
 
                 let transformedArenas: ArenaUsers[] = [];
                 for (let arena of arenas) {
-                    let transformedQuestions:Question[]=[];
+                /*    let transformedQuestions:Question[]=[];
                     for(let finalQuestion of arena.questions){
                         transformedQuestions.push(new Question(
                             finalQuestion.question,
@@ -128,7 +128,7 @@ export class SocketService{
                             finalQuestion.answer,
                             finalQuestion._id
                         ));
-                    }
+                    }*/
                     transformedArenas.push(new ArenaUsers(
                         arena._id,
                         arena.user ,
@@ -137,12 +137,12 @@ export class SocketService{
                         arena.user.lastName || arena.invite.lastName,
                         arena.user_played,
                         arena.invite_played,
-                        transformedQuestions
+                        /*transformedQuestions*/
                     ));
                 }
                 const UserArenas=data.objUser;
                 for (let userArena of UserArenas){
-                    let transformedQuestions:Question[]=[];
+             /*       let transformedQuestions:Question[]=[];
                     for(let finalQuestion of userArena.questions){
                         transformedQuestions.push(new Question(
                             finalQuestion.question,
@@ -153,7 +153,7 @@ export class SocketService{
                             finalQuestion.answer,
                             finalQuestion._id
                         ));
-                    }
+                    }*/
                     transformedArenas.push(new ArenaUsers(
                         userArena._id,
                         userArena.user._id ,
@@ -162,7 +162,7 @@ export class SocketService{
                         userArena.user.lastName,
                         userArena.user_played,
                         userArena.invite_played,
-                        transformedQuestions
+                        /*transformedQuestions*/
 
 
                     ));
